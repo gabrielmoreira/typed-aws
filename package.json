@@ -1,9 +1,9 @@
 {
   "name": "typed-aws",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Helps you write AWS CloudFormation in TypeScript",
-  "typings": "lib/types/index.d.js",
-  "main": "lib/types/index.ts",
+  "main": "lib/types/index.js",
+  "typings": "lib/types/index.d.ts",
   "scripts": {
     "clean": "rimraf ./lib",
     "test": "echo \"No tests\"",

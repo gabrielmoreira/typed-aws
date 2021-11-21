@@ -78,7 +78,7 @@ export class CfnResource<TProps extends CfnResourceProps>
     return this;
   }
 
-  with(apply: (resource: ThisType<this>) => void) {
+  with(apply: (resource: CfnResource<TProps>) => void) {
     apply(this);
     return this;
   }
