@@ -1,0 +1,67 @@
+{
+  "name": "typed-aws",
+  "version": "0.1.0",
+  "description": "Helps you write AWS CloudFormation in TypeScript",
+  "typings": "lib/types/index.d.js",
+  "main": "lib/types/index.ts",
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "test": "echo \"No tests\"",
+    "build": "tsc",
+    "lint": "npx eslint './types/**'",
+    "generate:full": "npm run download && npm run unzip && npm run generate",
+    "generate": "rimraf ./types/resources && ts-node ./src/generate.ts",
+    "download": "./scripts/download.sh",
+    "unzip": "./scripts/unzip.sh",
+    "prepublishOnly": "npm run clean && npm run generate && npm run test && npm run lint && npm run build"
+  },
+  "files": [
+    "lib",
+    "package.json",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmoreira/typed-aws.git"
+  },
+  "keywords": [
+    "serverless",
+    "typescript",
+    "aws",
+    "cloudformation",
+    "builder",
+    "serverless-builder",
+    "helper",
+    "serverless-helper",
+    "typed-aws"
+  ],
+  "author": "Gabriel Moreira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielmoreira/typed-aws/issues"
+  },
+  "homepage": "https://github.com/gabrielmoreira/typed-aws#readme",
+  "devDependencies": {
+    "glob": "^7.2.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2",
+    "word-wrap": "^1.2.3",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@serverless/typescript": "^2.66.2",
+    "@swc/cli": "^0.1.51",
+    "@swc/core": "^1.2.110",
+    "@swc/jest": "^0.2.5",
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "aws-sdk": "^2.1032.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.7"
+  }
+}

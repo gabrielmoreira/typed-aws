@@ -1,0 +1,32 @@
+// CloudFormation Resource AWS::CloudFormation::CustomResource
+
+import { CFResource } from '../../base';
+
+export type CustomResource_Type = 'AWS::CloudFormation::CustomResource';
+export const CustomResource_Type = 'AWS::CloudFormation::CustomResource';
+
+/**
+ * Resource Type definition for AWS::CloudFormation::CustomResource
+ * {@link
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html}
+ */
+export default function CustomResource(props: CustomResource_Properties) {
+  return new CFResource<CustomResource_Type, CustomResource_Properties>(
+    CustomResource_Type,
+    props
+  );
+}
+
+/**
+ * Resource Type definition for AWS::CloudFormation::CustomResource
+ * {@link
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html}
+ */
+export type CustomResource_Properties = {
+  Id?: string;
+  /**
+   * {@link
+   * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html#cfn-customresource-servicetoken}
+   */
+  ServiceToken: string;
+};
