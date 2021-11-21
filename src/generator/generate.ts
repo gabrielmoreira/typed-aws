@@ -40,6 +40,7 @@ export async function generateIndex(
   fileManager: FileManager
 ) {
   const names = modules.map((r) => r[0].module);
+  names.sort()
   let source = `
 ${names
   .map(
@@ -64,6 +65,7 @@ export async function generateModuleIndex(
 ) {
   const { module } = resources[0];
   const names = resources.map((r) => r.resource);
+  names.sort()
   let source = `
 ${names.map((name) => `import ${name}_ from './${name}';`).join('\n')}
 

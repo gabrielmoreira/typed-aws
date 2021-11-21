@@ -1,11 +1,11 @@
-import AccessAnalyzer from './AccessAnalyzer';
-export { AccessAnalyzer };
-
 import ACMPCA from './ACMPCA';
 export { ACMPCA };
 
 import ASK from './ASK';
 export { ASK };
+
+import AccessAnalyzer from './AccessAnalyzer';
+export { AccessAnalyzer };
 
 import AmazonMQ from './AmazonMQ';
 export { AmazonMQ };
@@ -22,8 +22,8 @@ export { ApiGatewayV2 };
 import AppConfig from './AppConfig';
 export { AppConfig };
 
-import ApplicationAutoScaling from './ApplicationAutoScaling';
-export { ApplicationAutoScaling };
+import AppFlow from './AppFlow';
+export { AppFlow };
 
 import AppMesh from './AppMesh';
 export { AppMesh };
@@ -33,6 +33,12 @@ export { AppStream };
 
 import AppSync from './AppSync';
 export { AppSync };
+
+import ApplicationAutoScaling from './ApplicationAutoScaling';
+export { ApplicationAutoScaling };
+
+import ApplicationInsights from './ApplicationInsights';
+export { ApplicationInsights };
 
 import Athena from './Athena';
 export { Athena };
@@ -52,14 +58,14 @@ export { Backup };
 import Batch from './Batch';
 export { Batch };
 
-import Cassandra from './Cassandra';
-export { Cassandra };
-
 import Budgets from './Budgets';
 export { Budgets };
 
 import CE from './CE';
 export { CE };
+
+import Cassandra from './Cassandra';
+export { Cassandra };
 
 import CertificateManager from './CertificateManager';
 export { CertificateManager };
@@ -76,11 +82,11 @@ export { CloudFormation };
 import CloudFront from './CloudFront';
 export { CloudFront };
 
-import CloudWatch from './CloudWatch';
-export { CloudWatch };
-
 import CloudTrail from './CloudTrail';
 export { CloudTrail };
+
+import CloudWatch from './CloudWatch';
+export { CloudWatch };
 
 import CodeBuild from './CodeBuild';
 export { CodeBuild };
@@ -109,6 +115,15 @@ export { Cognito };
 import Config from './Config';
 export { Config };
 
+import DAX from './DAX';
+export { DAX };
+
+import DLM from './DLM';
+export { DLM };
+
+import DMS from './DMS';
+export { DMS };
+
 import DataBrew from './DataBrew';
 export { DataBrew };
 
@@ -118,20 +133,11 @@ export { DataPipeline };
 import DataSync from './DataSync';
 export { DataSync };
 
-import DAX from './DAX';
-export { DAX };
-
 import Detective from './Detective';
 export { Detective };
 
 import DirectoryService from './DirectoryService';
 export { DirectoryService };
-
-import DMS from './DMS';
-export { DMS };
-
-import DLM from './DLM';
-export { DLM };
 
 import DynamoDB from './DynamoDB';
 export { DynamoDB };
@@ -151,6 +157,12 @@ export { EFS };
 import EKS from './EKS';
 export { EKS };
 
+import EMR from './EMR';
+export { EMR };
+
+import EMRContainers from './EMRContainers';
+export { EMRContainers };
+
 import ElastiCache from './ElastiCache';
 export { ElastiCache };
 
@@ -166,17 +178,11 @@ export { ElasticLoadBalancingV2 };
 import Elasticsearch from './Elasticsearch';
 export { Elasticsearch };
 
-import EMR from './EMR';
-export { EMR };
-
-import EMRContainers from './EMRContainers';
-export { EMRContainers };
+import EventSchemas from './EventSchemas';
+export { EventSchemas };
 
 import Events from './Events';
 export { Events };
-
-import EventSchemas from './EventSchemas';
-export { EventSchemas };
 
 import FIS from './FIS';
 export { FIS };
@@ -214,6 +220,9 @@ export { Inspector };
 import IoT from './IoT';
 export { IoT };
 
+import KMS from './KMS';
+export { KMS };
+
 import Kinesis from './Kinesis';
 export { Kinesis };
 
@@ -223,8 +232,8 @@ export { KinesisAnalytics };
 import KinesisAnalyticsV2 from './KinesisAnalyticsV2';
 export { KinesisAnalyticsV2 };
 
-import KMS from './KMS';
-export { KMS };
+import KinesisFirehose from './KinesisFirehose';
+export { KinesisFirehose };
 
 import LakeFormation from './LakeFormation';
 export { LakeFormation };
@@ -238,23 +247,23 @@ export { LicenseManager };
 import Logs from './Logs';
 export { Logs };
 
+import MSK from './MSK';
+export { MSK };
+
 import Macie from './Macie';
 export { Macie };
 
 import MediaConnect from './MediaConnect';
 export { MediaConnect };
 
-import MediaPackage from './MediaPackage';
-export { MediaPackage };
-
 import MediaConvert from './MediaConvert';
 export { MediaConvert };
 
+import MediaPackage from './MediaPackage';
+export { MediaPackage };
+
 import MemoryDB from './MemoryDB';
 export { MemoryDB };
-
-import MSK from './MSK';
-export { MSK };
 
 import Neptune from './Neptune';
 export { Neptune };
@@ -271,11 +280,11 @@ export { OpenSearchService };
 import OpsWorks from './OpsWorks';
 export { OpsWorks };
 
-import RAM from './RAM';
-export { RAM };
-
 import OpsWorksCM from './OpsWorksCM';
 export { OpsWorksCM };
+
+import RAM from './RAM';
+export { RAM };
 
 import RDS from './RDS';
 export { RDS };
@@ -301,29 +310,8 @@ export { S3ObjectLambda };
 import S3Outposts from './S3Outposts';
 export { S3Outposts };
 
-import SageMaker from './SageMaker';
-export { SageMaker };
-
-import SecretsManager from './SecretsManager';
-export { SecretsManager };
-
 import SDB from './SDB';
 export { SDB };
-
-import ServiceCatalog from './ServiceCatalog';
-export { ServiceCatalog };
-
-import SecurityHub from './SecurityHub';
-export { SecurityHub };
-
-import ServiceCatalogAppRegistry from './ServiceCatalogAppRegistry';
-export { ServiceCatalogAppRegistry };
-
-import ServiceDiscovery from './ServiceDiscovery';
-export { ServiceDiscovery };
-
-import Signer from './Signer';
-export { Signer };
 
 import SNS from './SNS';
 export { SNS };
@@ -339,6 +327,27 @@ export { SSMContacts };
 
 import SSMIncidents from './SSMIncidents';
 export { SSMIncidents };
+
+import SageMaker from './SageMaker';
+export { SageMaker };
+
+import SecretsManager from './SecretsManager';
+export { SecretsManager };
+
+import SecurityHub from './SecurityHub';
+export { SecurityHub };
+
+import ServiceCatalog from './ServiceCatalog';
+export { ServiceCatalog };
+
+import ServiceCatalogAppRegistry from './ServiceCatalogAppRegistry';
+export { ServiceCatalogAppRegistry };
+
+import ServiceDiscovery from './ServiceDiscovery';
+export { ServiceDiscovery };
+
+import Signer from './Signer';
+export { Signer };
 
 import StepFunctions from './StepFunctions';
 export { StepFunctions };
@@ -358,50 +367,43 @@ export { WAFRegional };
 import WAFv2 from './WAFv2';
 export { WAFv2 };
 
-import AppFlow from './AppFlow';
-export { AppFlow };
-
-import ApplicationInsights from './ApplicationInsights';
-export { ApplicationInsights };
-
 import WorkSpaces from './WorkSpaces';
 export { WorkSpaces };
 
 import XRay from './XRay';
 export { XRay };
 
-import KinesisFirehose from './KinesisFirehose';
-export { KinesisFirehose };
-
 export default {
-  AccessAnalyzer,
   ACMPCA,
   ASK,
+  AccessAnalyzer,
   AmazonMQ,
   Amplify,
   ApiGateway,
   ApiGatewayV2,
   AppConfig,
-  ApplicationAutoScaling,
+  AppFlow,
   AppMesh,
   AppStream,
   AppSync,
+  ApplicationAutoScaling,
+  ApplicationInsights,
   Athena,
   AuditManager,
   AutoScaling,
   AutoScalingPlans,
   Backup,
   Batch,
-  Cassandra,
   Budgets,
   CE,
+  Cassandra,
   CertificateManager,
   Chatbot,
   Cloud9,
   CloudFormation,
   CloudFront,
-  CloudWatch,
   CloudTrail,
+  CloudWatch,
   CodeBuild,
   CodeCommit,
   CodeDeploy,
@@ -411,29 +413,29 @@ export default {
   CodeStarNotifications,
   Cognito,
   Config,
+  DAX,
+  DLM,
+  DMS,
   DataBrew,
   DataPipeline,
   DataSync,
-  DAX,
   Detective,
   DirectoryService,
-  DMS,
-  DLM,
   DynamoDB,
   EC2,
   ECR,
   ECS,
   EFS,
   EKS,
+  EMR,
+  EMRContainers,
   ElastiCache,
   ElasticBeanstalk,
   ElasticLoadBalancing,
   ElasticLoadBalancingV2,
   Elasticsearch,
-  EMR,
-  EMRContainers,
-  Events,
   EventSchemas,
+  Events,
   FIS,
   FMS,
   FSx,
@@ -446,27 +448,28 @@ export default {
   ImageBuilder,
   Inspector,
   IoT,
+  KMS,
   Kinesis,
   KinesisAnalytics,
   KinesisAnalyticsV2,
-  KMS,
+  KinesisFirehose,
   LakeFormation,
   Lambda,
   LicenseManager,
   Logs,
+  MSK,
   Macie,
   MediaConnect,
-  MediaPackage,
   MediaConvert,
+  MediaPackage,
   MemoryDB,
-  MSK,
   Neptune,
   NetworkFirewall,
   NetworkManager,
   OpenSearchService,
   OpsWorks,
-  RAM,
   OpsWorksCM,
+  RAM,
   RDS,
   Redshift,
   ResourceGroups,
@@ -475,28 +478,25 @@ export default {
   S3,
   S3ObjectLambda,
   S3Outposts,
-  SageMaker,
-  SecretsManager,
   SDB,
-  ServiceCatalog,
-  SecurityHub,
-  ServiceCatalogAppRegistry,
-  ServiceDiscovery,
-  Signer,
   SNS,
   SQS,
   SSM,
   SSMContacts,
   SSMIncidents,
+  SageMaker,
+  SecretsManager,
+  SecurityHub,
+  ServiceCatalog,
+  ServiceCatalogAppRegistry,
+  ServiceDiscovery,
+  Signer,
   StepFunctions,
   Synthetics,
   Transfer,
   WAF,
   WAFRegional,
   WAFv2,
-  AppFlow,
-  ApplicationInsights,
   WorkSpaces,
   XRay,
-  KinesisFirehose,
 };

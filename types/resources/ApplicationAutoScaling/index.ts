@@ -1,9 +1,9 @@
-import ScalingPolicy_ from './ScalingPolicy';
 import ScalableTarget_ from './ScalableTarget';
+import ScalingPolicy_ from './ScalingPolicy';
 
 export namespace ApplicationAutoScaling {
-  export const ScalingPolicy = ScalingPolicy_;
   export const ScalableTarget = ScalableTarget_;
+  export const ScalingPolicy = ScalingPolicy_;
 }
 
 export default ApplicationAutoScaling;
