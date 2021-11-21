@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::RouteResponse
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RouteResponse_Type = 'AWS::ApiGatewayV2::RouteResponse';
 export const RouteResponse_Type = 'AWS::ApiGatewayV2::RouteResponse';
@@ -10,10 +10,7 @@ export const RouteResponse_Type = 'AWS::ApiGatewayV2::RouteResponse';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html}
  */
 export default function RouteResponse(props: RouteResponse_Properties) {
-  return new CFResource<RouteResponse_Type, RouteResponse_Properties>(
-    RouteResponse_Type,
-    props
-  );
+  return new CfnResource<RouteResponse_Properties>(RouteResponse_Type, props);
 }
 
 /**

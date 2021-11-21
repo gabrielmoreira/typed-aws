@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppConfig::HostedConfigurationVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type HostedConfigurationVersion_Type =
   'AWS::AppConfig::HostedConfigurationVersion';
@@ -15,10 +15,10 @@ export const HostedConfigurationVersion_Type =
 export default function HostedConfigurationVersion(
   props: HostedConfigurationVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<HostedConfigurationVersion_Properties>(
     HostedConfigurationVersion_Type,
-    HostedConfigurationVersion_Properties
-  >(HostedConfigurationVersion_Type, props);
+    props
+  );
 }
 
 /**

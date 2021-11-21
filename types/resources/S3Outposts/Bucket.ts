@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::Bucket
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Bucket_Type = 'AWS::S3Outposts::Bucket';
 export const Bucket_Type = 'AWS::S3Outposts::Bucket';
@@ -10,7 +10,7 @@ export const Bucket_Type = 'AWS::S3Outposts::Bucket';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html}
  */
 export default function Bucket(props: Bucket_Properties) {
-  return new CFResource<Bucket_Type, Bucket_Properties>(Bucket_Type, props);
+  return new CfnResource<Bucket_Properties>(Bucket_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::HealthCheck
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type HealthCheck_Type = 'AWS::Route53::HealthCheck';
 export const HealthCheck_Type = 'AWS::Route53::HealthCheck';
@@ -10,10 +10,7 @@ export const HealthCheck_Type = 'AWS::Route53::HealthCheck';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html}
  */
 export default function HealthCheck(props: HealthCheck_Properties) {
-  return new CFResource<HealthCheck_Type, HealthCheck_Properties>(
-    HealthCheck_Type,
-    props
-  );
+  return new CfnResource<HealthCheck_Properties>(HealthCheck_Type, props);
 }
 
 /**

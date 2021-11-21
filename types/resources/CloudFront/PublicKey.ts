@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::PublicKey
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PublicKey_Type = 'AWS::CloudFront::PublicKey';
 export const PublicKey_Type = 'AWS::CloudFront::PublicKey';
@@ -10,10 +10,7 @@ export const PublicKey_Type = 'AWS::CloudFront::PublicKey';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html}
  */
 export default function PublicKey(props: PublicKey_Properties) {
-  return new CFResource<PublicKey_Type, PublicKey_Properties>(
-    PublicKey_Type,
-    props
-  );
+  return new CfnResource<PublicKey_Properties>(PublicKey_Type, props);
 }
 
 /**

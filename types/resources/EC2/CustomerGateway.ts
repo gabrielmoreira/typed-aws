@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::CustomerGateway
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CustomerGateway_Type = 'AWS::EC2::CustomerGateway';
 export const CustomerGateway_Type = 'AWS::EC2::CustomerGateway';
@@ -10,7 +10,7 @@ export const CustomerGateway_Type = 'AWS::EC2::CustomerGateway';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html}
  */
 export default function CustomerGateway(props: CustomerGateway_Properties) {
-  return new CFResource<CustomerGateway_Type, CustomerGateway_Properties>(
+  return new CfnResource<CustomerGateway_Properties>(
     CustomerGateway_Type,
     props
   );

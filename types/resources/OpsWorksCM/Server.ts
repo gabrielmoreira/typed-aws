@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorksCM::Server
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Server_Type = 'AWS::OpsWorksCM::Server';
 export const Server_Type = 'AWS::OpsWorksCM::Server';
@@ -10,7 +10,7 @@ export const Server_Type = 'AWS::OpsWorksCM::Server';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html}
  */
 export default function Server(props: Server_Properties) {
-  return new CFResource<Server_Type, Server_Properties>(Server_Type, props);
+  return new CfnResource<Server_Properties>(Server_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SecurityGroupEgress
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecurityGroupEgress_Type = 'AWS::EC2::SecurityGroupEgress';
 export const SecurityGroupEgress_Type = 'AWS::EC2::SecurityGroupEgress';
@@ -12,10 +12,10 @@ export const SecurityGroupEgress_Type = 'AWS::EC2::SecurityGroupEgress';
 export default function SecurityGroupEgress(
   props: SecurityGroupEgress_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SecurityGroupEgress_Properties>(
     SecurityGroupEgress_Type,
-    SecurityGroupEgress_Properties
-  >(SecurityGroupEgress_Type, props);
+    props
+  );
 }
 
 /**

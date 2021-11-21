@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Instance
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Instance_Type = 'AWS::EC2::Instance';
 export const Instance_Type = 'AWS::EC2::Instance';
@@ -10,10 +10,7 @@ export const Instance_Type = 'AWS::EC2::Instance';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html}
  */
 export default function Instance(props: Instance_Properties) {
-  return new CFResource<Instance_Type, Instance_Properties>(
-    Instance_Type,
-    props
-  );
+  return new CfnResource<Instance_Properties>(Instance_Type, props);
 }
 
 /**

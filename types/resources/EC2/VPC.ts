@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPC
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPC_Type = 'AWS::EC2::VPC';
 export const VPC_Type = 'AWS::EC2::VPC';
@@ -10,7 +10,7 @@ export const VPC_Type = 'AWS::EC2::VPC';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html}
  */
 export default function VPC(props: VPC_Properties) {
-  return new CFResource<VPC_Type, VPC_Properties>(VPC_Type, props);
+  return new CfnResource<VPC_Properties>(VPC_Type, props);
 }
 
 /**

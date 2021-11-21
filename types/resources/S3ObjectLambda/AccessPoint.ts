@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3ObjectLambda::AccessPoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AccessPoint_Type = 'AWS::S3ObjectLambda::AccessPoint';
 export const AccessPoint_Type = 'AWS::S3ObjectLambda::AccessPoint';
@@ -12,10 +12,7 @@ export const AccessPoint_Type = 'AWS::S3ObjectLambda::AccessPoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html}
  */
 export default function AccessPoint(props: AccessPoint_Properties) {
-  return new CFResource<AccessPoint_Type, AccessPoint_Properties>(
-    AccessPoint_Type,
-    props
-  );
+  return new CfnResource<AccessPoint_Properties>(AccessPoint_Type, props);
 }
 
 /**

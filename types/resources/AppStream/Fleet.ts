@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::Fleet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Fleet_Type = 'AWS::AppStream::Fleet';
 export const Fleet_Type = 'AWS::AppStream::Fleet';
@@ -10,7 +10,7 @@ export const Fleet_Type = 'AWS::AppStream::Fleet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html}
  */
 export default function Fleet(props: Fleet_Properties) {
-  return new CFResource<Fleet_Type, Fleet_Properties>(Fleet_Type, props);
+  return new CfnResource<Fleet_Properties>(Fleet_Type, props);
 }
 
 /**

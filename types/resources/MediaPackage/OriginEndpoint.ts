@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::OriginEndpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type OriginEndpoint_Type = 'AWS::MediaPackage::OriginEndpoint';
 export const OriginEndpoint_Type = 'AWS::MediaPackage::OriginEndpoint';
@@ -10,10 +10,7 @@ export const OriginEndpoint_Type = 'AWS::MediaPackage::OriginEndpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html}
  */
 export default function OriginEndpoint(props: OriginEndpoint_Properties) {
-  return new CFResource<OriginEndpoint_Type, OriginEndpoint_Properties>(
-    OriginEndpoint_Type,
-    props
-  );
+  return new CfnResource<OriginEndpoint_Properties>(OriginEndpoint_Type, props);
 }
 
 /**

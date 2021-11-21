@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::Build
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Build_Type = 'AWS::GameLift::Build';
 export const Build_Type = 'AWS::GameLift::Build';
@@ -10,7 +10,7 @@ export const Build_Type = 'AWS::GameLift::Build';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html}
  */
 export default function Build(props: Build_Properties) {
-  return new CFResource<Build_Type, Build_Properties>(Build_Type, props);
+  return new CfnResource<Build_Properties>(Build_Type, props);
 }
 
 /**

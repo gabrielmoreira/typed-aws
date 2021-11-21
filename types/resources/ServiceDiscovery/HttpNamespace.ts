@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::HttpNamespace
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type HttpNamespace_Type = 'AWS::ServiceDiscovery::HttpNamespace';
 export const HttpNamespace_Type = 'AWS::ServiceDiscovery::HttpNamespace';
@@ -11,10 +11,7 @@ export const HttpNamespace_Type = 'AWS::ServiceDiscovery::HttpNamespace';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html}
  */
 export default function HttpNamespace(props: HttpNamespace_Properties) {
-  return new CFResource<HttpNamespace_Type, HttpNamespace_Properties>(
-    HttpNamespace_Type,
-    props
-  );
+  return new CfnResource<HttpNamespace_Properties>(HttpNamespace_Type, props);
 }
 
 /**

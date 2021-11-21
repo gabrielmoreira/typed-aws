@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::FleetMetric
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FleetMetric_Type = 'AWS::IoT::FleetMetric';
 export const FleetMetric_Type = 'AWS::IoT::FleetMetric';
@@ -10,10 +10,7 @@ export const FleetMetric_Type = 'AWS::IoT::FleetMetric';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html}
  */
 export default function FleetMetric(props: FleetMetric_Properties) {
-  return new CFResource<FleetMetric_Type, FleetMetric_Properties>(
-    FleetMetric_Type,
-    props
-  );
+  return new CfnResource<FleetMetric_Properties>(FleetMetric_Type, props);
 }
 
 /**

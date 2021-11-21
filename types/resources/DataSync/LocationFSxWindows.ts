@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationFSxWindows
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationFSxWindows_Type = 'AWS::DataSync::LocationFSxWindows';
 export const LocationFSxWindows_Type = 'AWS::DataSync::LocationFSxWindows';
@@ -12,7 +12,7 @@ export const LocationFSxWindows_Type = 'AWS::DataSync::LocationFSxWindows';
 export default function LocationFSxWindows(
   props: LocationFSxWindows_Properties
 ) {
-  return new CFResource<LocationFSxWindows_Type, LocationFSxWindows_Properties>(
+  return new CfnResource<LocationFSxWindows_Properties>(
     LocationFSxWindows_Type,
     props
   );

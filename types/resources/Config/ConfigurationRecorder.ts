@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConfigurationRecorder
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConfigurationRecorder_Type = 'AWS::Config::ConfigurationRecorder';
 export const ConfigurationRecorder_Type = 'AWS::Config::ConfigurationRecorder';
@@ -12,10 +12,10 @@ export const ConfigurationRecorder_Type = 'AWS::Config::ConfigurationRecorder';
 export default function ConfigurationRecorder(
   props: ConfigurationRecorder_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConfigurationRecorder_Properties>(
     ConfigurationRecorder_Type,
-    ConfigurationRecorder_Properties
-  >(ConfigurationRecorder_Type, props);
+    props
+  );
 }
 
 /**

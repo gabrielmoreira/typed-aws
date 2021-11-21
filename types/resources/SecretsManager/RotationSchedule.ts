@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecretsManager::RotationSchedule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RotationSchedule_Type = 'AWS::SecretsManager::RotationSchedule';
 export const RotationSchedule_Type = 'AWS::SecretsManager::RotationSchedule';
@@ -11,7 +11,7 @@ export const RotationSchedule_Type = 'AWS::SecretsManager::RotationSchedule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html}
  */
 export default function RotationSchedule(props: RotationSchedule_Properties) {
-  return new CFResource<RotationSchedule_Type, RotationSchedule_Properties>(
+  return new CfnResource<RotationSchedule_Properties>(
     RotationSchedule_Type,
     props
   );

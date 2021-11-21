@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Inspector::AssessmentTemplate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AssessmentTemplate_Type = 'AWS::Inspector::AssessmentTemplate';
 export const AssessmentTemplate_Type = 'AWS::Inspector::AssessmentTemplate';
@@ -12,7 +12,7 @@ export const AssessmentTemplate_Type = 'AWS::Inspector::AssessmentTemplate';
 export default function AssessmentTemplate(
   props: AssessmentTemplate_Properties
 ) {
-  return new CFResource<AssessmentTemplate_Type, AssessmentTemplate_Properties>(
+  return new CfnResource<AssessmentTemplate_Properties>(
     AssessmentTemplate_Type,
     props
   );

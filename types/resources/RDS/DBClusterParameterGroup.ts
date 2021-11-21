@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBClusterParameterGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBClusterParameterGroup_Type = 'AWS::RDS::DBClusterParameterGroup';
 export const DBClusterParameterGroup_Type = 'AWS::RDS::DBClusterParameterGroup';
@@ -12,10 +12,10 @@ export const DBClusterParameterGroup_Type = 'AWS::RDS::DBClusterParameterGroup';
 export default function DBClusterParameterGroup(
   props: DBClusterParameterGroup_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DBClusterParameterGroup_Properties>(
     DBClusterParameterGroup_Type,
-    DBClusterParameterGroup_Properties
-  >(DBClusterParameterGroup_Type, props);
+    props
+  );
 }
 
 /**

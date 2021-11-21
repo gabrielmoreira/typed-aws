@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cassandra::Keyspace
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Keyspace_Type = 'AWS::Cassandra::Keyspace';
 export const Keyspace_Type = 'AWS::Cassandra::Keyspace';
@@ -10,10 +10,7 @@ export const Keyspace_Type = 'AWS::Cassandra::Keyspace';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html}
  */
 export default function Keyspace(props: Keyspace_Properties) {
-  return new CFResource<Keyspace_Type, Keyspace_Properties>(
-    Keyspace_Type,
-    props
-  );
+  return new CfnResource<Keyspace_Properties>(Keyspace_Type, props);
 }
 
 /**

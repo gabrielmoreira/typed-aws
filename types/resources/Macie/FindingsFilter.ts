@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Macie::FindingsFilter
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FindingsFilter_Type = 'AWS::Macie::FindingsFilter';
 export const FindingsFilter_Type = 'AWS::Macie::FindingsFilter';
@@ -10,10 +10,7 @@ export const FindingsFilter_Type = 'AWS::Macie::FindingsFilter';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html}
  */
 export default function FindingsFilter(props: FindingsFilter_Properties) {
-  return new CFResource<FindingsFilter_Type, FindingsFilter_Properties>(
-    FindingsFilter_Type,
-    props
-  );
+  return new CfnResource<FindingsFilter_Properties>(FindingsFilter_Type, props);
 }
 
 /**

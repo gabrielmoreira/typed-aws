@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::EventBusPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EventBusPolicy_Type = 'AWS::Events::EventBusPolicy';
 export const EventBusPolicy_Type = 'AWS::Events::EventBusPolicy';
@@ -10,10 +10,7 @@ export const EventBusPolicy_Type = 'AWS::Events::EventBusPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html}
  */
 export default function EventBusPolicy(props: EventBusPolicy_Properties) {
-  return new CFResource<EventBusPolicy_Type, EventBusPolicy_Properties>(
-    EventBusPolicy_Type,
-    props
-  );
+  return new CfnResource<EventBusPolicy_Properties>(EventBusPolicy_Type, props);
 }
 
 /**

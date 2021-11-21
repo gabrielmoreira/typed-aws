@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::DistributionConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DistributionConfiguration_Type =
   'AWS::ImageBuilder::DistributionConfiguration';
@@ -15,10 +15,10 @@ export const DistributionConfiguration_Type =
 export default function DistributionConfiguration(
   props: DistributionConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DistributionConfiguration_Properties>(
     DistributionConfiguration_Type,
-    DistributionConfiguration_Properties
-  >(DistributionConfiguration_Type, props);
+    props
+  );
 }
 
 /**

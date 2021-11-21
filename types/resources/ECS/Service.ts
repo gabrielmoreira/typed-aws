@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::Service
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Service_Type = 'AWS::ECS::Service';
 export const Service_Type = 'AWS::ECS::Service';
@@ -10,7 +10,7 @@ export const Service_Type = 'AWS::ECS::Service';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html}
  */
 export default function Service(props: Service_Properties) {
-  return new CFResource<Service_Type, Service_Properties>(Service_Type, props);
+  return new CfnResource<Service_Properties>(Service_Type, props);
 }
 
 /**

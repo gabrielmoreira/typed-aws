@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationEFS
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationEFS_Type = 'AWS::DataSync::LocationEFS';
 export const LocationEFS_Type = 'AWS::DataSync::LocationEFS';
@@ -10,10 +10,7 @@ export const LocationEFS_Type = 'AWS::DataSync::LocationEFS';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html}
  */
 export default function LocationEFS(props: LocationEFS_Properties) {
-  return new CFResource<LocationEFS_Type, LocationEFS_Properties>(
-    LocationEFS_Type,
-    props
-  );
+  return new CfnResource<LocationEFS_Properties>(LocationEFS_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TrafficMirrorTarget
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TrafficMirrorTarget_Type = 'AWS::EC2::TrafficMirrorTarget';
 export const TrafficMirrorTarget_Type = 'AWS::EC2::TrafficMirrorTarget';
@@ -12,10 +12,10 @@ export const TrafficMirrorTarget_Type = 'AWS::EC2::TrafficMirrorTarget';
 export default function TrafficMirrorTarget(
   props: TrafficMirrorTarget_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TrafficMirrorTarget_Properties>(
     TrafficMirrorTarget_Type,
-    TrafficMirrorTarget_Properties
-  >(TrafficMirrorTarget_Type, props);
+    props
+  );
 }
 
 /**

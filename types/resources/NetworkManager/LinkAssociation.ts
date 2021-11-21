@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::LinkAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LinkAssociation_Type = 'AWS::NetworkManager::LinkAssociation';
 export const LinkAssociation_Type = 'AWS::NetworkManager::LinkAssociation';
@@ -12,7 +12,7 @@ export const LinkAssociation_Type = 'AWS::NetworkManager::LinkAssociation';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html}
  */
 export default function LinkAssociation(props: LinkAssociation_Properties) {
-  return new CFResource<LinkAssociation_Type, LinkAssociation_Properties>(
+  return new CfnResource<LinkAssociation_Properties>(
     LinkAssociation_Type,
     props
   );

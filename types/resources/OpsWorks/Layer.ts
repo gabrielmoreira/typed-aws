@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::Layer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Layer_Type = 'AWS::OpsWorks::Layer';
 export const Layer_Type = 'AWS::OpsWorks::Layer';
@@ -10,7 +10,7 @@ export const Layer_Type = 'AWS::OpsWorks::Layer';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html}
  */
 export default function Layer(props: Layer_Properties) {
-  return new CFResource<Layer_Type, Layer_Properties>(Layer_Type, props);
+  return new CfnResource<Layer_Properties>(Layer_Type, props);
 }
 
 /**

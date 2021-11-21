@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DLM::LifecyclePolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LifecyclePolicy_Type = 'AWS::DLM::LifecyclePolicy';
 export const LifecyclePolicy_Type = 'AWS::DLM::LifecyclePolicy';
@@ -10,7 +10,7 @@ export const LifecyclePolicy_Type = 'AWS::DLM::LifecyclePolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dlm-lifecyclepolicy.html}
  */
 export default function LifecyclePolicy(props: LifecyclePolicy_Properties) {
-  return new CFResource<LifecyclePolicy_Type, LifecyclePolicy_Properties>(
+  return new CfnResource<LifecyclePolicy_Properties>(
     LifecyclePolicy_Type,
     props
   );

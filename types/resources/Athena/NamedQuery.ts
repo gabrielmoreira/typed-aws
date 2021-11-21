@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::NamedQuery
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NamedQuery_Type = 'AWS::Athena::NamedQuery';
 export const NamedQuery_Type = 'AWS::Athena::NamedQuery';
@@ -10,10 +10,7 @@ export const NamedQuery_Type = 'AWS::Athena::NamedQuery';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html}
  */
 export default function NamedQuery(props: NamedQuery_Properties) {
-  return new CFResource<NamedQuery_Type, NamedQuery_Properties>(
-    NamedQuery_Type,
-    props
-  );
+  return new CfnResource<NamedQuery_Properties>(NamedQuery_Type, props);
 }
 
 /**

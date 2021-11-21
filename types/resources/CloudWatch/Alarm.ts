@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::Alarm
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Alarm_Type = 'AWS::CloudWatch::Alarm';
 export const Alarm_Type = 'AWS::CloudWatch::Alarm';
@@ -10,7 +10,7 @@ export const Alarm_Type = 'AWS::CloudWatch::Alarm';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html}
  */
 export default function Alarm(props: Alarm_Properties) {
-  return new CFResource<Alarm_Type, Alarm_Properties>(Alarm_Type, props);
+  return new CfnResource<Alarm_Properties>(Alarm_Type, props);
 }
 
 /**

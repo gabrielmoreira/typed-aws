@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualNode
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VirtualNode_Type = 'AWS::AppMesh::VirtualNode';
 export const VirtualNode_Type = 'AWS::AppMesh::VirtualNode';
@@ -10,10 +10,7 @@ export const VirtualNode_Type = 'AWS::AppMesh::VirtualNode';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html}
  */
 export default function VirtualNode(props: VirtualNode_Properties) {
-  return new CFResource<VirtualNode_Type, VirtualNode_Properties>(
-    VirtualNode_Type,
-    props
-  );
+  return new CfnResource<VirtualNode_Properties>(VirtualNode_Type, props);
 }
 
 /**

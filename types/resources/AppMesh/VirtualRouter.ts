@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualRouter
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VirtualRouter_Type = 'AWS::AppMesh::VirtualRouter';
 export const VirtualRouter_Type = 'AWS::AppMesh::VirtualRouter';
@@ -10,10 +10,7 @@ export const VirtualRouter_Type = 'AWS::AppMesh::VirtualRouter';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html}
  */
 export default function VirtualRouter(props: VirtualRouter_Properties) {
-  return new CFResource<VirtualRouter_Type, VirtualRouter_Properties>(
-    VirtualRouter_Type,
-    props
-  );
+  return new CfnResource<VirtualRouter_Properties>(VirtualRouter_Type, props);
 }
 
 /**

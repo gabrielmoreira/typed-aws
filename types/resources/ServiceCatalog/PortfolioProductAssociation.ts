@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::PortfolioProductAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PortfolioProductAssociation_Type =
   'AWS::ServiceCatalog::PortfolioProductAssociation';
@@ -15,10 +15,10 @@ export const PortfolioProductAssociation_Type =
 export default function PortfolioProductAssociation(
   props: PortfolioProductAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<PortfolioProductAssociation_Properties>(
     PortfolioProductAssociation_Type,
-    PortfolioProductAssociation_Properties
-  >(PortfolioProductAssociation_Type, props);
+    props
+  );
 }
 
 /**

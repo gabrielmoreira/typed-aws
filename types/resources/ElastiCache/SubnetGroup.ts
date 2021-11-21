@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::SubnetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SubnetGroup_Type = 'AWS::ElastiCache::SubnetGroup';
 export const SubnetGroup_Type = 'AWS::ElastiCache::SubnetGroup';
@@ -10,10 +10,7 @@ export const SubnetGroup_Type = 'AWS::ElastiCache::SubnetGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html}
  */
 export default function SubnetGroup(props: SubnetGroup_Properties) {
-  return new CFResource<SubnetGroup_Type, SubnetGroup_Properties>(
-    SubnetGroup_Type,
-    props
-  );
+  return new CfnResource<SubnetGroup_Properties>(SubnetGroup_Type, props);
 }
 
 /**

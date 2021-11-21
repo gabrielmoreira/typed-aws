@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::CustomMetric
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CustomMetric_Type = 'AWS::IoT::CustomMetric';
 export const CustomMetric_Type = 'AWS::IoT::CustomMetric';
@@ -10,10 +10,7 @@ export const CustomMetric_Type = 'AWS::IoT::CustomMetric';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html}
  */
 export default function CustomMetric(props: CustomMetric_Properties) {
-  return new CFResource<CustomMetric_Type, CustomMetric_Properties>(
-    CustomMetric_Type,
-    props
-  );
+  return new CfnResource<CustomMetric_Properties>(CustomMetric_Type, props);
 }
 
 /**

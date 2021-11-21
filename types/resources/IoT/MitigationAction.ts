@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::MitigationAction
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MitigationAction_Type = 'AWS::IoT::MitigationAction';
 export const MitigationAction_Type = 'AWS::IoT::MitigationAction';
@@ -11,7 +11,7 @@ export const MitigationAction_Type = 'AWS::IoT::MitigationAction';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html}
  */
 export default function MitigationAction(props: MitigationAction_Properties) {
-  return new CFResource<MitigationAction_Type, MitigationAction_Properties>(
+  return new CfnResource<MitigationAction_Properties>(
     MitigationAction_Type,
     props
   );

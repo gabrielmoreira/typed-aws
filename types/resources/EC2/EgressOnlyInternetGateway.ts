@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EgressOnlyInternetGateway
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EgressOnlyInternetGateway_Type =
   'AWS::EC2::EgressOnlyInternetGateway';
@@ -15,10 +15,10 @@ export const EgressOnlyInternetGateway_Type =
 export default function EgressOnlyInternetGateway(
   props: EgressOnlyInternetGateway_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<EgressOnlyInternetGateway_Properties>(
     EgressOnlyInternetGateway_Type,
-    EgressOnlyInternetGateway_Properties
-  >(EgressOnlyInternetGateway_Type, props);
+    props
+  );
 }
 
 /**

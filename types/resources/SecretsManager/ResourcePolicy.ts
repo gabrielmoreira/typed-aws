@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecretsManager::ResourcePolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourcePolicy_Type = 'AWS::SecretsManager::ResourcePolicy';
 export const ResourcePolicy_Type = 'AWS::SecretsManager::ResourcePolicy';
@@ -11,10 +11,7 @@ export const ResourcePolicy_Type = 'AWS::SecretsManager::ResourcePolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html}
  */
 export default function ResourcePolicy(props: ResourcePolicy_Properties) {
-  return new CFResource<ResourcePolicy_Type, ResourcePolicy_Properties>(
-    ResourcePolicy_Type,
-    props
-  );
+  return new CfnResource<ResourcePolicy_Properties>(ResourcePolicy_Type, props);
 }
 
 /**

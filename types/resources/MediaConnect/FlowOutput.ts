@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaConnect::FlowOutput
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FlowOutput_Type = 'AWS::MediaConnect::FlowOutput';
 export const FlowOutput_Type = 'AWS::MediaConnect::FlowOutput';
@@ -10,10 +10,7 @@ export const FlowOutput_Type = 'AWS::MediaConnect::FlowOutput';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html}
  */
 export default function FlowOutput(props: FlowOutput_Properties) {
-  return new CFResource<FlowOutput_Type, FlowOutput_Properties>(
-    FlowOutput_Type,
-    props
-  );
+  return new CfnResource<FlowOutput_Properties>(FlowOutput_Type, props);
 }
 
 /**

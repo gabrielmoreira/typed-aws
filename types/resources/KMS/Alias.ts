@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KMS::Alias
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Alias_Type = 'AWS::KMS::Alias';
 export const Alias_Type = 'AWS::KMS::Alias';
@@ -12,7 +12,7 @@ export const Alias_Type = 'AWS::KMS::Alias';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html}
  */
 export default function Alias(props: Alias_Properties) {
-  return new CFResource<Alias_Type, Alias_Properties>(Alias_Type, props);
+  return new CfnResource<Alias_Properties>(Alias_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolDomain
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolDomain_Type = 'AWS::Cognito::UserPoolDomain';
 export const UserPoolDomain_Type = 'AWS::Cognito::UserPoolDomain';
@@ -10,10 +10,7 @@ export const UserPoolDomain_Type = 'AWS::Cognito::UserPoolDomain';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html}
  */
 export default function UserPoolDomain(props: UserPoolDomain_Properties) {
-  return new CFResource<UserPoolDomain_Type, UserPoolDomain_Properties>(
-    UserPoolDomain_Type,
-    props
-  );
+  return new CfnResource<UserPoolDomain_Properties>(UserPoolDomain_Type, props);
 }
 
 /**

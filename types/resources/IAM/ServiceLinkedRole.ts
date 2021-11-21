@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::ServiceLinkedRole
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ServiceLinkedRole_Type = 'AWS::IAM::ServiceLinkedRole';
 export const ServiceLinkedRole_Type = 'AWS::IAM::ServiceLinkedRole';
@@ -10,7 +10,7 @@ export const ServiceLinkedRole_Type = 'AWS::IAM::ServiceLinkedRole';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html}
  */
 export default function ServiceLinkedRole(props: ServiceLinkedRole_Properties) {
-  return new CFResource<ServiceLinkedRole_Type, ServiceLinkedRole_Properties>(
+  return new CfnResource<ServiceLinkedRole_Properties>(
     ServiceLinkedRole_Type,
     props
   );

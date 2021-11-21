@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SQS::QueuePolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type QueuePolicy_Type = 'AWS::SQS::QueuePolicy';
 export const QueuePolicy_Type = 'AWS::SQS::QueuePolicy';
@@ -10,10 +10,7 @@ export const QueuePolicy_Type = 'AWS::SQS::QueuePolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html}
  */
 export default function QueuePolicy(props: QueuePolicy_Properties) {
-  return new CFResource<QueuePolicy_Type, QueuePolicy_Properties>(
-    QueuePolicy_Type,
-    props
-  );
+  return new CfnResource<QueuePolicy_Properties>(QueuePolicy_Type, props);
 }
 
 /**

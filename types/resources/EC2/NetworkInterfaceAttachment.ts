@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInterfaceAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkInterfaceAttachment_Type =
   'AWS::EC2::NetworkInterfaceAttachment';
@@ -15,10 +15,10 @@ export const NetworkInterfaceAttachment_Type =
 export default function NetworkInterfaceAttachment(
   props: NetworkInterfaceAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<NetworkInterfaceAttachment_Properties>(
     NetworkInterfaceAttachment_Type,
-    NetworkInterfaceAttachment_Properties
-  >(NetworkInterfaceAttachment_Type, props);
+    props
+  );
 }
 
 /**

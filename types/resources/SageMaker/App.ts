@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::App
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type App_Type = 'AWS::SageMaker::App';
 export const App_Type = 'AWS::SageMaker::App';
@@ -10,7 +10,7 @@ export const App_Type = 'AWS::SageMaker::App';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html}
  */
 export default function App(props: App_Properties) {
-  return new CFResource<App_Type, App_Properties>(App_Type, props);
+  return new CfnResource<App_Properties>(App_Type, props);
 }
 
 /**

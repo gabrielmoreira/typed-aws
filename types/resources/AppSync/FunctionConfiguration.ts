@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::FunctionConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FunctionConfiguration_Type = 'AWS::AppSync::FunctionConfiguration';
 export const FunctionConfiguration_Type = 'AWS::AppSync::FunctionConfiguration';
@@ -13,10 +13,10 @@ export const FunctionConfiguration_Type = 'AWS::AppSync::FunctionConfiguration';
 export default function FunctionConfiguration(
   props: FunctionConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<FunctionConfiguration_Properties>(
     FunctionConfiguration_Type,
-    FunctionConfiguration_Properties
-  >(FunctionConfiguration_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::PortfolioShare
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PortfolioShare_Type = 'AWS::ServiceCatalog::PortfolioShare';
 export const PortfolioShare_Type = 'AWS::ServiceCatalog::PortfolioShare';
@@ -11,10 +11,7 @@ export const PortfolioShare_Type = 'AWS::ServiceCatalog::PortfolioShare';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html}
  */
 export default function PortfolioShare(props: PortfolioShare_Properties) {
-  return new CFResource<PortfolioShare_Type, PortfolioShare_Properties>(
-    PortfolioShare_Type,
-    props
-  );
+  return new CfnResource<PortfolioShare_Properties>(PortfolioShare_Type, props);
 }
 
 /**

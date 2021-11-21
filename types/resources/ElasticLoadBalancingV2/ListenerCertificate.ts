@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticLoadBalancingV2::ListenerCertificate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ListenerCertificate_Type =
   'AWS::ElasticLoadBalancingV2::ListenerCertificate';
@@ -15,10 +15,10 @@ export const ListenerCertificate_Type =
 export default function ListenerCertificate(
   props: ListenerCertificate_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ListenerCertificate_Properties>(
     ListenerCertificate_Type,
-    ListenerCertificate_Properties
-  >(ListenerCertificate_Type, props);
+    props
+  );
 }
 
 /**

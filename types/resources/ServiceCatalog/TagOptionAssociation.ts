@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::TagOptionAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TagOptionAssociation_Type =
   'AWS::ServiceCatalog::TagOptionAssociation';
@@ -15,10 +15,10 @@ export const TagOptionAssociation_Type =
 export default function TagOptionAssociation(
   props: TagOptionAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TagOptionAssociation_Properties>(
     TagOptionAssociation_Type,
-    TagOptionAssociation_Properties
-  >(TagOptionAssociation_Type, props);
+    props
+  );
 }
 
 /**

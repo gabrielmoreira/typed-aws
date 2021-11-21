@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayPeeringAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayPeeringAttachment_Type =
   'AWS::EC2::TransitGatewayPeeringAttachment';
@@ -14,10 +14,10 @@ export const TransitGatewayPeeringAttachment_Type =
 export default function TransitGatewayPeeringAttachment(
   props: TransitGatewayPeeringAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayPeeringAttachment_Properties>(
     TransitGatewayPeeringAttachment_Type,
-    TransitGatewayPeeringAttachment_Properties
-  >(TransitGatewayPeeringAttachment_Type, props);
+    props
+  );
 }
 
 /**

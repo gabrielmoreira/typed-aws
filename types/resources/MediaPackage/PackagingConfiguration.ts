@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::PackagingConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PackagingConfiguration_Type =
   'AWS::MediaPackage::PackagingConfiguration';
@@ -14,10 +14,10 @@ export const PackagingConfiguration_Type =
 export default function PackagingConfiguration(
   props: PackagingConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<PackagingConfiguration_Properties>(
     PackagingConfiguration_Type,
-    PackagingConfiguration_Properties
-  >(PackagingConfiguration_Type, props);
+    props
+  );
 }
 
 /**

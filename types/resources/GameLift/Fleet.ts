@@ -1,12 +1,12 @@
 // CloudFormation Resource AWS::GameLift::Fleet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Fleet_Type = 'AWS::GameLift::Fleet';
 export const Fleet_Type = 'AWS::GameLift::Fleet';
 
 export default function Fleet(props: Fleet_Properties) {
-  return new CFResource<Fleet_Type, Fleet_Properties>(Fleet_Type, props);
+  return new CfnResource<Fleet_Properties>(Fleet_Type, props);
 }
 
 export type Fleet_Properties = {

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EIP
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EIP_Type = 'AWS::EC2::EIP';
 export const EIP_Type = 'AWS::EC2::EIP';
@@ -10,7 +10,7 @@ export const EIP_Type = 'AWS::EC2::EIP';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html}
  */
 export default function EIP(props: EIP_Properties) {
-  return new CFResource<EIP_Type, EIP_Properties>(EIP_Type, props);
+  return new CfnResource<EIP_Properties>(EIP_Type, props);
 }
 
 /**

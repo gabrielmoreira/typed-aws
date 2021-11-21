@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::WarmPool
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WarmPool_Type = 'AWS::AutoScaling::WarmPool';
 export const WarmPool_Type = 'AWS::AutoScaling::WarmPool';
@@ -10,10 +10,7 @@ export const WarmPool_Type = 'AWS::AutoScaling::WarmPool';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html}
  */
 export default function WarmPool(props: WarmPool_Properties) {
-  return new CFResource<WarmPool_Type, WarmPool_Properties>(
-    WarmPool_Type,
-    props
-  );
+  return new CfnResource<WarmPool_Properties>(WarmPool_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::Stack
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Stack_Type = 'AWS::CloudFormation::Stack';
 export const Stack_Type = 'AWS::CloudFormation::Stack';
@@ -10,7 +10,7 @@ export const Stack_Type = 'AWS::CloudFormation::Stack';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html}
  */
 export default function Stack(props: Stack_Properties) {
-  return new CFResource<Stack_Type, Stack_Properties>(Stack_Type, props);
+  return new CfnResource<Stack_Properties>(Stack_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::LaunchConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LaunchConfiguration_Type = 'AWS::AutoScaling::LaunchConfiguration';
 export const LaunchConfiguration_Type = 'AWS::AutoScaling::LaunchConfiguration';
@@ -14,10 +14,10 @@ export const LaunchConfiguration_Type = 'AWS::AutoScaling::LaunchConfiguration';
 export default function LaunchConfiguration(
   props: LaunchConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LaunchConfiguration_Properties>(
     LaunchConfiguration_Type,
-    LaunchConfiguration_Properties
-  >(LaunchConfiguration_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EMR::InstanceFleetConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type InstanceFleetConfig_Type = 'AWS::EMR::InstanceFleetConfig';
 export const InstanceFleetConfig_Type = 'AWS::EMR::InstanceFleetConfig';
@@ -12,10 +12,10 @@ export const InstanceFleetConfig_Type = 'AWS::EMR::InstanceFleetConfig';
 export default function InstanceFleetConfig(
   props: InstanceFleetConfig_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<InstanceFleetConfig_Properties>(
     InstanceFleetConfig_Type,
-    InstanceFleetConfig_Properties
-  >(InstanceFleetConfig_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::Endpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Endpoint_Type = 'AWS::S3Outposts::Endpoint';
 export const Endpoint_Type = 'AWS::S3Outposts::Endpoint';
@@ -10,10 +10,7 @@ export const Endpoint_Type = 'AWS::S3Outposts::Endpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html}
  */
 export default function Endpoint(props: Endpoint_Properties) {
-  return new CFResource<Endpoint_Type, Endpoint_Properties>(
-    Endpoint_Type,
-    props
-  );
+  return new CfnResource<Endpoint_Properties>(Endpoint_Type, props);
 }
 
 /**

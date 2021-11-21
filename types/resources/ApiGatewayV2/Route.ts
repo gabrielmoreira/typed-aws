@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::Route
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Route_Type = 'AWS::ApiGatewayV2::Route';
 export const Route_Type = 'AWS::ApiGatewayV2::Route';
@@ -10,7 +10,7 @@ export const Route_Type = 'AWS::ApiGatewayV2::Route';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-route.html}
  */
 export default function Route(props: Route_Properties) {
-  return new CFResource<Route_Type, Route_Properties>(Route_Type, props);
+  return new CfnResource<Route_Properties>(Route_Type, props);
 }
 
 /**

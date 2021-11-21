@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::DataQualityJobDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DataQualityJobDefinition_Type =
   'AWS::SageMaker::DataQualityJobDefinition';
@@ -15,10 +15,10 @@ export const DataQualityJobDefinition_Type =
 export default function DataQualityJobDefinition(
   props: DataQualityJobDefinition_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DataQualityJobDefinition_Properties>(
     DataQualityJobDefinition_Type,
-    DataQualityJobDefinition_Properties
-  >(DataQualityJobDefinition_Type, props);
+    props
+  );
 }
 
 /**

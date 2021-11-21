@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::SchemaVersionMetadata
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SchemaVersionMetadata_Type = 'AWS::Glue::SchemaVersionMetadata';
 export const SchemaVersionMetadata_Type = 'AWS::Glue::SchemaVersionMetadata';
@@ -13,10 +13,10 @@ export const SchemaVersionMetadata_Type = 'AWS::Glue::SchemaVersionMetadata';
 export default function SchemaVersionMetadata(
   props: SchemaVersionMetadata_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SchemaVersionMetadata_Properties>(
     SchemaVersionMetadata_Type,
-    SchemaVersionMetadata_Properties
-  >(SchemaVersionMetadata_Type, props);
+    props
+  );
 }
 
 /**

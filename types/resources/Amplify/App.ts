@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Amplify::App
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type App_Type = 'AWS::Amplify::App';
 export const App_Type = 'AWS::Amplify::App';
@@ -11,7 +11,7 @@ export const App_Type = 'AWS::Amplify::App';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html}
  */
 export default function App(props: App_Properties) {
-  return new CFResource<App_Type, App_Properties>(App_Type, props);
+  return new CfnResource<App_Properties>(App_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::FirewallPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FirewallPolicy_Type = 'AWS::NetworkFirewall::FirewallPolicy';
 export const FirewallPolicy_Type = 'AWS::NetworkFirewall::FirewallPolicy';
@@ -11,10 +11,7 @@ export const FirewallPolicy_Type = 'AWS::NetworkFirewall::FirewallPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html}
  */
 export default function FirewallPolicy(props: FirewallPolicy_Properties) {
-  return new CFResource<FirewallPolicy_Type, FirewallPolicy_Properties>(
-    FirewallPolicy_Type,
-    props
-  );
+  return new CfnResource<FirewallPolicy_Properties>(FirewallPolicy_Type, props);
 }
 
 /**

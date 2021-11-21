@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Detective::MemberInvitation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MemberInvitation_Type = 'AWS::Detective::MemberInvitation';
 export const MemberInvitation_Type = 'AWS::Detective::MemberInvitation';
@@ -10,7 +10,7 @@ export const MemberInvitation_Type = 'AWS::Detective::MemberInvitation';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html}
  */
 export default function MemberInvitation(props: MemberInvitation_Properties) {
-  return new CFResource<MemberInvitation_Type, MemberInvitation_Properties>(
+  return new CfnResource<MemberInvitation_Properties>(
     MemberInvitation_Type,
     props
   );

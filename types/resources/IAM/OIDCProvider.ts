@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::OIDCProvider
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type OIDCProvider_Type = 'AWS::IAM::OIDCProvider';
 export const OIDCProvider_Type = 'AWS::IAM::OIDCProvider';
@@ -10,10 +10,7 @@ export const OIDCProvider_Type = 'AWS::IAM::OIDCProvider';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html}
  */
 export default function OIDCProvider(props: OIDCProvider_Properties) {
-  return new CFResource<OIDCProvider_Type, OIDCProvider_Properties>(
-    OIDCProvider_Type,
-    props
-  );
+  return new CfnResource<OIDCProvider_Properties>(OIDCProvider_Type, props);
 }
 
 /**

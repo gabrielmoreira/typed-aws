@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::AutoScalingGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AutoScalingGroup_Type = 'AWS::AutoScaling::AutoScalingGroup';
 export const AutoScalingGroup_Type = 'AWS::AutoScaling::AutoScalingGroup';
@@ -10,7 +10,7 @@ export const AutoScalingGroup_Type = 'AWS::AutoScaling::AutoScalingGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html}
  */
 export default function AutoScalingGroup(props: AutoScalingGroup_Properties) {
-  return new CFResource<AutoScalingGroup_Type, AutoScalingGroup_Properties>(
+  return new CfnResource<AutoScalingGroup_Properties>(
     AutoScalingGroup_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolUserToGroupAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolUserToGroupAttachment_Type =
   'AWS::Cognito::UserPoolUserToGroupAttachment';
@@ -15,10 +15,10 @@ export const UserPoolUserToGroupAttachment_Type =
 export default function UserPoolUserToGroupAttachment(
   props: UserPoolUserToGroupAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<UserPoolUserToGroupAttachment_Properties>(
     UserPoolUserToGroupAttachment_Type,
-    UserPoolUserToGroupAttachment_Properties
-  >(UserPoolUserToGroupAttachment_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::FIS::ExperimentTemplate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ExperimentTemplate_Type = 'AWS::FIS::ExperimentTemplate';
 export const ExperimentTemplate_Type = 'AWS::FIS::ExperimentTemplate';
@@ -12,7 +12,7 @@ export const ExperimentTemplate_Type = 'AWS::FIS::ExperimentTemplate';
 export default function ExperimentTemplate(
   props: ExperimentTemplate_Properties
 ) {
-  return new CFResource<ExperimentTemplate_Type, ExperimentTemplate_Properties>(
+  return new CfnResource<ExperimentTemplate_Properties>(
     ExperimentTemplate_Type,
     props
   );

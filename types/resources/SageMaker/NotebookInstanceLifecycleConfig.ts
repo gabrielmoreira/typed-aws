@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::NotebookInstanceLifecycleConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NotebookInstanceLifecycleConfig_Type =
   'AWS::SageMaker::NotebookInstanceLifecycleConfig';
@@ -15,10 +15,10 @@ export const NotebookInstanceLifecycleConfig_Type =
 export default function NotebookInstanceLifecycleConfig(
   props: NotebookInstanceLifecycleConfig_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<NotebookInstanceLifecycleConfig_Properties>(
     NotebookInstanceLifecycleConfig_Type,
-    NotebookInstanceLifecycleConfig_Properties
-  >(NotebookInstanceLifecycleConfig_Type, props);
+    props
+  );
 }
 
 /**

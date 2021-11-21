@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::TaskDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TaskDefinition_Type = 'AWS::ECS::TaskDefinition';
 export const TaskDefinition_Type = 'AWS::ECS::TaskDefinition';
@@ -11,10 +11,7 @@ export const TaskDefinition_Type = 'AWS::ECS::TaskDefinition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html}
  */
 export default function TaskDefinition(props: TaskDefinition_Properties) {
-  return new CFResource<TaskDefinition_Type, TaskDefinition_Properties>(
-    TaskDefinition_Type,
-    props
-  );
+  return new CfnResource<TaskDefinition_Properties>(TaskDefinition_Type, props);
 }
 
 /**

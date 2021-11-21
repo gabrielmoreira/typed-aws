@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ModelBiasJobDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ModelBiasJobDefinition_Type =
   'AWS::SageMaker::ModelBiasJobDefinition';
@@ -15,10 +15,10 @@ export const ModelBiasJobDefinition_Type =
 export default function ModelBiasJobDefinition(
   props: ModelBiasJobDefinition_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ModelBiasJobDefinition_Properties>(
     ModelBiasJobDefinition_Type,
-    ModelBiasJobDefinition_Properties
-  >(ModelBiasJobDefinition_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBProxyEndpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBProxyEndpoint_Type = 'AWS::RDS::DBProxyEndpoint';
 export const DBProxyEndpoint_Type = 'AWS::RDS::DBProxyEndpoint';
@@ -10,7 +10,7 @@ export const DBProxyEndpoint_Type = 'AWS::RDS::DBProxyEndpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html}
  */
 export default function DBProxyEndpoint(props: DBProxyEndpoint_Properties) {
-  return new CFResource<DBProxyEndpoint_Type, DBProxyEndpoint_Properties>(
+  return new CfnResource<DBProxyEndpoint_Properties>(
     DBProxyEndpoint_Type,
     props
   );

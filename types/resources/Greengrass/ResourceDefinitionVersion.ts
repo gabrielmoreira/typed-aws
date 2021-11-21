@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::ResourceDefinitionVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceDefinitionVersion_Type =
   'AWS::Greengrass::ResourceDefinitionVersion';
@@ -15,10 +15,10 @@ export const ResourceDefinitionVersion_Type =
 export default function ResourceDefinitionVersion(
   props: ResourceDefinitionVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResourceDefinitionVersion_Properties>(
     ResourceDefinitionVersion_Type,
-    ResourceDefinitionVersion_Properties
-  >(ResourceDefinitionVersion_Type, props);
+    props
+  );
 }
 
 /**

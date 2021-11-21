@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalogAppRegistry::ResourceAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceAssociation_Type =
   'AWS::ServiceCatalogAppRegistry::ResourceAssociation';
@@ -15,10 +15,10 @@ export const ResourceAssociation_Type =
 export default function ResourceAssociation(
   props: ResourceAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResourceAssociation_Properties>(
     ResourceAssociation_Type,
-    ResourceAssociation_Properties
-  >(ResourceAssociation_Type, props);
+    props
+  );
 }
 
 /**

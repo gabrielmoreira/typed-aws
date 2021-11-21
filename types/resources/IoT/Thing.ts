@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Thing
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Thing_Type = 'AWS::IoT::Thing';
 export const Thing_Type = 'AWS::IoT::Thing';
@@ -10,7 +10,7 @@ export const Thing_Type = 'AWS::IoT::Thing';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html}
  */
 export default function Thing(props: Thing_Properties) {
-  return new CFResource<Thing_Type, Thing_Properties>(Thing_Type, props);
+  return new CfnResource<Thing_Properties>(Thing_Type, props);
 }
 
 /**

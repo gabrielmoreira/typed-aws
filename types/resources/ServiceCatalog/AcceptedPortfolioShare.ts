@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::AcceptedPortfolioShare
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AcceptedPortfolioShare_Type =
   'AWS::ServiceCatalog::AcceptedPortfolioShare';
@@ -15,10 +15,10 @@ export const AcceptedPortfolioShare_Type =
 export default function AcceptedPortfolioShare(
   props: AcceptedPortfolioShare_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<AcceptedPortfolioShare_Properties>(
     AcceptedPortfolioShare_Type,
-    AcceptedPortfolioShare_Properties
-  >(AcceptedPortfolioShare_Type, props);
+    props
+  );
 }
 
 /**

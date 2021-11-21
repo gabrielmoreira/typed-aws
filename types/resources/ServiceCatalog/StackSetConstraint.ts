@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::StackSetConstraint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StackSetConstraint_Type = 'AWS::ServiceCatalog::StackSetConstraint';
 export const StackSetConstraint_Type =
@@ -14,7 +14,7 @@ export const StackSetConstraint_Type =
 export default function StackSetConstraint(
   props: StackSetConstraint_Properties
 ) {
-  return new CFResource<StackSetConstraint_Type, StackSetConstraint_Properties>(
+  return new CfnResource<StackSetConstraint_Properties>(
     StackSetConstraint_Type,
     props
   );

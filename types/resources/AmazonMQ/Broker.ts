@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AmazonMQ::Broker
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Broker_Type = 'AWS::AmazonMQ::Broker';
 export const Broker_Type = 'AWS::AmazonMQ::Broker';
@@ -10,7 +10,7 @@ export const Broker_Type = 'AWS::AmazonMQ::Broker';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html}
  */
 export default function Broker(props: Broker_Properties) {
-  return new CFResource<Broker_Type, Broker_Properties>(Broker_Type, props);
+  return new CfnResource<Broker_Properties>(Broker_Type, props);
 }
 
 /**

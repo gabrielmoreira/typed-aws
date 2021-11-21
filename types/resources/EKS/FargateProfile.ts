@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EKS::FargateProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FargateProfile_Type = 'AWS::EKS::FargateProfile';
 export const FargateProfile_Type = 'AWS::EKS::FargateProfile';
@@ -10,10 +10,7 @@ export const FargateProfile_Type = 'AWS::EKS::FargateProfile';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html}
  */
 export default function FargateProfile(props: FargateProfile_Properties) {
-  return new CFResource<FargateProfile_Type, FargateProfile_Properties>(
-    FargateProfile_Type,
-    props
-  );
+  return new CfnResource<FargateProfile_Properties>(FargateProfile_Type, props);
 }
 
 /**

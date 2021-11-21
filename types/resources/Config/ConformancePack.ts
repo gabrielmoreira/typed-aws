@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConformancePack
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConformancePack_Type = 'AWS::Config::ConformancePack';
 export const ConformancePack_Type = 'AWS::Config::ConformancePack';
@@ -12,7 +12,7 @@ export const ConformancePack_Type = 'AWS::Config::ConformancePack';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html}
  */
 export default function ConformancePack(props: ConformancePack_Properties) {
-  return new CFResource<ConformancePack_Type, ConformancePack_Properties>(
+  return new CfnResource<ConformancePack_Properties>(
     ConformancePack_Type,
     props
   );

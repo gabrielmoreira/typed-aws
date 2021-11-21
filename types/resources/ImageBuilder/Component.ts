@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::Component
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Component_Type = 'AWS::ImageBuilder::Component';
 export const Component_Type = 'AWS::ImageBuilder::Component';
@@ -10,10 +10,7 @@ export const Component_Type = 'AWS::ImageBuilder::Component';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html}
  */
 export default function Component(props: Component_Properties) {
-  return new CFResource<Component_Type, Component_Properties>(
-    Component_Type,
-    props
-  );
+  return new CfnResource<Component_Properties>(Component_Type, props);
 }
 
 /**

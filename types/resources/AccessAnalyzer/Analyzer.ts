@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AccessAnalyzer::Analyzer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Analyzer_Type = 'AWS::AccessAnalyzer::Analyzer';
 export const Analyzer_Type = 'AWS::AccessAnalyzer::Analyzer';
@@ -11,10 +11,7 @@ export const Analyzer_Type = 'AWS::AccessAnalyzer::Analyzer';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html}
  */
 export default function Analyzer(props: Analyzer_Properties) {
-  return new CFResource<Analyzer_Type, Analyzer_Properties>(
-    Analyzer_Type,
-    props
-  );
+  return new CfnResource<Analyzer_Properties>(Analyzer_Type, props);
 }
 
 /**

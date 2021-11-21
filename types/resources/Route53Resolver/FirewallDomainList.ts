@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::FirewallDomainList
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FirewallDomainList_Type =
   'AWS::Route53Resolver::FirewallDomainList';
@@ -14,7 +14,7 @@ export const FirewallDomainList_Type =
 export default function FirewallDomainList(
   props: FirewallDomainList_Properties
 ) {
-  return new CFResource<FirewallDomainList_Type, FirewallDomainList_Properties>(
+  return new CfnResource<FirewallDomainList_Properties>(
     FirewallDomainList_Type,
     props
   );

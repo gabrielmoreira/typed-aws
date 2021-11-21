@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppConfig::Deployment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Deployment_Type = 'AWS::AppConfig::Deployment';
 export const Deployment_Type = 'AWS::AppConfig::Deployment';
@@ -10,10 +10,7 @@ export const Deployment_Type = 'AWS::AppConfig::Deployment';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html}
  */
 export default function Deployment(props: Deployment_Properties) {
-  return new CFResource<Deployment_Type, Deployment_Properties>(
-    Deployment_Type,
-    props
-  );
+  return new CfnResource<Deployment_Properties>(Deployment_Type, props);
 }
 
 /**

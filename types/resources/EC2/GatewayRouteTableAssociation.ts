@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::GatewayRouteTableAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GatewayRouteTableAssociation_Type =
   'AWS::EC2::GatewayRouteTableAssociation';
@@ -17,10 +17,10 @@ export const GatewayRouteTableAssociation_Type =
 export default function GatewayRouteTableAssociation(
   props: GatewayRouteTableAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<GatewayRouteTableAssociation_Properties>(
     GatewayRouteTableAssociation_Type,
-    GatewayRouteTableAssociation_Properties
-  >(GatewayRouteTableAssociation_Type, props);
+    props
+  );
 }
 
 /**

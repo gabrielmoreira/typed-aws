@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::Macro
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Macro_Type = 'AWS::CloudFormation::Macro';
 export const Macro_Type = 'AWS::CloudFormation::Macro';
@@ -10,7 +10,7 @@ export const Macro_Type = 'AWS::CloudFormation::Macro';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html}
  */
 export default function Macro(props: Macro_Properties) {
-  return new CFResource<Macro_Type, Macro_Properties>(Macro_Type, props);
+  return new CfnResource<Macro_Properties>(Macro_Type, props);
 }
 
 /**

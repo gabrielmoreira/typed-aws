@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodePipeline::CustomActionType
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CustomActionType_Type = 'AWS::CodePipeline::CustomActionType';
 export const CustomActionType_Type = 'AWS::CodePipeline::CustomActionType';
@@ -11,7 +11,7 @@ export const CustomActionType_Type = 'AWS::CodePipeline::CustomActionType';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html}
  */
 export default function CustomActionType(props: CustomActionType_Properties) {
-  return new CFResource<CustomActionType_Type, CustomActionType_Properties>(
+  return new CfnResource<CustomActionType_Properties>(
     CustomActionType_Type,
     props
   );

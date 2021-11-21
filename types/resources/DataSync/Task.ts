@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::Task
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Task_Type = 'AWS::DataSync::Task';
 export const Task_Type = 'AWS::DataSync::Task';
@@ -10,7 +10,7 @@ export const Task_Type = 'AWS::DataSync::Task';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html}
  */
 export default function Task(props: Task_Properties) {
-  return new CFResource<Task_Type, Task_Properties>(Task_Type, props);
+  return new CfnResource<Task_Properties>(Task_Type, props);
 }
 
 /**

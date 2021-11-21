@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EFS::MountTarget
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MountTarget_Type = 'AWS::EFS::MountTarget';
 export const MountTarget_Type = 'AWS::EFS::MountTarget';
@@ -10,10 +10,7 @@ export const MountTarget_Type = 'AWS::EFS::MountTarget';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html}
  */
 export default function MountTarget(props: MountTarget_Properties) {
-  return new CFResource<MountTarget_Type, MountTarget_Properties>(
-    MountTarget_Type,
-    props
-  );
+  return new CfnResource<MountTarget_Properties>(MountTarget_Type, props);
 }
 
 /**

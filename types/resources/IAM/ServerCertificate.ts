@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::ServerCertificate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ServerCertificate_Type = 'AWS::IAM::ServerCertificate';
 export const ServerCertificate_Type = 'AWS::IAM::ServerCertificate';
@@ -10,7 +10,7 @@ export const ServerCertificate_Type = 'AWS::IAM::ServerCertificate';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html}
  */
 export default function ServerCertificate(props: ServerCertificate_Properties) {
-  return new CFResource<ServerCertificate_Type, ServerCertificate_Properties>(
+  return new CfnResource<ServerCertificate_Properties>(
     ServerCertificate_Type,
     props
   );

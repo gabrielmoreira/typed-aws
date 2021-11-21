@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::UsagePlanKey
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UsagePlanKey_Type = 'AWS::ApiGateway::UsagePlanKey';
 export const UsagePlanKey_Type = 'AWS::ApiGateway::UsagePlanKey';
@@ -10,10 +10,7 @@ export const UsagePlanKey_Type = 'AWS::ApiGateway::UsagePlanKey';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html}
  */
 export default function UsagePlanKey(props: UsagePlanKey_Properties) {
-  return new CFResource<UsagePlanKey_Type, UsagePlanKey_Properties>(
-    UsagePlanKey_Type,
-    props
-  );
+  return new CfnResource<UsagePlanKey_Properties>(UsagePlanKey_Type, props);
 }
 
 /**

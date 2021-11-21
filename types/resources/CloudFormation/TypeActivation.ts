@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::CloudFormation::TypeActivation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TypeActivation_Type = 'AWS::CloudFormation::TypeActivation';
 export const TypeActivation_Type = 'AWS::CloudFormation::TypeActivation';
 
 export default function TypeActivation(props: TypeActivation_Properties) {
-  return new CFResource<TypeActivation_Type, TypeActivation_Properties>(
-    TypeActivation_Type,
-    props
-  );
+  return new CfnResource<TypeActivation_Properties>(TypeActivation_Type, props);
 }
 
 export type TypeActivation_Properties =

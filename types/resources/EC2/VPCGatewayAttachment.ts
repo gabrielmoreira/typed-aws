@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCGatewayAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCGatewayAttachment_Type = 'AWS::EC2::VPCGatewayAttachment';
 export const VPCGatewayAttachment_Type = 'AWS::EC2::VPCGatewayAttachment';
@@ -12,10 +12,10 @@ export const VPCGatewayAttachment_Type = 'AWS::EC2::VPCGatewayAttachment';
 export default function VPCGatewayAttachment(
   props: VPCGatewayAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<VPCGatewayAttachment_Properties>(
     VPCGatewayAttachment_Type,
-    VPCGatewayAttachment_Properties
-  >(VPCGatewayAttachment_Type, props);
+    props
+  );
 }
 
 /**

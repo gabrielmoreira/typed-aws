@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Subnet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Subnet_Type = 'AWS::EC2::Subnet';
 export const Subnet_Type = 'AWS::EC2::Subnet';
@@ -10,7 +10,7 @@ export const Subnet_Type = 'AWS::EC2::Subnet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html}
  */
 export default function Subnet(props: Subnet_Properties) {
-  return new CFResource<Subnet_Type, Subnet_Properties>(Subnet_Type, props);
+  return new CfnResource<Subnet_Properties>(Subnet_Type, props);
 }
 
 /**

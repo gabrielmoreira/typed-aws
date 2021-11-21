@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::PrivateDnsNamespace
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PrivateDnsNamespace_Type =
   'AWS::ServiceDiscovery::PrivateDnsNamespace';
@@ -15,10 +15,10 @@ export const PrivateDnsNamespace_Type =
 export default function PrivateDnsNamespace(
   props: PrivateDnsNamespace_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<PrivateDnsNamespace_Properties>(
     PrivateDnsNamespace_Type,
-    PrivateDnsNamespace_Properties
-  >(PrivateDnsNamespace_Type, props);
+    props
+  );
 }
 
 /**

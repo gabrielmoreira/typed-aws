@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::DocumentationPart
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DocumentationPart_Type = 'AWS::ApiGateway::DocumentationPart';
 export const DocumentationPart_Type = 'AWS::ApiGateway::DocumentationPart';
@@ -10,7 +10,7 @@ export const DocumentationPart_Type = 'AWS::ApiGateway::DocumentationPart';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html}
  */
 export default function DocumentationPart(props: DocumentationPart_Properties) {
-  return new CFResource<DocumentationPart_Type, DocumentationPart_Properties>(
+  return new CfnResource<DocumentationPart_Properties>(
     DocumentationPart_Type,
     props
   );

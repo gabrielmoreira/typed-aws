@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Recipe
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Recipe_Type = 'AWS::DataBrew::Recipe';
 export const Recipe_Type = 'AWS::DataBrew::Recipe';
@@ -10,7 +10,7 @@ export const Recipe_Type = 'AWS::DataBrew::Recipe';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html}
  */
 export default function Recipe(props: Recipe_Properties) {
-  return new CFResource<Recipe_Type, Recipe_Properties>(Recipe_Type, props);
+  return new CfnResource<Recipe_Properties>(Recipe_Type, props);
 }
 
 /**

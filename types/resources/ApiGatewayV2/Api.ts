@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::Api
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Api_Type = 'AWS::ApiGatewayV2::Api';
 export const Api_Type = 'AWS::ApiGatewayV2::Api';
@@ -10,7 +10,7 @@ export const Api_Type = 'AWS::ApiGatewayV2::Api';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html}
  */
 export default function Api(props: Api_Properties) {
-  return new CFResource<Api_Type, Api_Properties>(Api_Type, props);
+  return new CfnResource<Api_Properties>(Api_Type, props);
 }
 
 /**

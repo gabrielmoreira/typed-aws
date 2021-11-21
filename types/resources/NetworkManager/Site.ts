@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::Site
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Site_Type = 'AWS::NetworkManager::Site';
 export const Site_Type = 'AWS::NetworkManager::Site';
@@ -10,7 +10,7 @@ export const Site_Type = 'AWS::NetworkManager::Site';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html}
  */
 export default function Site(props: Site_Properties) {
-  return new CFResource<Site_Type, Site_Properties>(Site_Type, props);
+  return new CfnResource<Site_Properties>(Site_Type, props);
 }
 
 /**

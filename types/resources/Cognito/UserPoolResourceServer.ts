@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolResourceServer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolResourceServer_Type =
   'AWS::Cognito::UserPoolResourceServer';
@@ -15,10 +15,10 @@ export const UserPoolResourceServer_Type =
 export default function UserPoolResourceServer(
   props: UserPoolResourceServer_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<UserPoolResourceServer_Properties>(
     UserPoolResourceServer_Type,
-    UserPoolResourceServer_Properties
-  >(UserPoolResourceServer_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Signer::ProfilePermission
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ProfilePermission_Type = 'AWS::Signer::ProfilePermission';
 export const ProfilePermission_Type = 'AWS::Signer::ProfilePermission';
@@ -11,7 +11,7 @@ export const ProfilePermission_Type = 'AWS::Signer::ProfilePermission';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html}
  */
 export default function ProfilePermission(props: ProfilePermission_Properties) {
-  return new CFResource<ProfilePermission_Type, ProfilePermission_Properties>(
+  return new CfnResource<ProfilePermission_Properties>(
     ProfilePermission_Type,
     props
   );

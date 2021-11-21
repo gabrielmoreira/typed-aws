@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VolumeAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VolumeAttachment_Type = 'AWS::EC2::VolumeAttachment';
 export const VolumeAttachment_Type = 'AWS::EC2::VolumeAttachment';
@@ -10,7 +10,7 @@ export const VolumeAttachment_Type = 'AWS::EC2::VolumeAttachment';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html}
  */
 export default function VolumeAttachment(props: VolumeAttachment_Properties) {
-  return new CFResource<VolumeAttachment_Type, VolumeAttachment_Properties>(
+  return new CfnResource<VolumeAttachment_Properties>(
     VolumeAttachment_Type,
     props
   );

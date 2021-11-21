@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::UserGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserGroup_Type = 'AWS::ElastiCache::UserGroup';
 export const UserGroup_Type = 'AWS::ElastiCache::UserGroup';
@@ -10,10 +10,7 @@ export const UserGroup_Type = 'AWS::ElastiCache::UserGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html}
  */
 export default function UserGroup(props: UserGroup_Properties) {
-  return new CFResource<UserGroup_Type, UserGroup_Properties>(
-    UserGroup_Type,
-    props
-  );
+  return new CfnResource<UserGroup_Properties>(UserGroup_Type, props);
 }
 
 /**

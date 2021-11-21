@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolIdentityProvider
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolIdentityProvider_Type =
   'AWS::Cognito::UserPoolIdentityProvider';
@@ -15,10 +15,10 @@ export const UserPoolIdentityProvider_Type =
 export default function UserPoolIdentityProvider(
   props: UserPoolIdentityProvider_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<UserPoolIdentityProvider_Properties>(
     UserPoolIdentityProvider_Type,
-    UserPoolIdentityProvider_Properties
-  >(UserPoolIdentityProvider_Type, props);
+    props
+  );
 }
 
 /**

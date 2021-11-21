@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::TransitGatewayRegistration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayRegistration_Type =
   'AWS::NetworkManager::TransitGatewayRegistration';
@@ -18,10 +18,10 @@ export const TransitGatewayRegistration_Type =
 export default function TransitGatewayRegistration(
   props: TransitGatewayRegistration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayRegistration_Properties>(
     TransitGatewayRegistration_Type,
-    TransitGatewayRegistration_Properties
-  >(TransitGatewayRegistration_Type, props);
+    props
+  );
 }
 
 /**

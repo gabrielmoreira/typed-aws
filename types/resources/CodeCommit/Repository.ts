@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeCommit::Repository
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Repository_Type = 'AWS::CodeCommit::Repository';
 export const Repository_Type = 'AWS::CodeCommit::Repository';
@@ -10,10 +10,7 @@ export const Repository_Type = 'AWS::CodeCommit::Repository';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html}
  */
 export default function Repository(props: Repository_Properties) {
-  return new CFResource<Repository_Type, Repository_Properties>(
-    Repository_Type,
-    props
-  );
+  return new CfnResource<Repository_Properties>(Repository_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::MatchmakingConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MatchmakingConfiguration_Type =
   'AWS::GameLift::MatchmakingConfiguration';
@@ -15,10 +15,10 @@ export const MatchmakingConfiguration_Type =
 export default function MatchmakingConfiguration(
   props: MatchmakingConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<MatchmakingConfiguration_Properties>(
     MatchmakingConfiguration_Type,
-    MatchmakingConfiguration_Properties
-  >(MatchmakingConfiguration_Type, props);
+    props
+  );
 }
 
 /**

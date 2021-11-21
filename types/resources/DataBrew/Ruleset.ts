@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Ruleset
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Ruleset_Type = 'AWS::DataBrew::Ruleset';
 export const Ruleset_Type = 'AWS::DataBrew::Ruleset';
@@ -10,7 +10,7 @@ export const Ruleset_Type = 'AWS::DataBrew::Ruleset';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html}
  */
 export default function Ruleset(props: Ruleset_Properties) {
-  return new CFResource<Ruleset_Type, Ruleset_Properties>(Ruleset_Type, props);
+  return new CfnResource<Ruleset_Properties>(Ruleset_Type, props);
 }
 
 /**

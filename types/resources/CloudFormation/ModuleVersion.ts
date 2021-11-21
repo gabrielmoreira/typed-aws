@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::ModuleVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ModuleVersion_Type = 'AWS::CloudFormation::ModuleVersion';
 export const ModuleVersion_Type = 'AWS::CloudFormation::ModuleVersion';
@@ -11,10 +11,7 @@ export const ModuleVersion_Type = 'AWS::CloudFormation::ModuleVersion';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html}
  */
 export default function ModuleVersion(props: ModuleVersion_Properties) {
-  return new CFResource<ModuleVersion_Type, ModuleVersion_Properties>(
-    ModuleVersion_Type,
-    props
-  );
+  return new CfnResource<ModuleVersion_Properties>(ModuleVersion_Type, props);
 }
 
 /**

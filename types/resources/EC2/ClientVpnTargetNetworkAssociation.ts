@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnTargetNetworkAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClientVpnTargetNetworkAssociation_Type =
   'AWS::EC2::ClientVpnTargetNetworkAssociation';
@@ -15,10 +15,10 @@ export const ClientVpnTargetNetworkAssociation_Type =
 export default function ClientVpnTargetNetworkAssociation(
   props: ClientVpnTargetNetworkAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ClientVpnTargetNetworkAssociation_Properties>(
     ClientVpnTargetNetworkAssociation_Type,
-    ClientVpnTargetNetworkAssociation_Properties
-  >(ClientVpnTargetNetworkAssociation_Type, props);
+    props
+  );
 }
 
 /**

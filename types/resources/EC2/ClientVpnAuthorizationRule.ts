@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnAuthorizationRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClientVpnAuthorizationRule_Type =
   'AWS::EC2::ClientVpnAuthorizationRule';
@@ -15,10 +15,10 @@ export const ClientVpnAuthorizationRule_Type =
 export default function ClientVpnAuthorizationRule(
   props: ClientVpnAuthorizationRule_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ClientVpnAuthorizationRule_Properties>(
     ClientVpnAuthorizationRule_Type,
-    ClientVpnAuthorizationRule_Properties
-  >(ClientVpnAuthorizationRule_Type, props);
+    props
+  );
 }
 
 /**

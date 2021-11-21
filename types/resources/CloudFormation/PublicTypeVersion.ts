@@ -1,12 +1,12 @@
 // CloudFormation Resource AWS::CloudFormation::PublicTypeVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PublicTypeVersion_Type = 'AWS::CloudFormation::PublicTypeVersion';
 export const PublicTypeVersion_Type = 'AWS::CloudFormation::PublicTypeVersion';
 
 export default function PublicTypeVersion(props: PublicTypeVersion_Properties) {
-  return new CFResource<PublicTypeVersion_Type, PublicTypeVersion_Properties>(
+  return new CfnResource<PublicTypeVersion_Properties>(
     PublicTypeVersion_Type,
     props
   );

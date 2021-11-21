@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::RuleGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RuleGroup_Type = 'AWS::WAFv2::RuleGroup';
 export const RuleGroup_Type = 'AWS::WAFv2::RuleGroup';
@@ -18,10 +18,7 @@ export const RuleGroup_Type = 'AWS::WAFv2::RuleGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html}
  */
 export default function RuleGroup(props: RuleGroup_Properties) {
-  return new CFResource<RuleGroup_Type, RuleGroup_Properties>(
-    RuleGroup_Type,
-    props
-  );
+  return new CfnResource<RuleGroup_Properties>(RuleGroup_Type, props);
 }
 
 /**

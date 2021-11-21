@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MSK::Cluster
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Cluster_Type = 'AWS::MSK::Cluster';
 export const Cluster_Type = 'AWS::MSK::Cluster';
@@ -10,7 +10,7 @@ export const Cluster_Type = 'AWS::MSK::Cluster';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html}
  */
 export default function Cluster(props: Cluster_Properties) {
-  return new CFResource<Cluster_Type, Cluster_Properties>(Cluster_Type, props);
+  return new CfnResource<Cluster_Properties>(Cluster_Type, props);
 }
 
 /**

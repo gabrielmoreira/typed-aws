@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::ImageBuilder::ImagePipeline
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ImagePipeline_Type = 'AWS::ImageBuilder::ImagePipeline';
 export const ImagePipeline_Type = 'AWS::ImageBuilder::ImagePipeline';
 
 export default function ImagePipeline(props: ImagePipeline_Properties) {
-  return new CFResource<ImagePipeline_Type, ImagePipeline_Properties>(
-    ImagePipeline_Type,
-    props
-  );
+  return new CfnResource<ImagePipeline_Properties>(ImagePipeline_Type, props);
 }
 
 export type ImagePipeline_Properties =

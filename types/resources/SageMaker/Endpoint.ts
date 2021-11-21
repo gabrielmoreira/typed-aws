@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Endpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Endpoint_Type = 'AWS::SageMaker::Endpoint';
 export const Endpoint_Type = 'AWS::SageMaker::Endpoint';
@@ -10,10 +10,7 @@ export const Endpoint_Type = 'AWS::SageMaker::Endpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html}
  */
 export default function Endpoint(props: Endpoint_Properties) {
-  return new CFResource<Endpoint_Type, Endpoint_Properties>(
-    Endpoint_Type,
-    props
-  );
+  return new CfnResource<Endpoint_Properties>(Endpoint_Type, props);
 }
 
 /**

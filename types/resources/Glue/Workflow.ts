@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Workflow
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Workflow_Type = 'AWS::Glue::Workflow';
 export const Workflow_Type = 'AWS::Glue::Workflow';
@@ -10,10 +10,7 @@ export const Workflow_Type = 'AWS::Glue::Workflow';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html}
  */
 export default function Workflow(props: Workflow_Properties) {
-  return new CFResource<Workflow_Type, Workflow_Properties>(
-    Workflow_Type,
-    props
-  );
+  return new CfnResource<Workflow_Properties>(Workflow_Type, props);
 }
 
 /**

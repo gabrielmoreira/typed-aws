@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::SecurityGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecurityGroup_Type = 'AWS::ElastiCache::SecurityGroup';
 export const SecurityGroup_Type = 'AWS::ElastiCache::SecurityGroup';
@@ -10,10 +10,7 @@ export const SecurityGroup_Type = 'AWS::ElastiCache::SecurityGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html}
  */
 export default function SecurityGroup(props: SecurityGroup_Properties) {
-  return new CFResource<SecurityGroup_Type, SecurityGroup_Properties>(
-    SecurityGroup_Type,
-    props
-  );
+  return new CfnResource<SecurityGroup_Properties>(SecurityGroup_Type, props);
 }
 
 /**

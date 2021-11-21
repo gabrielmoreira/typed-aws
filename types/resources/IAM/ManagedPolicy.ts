@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::ManagedPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ManagedPolicy_Type = 'AWS::IAM::ManagedPolicy';
 export const ManagedPolicy_Type = 'AWS::IAM::ManagedPolicy';
@@ -10,10 +10,7 @@ export const ManagedPolicy_Type = 'AWS::IAM::ManagedPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html}
  */
 export default function ManagedPolicy(props: ManagedPolicy_Properties) {
-  return new CFResource<ManagedPolicy_Type, ManagedPolicy_Properties>(
-    ManagedPolicy_Type,
-    props
-  );
+  return new CfnResource<ManagedPolicy_Properties>(ManagedPolicy_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::RequestValidator
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RequestValidator_Type = 'AWS::ApiGateway::RequestValidator';
 export const RequestValidator_Type = 'AWS::ApiGateway::RequestValidator';
@@ -10,7 +10,7 @@ export const RequestValidator_Type = 'AWS::ApiGateway::RequestValidator';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html}
  */
 export default function RequestValidator(props: RequestValidator_Properties) {
-  return new CFResource<RequestValidator_Type, RequestValidator_Properties>(
+  return new CfnResource<RequestValidator_Properties>(
     RequestValidator_Type,
     props
   );

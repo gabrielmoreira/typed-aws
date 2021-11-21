@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Dataset
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Dataset_Type = 'AWS::DataBrew::Dataset';
 export const Dataset_Type = 'AWS::DataBrew::Dataset';
@@ -10,7 +10,7 @@ export const Dataset_Type = 'AWS::DataBrew::Dataset';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html}
  */
 export default function Dataset(props: Dataset_Properties) {
-  return new CFResource<Dataset_Type, Dataset_Properties>(Dataset_Type, props);
+  return new CfnResource<Dataset_Properties>(Dataset_Type, props);
 }
 
 /**

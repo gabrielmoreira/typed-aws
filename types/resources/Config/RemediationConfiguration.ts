@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::RemediationConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RemediationConfiguration_Type =
   'AWS::Config::RemediationConfiguration';
@@ -15,10 +15,10 @@ export const RemediationConfiguration_Type =
 export default function RemediationConfiguration(
   props: RemediationConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<RemediationConfiguration_Properties>(
     RemediationConfiguration_Type,
-    RemediationConfiguration_Properties
-  >(RemediationConfiguration_Type, props);
+    props
+  );
 }
 
 /**

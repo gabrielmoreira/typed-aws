@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Table
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Table_Type = 'AWS::Glue::Table';
 export const Table_Type = 'AWS::Glue::Table';
@@ -10,7 +10,7 @@ export const Table_Type = 'AWS::Glue::Table';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html}
  */
 export default function Table(props: Table_Properties) {
-  return new CFResource<Table_Type, Table_Properties>(Table_Type, props);
+  return new CfnResource<Table_Properties>(Table_Type, props);
 }
 
 /**

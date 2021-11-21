@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GlobalAccelerator::EndpointGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EndpointGroup_Type = 'AWS::GlobalAccelerator::EndpointGroup';
 export const EndpointGroup_Type = 'AWS::GlobalAccelerator::EndpointGroup';
@@ -11,10 +11,7 @@ export const EndpointGroup_Type = 'AWS::GlobalAccelerator::EndpointGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html}
  */
 export default function EndpointGroup(props: EndpointGroup_Properties) {
-  return new CFResource<EndpointGroup_Type, EndpointGroup_Properties>(
-    EndpointGroup_Type,
-    props
-  );
+  return new CfnResource<EndpointGroup_Properties>(EndpointGroup_Type, props);
 }
 
 /**

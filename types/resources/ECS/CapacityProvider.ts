@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::CapacityProvider
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CapacityProvider_Type = 'AWS::ECS::CapacityProvider';
 export const CapacityProvider_Type = 'AWS::ECS::CapacityProvider';
@@ -10,7 +10,7 @@ export const CapacityProvider_Type = 'AWS::ECS::CapacityProvider';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html}
  */
 export default function CapacityProvider(props: CapacityProvider_Properties) {
-  return new CFResource<CapacityProvider_Type, CapacityProvider_Properties>(
+  return new CfnResource<CapacityProvider_Properties>(
     CapacityProvider_Type,
     props
   );

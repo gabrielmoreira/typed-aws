@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::JobTemplate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type JobTemplate_Type = 'AWS::IoT::JobTemplate';
 export const JobTemplate_Type = 'AWS::IoT::JobTemplate';
@@ -11,10 +11,7 @@ export const JobTemplate_Type = 'AWS::IoT::JobTemplate';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html}
  */
 export default function JobTemplate(props: JobTemplate_Properties) {
-  return new CFResource<JobTemplate_Type, JobTemplate_Properties>(
-    JobTemplate_Type,
-    props
-  );
+  return new CfnResource<JobTemplate_Properties>(JobTemplate_Type, props);
 }
 
 /**

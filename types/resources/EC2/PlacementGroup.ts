@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::PlacementGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PlacementGroup_Type = 'AWS::EC2::PlacementGroup';
 export const PlacementGroup_Type = 'AWS::EC2::PlacementGroup';
@@ -10,10 +10,7 @@ export const PlacementGroup_Type = 'AWS::EC2::PlacementGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html}
  */
 export default function PlacementGroup(props: PlacementGroup_Properties) {
-  return new CFResource<PlacementGroup_Type, PlacementGroup_Properties>(
-    PlacementGroup_Type,
-    props
-  );
+  return new CfnResource<PlacementGroup_Properties>(PlacementGroup_Type, props);
 }
 
 /**

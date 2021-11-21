@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::StackUserAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StackUserAssociation_Type = 'AWS::AppStream::StackUserAssociation';
 export const StackUserAssociation_Type = 'AWS::AppStream::StackUserAssociation';
@@ -13,10 +13,10 @@ export const StackUserAssociation_Type = 'AWS::AppStream::StackUserAssociation';
 export default function StackUserAssociation(
   props: StackUserAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<StackUserAssociation_Properties>(
     StackUserAssociation_Type,
-    StackUserAssociation_Properties
-  >(StackUserAssociation_Type, props);
+    props
+  );
 }
 
 /**

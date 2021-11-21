@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::WaitConditionHandle
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WaitConditionHandle_Type =
   'AWS::CloudFormation::WaitConditionHandle';
@@ -15,10 +15,10 @@ export const WaitConditionHandle_Type =
 export default function WaitConditionHandle(
   props: WaitConditionHandle_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<WaitConditionHandle_Properties>(
     WaitConditionHandle_Type,
-    WaitConditionHandle_Properties
-  >(WaitConditionHandle_Type, props);
+    props
+  );
 }
 
 /**

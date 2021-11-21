@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AmazonMQ::Configuration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Configuration_Type = 'AWS::AmazonMQ::Configuration';
 export const Configuration_Type = 'AWS::AmazonMQ::Configuration';
@@ -10,10 +10,7 @@ export const Configuration_Type = 'AWS::AmazonMQ::Configuration';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html}
  */
 export default function Configuration(props: Configuration_Properties) {
-  return new CFResource<Configuration_Type, Configuration_Properties>(
-    Configuration_Type,
-    props
-  );
+  return new CfnResource<Configuration_Properties>(Configuration_Type, props);
 }
 
 /**

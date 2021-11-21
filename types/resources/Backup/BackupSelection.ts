@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::BackupSelection
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type BackupSelection_Type = 'AWS::Backup::BackupSelection';
 export const BackupSelection_Type = 'AWS::Backup::BackupSelection';
@@ -10,7 +10,7 @@ export const BackupSelection_Type = 'AWS::Backup::BackupSelection';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html}
  */
 export default function BackupSelection(props: BackupSelection_Properties) {
-  return new CFResource<BackupSelection_Type, BackupSelection_Properties>(
+  return new CfnResource<BackupSelection_Properties>(
     BackupSelection_Type,
     props
   );

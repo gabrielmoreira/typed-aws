@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::ApiDestination
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApiDestination_Type = 'AWS::Events::ApiDestination';
 export const ApiDestination_Type = 'AWS::Events::ApiDestination';
@@ -10,10 +10,7 @@ export const ApiDestination_Type = 'AWS::Events::ApiDestination';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-apidestination.html}
  */
 export default function ApiDestination(props: ApiDestination_Properties) {
-  return new CFResource<ApiDestination_Type, ApiDestination_Properties>(
-    ApiDestination_Type,
-    props
-  );
+  return new CfnResource<ApiDestination_Properties>(ApiDestination_Type, props);
 }
 
 /**

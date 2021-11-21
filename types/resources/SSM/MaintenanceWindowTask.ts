@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::MaintenanceWindowTask
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MaintenanceWindowTask_Type = 'AWS::SSM::MaintenanceWindowTask';
 export const MaintenanceWindowTask_Type = 'AWS::SSM::MaintenanceWindowTask';
@@ -12,10 +12,10 @@ export const MaintenanceWindowTask_Type = 'AWS::SSM::MaintenanceWindowTask';
 export default function MaintenanceWindowTask(
   props: MaintenanceWindowTask_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<MaintenanceWindowTask_Properties>(
     MaintenanceWindowTask_Type,
-    MaintenanceWindowTask_Properties
-  >(MaintenanceWindowTask_Type, props);
+    props
+  );
 }
 
 /**

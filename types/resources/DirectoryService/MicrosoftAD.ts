@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DirectoryService::MicrosoftAD
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MicrosoftAD_Type = 'AWS::DirectoryService::MicrosoftAD';
 export const MicrosoftAD_Type = 'AWS::DirectoryService::MicrosoftAD';
@@ -10,10 +10,7 @@ export const MicrosoftAD_Type = 'AWS::DirectoryService::MicrosoftAD';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html}
  */
 export default function MicrosoftAD(props: MicrosoftAD_Properties) {
-  return new CFResource<MicrosoftAD_Type, MicrosoftAD_Properties>(
-    MicrosoftAD_Type,
-    props
-  );
+  return new CfnResource<MicrosoftAD_Properties>(MicrosoftAD_Type, props);
 }
 
 /**

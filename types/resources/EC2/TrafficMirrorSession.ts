@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TrafficMirrorSession
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TrafficMirrorSession_Type = 'AWS::EC2::TrafficMirrorSession';
 export const TrafficMirrorSession_Type = 'AWS::EC2::TrafficMirrorSession';
@@ -12,10 +12,10 @@ export const TrafficMirrorSession_Type = 'AWS::EC2::TrafficMirrorSession';
 export default function TrafficMirrorSession(
   props: TrafficMirrorSession_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TrafficMirrorSession_Properties>(
     TrafficMirrorSession_Type,
-    TrafficMirrorSession_Properties
-  >(TrafficMirrorSession_Type, props);
+    props
+  );
 }
 
 /**

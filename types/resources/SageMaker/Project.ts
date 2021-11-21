@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Project
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Project_Type = 'AWS::SageMaker::Project';
 export const Project_Type = 'AWS::SageMaker::Project';
@@ -10,7 +10,7 @@ export const Project_Type = 'AWS::SageMaker::Project';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html}
  */
 export default function Project(props: Project_Properties) {
-  return new CFResource<Project_Type, Project_Properties>(Project_Type, props);
+  return new CfnResource<Project_Properties>(Project_Type, props);
 }
 
 /**

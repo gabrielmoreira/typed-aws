@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EMR::InstanceGroupConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type InstanceGroupConfig_Type = 'AWS::EMR::InstanceGroupConfig';
 export const InstanceGroupConfig_Type = 'AWS::EMR::InstanceGroupConfig';
@@ -12,10 +12,10 @@ export const InstanceGroupConfig_Type = 'AWS::EMR::InstanceGroupConfig';
 export default function InstanceGroupConfig(
   props: InstanceGroupConfig_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<InstanceGroupConfig_Properties>(
     InstanceGroupConfig_Type,
-    InstanceGroupConfig_Properties
-  >(InstanceGroupConfig_Type, props);
+    props
+  );
 }
 
 /**

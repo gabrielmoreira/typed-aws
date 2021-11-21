@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::DataSource
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DataSource_Type = 'AWS::AppSync::DataSource';
 export const DataSource_Type = 'AWS::AppSync::DataSource';
@@ -10,10 +10,7 @@ export const DataSource_Type = 'AWS::AppSync::DataSource';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html}
  */
 export default function DataSource(props: DataSource_Properties) {
-  return new CFResource<DataSource_Type, DataSource_Properties>(
-    DataSource_Type,
-    props
-  );
+  return new CfnResource<DataSource_Properties>(DataSource_Type, props);
 }
 
 /**

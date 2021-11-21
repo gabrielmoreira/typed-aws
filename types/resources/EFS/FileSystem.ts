@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EFS::FileSystem
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FileSystem_Type = 'AWS::EFS::FileSystem';
 export const FileSystem_Type = 'AWS::EFS::FileSystem';
@@ -10,10 +10,7 @@ export const FileSystem_Type = 'AWS::EFS::FileSystem';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html}
  */
 export default function FileSystem(props: FileSystem_Properties) {
-  return new CFResource<FileSystem_Type, FileSystem_Properties>(
-    FileSystem_Type,
-    props
-  );
+  return new CfnResource<FileSystem_Properties>(FileSystem_Type, props);
 }
 
 /**

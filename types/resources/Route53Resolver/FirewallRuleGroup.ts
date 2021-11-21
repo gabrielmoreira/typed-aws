@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::FirewallRuleGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FirewallRuleGroup_Type = 'AWS::Route53Resolver::FirewallRuleGroup';
 export const FirewallRuleGroup_Type = 'AWS::Route53Resolver::FirewallRuleGroup';
@@ -10,7 +10,7 @@ export const FirewallRuleGroup_Type = 'AWS::Route53Resolver::FirewallRuleGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html}
  */
 export default function FirewallRuleGroup(props: FirewallRuleGroup_Properties) {
-  return new CFResource<FirewallRuleGroup_Type, FirewallRuleGroup_Properties>(
+  return new CfnResource<FirewallRuleGroup_Properties>(
     FirewallRuleGroup_Type,
     props
   );

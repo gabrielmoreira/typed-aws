@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::UsagePlan
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UsagePlan_Type = 'AWS::ApiGateway::UsagePlan';
 export const UsagePlan_Type = 'AWS::ApiGateway::UsagePlan';
@@ -10,10 +10,7 @@ export const UsagePlan_Type = 'AWS::ApiGateway::UsagePlan';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html}
  */
 export default function UsagePlan(props: UsagePlan_Properties) {
-  return new CFResource<UsagePlan_Type, UsagePlan_Properties>(
-    UsagePlan_Type,
-    props
-  );
+  return new CfnResource<UsagePlan_Properties>(UsagePlan_Type, props);
 }
 
 /**

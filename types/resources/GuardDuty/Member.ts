@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::Member
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Member_Type = 'AWS::GuardDuty::Member';
 export const Member_Type = 'AWS::GuardDuty::Member';
@@ -10,7 +10,7 @@ export const Member_Type = 'AWS::GuardDuty::Member';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html}
  */
 export default function Member(props: Member_Properties) {
-  return new CFResource<Member_Type, Member_Properties>(Member_Type, props);
+  return new CfnResource<Member_Properties>(Member_Type, props);
 }
 
 /**

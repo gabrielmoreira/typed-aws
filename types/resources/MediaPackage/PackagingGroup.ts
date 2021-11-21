@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::PackagingGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PackagingGroup_Type = 'AWS::MediaPackage::PackagingGroup';
 export const PackagingGroup_Type = 'AWS::MediaPackage::PackagingGroup';
@@ -10,10 +10,7 @@ export const PackagingGroup_Type = 'AWS::MediaPackage::PackagingGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html}
  */
 export default function PackagingGroup(props: PackagingGroup_Properties) {
-  return new CFResource<PackagingGroup_Type, PackagingGroup_Properties>(
-    PackagingGroup_Type,
-    props
-  );
+  return new CfnResource<PackagingGroup_Properties>(PackagingGroup_Type, props);
 }
 
 /**

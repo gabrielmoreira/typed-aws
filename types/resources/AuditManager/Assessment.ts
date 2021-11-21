@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AuditManager::Assessment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Assessment_Type = 'AWS::AuditManager::Assessment';
 export const Assessment_Type = 'AWS::AuditManager::Assessment';
@@ -11,10 +11,7 @@ export const Assessment_Type = 'AWS::AuditManager::Assessment';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html}
  */
 export default function Assessment(props: Assessment_Properties) {
-  return new CFResource<Assessment_Type, Assessment_Properties>(
-    Assessment_Type,
-    props
-  );
+  return new CfnResource<Assessment_Properties>(Assessment_Type, props);
 }
 
 /**

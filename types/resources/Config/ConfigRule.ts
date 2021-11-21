@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConfigRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConfigRule_Type = 'AWS::Config::ConfigRule';
 export const ConfigRule_Type = 'AWS::Config::ConfigRule';
@@ -10,10 +10,7 @@ export const ConfigRule_Type = 'AWS::Config::ConfigRule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html}
  */
 export default function ConfigRule(props: ConfigRule_Properties) {
-  return new CFResource<ConfigRule_Type, ConfigRule_Properties>(
-    ConfigRule_Type,
-    props
-  );
+  return new CfnResource<ConfigRule_Properties>(ConfigRule_Type, props);
 }
 
 /**

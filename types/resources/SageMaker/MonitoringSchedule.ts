@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::MonitoringSchedule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MonitoringSchedule_Type = 'AWS::SageMaker::MonitoringSchedule';
 export const MonitoringSchedule_Type = 'AWS::SageMaker::MonitoringSchedule';
@@ -12,7 +12,7 @@ export const MonitoringSchedule_Type = 'AWS::SageMaker::MonitoringSchedule';
 export default function MonitoringSchedule(
   props: MonitoringSchedule_Properties
 ) {
-  return new CFResource<MonitoringSchedule_Type, MonitoringSchedule_Properties>(
+  return new CfnResource<MonitoringSchedule_Properties>(
     MonitoringSchedule_Type,
     props
   );

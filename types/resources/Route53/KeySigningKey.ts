@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::KeySigningKey
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type KeySigningKey_Type = 'AWS::Route53::KeySigningKey';
 export const KeySigningKey_Type = 'AWS::Route53::KeySigningKey';
@@ -11,10 +11,7 @@ export const KeySigningKey_Type = 'AWS::Route53::KeySigningKey';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html}
  */
 export default function KeySigningKey(props: KeySigningKey_Properties) {
-  return new CFResource<KeySigningKey_Type, KeySigningKey_Properties>(
-    KeySigningKey_Type,
-    props
-  );
+  return new CfnResource<KeySigningKey_Properties>(KeySigningKey_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAF::ByteMatchSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ByteMatchSet_Type = 'AWS::WAF::ByteMatchSet';
 export const ByteMatchSet_Type = 'AWS::WAF::ByteMatchSet';
@@ -10,10 +10,7 @@ export const ByteMatchSet_Type = 'AWS::WAF::ByteMatchSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html}
  */
 export default function ByteMatchSet(props: ByteMatchSet_Properties) {
-  return new CFResource<ByteMatchSet_Type, ByteMatchSet_Properties>(
-    ByteMatchSet_Type,
-    props
-  );
+  return new CfnResource<ByteMatchSet_Properties>(ByteMatchSet_Type, props);
 }
 
 /**

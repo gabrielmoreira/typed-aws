@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::NotebookInstance
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NotebookInstance_Type = 'AWS::SageMaker::NotebookInstance';
 export const NotebookInstance_Type = 'AWS::SageMaker::NotebookInstance';
@@ -10,7 +10,7 @@ export const NotebookInstance_Type = 'AWS::SageMaker::NotebookInstance';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html}
  */
 export default function NotebookInstance(props: NotebookInstance_Properties) {
-  return new CFResource<NotebookInstance_Type, NotebookInstance_Properties>(
+  return new CfnResource<NotebookInstance_Properties>(
     NotebookInstance_Type,
     props
   );

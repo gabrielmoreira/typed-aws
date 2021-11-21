@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::OptionGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type OptionGroup_Type = 'AWS::RDS::OptionGroup';
 export const OptionGroup_Type = 'AWS::RDS::OptionGroup';
@@ -10,10 +10,7 @@ export const OptionGroup_Type = 'AWS::RDS::OptionGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html}
  */
 export default function OptionGroup(props: OptionGroup_Properties) {
-  return new CFResource<OptionGroup_Type, OptionGroup_Properties>(
-    OptionGroup_Type,
-    props
-  );
+  return new CfnResource<OptionGroup_Properties>(OptionGroup_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::ElasticLoadBalancerAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ElasticLoadBalancerAttachment_Type =
   'AWS::OpsWorks::ElasticLoadBalancerAttachment';
@@ -15,10 +15,10 @@ export const ElasticLoadBalancerAttachment_Type =
 export default function ElasticLoadBalancerAttachment(
   props: ElasticLoadBalancerAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ElasticLoadBalancerAttachment_Properties>(
     ElasticLoadBalancerAttachment_Type,
-    ElasticLoadBalancerAttachment_Properties
-  >(ElasticLoadBalancerAttachment_Type, props);
+    props
+  );
 }
 
 /**

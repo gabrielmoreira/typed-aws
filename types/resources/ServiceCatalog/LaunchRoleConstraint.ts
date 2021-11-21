@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::LaunchRoleConstraint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LaunchRoleConstraint_Type =
   'AWS::ServiceCatalog::LaunchRoleConstraint';
@@ -15,10 +15,10 @@ export const LaunchRoleConstraint_Type =
 export default function LaunchRoleConstraint(
   props: LaunchRoleConstraint_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LaunchRoleConstraint_Properties>(
     LaunchRoleConstraint_Type,
-    LaunchRoleConstraint_Properties
-  >(LaunchRoleConstraint_Type, props);
+    props
+  );
 }
 
 /**

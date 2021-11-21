@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::Link
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Link_Type = 'AWS::NetworkManager::Link';
 export const Link_Type = 'AWS::NetworkManager::Link';
@@ -10,7 +10,7 @@ export const Link_Type = 'AWS::NetworkManager::Link';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html}
  */
 export default function Link(props: Link_Properties) {
-  return new CFResource<Link_Type, Link_Properties>(Link_Type, props);
+  return new CfnResource<Link_Properties>(Link_Type, props);
 }
 
 /**

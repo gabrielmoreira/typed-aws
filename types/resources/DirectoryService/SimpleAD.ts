@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DirectoryService::SimpleAD
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SimpleAD_Type = 'AWS::DirectoryService::SimpleAD';
 export const SimpleAD_Type = 'AWS::DirectoryService::SimpleAD';
@@ -10,10 +10,7 @@ export const SimpleAD_Type = 'AWS::DirectoryService::SimpleAD';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html}
  */
 export default function SimpleAD(props: SimpleAD_Properties) {
-  return new CFResource<SimpleAD_Type, SimpleAD_Properties>(
-    SimpleAD_Type,
-    props
-  );
+  return new CfnResource<SimpleAD_Properties>(SimpleAD_Type, props);
 }
 
 /**

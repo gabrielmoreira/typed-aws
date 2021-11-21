@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInterface
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkInterface_Type = 'AWS::EC2::NetworkInterface';
 export const NetworkInterface_Type = 'AWS::EC2::NetworkInterface';
@@ -10,7 +10,7 @@ export const NetworkInterface_Type = 'AWS::EC2::NetworkInterface';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html}
  */
 export default function NetworkInterface(props: NetworkInterface_Properties) {
-  return new CFResource<NetworkInterface_Type, NetworkInterface_Properties>(
+  return new CfnResource<NetworkInterface_Properties>(
     NetworkInterface_Type,
     props
   );

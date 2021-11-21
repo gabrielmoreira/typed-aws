@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::TaskSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TaskSet_Type = 'AWS::ECS::TaskSet';
 export const TaskSet_Type = 'AWS::ECS::TaskSet';
@@ -14,7 +14,7 @@ export const TaskSet_Type = 'AWS::ECS::TaskSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html}
  */
 export default function TaskSet(props: TaskSet_Properties) {
-  return new CFResource<TaskSet_Type, TaskSet_Properties>(TaskSet_Type, props);
+  return new CfnResource<TaskSet_Properties>(TaskSet_Type, props);
 }
 
 /**

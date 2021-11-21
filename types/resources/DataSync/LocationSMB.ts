@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationSMB
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationSMB_Type = 'AWS::DataSync::LocationSMB';
 export const LocationSMB_Type = 'AWS::DataSync::LocationSMB';
@@ -10,10 +10,7 @@ export const LocationSMB_Type = 'AWS::DataSync::LocationSMB';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html}
  */
 export default function LocationSMB(props: LocationSMB_Properties) {
-  return new CFResource<LocationSMB_Type, LocationSMB_Properties>(
-    LocationSMB_Type,
-    props
-  );
+  return new CfnResource<LocationSMB_Properties>(LocationSMB_Type, props);
 }
 
 /**

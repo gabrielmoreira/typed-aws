@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeStarConnections::Connection
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Connection_Type = 'AWS::CodeStarConnections::Connection';
 export const Connection_Type = 'AWS::CodeStarConnections::Connection';
@@ -11,10 +11,7 @@ export const Connection_Type = 'AWS::CodeStarConnections::Connection';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html}
  */
 export default function Connection(props: Connection_Properties) {
-  return new CFResource<Connection_Type, Connection_Properties>(
-    Connection_Type,
-    props
-  );
+  return new CfnResource<Connection_Properties>(Connection_Type, props);
 }
 
 /**

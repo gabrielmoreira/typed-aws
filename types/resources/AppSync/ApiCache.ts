@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::ApiCache
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApiCache_Type = 'AWS::AppSync::ApiCache';
 export const ApiCache_Type = 'AWS::AppSync::ApiCache';
@@ -10,10 +10,7 @@ export const ApiCache_Type = 'AWS::AppSync::ApiCache';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html}
  */
 export default function ApiCache(props: ApiCache_Properties) {
-  return new CFResource<ApiCache_Type, ApiCache_Properties>(
-    ApiCache_Type,
-    props
-  );
+  return new CfnResource<ApiCache_Properties>(ApiCache_Type, props);
 }
 
 /**

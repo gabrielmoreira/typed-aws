@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::SecurityProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecurityProfile_Type = 'AWS::IoT::SecurityProfile';
 export const SecurityProfile_Type = 'AWS::IoT::SecurityProfile';
@@ -11,7 +11,7 @@ export const SecurityProfile_Type = 'AWS::IoT::SecurityProfile';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html}
  */
 export default function SecurityProfile(props: SecurityProfile_Properties) {
-  return new CFResource<SecurityProfile_Type, SecurityProfile_Properties>(
+  return new CfnResource<SecurityProfile_Properties>(
     SecurityProfile_Type,
     props
   );

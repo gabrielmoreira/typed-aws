@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Image
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Image_Type = 'AWS::SageMaker::Image';
 export const Image_Type = 'AWS::SageMaker::Image';
@@ -10,7 +10,7 @@ export const Image_Type = 'AWS::SageMaker::Image';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html}
  */
 export default function Image(props: Image_Properties) {
-  return new CFResource<Image_Type, Image_Properties>(Image_Type, props);
+  return new CfnResource<Image_Properties>(Image_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaConnect::FlowEntitlement
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FlowEntitlement_Type = 'AWS::MediaConnect::FlowEntitlement';
 export const FlowEntitlement_Type = 'AWS::MediaConnect::FlowEntitlement';
@@ -10,7 +10,7 @@ export const FlowEntitlement_Type = 'AWS::MediaConnect::FlowEntitlement';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html}
  */
 export default function FlowEntitlement(props: FlowEntitlement_Properties) {
-  return new CFResource<FlowEntitlement_Type, FlowEntitlement_Properties>(
+  return new CfnResource<FlowEntitlement_Properties>(
     FlowEntitlement_Type,
     props
   );

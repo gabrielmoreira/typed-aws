@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::GroupVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GroupVersion_Type = 'AWS::Greengrass::GroupVersion';
 export const GroupVersion_Type = 'AWS::Greengrass::GroupVersion';
@@ -10,10 +10,7 @@ export const GroupVersion_Type = 'AWS::Greengrass::GroupVersion';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html}
  */
 export default function GroupVersion(props: GroupVersion_Properties) {
-  return new CFResource<GroupVersion_Type, GroupVersion_Properties>(
-    GroupVersion_Type,
-    props
-  );
+  return new CfnResource<GroupVersion_Properties>(GroupVersion_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::LaunchNotificationConstraint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LaunchNotificationConstraint_Type =
   'AWS::ServiceCatalog::LaunchNotificationConstraint';
@@ -15,10 +15,10 @@ export const LaunchNotificationConstraint_Type =
 export default function LaunchNotificationConstraint(
   props: LaunchNotificationConstraint_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LaunchNotificationConstraint_Properties>(
     LaunchNotificationConstraint_Type,
-    LaunchNotificationConstraint_Properties
-  >(LaunchNotificationConstraint_Type, props);
+    props
+  );
 }
 
 /**

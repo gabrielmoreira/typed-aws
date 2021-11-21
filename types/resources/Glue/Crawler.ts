@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Crawler
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Crawler_Type = 'AWS::Glue::Crawler';
 export const Crawler_Type = 'AWS::Glue::Crawler';
@@ -10,7 +10,7 @@ export const Crawler_Type = 'AWS::Glue::Crawler';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html}
  */
 export default function Crawler(props: Crawler_Properties) {
-  return new CFResource<Crawler_Type, Crawler_Properties>(Crawler_Type, props);
+  return new CfnResource<Crawler_Properties>(Crawler_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::ServiceActionAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ServiceActionAssociation_Type =
   'AWS::ServiceCatalog::ServiceActionAssociation';
@@ -15,10 +15,10 @@ export const ServiceActionAssociation_Type =
 export default function ServiceActionAssociation(
   props: ServiceActionAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ServiceActionAssociation_Properties>(
     ServiceActionAssociation_Type,
-    ServiceActionAssociation_Properties
-  >(ServiceActionAssociation_Type, props);
+    props
+  );
 }
 
 /**

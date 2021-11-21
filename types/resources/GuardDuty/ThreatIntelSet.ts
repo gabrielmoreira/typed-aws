@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::ThreatIntelSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ThreatIntelSet_Type = 'AWS::GuardDuty::ThreatIntelSet';
 export const ThreatIntelSet_Type = 'AWS::GuardDuty::ThreatIntelSet';
@@ -10,10 +10,7 @@ export const ThreatIntelSet_Type = 'AWS::GuardDuty::ThreatIntelSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html}
  */
 export default function ThreatIntelSet(props: ThreatIntelSet_Properties) {
-  return new CFResource<ThreatIntelSet_Type, ThreatIntelSet_Properties>(
-    ThreatIntelSet_Type,
-    props
-  );
+  return new CfnResource<ThreatIntelSet_Properties>(ThreatIntelSet_Type, props);
 }
 
 /**

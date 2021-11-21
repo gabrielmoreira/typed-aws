@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::GatewayResponse
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GatewayResponse_Type = 'AWS::ApiGateway::GatewayResponse';
 export const GatewayResponse_Type = 'AWS::ApiGateway::GatewayResponse';
@@ -10,7 +10,7 @@ export const GatewayResponse_Type = 'AWS::ApiGateway::GatewayResponse';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html}
  */
 export default function GatewayResponse(props: GatewayResponse_Properties) {
-  return new CFResource<GatewayResponse_Type, GatewayResponse_Properties>(
+  return new CfnResource<GatewayResponse_Properties>(
     GatewayResponse_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::HostedZone
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type HostedZone_Type = 'AWS::Route53::HostedZone';
 export const HostedZone_Type = 'AWS::Route53::HostedZone';
@@ -10,10 +10,7 @@ export const HostedZone_Type = 'AWS::Route53::HostedZone';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html}
  */
 export default function HostedZone(props: HostedZone_Properties) {
-  return new CFResource<HostedZone_Type, HostedZone_Properties>(
-    HostedZone_Type,
-    props
-  );
+  return new CfnResource<HostedZone_Properties>(HostedZone_Type, props);
 }
 
 /**

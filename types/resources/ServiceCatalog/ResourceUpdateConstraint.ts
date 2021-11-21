@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::ResourceUpdateConstraint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceUpdateConstraint_Type =
   'AWS::ServiceCatalog::ResourceUpdateConstraint';
@@ -15,10 +15,10 @@ export const ResourceUpdateConstraint_Type =
 export default function ResourceUpdateConstraint(
   props: ResourceUpdateConstraint_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResourceUpdateConstraint_Properties>(
     ResourceUpdateConstraint_Type,
-    ResourceUpdateConstraint_Properties
-  >(ResourceUpdateConstraint_Type, props);
+    props
+  );
 }
 
 /**

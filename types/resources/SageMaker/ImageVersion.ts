@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ImageVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ImageVersion_Type = 'AWS::SageMaker::ImageVersion';
 export const ImageVersion_Type = 'AWS::SageMaker::ImageVersion';
@@ -10,10 +10,7 @@ export const ImageVersion_Type = 'AWS::SageMaker::ImageVersion';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html}
  */
 export default function ImageVersion(props: ImageVersion_Properties) {
-  return new CFResource<ImageVersion_Type, ImageVersion_Properties>(
-    ImageVersion_Type,
-    props
-  );
+  return new CfnResource<ImageVersion_Properties>(ImageVersion_Type, props);
 }
 
 /**

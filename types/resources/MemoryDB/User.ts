@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MemoryDB::User
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type User_Type = 'AWS::MemoryDB::User';
 export const User_Type = 'AWS::MemoryDB::User';
@@ -10,7 +10,7 @@ export const User_Type = 'AWS::MemoryDB::User';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html}
  */
 export default function User(props: User_Properties) {
-  return new CFResource<User_Type, User_Properties>(User_Type, props);
+  return new CfnResource<User_Properties>(User_Type, props);
 }
 
 /**

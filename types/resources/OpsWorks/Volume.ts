@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::Volume
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Volume_Type = 'AWS::OpsWorks::Volume';
 export const Volume_Type = 'AWS::OpsWorks::Volume';
@@ -10,7 +10,7 @@ export const Volume_Type = 'AWS::OpsWorks::Volume';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html}
  */
 export default function Volume(props: Volume_Properties) {
-  return new CFResource<Volume_Type, Volume_Properties>(Volume_Type, props);
+  return new CfnResource<Volume_Properties>(Volume_Type, props);
 }
 
 /**

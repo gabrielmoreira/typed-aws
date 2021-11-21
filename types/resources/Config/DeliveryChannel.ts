@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::DeliveryChannel
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeliveryChannel_Type = 'AWS::Config::DeliveryChannel';
 export const DeliveryChannel_Type = 'AWS::Config::DeliveryChannel';
@@ -10,7 +10,7 @@ export const DeliveryChannel_Type = 'AWS::Config::DeliveryChannel';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html}
  */
 export default function DeliveryChannel(props: DeliveryChannel_Properties) {
-  return new CFResource<DeliveryChannel_Type, DeliveryChannel_Properties>(
+  return new CfnResource<DeliveryChannel_Properties>(
     DeliveryChannel_Type,
     props
   );

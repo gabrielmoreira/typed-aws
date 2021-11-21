@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayMulticastGroupSource
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayMulticastGroupSource_Type =
   'AWS::EC2::TransitGatewayMulticastGroupSource';
@@ -16,10 +16,10 @@ export const TransitGatewayMulticastGroupSource_Type =
 export default function TransitGatewayMulticastGroupSource(
   props: TransitGatewayMulticastGroupSource_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayMulticastGroupSource_Properties>(
     TransitGatewayMulticastGroupSource_Type,
-    TransitGatewayMulticastGroupSource_Properties
-  >(TransitGatewayMulticastGroupSource_Type, props);
+    props
+  );
 }
 
 /**

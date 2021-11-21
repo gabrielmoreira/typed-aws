@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Workteam
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Workteam_Type = 'AWS::SageMaker::Workteam';
 export const Workteam_Type = 'AWS::SageMaker::Workteam';
@@ -10,10 +10,7 @@ export const Workteam_Type = 'AWS::SageMaker::Workteam';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html}
  */
 export default function Workteam(props: Workteam_Properties) {
-  return new CFResource<Workteam_Type, Workteam_Properties>(
-    Workteam_Type,
-    props
-  );
+  return new CfnResource<Workteam_Properties>(Workteam_Type, props);
 }
 
 /**

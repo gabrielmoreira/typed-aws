@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeStar::GitHubRepository
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GitHubRepository_Type = 'AWS::CodeStar::GitHubRepository';
 export const GitHubRepository_Type = 'AWS::CodeStar::GitHubRepository';
@@ -10,7 +10,7 @@ export const GitHubRepository_Type = 'AWS::CodeStar::GitHubRepository';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html}
  */
 export default function GitHubRepository(props: GitHubRepository_Properties) {
-  return new CFResource<GitHubRepository_Type, GitHubRepository_Properties>(
+  return new CfnResource<GitHubRepository_Properties>(
     GitHubRepository_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::ImageBuilder
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ImageBuilder_Type = 'AWS::AppStream::ImageBuilder';
 export const ImageBuilder_Type = 'AWS::AppStream::ImageBuilder';
@@ -10,10 +10,7 @@ export const ImageBuilder_Type = 'AWS::AppStream::ImageBuilder';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html}
  */
 export default function ImageBuilder(props: ImageBuilder_Properties) {
-  return new CFResource<ImageBuilder_Type, ImageBuilder_Properties>(
-    ImageBuilder_Type,
-    props
-  );
+  return new CfnResource<ImageBuilder_Properties>(ImageBuilder_Type, props);
 }
 
 /**

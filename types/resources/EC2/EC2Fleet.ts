@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EC2Fleet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EC2Fleet_Type = 'AWS::EC2::EC2Fleet';
 export const EC2Fleet_Type = 'AWS::EC2::EC2Fleet';
@@ -10,10 +10,7 @@ export const EC2Fleet_Type = 'AWS::EC2::EC2Fleet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html}
  */
 export default function EC2Fleet(props: EC2Fleet_Properties) {
-  return new CFResource<EC2Fleet_Type, EC2Fleet_Properties>(
-    EC2Fleet_Type,
-    props
-  );
+  return new CfnResource<EC2Fleet_Properties>(EC2Fleet_Type, props);
 }
 
 /**

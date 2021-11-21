@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCCidrBlock
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCCidrBlock_Type = 'AWS::EC2::VPCCidrBlock';
 export const VPCCidrBlock_Type = 'AWS::EC2::VPCCidrBlock';
@@ -10,10 +10,7 @@ export const VPCCidrBlock_Type = 'AWS::EC2::VPCCidrBlock';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html}
  */
 export default function VPCCidrBlock(props: VPCCidrBlock_Properties) {
-  return new CFResource<VPCCidrBlock_Type, VPCCidrBlock_Properties>(
-    VPCCidrBlock_Type,
-    props
-  );
+  return new CfnResource<VPCCidrBlock_Properties>(VPCCidrBlock_Type, props);
 }
 
 /**

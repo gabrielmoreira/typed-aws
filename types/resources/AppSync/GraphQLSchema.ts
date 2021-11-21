@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::GraphQLSchema
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GraphQLSchema_Type = 'AWS::AppSync::GraphQLSchema';
 export const GraphQLSchema_Type = 'AWS::AppSync::GraphQLSchema';
@@ -10,10 +10,7 @@ export const GraphQLSchema_Type = 'AWS::AppSync::GraphQLSchema';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html}
  */
 export default function GraphQLSchema(props: GraphQLSchema_Properties) {
-  return new CFResource<GraphQLSchema_Type, GraphQLSchema_Properties>(
-    GraphQLSchema_Type,
-    props
-  );
+  return new CfnResource<GraphQLSchema_Properties>(GraphQLSchema_Type, props);
 }
 
 /**

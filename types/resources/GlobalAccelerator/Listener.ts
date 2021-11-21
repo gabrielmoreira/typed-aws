@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GlobalAccelerator::Listener
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Listener_Type = 'AWS::GlobalAccelerator::Listener';
 export const Listener_Type = 'AWS::GlobalAccelerator::Listener';
@@ -10,10 +10,7 @@ export const Listener_Type = 'AWS::GlobalAccelerator::Listener';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html}
  */
 export default function Listener(props: Listener_Properties) {
-  return new CFResource<Listener_Type, Listener_Properties>(
-    Listener_Type,
-    props
-  );
+  return new CfnResource<Listener_Properties>(Listener_Type, props);
 }
 
 /**

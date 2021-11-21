@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::ResourceDataSync
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceDataSync_Type = 'AWS::SSM::ResourceDataSync';
 export const ResourceDataSync_Type = 'AWS::SSM::ResourceDataSync';
@@ -10,7 +10,7 @@ export const ResourceDataSync_Type = 'AWS::SSM::ResourceDataSync';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html}
  */
 export default function ResourceDataSync(props: ResourceDataSync_Properties) {
-  return new CFResource<ResourceDataSync_Type, ResourceDataSync_Properties>(
+  return new CfnResource<ResourceDataSync_Properties>(
     ResourceDataSync_Type,
     props
   );

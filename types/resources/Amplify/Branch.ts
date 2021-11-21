@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Amplify::Branch
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Branch_Type = 'AWS::Amplify::Branch';
 export const Branch_Type = 'AWS::Amplify::Branch';
@@ -11,7 +11,7 @@ export const Branch_Type = 'AWS::Amplify::Branch';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html}
  */
 export default function Branch(props: Branch_Properties) {
-  return new CFResource<Branch_Type, Branch_Properties>(Branch_Type, props);
+  return new CfnResource<Branch_Properties>(Branch_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Deployment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Deployment_Type = 'AWS::ApiGateway::Deployment';
 export const Deployment_Type = 'AWS::ApiGateway::Deployment';
@@ -10,10 +10,7 @@ export const Deployment_Type = 'AWS::ApiGateway::Deployment';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html}
  */
 export default function Deployment(props: Deployment_Properties) {
-  return new CFResource<Deployment_Type, Deployment_Properties>(
-    Deployment_Type,
-    props
-  );
+  return new CfnResource<Deployment_Properties>(Deployment_Type, props);
 }
 
 /**

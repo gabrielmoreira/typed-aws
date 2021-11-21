@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EventSchemas::Discoverer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Discoverer_Type = 'AWS::EventSchemas::Discoverer';
 export const Discoverer_Type = 'AWS::EventSchemas::Discoverer';
@@ -10,10 +10,7 @@ export const Discoverer_Type = 'AWS::EventSchemas::Discoverer';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html}
  */
 export default function Discoverer(props: Discoverer_Properties) {
-  return new CFResource<Discoverer_Type, Discoverer_Properties>(
-    Discoverer_Type,
-    props
-  );
+  return new CfnResource<Discoverer_Properties>(Discoverer_Type, props);
 }
 
 /**

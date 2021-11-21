@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::Detector
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Detector_Type = 'AWS::GuardDuty::Detector';
 export const Detector_Type = 'AWS::GuardDuty::Detector';
@@ -10,10 +10,7 @@ export const Detector_Type = 'AWS::GuardDuty::Detector';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html}
  */
 export default function Detector(props: Detector_Properties) {
-  return new CFResource<Detector_Type, Detector_Properties>(
-    Detector_Type,
-    props
-  );
+  return new CfnResource<Detector_Properties>(Detector_Type, props);
 }
 
 /**

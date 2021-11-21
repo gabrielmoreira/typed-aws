@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCPeeringConnection
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCPeeringConnection_Type = 'AWS::EC2::VPCPeeringConnection';
 export const VPCPeeringConnection_Type = 'AWS::EC2::VPCPeeringConnection';
@@ -12,10 +12,10 @@ export const VPCPeeringConnection_Type = 'AWS::EC2::VPCPeeringConnection';
 export default function VPCPeeringConnection(
   props: VPCPeeringConnection_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<VPCPeeringConnection_Properties>(
     VPCPeeringConnection_Type,
-    VPCPeeringConnection_Properties
-  >(VPCPeeringConnection_Type, props);
+    props
+  );
 }
 
 /**

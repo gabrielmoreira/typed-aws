@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticBeanstalk::ApplicationVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApplicationVersion_Type =
   'AWS::ElasticBeanstalk::ApplicationVersion';
@@ -15,7 +15,7 @@ export const ApplicationVersion_Type =
 export default function ApplicationVersion(
   props: ApplicationVersion_Properties
 ) {
-  return new CFResource<ApplicationVersion_Type, ApplicationVersion_Properties>(
+  return new CfnResource<ApplicationVersion_Properties>(
     ApplicationVersion_Type,
     props
   );

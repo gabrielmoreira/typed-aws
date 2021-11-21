@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::StackFleetAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StackFleetAssociation_Type =
   'AWS::AppStream::StackFleetAssociation';
@@ -15,10 +15,10 @@ export const StackFleetAssociation_Type =
 export default function StackFleetAssociation(
   props: StackFleetAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<StackFleetAssociation_Properties>(
     StackFleetAssociation_Type,
-    StackFleetAssociation_Properties
-  >(StackFleetAssociation_Type, props);
+    props
+  );
 }
 
 /**

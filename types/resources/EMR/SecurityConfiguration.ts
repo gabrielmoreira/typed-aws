@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EMR::SecurityConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecurityConfiguration_Type = 'AWS::EMR::SecurityConfiguration';
 export const SecurityConfiguration_Type = 'AWS::EMR::SecurityConfiguration';
@@ -12,10 +12,10 @@ export const SecurityConfiguration_Type = 'AWS::EMR::SecurityConfiguration';
 export default function SecurityConfiguration(
   props: SecurityConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SecurityConfiguration_Properties>(
     SecurityConfiguration_Type,
-    SecurityConfiguration_Properties
-  >(SecurityConfiguration_Type, props);
+    props
+  );
 }
 
 /**

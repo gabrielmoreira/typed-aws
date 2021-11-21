@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::FunctionDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FunctionDefinition_Type = 'AWS::Greengrass::FunctionDefinition';
 export const FunctionDefinition_Type = 'AWS::Greengrass::FunctionDefinition';
@@ -13,7 +13,7 @@ export const FunctionDefinition_Type = 'AWS::Greengrass::FunctionDefinition';
 export default function FunctionDefinition(
   props: FunctionDefinition_Properties
 ) {
-  return new CFResource<FunctionDefinition_Type, FunctionDefinition_Properties>(
+  return new CfnResource<FunctionDefinition_Properties>(
     FunctionDefinition_Type,
     props
   );

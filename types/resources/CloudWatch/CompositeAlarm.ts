@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::CompositeAlarm
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CompositeAlarm_Type = 'AWS::CloudWatch::CompositeAlarm';
 export const CompositeAlarm_Type = 'AWS::CloudWatch::CompositeAlarm';
@@ -12,10 +12,7 @@ export const CompositeAlarm_Type = 'AWS::CloudWatch::CompositeAlarm';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html}
  */
 export default function CompositeAlarm(props: CompositeAlarm_Properties) {
-  return new CFResource<CompositeAlarm_Type, CompositeAlarm_Properties>(
-    CompositeAlarm_Type,
-    props
-  );
+  return new CfnResource<CompositeAlarm_Properties>(CompositeAlarm_Type, props);
 }
 
 /**

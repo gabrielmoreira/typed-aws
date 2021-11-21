@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Neptune::DBCluster
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBCluster_Type = 'AWS::Neptune::DBCluster';
 export const DBCluster_Type = 'AWS::Neptune::DBCluster';
@@ -10,10 +10,7 @@ export const DBCluster_Type = 'AWS::Neptune::DBCluster';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html}
  */
 export default function DBCluster(props: DBCluster_Properties) {
-  return new CFResource<DBCluster_Type, DBCluster_Properties>(
-    DBCluster_Type,
-    props
-  );
+  return new CfnResource<DBCluster_Properties>(DBCluster_Type, props);
 }
 
 /**

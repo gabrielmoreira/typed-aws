@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::CodeRepository
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CodeRepository_Type = 'AWS::SageMaker::CodeRepository';
 export const CodeRepository_Type = 'AWS::SageMaker::CodeRepository';
@@ -10,10 +10,7 @@ export const CodeRepository_Type = 'AWS::SageMaker::CodeRepository';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-coderepository.html}
  */
 export default function CodeRepository(props: CodeRepository_Properties) {
-  return new CFResource<CodeRepository_Type, CodeRepository_Properties>(
-    CodeRepository_Type,
-    props
-  );
+  return new CfnResource<CodeRepository_Properties>(CodeRepository_Type, props);
 }
 
 /**

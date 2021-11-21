@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::FMS::NotificationChannel
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NotificationChannel_Type = 'AWS::FMS::NotificationChannel';
 export const NotificationChannel_Type = 'AWS::FMS::NotificationChannel';
@@ -13,10 +13,10 @@ export const NotificationChannel_Type = 'AWS::FMS::NotificationChannel';
 export default function NotificationChannel(
   props: NotificationChannel_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<NotificationChannel_Properties>(
     NotificationChannel_Type,
-    NotificationChannel_Properties
-  >(NotificationChannel_Type, props);
+    props
+  );
 }
 
 /**

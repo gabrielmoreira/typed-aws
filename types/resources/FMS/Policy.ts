@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::FMS::Policy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Policy_Type = 'AWS::FMS::Policy';
 export const Policy_Type = 'AWS::FMS::Policy';
@@ -10,7 +10,7 @@ export const Policy_Type = 'AWS::FMS::Policy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html}
  */
 export default function Policy(props: Policy_Properties) {
-  return new CFResource<Policy_Type, Policy_Properties>(Policy_Type, props);
+  return new CfnResource<Policy_Properties>(Policy_Type, props);
 }
 
 /**

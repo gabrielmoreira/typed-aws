@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::Stack
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Stack_Type = 'AWS::OpsWorks::Stack';
 export const Stack_Type = 'AWS::OpsWorks::Stack';
@@ -10,7 +10,7 @@ export const Stack_Type = 'AWS::OpsWorks::Stack';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html}
  */
 export default function Stack(props: Stack_Properties) {
-  return new CFResource<Stack_Type, Stack_Properties>(Stack_Type, props);
+  return new CfnResource<Stack_Properties>(Stack_Type, props);
 }
 
 /**

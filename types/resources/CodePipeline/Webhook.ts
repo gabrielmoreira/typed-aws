@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodePipeline::Webhook
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Webhook_Type = 'AWS::CodePipeline::Webhook';
 export const Webhook_Type = 'AWS::CodePipeline::Webhook';
@@ -10,7 +10,7 @@ export const Webhook_Type = 'AWS::CodePipeline::Webhook';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html}
  */
 export default function Webhook(props: Webhook_Properties) {
-  return new CFResource<Webhook_Type, Webhook_Properties>(Webhook_Type, props);
+  return new CfnResource<Webhook_Properties>(Webhook_Type, props);
 }
 
 /**

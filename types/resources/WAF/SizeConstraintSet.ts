@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAF::SizeConstraintSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SizeConstraintSet_Type = 'AWS::WAF::SizeConstraintSet';
 export const SizeConstraintSet_Type = 'AWS::WAF::SizeConstraintSet';
@@ -10,7 +10,7 @@ export const SizeConstraintSet_Type = 'AWS::WAF::SizeConstraintSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html}
  */
 export default function SizeConstraintSet(props: SizeConstraintSet_Properties) {
-  return new CFResource<SizeConstraintSet_Type, SizeConstraintSet_Properties>(
+  return new CfnResource<SizeConstraintSet_Properties>(
     SizeConstraintSet_Type,
     props
   );

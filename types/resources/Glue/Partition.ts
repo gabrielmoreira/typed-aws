@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Partition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Partition_Type = 'AWS::Glue::Partition';
 export const Partition_Type = 'AWS::Glue::Partition';
@@ -10,10 +10,7 @@ export const Partition_Type = 'AWS::Glue::Partition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html}
  */
 export default function Partition(props: Partition_Properties) {
-  return new CFResource<Partition_Type, Partition_Properties>(
-    Partition_Type,
-    props
-  );
+  return new CfnResource<Partition_Properties>(Partition_Type, props);
 }
 
 /**

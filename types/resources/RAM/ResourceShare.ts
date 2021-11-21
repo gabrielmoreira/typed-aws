@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RAM::ResourceShare
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceShare_Type = 'AWS::RAM::ResourceShare';
 export const ResourceShare_Type = 'AWS::RAM::ResourceShare';
@@ -10,10 +10,7 @@ export const ResourceShare_Type = 'AWS::RAM::ResourceShare';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html}
  */
 export default function ResourceShare(props: ResourceShare_Properties) {
-  return new CFResource<ResourceShare_Type, ResourceShare_Properties>(
-    ResourceShare_Type,
-    props
-  );
+  return new CfnResource<ResourceShare_Properties>(ResourceShare_Type, props);
 }
 
 /**

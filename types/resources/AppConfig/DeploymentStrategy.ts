@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppConfig::DeploymentStrategy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeploymentStrategy_Type = 'AWS::AppConfig::DeploymentStrategy';
 export const DeploymentStrategy_Type = 'AWS::AppConfig::DeploymentStrategy';
@@ -12,7 +12,7 @@ export const DeploymentStrategy_Type = 'AWS::AppConfig::DeploymentStrategy';
 export default function DeploymentStrategy(
   props: DeploymentStrategy_Properties
 ) {
-  return new CFResource<DeploymentStrategy_Type, DeploymentStrategy_Properties>(
+  return new CfnResource<DeploymentStrategy_Properties>(
     DeploymentStrategy_Type,
     props
   );

@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::SSMContacts::ContactChannel
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ContactChannel_Type = 'AWS::SSMContacts::ContactChannel';
 export const ContactChannel_Type = 'AWS::SSMContacts::ContactChannel';
 
 export default function ContactChannel(props: ContactChannel_Properties) {
-  return new CFResource<ContactChannel_Type, ContactChannel_Properties>(
-    ContactChannel_Type,
-    props
-  );
+  return new CfnResource<ContactChannel_Properties>(ContactChannel_Type, props);
 }
 
 export type ContactChannel_Properties = {

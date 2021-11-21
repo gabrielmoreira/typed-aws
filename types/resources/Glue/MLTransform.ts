@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::MLTransform
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MLTransform_Type = 'AWS::Glue::MLTransform';
 export const MLTransform_Type = 'AWS::Glue::MLTransform';
@@ -10,10 +10,7 @@ export const MLTransform_Type = 'AWS::Glue::MLTransform';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html}
  */
 export default function MLTransform(props: MLTransform_Properties) {
-  return new CFResource<MLTransform_Type, MLTransform_Properties>(
-    MLTransform_Type,
-    props
-  );
+  return new CfnResource<MLTransform_Properties>(MLTransform_Type, props);
 }
 
 /**

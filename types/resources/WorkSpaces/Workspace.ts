@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WorkSpaces::Workspace
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Workspace_Type = 'AWS::WorkSpaces::Workspace';
 export const Workspace_Type = 'AWS::WorkSpaces::Workspace';
@@ -10,10 +10,7 @@ export const Workspace_Type = 'AWS::WorkSpaces::Workspace';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html}
  */
 export default function Workspace(props: Workspace_Properties) {
-  return new CFResource<Workspace_Type, Workspace_Properties>(
-    Workspace_Type,
-    props
-  );
+  return new CfnResource<Workspace_Properties>(Workspace_Type, props);
 }
 
 /**

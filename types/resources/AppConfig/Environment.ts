@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppConfig::Environment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Environment_Type = 'AWS::AppConfig::Environment';
 export const Environment_Type = 'AWS::AppConfig::Environment';
@@ -10,10 +10,7 @@ export const Environment_Type = 'AWS::AppConfig::Environment';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html}
  */
 export default function Environment(props: Environment_Properties) {
-  return new CFResource<Environment_Type, Environment_Properties>(
-    Environment_Type,
-    props
-  );
+  return new CfnResource<Environment_Properties>(Environment_Type, props);
 }
 
 /**

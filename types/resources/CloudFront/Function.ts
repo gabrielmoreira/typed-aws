@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::Function
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Function_Type = 'AWS::CloudFront::Function';
 export const Function_Type = 'AWS::CloudFront::Function';
@@ -10,10 +10,7 @@ export const Function_Type = 'AWS::CloudFront::Function';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html}
  */
 export default function Function(props: Function_Properties) {
-  return new CFResource<Function_Type, Function_Properties>(
-    Function_Type,
-    props
-  );
+  return new CfnResource<Function_Properties>(Function_Type, props);
 }
 
 /**

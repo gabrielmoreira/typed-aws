@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::Firewall
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Firewall_Type = 'AWS::NetworkFirewall::Firewall';
 export const Firewall_Type = 'AWS::NetworkFirewall::Firewall';
@@ -10,10 +10,7 @@ export const Firewall_Type = 'AWS::NetworkFirewall::Firewall';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html}
  */
 export default function Firewall(props: Firewall_Properties) {
-  return new CFResource<Firewall_Type, Firewall_Properties>(
-    Firewall_Type,
-    props
-  );
+  return new CfnResource<Firewall_Properties>(Firewall_Type, props);
 }
 
 /**

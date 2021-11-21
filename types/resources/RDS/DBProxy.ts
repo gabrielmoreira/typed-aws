@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBProxy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBProxy_Type = 'AWS::RDS::DBProxy';
 export const DBProxy_Type = 'AWS::RDS::DBProxy';
@@ -10,7 +10,7 @@ export const DBProxy_Type = 'AWS::RDS::DBProxy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html}
  */
 export default function DBProxy(props: DBProxy_Properties) {
-  return new CFResource<DBProxy_Type, DBProxy_Properties>(DBProxy_Type, props);
+  return new CfnResource<DBProxy_Properties>(DBProxy_Type, props);
 }
 
 /**

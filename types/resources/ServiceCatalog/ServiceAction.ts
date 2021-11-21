@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::ServiceAction
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ServiceAction_Type = 'AWS::ServiceCatalog::ServiceAction';
 export const ServiceAction_Type = 'AWS::ServiceCatalog::ServiceAction';
@@ -10,10 +10,7 @@ export const ServiceAction_Type = 'AWS::ServiceCatalog::ServiceAction';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html}
  */
 export default function ServiceAction(props: ServiceAction_Properties) {
-  return new CFResource<ServiceAction_Type, ServiceAction_Properties>(
-    ServiceAction_Type,
-    props
-  );
+  return new CfnResource<ServiceAction_Properties>(ServiceAction_Type, props);
 }
 
 /**

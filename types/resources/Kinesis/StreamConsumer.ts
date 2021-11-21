@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Kinesis::StreamConsumer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StreamConsumer_Type = 'AWS::Kinesis::StreamConsumer';
 export const StreamConsumer_Type = 'AWS::Kinesis::StreamConsumer';
@@ -10,10 +10,7 @@ export const StreamConsumer_Type = 'AWS::Kinesis::StreamConsumer';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html}
  */
 export default function StreamConsumer(props: StreamConsumer_Properties) {
-  return new CFResource<StreamConsumer_Type, StreamConsumer_Properties>(
-    StreamConsumer_Type,
-    props
-  );
+  return new CfnResource<StreamConsumer_Properties>(StreamConsumer_Type, props);
 }
 
 /**

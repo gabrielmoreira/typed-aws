@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaConvert::Queue
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Queue_Type = 'AWS::MediaConvert::Queue';
 export const Queue_Type = 'AWS::MediaConvert::Queue';
@@ -10,7 +10,7 @@ export const Queue_Type = 'AWS::MediaConvert::Queue';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html}
  */
 export default function Queue(props: Queue_Properties) {
-  return new CFResource<Queue_Type, Queue_Properties>(Queue_Type, props);
+  return new CfnResource<Queue_Properties>(Queue_Type, props);
 }
 
 /**

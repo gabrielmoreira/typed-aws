@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::ClusterCapacityProviderAssociations
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClusterCapacityProviderAssociations_Type =
   'AWS::ECS::ClusterCapacityProviderAssociations';
@@ -15,10 +15,10 @@ export const ClusterCapacityProviderAssociations_Type =
 export default function ClusterCapacityProviderAssociations(
   props: ClusterCapacityProviderAssociations_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ClusterCapacityProviderAssociations_Properties>(
     ClusterCapacityProviderAssociations_Type,
-    ClusterCapacityProviderAssociations_Properties
-  >(ClusterCapacityProviderAssociations_Type, props);
+    props
+  );
 }
 
 /**

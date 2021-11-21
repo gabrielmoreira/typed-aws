@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::XssMatchSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type XssMatchSet_Type = 'AWS::WAFRegional::XssMatchSet';
 export const XssMatchSet_Type = 'AWS::WAFRegional::XssMatchSet';
@@ -10,10 +10,7 @@ export const XssMatchSet_Type = 'AWS::WAFRegional::XssMatchSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html}
  */
 export default function XssMatchSet(props: XssMatchSet_Properties) {
-  return new CFResource<XssMatchSet_Type, XssMatchSet_Properties>(
-    XssMatchSet_Type,
-    props
-  );
+  return new CfnResource<XssMatchSet_Properties>(XssMatchSet_Type, props);
 }
 
 /**

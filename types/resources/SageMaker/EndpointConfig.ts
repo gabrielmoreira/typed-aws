@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::EndpointConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EndpointConfig_Type = 'AWS::SageMaker::EndpointConfig';
 export const EndpointConfig_Type = 'AWS::SageMaker::EndpointConfig';
@@ -10,10 +10,7 @@ export const EndpointConfig_Type = 'AWS::SageMaker::EndpointConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html}
  */
 export default function EndpointConfig(props: EndpointConfig_Properties) {
-  return new CFResource<EndpointConfig_Type, EndpointConfig_Properties>(
-    EndpointConfig_Type,
-    props
-  );
+  return new CfnResource<EndpointConfig_Properties>(EndpointConfig_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::MatchmakingRuleSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MatchmakingRuleSet_Type = 'AWS::GameLift::MatchmakingRuleSet';
 export const MatchmakingRuleSet_Type = 'AWS::GameLift::MatchmakingRuleSet';
@@ -12,7 +12,7 @@ export const MatchmakingRuleSet_Type = 'AWS::GameLift::MatchmakingRuleSet';
 export default function MatchmakingRuleSet(
   props: MatchmakingRuleSet_Properties
 ) {
-  return new CFResource<MatchmakingRuleSet_Type, MatchmakingRuleSet_Properties>(
+  return new CfnResource<MatchmakingRuleSet_Properties>(
     MatchmakingRuleSet_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::AccessPoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AccessPoint_Type = 'AWS::S3Outposts::AccessPoint';
 export const AccessPoint_Type = 'AWS::S3Outposts::AccessPoint';
@@ -10,10 +10,7 @@ export const AccessPoint_Type = 'AWS::S3Outposts::AccessPoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html}
  */
 export default function AccessPoint(props: AccessPoint_Properties) {
-  return new CFResource<AccessPoint_Type, AccessPoint_Properties>(
-    AccessPoint_Type,
-    props
-  );
+  return new CfnResource<AccessPoint_Properties>(AccessPoint_Type, props);
 }
 
 /**

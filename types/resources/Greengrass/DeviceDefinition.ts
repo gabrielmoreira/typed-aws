@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::DeviceDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeviceDefinition_Type = 'AWS::Greengrass::DeviceDefinition';
 export const DeviceDefinition_Type = 'AWS::Greengrass::DeviceDefinition';
@@ -10,7 +10,7 @@ export const DeviceDefinition_Type = 'AWS::Greengrass::DeviceDefinition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html}
  */
 export default function DeviceDefinition(props: DeviceDefinition_Properties) {
-  return new CFResource<DeviceDefinition_Type, DeviceDefinition_Properties>(
+  return new CfnResource<DeviceDefinition_Properties>(
     DeviceDefinition_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpointServicePermissions
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCEndpointServicePermissions_Type =
   'AWS::EC2::VPCEndpointServicePermissions';
@@ -15,10 +15,10 @@ export const VPCEndpointServicePermissions_Type =
 export default function VPCEndpointServicePermissions(
   props: VPCEndpointServicePermissions_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<VPCEndpointServicePermissions_Properties>(
     VPCEndpointServicePermissions_Type,
-    VPCEndpointServicePermissions_Properties
-  >(VPCEndpointServicePermissions_Type, props);
+    props
+  );
 }
 
 /**

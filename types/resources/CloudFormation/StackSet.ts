@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::CloudFormation::StackSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StackSet_Type = 'AWS::CloudFormation::StackSet';
 export const StackSet_Type = 'AWS::CloudFormation::StackSet';
 
 export default function StackSet(props: StackSet_Properties) {
-  return new CFResource<StackSet_Type, StackSet_Properties>(
-    StackSet_Type,
-    props
-  );
+  return new CfnResource<StackSet_Properties>(StackSet_Type, props);
 }
 
 export type StackSet_Properties =

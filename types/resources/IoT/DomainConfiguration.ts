@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::DomainConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DomainConfiguration_Type = 'AWS::IoT::DomainConfiguration';
 export const DomainConfiguration_Type = 'AWS::IoT::DomainConfiguration';
@@ -12,10 +12,10 @@ export const DomainConfiguration_Type = 'AWS::IoT::DomainConfiguration';
 export default function DomainConfiguration(
   props: DomainConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DomainConfiguration_Properties>(
     DomainConfiguration_Type,
-    DomainConfiguration_Properties
-  >(DomainConfiguration_Type, props);
+    props
+  );
 }
 
 /**

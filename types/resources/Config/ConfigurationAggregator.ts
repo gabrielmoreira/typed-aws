@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConfigurationAggregator
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConfigurationAggregator_Type =
   'AWS::Config::ConfigurationAggregator';
@@ -15,10 +15,10 @@ export const ConfigurationAggregator_Type =
 export default function ConfigurationAggregator(
   props: ConfigurationAggregator_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConfigurationAggregator_Properties>(
     ConfigurationAggregator_Type,
-    ConfigurationAggregator_Properties
-  >(ConfigurationAggregator_Type, props);
+    props
+  );
 }
 
 /**

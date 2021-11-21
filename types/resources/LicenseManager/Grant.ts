@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LicenseManager::Grant
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Grant_Type = 'AWS::LicenseManager::Grant';
 export const Grant_Type = 'AWS::LicenseManager::Grant';
@@ -11,7 +11,7 @@ export const Grant_Type = 'AWS::LicenseManager::Grant';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html}
  */
 export default function Grant(props: Grant_Properties) {
-  return new CFResource<Grant_Type, Grant_Properties>(Grant_Type, props);
+  return new CfnResource<Grant_Properties>(Grant_Type, props);
 }
 
 /**

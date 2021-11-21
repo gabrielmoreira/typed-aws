@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ProvisioningTemplate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ProvisioningTemplate_Type = 'AWS::IoT::ProvisioningTemplate';
 export const ProvisioningTemplate_Type = 'AWS::IoT::ProvisioningTemplate';
@@ -12,10 +12,10 @@ export const ProvisioningTemplate_Type = 'AWS::IoT::ProvisioningTemplate';
 export default function ProvisioningTemplate(
   props: ProvisioningTemplate_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ProvisioningTemplate_Properties>(
     ProvisioningTemplate_Type,
-    ProvisioningTemplate_Properties
-  >(ProvisioningTemplate_Type, props);
+    props
+  );
 }
 
 /**

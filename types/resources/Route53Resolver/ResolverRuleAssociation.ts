@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverRuleAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResolverRuleAssociation_Type =
   'AWS::Route53Resolver::ResolverRuleAssociation';
@@ -15,10 +15,10 @@ export const ResolverRuleAssociation_Type =
 export default function ResolverRuleAssociation(
   props: ResolverRuleAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResolverRuleAssociation_Properties>(
     ResolverRuleAssociation_Type,
-    ResolverRuleAssociation_Properties
-  >(ResolverRuleAssociation_Type, props);
+    props
+  );
 }
 
 /**

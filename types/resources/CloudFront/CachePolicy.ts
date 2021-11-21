@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::CachePolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CachePolicy_Type = 'AWS::CloudFront::CachePolicy';
 export const CachePolicy_Type = 'AWS::CloudFront::CachePolicy';
@@ -10,10 +10,7 @@ export const CachePolicy_Type = 'AWS::CloudFront::CachePolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html}
  */
 export default function CachePolicy(props: CachePolicy_Properties) {
-  return new CFResource<CachePolicy_Type, CachePolicy_Properties>(
-    CachePolicy_Type,
-    props
-  );
+  return new CfnResource<CachePolicy_Properties>(CachePolicy_Type, props);
 }
 
 /**

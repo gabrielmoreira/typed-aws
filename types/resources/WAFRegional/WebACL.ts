@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::WebACL
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WebACL_Type = 'AWS::WAFRegional::WebACL';
 export const WebACL_Type = 'AWS::WAFRegional::WebACL';
@@ -10,7 +10,7 @@ export const WebACL_Type = 'AWS::WAFRegional::WebACL';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html}
  */
 export default function WebACL(props: WebACL_Properties) {
-  return new CFResource<WebACL_Type, WebACL_Properties>(WebACL_Type, props);
+  return new CfnResource<WebACL_Properties>(WebACL_Type, props);
 }
 
 /**

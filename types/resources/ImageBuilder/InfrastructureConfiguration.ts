@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::InfrastructureConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type InfrastructureConfiguration_Type =
   'AWS::ImageBuilder::InfrastructureConfiguration';
@@ -15,10 +15,10 @@ export const InfrastructureConfiguration_Type =
 export default function InfrastructureConfiguration(
   props: InfrastructureConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<InfrastructureConfiguration_Properties>(
     InfrastructureConfiguration_Type,
-    InfrastructureConfiguration_Properties
-  >(InfrastructureConfiguration_Type, props);
+    props
+  );
 }
 
 /**

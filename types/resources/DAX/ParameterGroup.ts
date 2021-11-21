@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DAX::ParameterGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ParameterGroup_Type = 'AWS::DAX::ParameterGroup';
 export const ParameterGroup_Type = 'AWS::DAX::ParameterGroup';
@@ -10,10 +10,7 @@ export const ParameterGroup_Type = 'AWS::DAX::ParameterGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html}
  */
 export default function ParameterGroup(props: ParameterGroup_Properties) {
-  return new CFResource<ParameterGroup_Type, ParameterGroup_Properties>(
-    ParameterGroup_Type,
-    props
-  );
+  return new CfnResource<ParameterGroup_Properties>(ParameterGroup_Type, props);
 }
 
 /**

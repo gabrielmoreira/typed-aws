@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DMS::EventSubscription
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EventSubscription_Type = 'AWS::DMS::EventSubscription';
 export const EventSubscription_Type = 'AWS::DMS::EventSubscription';
@@ -10,7 +10,7 @@ export const EventSubscription_Type = 'AWS::DMS::EventSubscription';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html}
  */
 export default function EventSubscription(props: EventSubscription_Properties) {
-  return new CFResource<EventSubscription_Type, EventSubscription_Properties>(
+  return new CfnResource<EventSubscription_Properties>(
     EventSubscription_Type,
     props
   );

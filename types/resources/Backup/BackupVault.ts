@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::BackupVault
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type BackupVault_Type = 'AWS::Backup::BackupVault';
 export const BackupVault_Type = 'AWS::Backup::BackupVault';
@@ -10,10 +10,7 @@ export const BackupVault_Type = 'AWS::Backup::BackupVault';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html}
  */
 export default function BackupVault(props: BackupVault_Properties) {
-  return new CFResource<BackupVault_Type, BackupVault_Properties>(
-    BackupVault_Type,
-    props
-  );
+  return new CfnResource<BackupVault_Properties>(BackupVault_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBSecurityGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBSecurityGroup_Type = 'AWS::RDS::DBSecurityGroup';
 export const DBSecurityGroup_Type = 'AWS::RDS::DBSecurityGroup';
@@ -10,7 +10,7 @@ export const DBSecurityGroup_Type = 'AWS::RDS::DBSecurityGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html}
  */
 export default function DBSecurityGroup(props: DBSecurityGroup_Properties) {
-  return new CFResource<DBSecurityGroup_Type, DBSecurityGroup_Properties>(
+  return new CfnResource<DBSecurityGroup_Properties>(
     DBSecurityGroup_Type,
     props
   );

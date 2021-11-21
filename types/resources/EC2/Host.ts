@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Host
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Host_Type = 'AWS::EC2::Host';
 export const Host_Type = 'AWS::EC2::Host';
@@ -10,7 +10,7 @@ export const Host_Type = 'AWS::EC2::Host';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html}
  */
 export default function Host(props: Host_Properties) {
-  return new CFResource<Host_Type, Host_Properties>(Host_Type, props);
+  return new CfnResource<Host_Properties>(Host_Type, props);
 }
 
 /**

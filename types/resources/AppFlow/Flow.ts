@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppFlow::Flow
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Flow_Type = 'AWS::AppFlow::Flow';
 export const Flow_Type = 'AWS::AppFlow::Flow';
@@ -10,7 +10,7 @@ export const Flow_Type = 'AWS::AppFlow::Flow';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html}
  */
 export default function Flow(props: Flow_Properties) {
-  return new CFResource<Flow_Type, Flow_Properties>(Flow_Type, props);
+  return new CfnResource<Flow_Properties>(Flow_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::ResourceVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceVersion_Type = 'AWS::CloudFormation::ResourceVersion';
 export const ResourceVersion_Type = 'AWS::CloudFormation::ResourceVersion';
@@ -11,7 +11,7 @@ export const ResourceVersion_Type = 'AWS::CloudFormation::ResourceVersion';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html}
  */
 export default function ResourceVersion(props: ResourceVersion_Properties) {
-  return new CFResource<ResourceVersion_Type, ResourceVersion_Properties>(
+  return new CfnResource<ResourceVersion_Properties>(
     ResourceVersion_Type,
     props
   );

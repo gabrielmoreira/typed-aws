@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInterfacePermission
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkInterfacePermission_Type =
   'AWS::EC2::NetworkInterfacePermission';
@@ -15,10 +15,10 @@ export const NetworkInterfacePermission_Type =
 export default function NetworkInterfacePermission(
   props: NetworkInterfacePermission_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<NetworkInterfacePermission_Properties>(
     NetworkInterfacePermission_Type,
-    NetworkInterfacePermission_Properties
-  >(NetworkInterfacePermission_Type, props);
+    props
+  );
 }
 
 /**

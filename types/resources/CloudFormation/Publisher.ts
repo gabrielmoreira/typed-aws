@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::Publisher
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Publisher_Type = 'AWS::CloudFormation::Publisher';
 export const Publisher_Type = 'AWS::CloudFormation::Publisher';
@@ -10,10 +10,7 @@ export const Publisher_Type = 'AWS::CloudFormation::Publisher';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html}
  */
 export default function Publisher(props: Publisher_Properties) {
-  return new CFResource<Publisher_Type, Publisher_Properties>(
-    Publisher_Type,
-    props
-  );
+  return new CfnResource<Publisher_Properties>(Publisher_Type, props);
 }
 
 /**

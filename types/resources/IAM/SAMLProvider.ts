@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::SAMLProvider
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SAMLProvider_Type = 'AWS::IAM::SAMLProvider';
 export const SAMLProvider_Type = 'AWS::IAM::SAMLProvider';
@@ -10,10 +10,7 @@ export const SAMLProvider_Type = 'AWS::IAM::SAMLProvider';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html}
  */
 export default function SAMLProvider(props: SAMLProvider_Properties) {
-  return new CFResource<SAMLProvider_Type, SAMLProvider_Properties>(
-    SAMLProvider_Type,
-    props
-  );
+  return new CfnResource<SAMLProvider_Properties>(SAMLProvider_Type, props);
 }
 
 /**

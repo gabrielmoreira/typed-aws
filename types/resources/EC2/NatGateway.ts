@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NatGateway
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NatGateway_Type = 'AWS::EC2::NatGateway';
 export const NatGateway_Type = 'AWS::EC2::NatGateway';
@@ -10,10 +10,7 @@ export const NatGateway_Type = 'AWS::EC2::NatGateway';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html}
  */
 export default function NatGateway(props: NatGateway_Properties) {
-  return new CFResource<NatGateway_Type, NatGateway_Properties>(
-    NatGateway_Type,
-    props
-  );
+  return new CfnResource<NatGateway_Properties>(NatGateway_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::EventInvokeConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EventInvokeConfig_Type = 'AWS::Lambda::EventInvokeConfig';
 export const EventInvokeConfig_Type = 'AWS::Lambda::EventInvokeConfig';
@@ -10,7 +10,7 @@ export const EventInvokeConfig_Type = 'AWS::Lambda::EventInvokeConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html}
  */
 export default function EventInvokeConfig(props: EventInvokeConfig_Properties) {
-  return new CFResource<EventInvokeConfig_Type, EventInvokeConfig_Properties>(
+  return new CfnResource<EventInvokeConfig_Properties>(
     EventInvokeConfig_Type,
     props
   );

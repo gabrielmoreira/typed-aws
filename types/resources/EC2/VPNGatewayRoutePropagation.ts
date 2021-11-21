@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPNGatewayRoutePropagation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPNGatewayRoutePropagation_Type =
   'AWS::EC2::VPNGatewayRoutePropagation';
@@ -15,10 +15,10 @@ export const VPNGatewayRoutePropagation_Type =
 export default function VPNGatewayRoutePropagation(
   props: VPNGatewayRoutePropagation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<VPNGatewayRoutePropagation_Properties>(
     VPNGatewayRoutePropagation_Type,
-    VPNGatewayRoutePropagation_Properties
-  >(VPNGatewayRoutePropagation_Type, props);
+    props
+  );
 }
 
 /**

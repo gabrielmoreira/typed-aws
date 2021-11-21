@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::CoreDefinitionVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CoreDefinitionVersion_Type =
   'AWS::Greengrass::CoreDefinitionVersion';
@@ -15,10 +15,10 @@ export const CoreDefinitionVersion_Type =
 export default function CoreDefinitionVersion(
   props: CoreDefinitionVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CoreDefinitionVersion_Properties>(
     CoreDefinitionVersion_Type,
-    CoreDefinitionVersion_Properties
-  >(CoreDefinitionVersion_Type, props);
+    props
+  );
 }
 
 /**

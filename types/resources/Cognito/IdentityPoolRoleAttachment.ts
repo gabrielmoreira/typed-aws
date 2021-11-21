@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::IdentityPoolRoleAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type IdentityPoolRoleAttachment_Type =
   'AWS::Cognito::IdentityPoolRoleAttachment';
@@ -15,10 +15,10 @@ export const IdentityPoolRoleAttachment_Type =
 export default function IdentityPoolRoleAttachment(
   props: IdentityPoolRoleAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<IdentityPoolRoleAttachment_Properties>(
     IdentityPoolRoleAttachment_Type,
-    IdentityPoolRoleAttachment_Properties
-  >(IdentityPoolRoleAttachment_Type, props);
+    props
+  );
 }
 
 /**

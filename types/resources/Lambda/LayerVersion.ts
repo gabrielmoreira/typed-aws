@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::LayerVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LayerVersion_Type = 'AWS::Lambda::LayerVersion';
 export const LayerVersion_Type = 'AWS::Lambda::LayerVersion';
@@ -10,10 +10,7 @@ export const LayerVersion_Type = 'AWS::Lambda::LayerVersion';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html}
  */
 export default function LayerVersion(props: LayerVersion_Properties) {
-  return new CFResource<LayerVersion_Type, LayerVersion_Properties>(
-    LayerVersion_Type,
-    props
-  );
+  return new CfnResource<LayerVersion_Properties>(LayerVersion_Type, props);
 }
 
 /**

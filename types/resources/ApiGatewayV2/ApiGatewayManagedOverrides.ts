@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::ApiGatewayManagedOverrides
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApiGatewayManagedOverrides_Type =
   'AWS::ApiGatewayV2::ApiGatewayManagedOverrides';
@@ -15,10 +15,10 @@ export const ApiGatewayManagedOverrides_Type =
 export default function ApiGatewayManagedOverrides(
   props: ApiGatewayManagedOverrides_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ApiGatewayManagedOverrides_Properties>(
     ApiGatewayManagedOverrides_Type,
-    ApiGatewayManagedOverrides_Properties
-  >(ApiGatewayManagedOverrides_Type, props);
+    props
+  );
 }
 
 /**

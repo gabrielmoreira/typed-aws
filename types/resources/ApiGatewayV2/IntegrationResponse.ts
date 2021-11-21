@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::IntegrationResponse
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type IntegrationResponse_Type = 'AWS::ApiGatewayV2::IntegrationResponse';
 export const IntegrationResponse_Type =
@@ -14,10 +14,10 @@ export const IntegrationResponse_Type =
 export default function IntegrationResponse(
   props: IntegrationResponse_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<IntegrationResponse_Properties>(
     IntegrationResponse_Type,
-    IntegrationResponse_Properties
-  >(IntegrationResponse_Type, props);
+    props
+  );
 }
 
 /**

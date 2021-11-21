@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticBeanstalk::Application
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Application_Type = 'AWS::ElasticBeanstalk::Application';
 export const Application_Type = 'AWS::ElasticBeanstalk::Application';
@@ -10,10 +10,7 @@ export const Application_Type = 'AWS::ElasticBeanstalk::Application';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html}
  */
 export default function Application(props: Application_Properties) {
-  return new CFResource<Application_Type, Application_Properties>(
-    Application_Type,
-    props
-  );
+  return new CfnResource<Application_Properties>(Application_Type, props);
 }
 
 /**

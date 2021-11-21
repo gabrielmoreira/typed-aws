@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Batch::ComputeEnvironment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ComputeEnvironment_Type = 'AWS::Batch::ComputeEnvironment';
 export const ComputeEnvironment_Type = 'AWS::Batch::ComputeEnvironment';
@@ -12,7 +12,7 @@ export const ComputeEnvironment_Type = 'AWS::Batch::ComputeEnvironment';
 export default function ComputeEnvironment(
   props: ComputeEnvironment_Properties
 ) {
-  return new CFResource<ComputeEnvironment_Type, ComputeEnvironment_Properties>(
+  return new CfnResource<ComputeEnvironment_Properties>(
     ComputeEnvironment_Type,
     props
   );

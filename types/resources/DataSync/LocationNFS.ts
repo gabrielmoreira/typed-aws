@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationNFS
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationNFS_Type = 'AWS::DataSync::LocationNFS';
 export const LocationNFS_Type = 'AWS::DataSync::LocationNFS';
@@ -10,10 +10,7 @@ export const LocationNFS_Type = 'AWS::DataSync::LocationNFS';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html}
  */
 export default function LocationNFS(props: LocationNFS_Properties) {
-  return new CFResource<LocationNFS_Type, LocationNFS_Properties>(
-    LocationNFS_Type,
-    props
-  );
+  return new CfnResource<LocationNFS_Properties>(LocationNFS_Type, props);
 }
 
 /**

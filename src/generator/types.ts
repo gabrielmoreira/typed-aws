@@ -10,14 +10,14 @@ export type Schema<T extends TypeDefinition = TypeDefinition> = {
 } & BaseTypeDefinition &
   T;
 
-  export type PropertyRef = string;
+export type PropertyRef = string;
 
 export type BaseTypeDefinition = {
   description?: string;
   originalType?: string;
-} & ConditionalTypes;
+} & (ConditionalTypes | {});
 
-export type ConditionalTypes = AnyOfType | OneOfType | AllOfType | {};
+export type ConditionalTypes = AnyOfType | OneOfType | AllOfType;
 
 export type AnyOfType = {
   anyOf: TypeDefinition[];
@@ -51,7 +51,7 @@ export type ObjectType = {
   createOnlyProperties?: PropertyRef[];
   primaryIdentifier?: PropertyRef[];
   deprecatedProperties?: PropertyRef[];
-  handlers?: any;
+  handlers?: unknown;
 };
 
 export type StringType = {
@@ -68,8 +68,8 @@ export type StringType = {
 export type ArrayType = {
   type: 'array';
   items: TypeDefinition;
-  default?: any[];
-  examples?: any[];
+  default?: unknown[];
+  examples?: unknown[];
   uniqueItems?: boolean;
   minItems?: number;
   maxItems?: number;
@@ -101,7 +101,11 @@ export type RefType = {
   $ref: string;
 };
 
-export type ResourceFile = { module: string; resource: string; fileName: string };
+export type ResourceFile = {
+  module: string;
+  resource: string;
+  fileName: string;
+};
 export type ModuleFile = { module: string; fileName: string };
 export type IndexFile = { fileName: string };
 export type FileData = { source: string };

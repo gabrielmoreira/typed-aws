@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApplicationReferenceDataSource_Type =
   'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource';
@@ -15,10 +15,10 @@ export const ApplicationReferenceDataSource_Type =
 export default function ApplicationReferenceDataSource(
   props: ApplicationReferenceDataSource_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ApplicationReferenceDataSource_Properties>(
     ApplicationReferenceDataSource_Type,
-    ApplicationReferenceDataSource_Properties
-  >(ApplicationReferenceDataSource_Type, props);
+    props
+  );
 }
 
 /**

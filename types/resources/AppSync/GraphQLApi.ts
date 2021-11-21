@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::GraphQLApi
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GraphQLApi_Type = 'AWS::AppSync::GraphQLApi';
 export const GraphQLApi_Type = 'AWS::AppSync::GraphQLApi';
@@ -10,10 +10,7 @@ export const GraphQLApi_Type = 'AWS::AppSync::GraphQLApi';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html}
  */
 export default function GraphQLApi(props: GraphQLApi_Properties) {
-  return new CFResource<GraphQLApi_Type, GraphQLApi_Properties>(
-    GraphQLApi_Type,
-    props
-  );
+  return new CfnResource<GraphQLApi_Properties>(GraphQLApi_Type, props);
 }
 
 /**

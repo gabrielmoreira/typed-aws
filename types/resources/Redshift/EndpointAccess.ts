@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::EndpointAccess
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EndpointAccess_Type = 'AWS::Redshift::EndpointAccess';
 export const EndpointAccess_Type = 'AWS::Redshift::EndpointAccess';
@@ -10,10 +10,7 @@ export const EndpointAccess_Type = 'AWS::Redshift::EndpointAccess';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html}
  */
 export default function EndpointAccess(props: EndpointAccess_Properties) {
-  return new CFResource<EndpointAccess_Type, EndpointAccess_Properties>(
-    EndpointAccess_Type,
-    props
-  );
+  return new CfnResource<EndpointAccess_Properties>(EndpointAccess_Type, props);
 }
 
 /**

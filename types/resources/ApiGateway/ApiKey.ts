@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::ApiKey
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApiKey_Type = 'AWS::ApiGateway::ApiKey';
 export const ApiKey_Type = 'AWS::ApiGateway::ApiKey';
@@ -10,7 +10,7 @@ export const ApiKey_Type = 'AWS::ApiGateway::ApiKey';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html}
  */
 export default function ApiKey(props: ApiKey_Properties) {
-  return new CFResource<ApiKey_Type, ApiKey_Properties>(ApiKey_Type, props);
+  return new CfnResource<ApiKey_Properties>(ApiKey_Type, props);
 }
 
 /**

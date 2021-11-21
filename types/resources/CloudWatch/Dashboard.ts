@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::Dashboard
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Dashboard_Type = 'AWS::CloudWatch::Dashboard';
 export const Dashboard_Type = 'AWS::CloudWatch::Dashboard';
@@ -10,10 +10,7 @@ export const Dashboard_Type = 'AWS::CloudWatch::Dashboard';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html}
  */
 export default function Dashboard(props: Dashboard_Properties) {
-  return new CFResource<Dashboard_Type, Dashboard_Properties>(
-    Dashboard_Type,
-    props
-  );
+  return new CfnResource<Dashboard_Properties>(Dashboard_Type, props);
 }
 
 /**

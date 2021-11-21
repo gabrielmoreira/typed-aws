@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::WebACLAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WebACLAssociation_Type = 'AWS::WAFv2::WebACLAssociation';
 export const WebACLAssociation_Type = 'AWS::WAFv2::WebACLAssociation';
@@ -11,7 +11,7 @@ export const WebACLAssociation_Type = 'AWS::WAFv2::WebACLAssociation';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html}
  */
 export default function WebACLAssociation(props: WebACLAssociation_Properties) {
-  return new CFResource<WebACLAssociation_Type, WebACLAssociation_Properties>(
+  return new CfnResource<WebACLAssociation_Properties>(
     WebACLAssociation_Type,
     props
   );

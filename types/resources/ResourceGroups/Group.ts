@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ResourceGroups::Group
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Group_Type = 'AWS::ResourceGroups::Group';
 export const Group_Type = 'AWS::ResourceGroups::Group';
@@ -10,7 +10,7 @@ export const Group_Type = 'AWS::ResourceGroups::Group';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html}
  */
 export default function Group(props: Group_Properties) {
-  return new CFResource<Group_Type, Group_Properties>(Group_Type, props);
+  return new CfnResource<Group_Properties>(Group_Type, props);
 }
 
 /**

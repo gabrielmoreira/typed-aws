@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecretsManager::SecretTargetAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecretTargetAttachment_Type =
   'AWS::SecretsManager::SecretTargetAttachment';
@@ -15,10 +15,10 @@ export const SecretTargetAttachment_Type =
 export default function SecretTargetAttachment(
   props: SecretTargetAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SecretTargetAttachment_Properties>(
     SecretTargetAttachment_Type,
-    SecretTargetAttachment_Properties
-  >(SecretTargetAttachment_Type, props);
+    props
+  );
 }
 
 /**

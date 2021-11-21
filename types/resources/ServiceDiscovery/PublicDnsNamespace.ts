@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::PublicDnsNamespace
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PublicDnsNamespace_Type =
   'AWS::ServiceDiscovery::PublicDnsNamespace';
@@ -15,7 +15,7 @@ export const PublicDnsNamespace_Type =
 export default function PublicDnsNamespace(
   props: PublicDnsNamespace_Properties
 ) {
-  return new CFResource<PublicDnsNamespace_Type, PublicDnsNamespace_Properties>(
+  return new CfnResource<PublicDnsNamespace_Properties>(
     PublicDnsNamespace_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ClusterSubnetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClusterSubnetGroup_Type = 'AWS::Redshift::ClusterSubnetGroup';
 export const ClusterSubnetGroup_Type = 'AWS::Redshift::ClusterSubnetGroup';
@@ -12,7 +12,7 @@ export const ClusterSubnetGroup_Type = 'AWS::Redshift::ClusterSubnetGroup';
 export default function ClusterSubnetGroup(
   props: ClusterSubnetGroup_Properties
 ) {
-  return new CFResource<ClusterSubnetGroup_Type, ClusterSubnetGroup_Properties>(
+  return new CfnResource<ClusterSubnetGroup_Properties>(
     ClusterSubnetGroup_Type,
     props
   );

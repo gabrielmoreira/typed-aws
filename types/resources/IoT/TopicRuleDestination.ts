@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::TopicRuleDestination
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TopicRuleDestination_Type = 'AWS::IoT::TopicRuleDestination';
 export const TopicRuleDestination_Type = 'AWS::IoT::TopicRuleDestination';
@@ -12,10 +12,10 @@ export const TopicRuleDestination_Type = 'AWS::IoT::TopicRuleDestination';
 export default function TopicRuleDestination(
   props: TopicRuleDestination_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TopicRuleDestination_Properties>(
     TopicRuleDestination_Type,
-    TopicRuleDestination_Properties
-  >(TopicRuleDestination_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBSecurityGroupIngress
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBSecurityGroupIngress_Type = 'AWS::RDS::DBSecurityGroupIngress';
 export const DBSecurityGroupIngress_Type = 'AWS::RDS::DBSecurityGroupIngress';
@@ -12,10 +12,10 @@ export const DBSecurityGroupIngress_Type = 'AWS::RDS::DBSecurityGroupIngress';
 export default function DBSecurityGroupIngress(
   props: DBSecurityGroupIngress_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DBSecurityGroupIngress_Properties>(
     DBSecurityGroupIngress_Type,
-    DBSecurityGroupIngress_Properties
-  >(DBSecurityGroupIngress_Type, props);
+    props
+  );
 }
 
 /**

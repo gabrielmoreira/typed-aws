@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Trigger
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Trigger_Type = 'AWS::Glue::Trigger';
 export const Trigger_Type = 'AWS::Glue::Trigger';
@@ -10,7 +10,7 @@ export const Trigger_Type = 'AWS::Glue::Trigger';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html}
  */
 export default function Trigger(props: Trigger_Properties) {
-  return new CFResource<Trigger_Type, Trigger_Properties>(Trigger_Type, props);
+  return new CfnResource<Trigger_Properties>(Trigger_Type, props);
 }
 
 /**

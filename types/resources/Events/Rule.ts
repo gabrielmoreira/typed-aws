@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::Rule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Rule_Type = 'AWS::Events::Rule';
 export const Rule_Type = 'AWS::Events::Rule';
@@ -10,7 +10,7 @@ export const Rule_Type = 'AWS::Events::Rule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html}
  */
 export default function Rule(props: Rule_Properties) {
-  return new CFResource<Rule_Type, Rule_Properties>(Rule_Type, props);
+  return new CfnResource<Rule_Properties>(Rule_Type, props);
 }
 
 /**

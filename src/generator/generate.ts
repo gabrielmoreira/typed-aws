@@ -1,6 +1,6 @@
 import { FileManager } from './file-manager';
 import { formatSource } from './format';
-import { ResourceModel } from './models';
+import { ResourceModel } from './codegen';
 import { ResourceFile } from './types';
 
 export function generateSource(model: ResourceModel) {

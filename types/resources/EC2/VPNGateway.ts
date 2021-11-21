@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPNGateway
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPNGateway_Type = 'AWS::EC2::VPNGateway';
 export const VPNGateway_Type = 'AWS::EC2::VPNGateway';
@@ -10,10 +10,7 @@ export const VPNGateway_Type = 'AWS::EC2::VPNGateway';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html}
  */
 export default function VPNGateway(props: VPNGateway_Properties) {
-  return new CFResource<VPNGateway_Type, VPNGateway_Properties>(
-    VPNGateway_Type,
-    props
-  );
+  return new CfnResource<VPNGateway_Properties>(VPNGateway_Type, props);
 }
 
 /**

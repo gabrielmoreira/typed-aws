@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::BasePathMapping
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type BasePathMapping_Type = 'AWS::ApiGateway::BasePathMapping';
 export const BasePathMapping_Type = 'AWS::ApiGateway::BasePathMapping';
@@ -10,7 +10,7 @@ export const BasePathMapping_Type = 'AWS::ApiGateway::BasePathMapping';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html}
  */
 export default function BasePathMapping(props: BasePathMapping_Properties) {
-  return new CFResource<BasePathMapping_Type, BasePathMapping_Properties>(
+  return new CfnResource<BasePathMapping_Properties>(
     BasePathMapping_Type,
     props
   );

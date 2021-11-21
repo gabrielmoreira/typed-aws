@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Registry
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Registry_Type = 'AWS::Glue::Registry';
 export const Registry_Type = 'AWS::Glue::Registry';
@@ -11,10 +11,7 @@ export const Registry_Type = 'AWS::Glue::Registry';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html}
  */
 export default function Registry(props: Registry_Properties) {
-  return new CFResource<Registry_Type, Registry_Properties>(
-    Registry_Type,
-    props
-  );
+  return new CfnResource<Registry_Properties>(Registry_Type, props);
 }
 
 /**

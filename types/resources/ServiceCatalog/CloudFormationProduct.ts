@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::CloudFormationProduct
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CloudFormationProduct_Type =
   'AWS::ServiceCatalog::CloudFormationProduct';
@@ -15,10 +15,10 @@ export const CloudFormationProduct_Type =
 export default function CloudFormationProduct(
   props: CloudFormationProduct_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CloudFormationProduct_Properties>(
     CloudFormationProduct_Type,
-    CloudFormationProduct_Properties
-  >(CloudFormationProduct_Type, props);
+    props
+  );
 }
 
 /**

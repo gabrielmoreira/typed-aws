@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayMulticastDomain
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayMulticastDomain_Type =
   'AWS::EC2::TransitGatewayMulticastDomain';
@@ -14,10 +14,10 @@ export const TransitGatewayMulticastDomain_Type =
 export default function TransitGatewayMulticastDomain(
   props: TransitGatewayMulticastDomain_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayMulticastDomain_Properties>(
     TransitGatewayMulticastDomain_Type,
-    TransitGatewayMulticastDomain_Properties
-  >(TransitGatewayMulticastDomain_Type, props);
+    props
+  );
 }
 
 /**

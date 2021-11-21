@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::PatchBaseline
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PatchBaseline_Type = 'AWS::SSM::PatchBaseline';
 export const PatchBaseline_Type = 'AWS::SSM::PatchBaseline';
@@ -10,10 +10,7 @@ export const PatchBaseline_Type = 'AWS::SSM::PatchBaseline';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html}
  */
 export default function PatchBaseline(props: PatchBaseline_Properties) {
-  return new CFResource<PatchBaseline_Type, PatchBaseline_Properties>(
-    PatchBaseline_Type,
-    props
-  );
+  return new CfnResource<PatchBaseline_Properties>(PatchBaseline_Type, props);
 }
 
 /**

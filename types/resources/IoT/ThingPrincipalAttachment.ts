@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ThingPrincipalAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ThingPrincipalAttachment_Type =
   'AWS::IoT::ThingPrincipalAttachment';
@@ -14,10 +14,10 @@ export const ThingPrincipalAttachment_Type =
 export default function ThingPrincipalAttachment(
   props: ThingPrincipalAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ThingPrincipalAttachment_Properties>(
     ThingPrincipalAttachment_Type,
-    ThingPrincipalAttachment_Properties
-  >(ThingPrincipalAttachment_Type, props);
+    props
+  );
 }
 
 /**

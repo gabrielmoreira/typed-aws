@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScalingPlans::ScalingPlan
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ScalingPlan_Type = 'AWS::AutoScalingPlans::ScalingPlan';
 export const ScalingPlan_Type = 'AWS::AutoScalingPlans::ScalingPlan';
@@ -10,10 +10,7 @@ export const ScalingPlan_Type = 'AWS::AutoScalingPlans::ScalingPlan';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html}
  */
 export default function ScalingPlan(props: ScalingPlan_Properties) {
-  return new CFResource<ScalingPlan_Type, ScalingPlan_Properties>(
-    ScalingPlan_Type,
-    props
-  );
+  return new CfnResource<ScalingPlan_Properties>(ScalingPlan_Type, props);
 }
 
 /**

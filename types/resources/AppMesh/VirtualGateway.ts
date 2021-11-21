@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualGateway
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VirtualGateway_Type = 'AWS::AppMesh::VirtualGateway';
 export const VirtualGateway_Type = 'AWS::AppMesh::VirtualGateway';
@@ -10,10 +10,7 @@ export const VirtualGateway_Type = 'AWS::AppMesh::VirtualGateway';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html}
  */
 export default function VirtualGateway(props: VirtualGateway_Properties) {
-  return new CFResource<VirtualGateway_Type, VirtualGateway_Properties>(
-    VirtualGateway_Type,
-    props
-  );
+  return new CfnResource<VirtualGateway_Properties>(VirtualGateway_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::RecordSetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RecordSetGroup_Type = 'AWS::Route53::RecordSetGroup';
 export const RecordSetGroup_Type = 'AWS::Route53::RecordSetGroup';
@@ -10,10 +10,7 @@ export const RecordSetGroup_Type = 'AWS::Route53::RecordSetGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html}
  */
 export default function RecordSetGroup(props: RecordSetGroup_Properties) {
-  return new CFResource<RecordSetGroup_Type, RecordSetGroup_Properties>(
-    RecordSetGroup_Type,
-    props
-  );
+  return new CfnResource<RecordSetGroup_Properties>(RecordSetGroup_Type, props);
 }
 
 /**

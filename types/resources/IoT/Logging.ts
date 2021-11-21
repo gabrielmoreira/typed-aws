@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Logging
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Logging_Type = 'AWS::IoT::Logging';
 export const Logging_Type = 'AWS::IoT::Logging';
@@ -12,7 +12,7 @@ export const Logging_Type = 'AWS::IoT::Logging';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html}
  */
 export default function Logging(props: Logging_Properties) {
-  return new CFResource<Logging_Type, Logging_Properties>(Logging_Type, props);
+  return new CfnResource<Logging_Properties>(Logging_Type, props);
 }
 
 /**

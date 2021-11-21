@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolRiskConfigurationAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolRiskConfigurationAttachment_Type =
   'AWS::Cognito::UserPoolRiskConfigurationAttachment';
@@ -15,10 +15,10 @@ export const UserPoolRiskConfigurationAttachment_Type =
 export default function UserPoolRiskConfigurationAttachment(
   props: UserPoolRiskConfigurationAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<UserPoolRiskConfigurationAttachment_Properties>(
     UserPoolRiskConfigurationAttachment_Type,
-    UserPoolRiskConfigurationAttachment_Properties
-  >(UserPoolRiskConfigurationAttachment_Type, props);
+    props
+  );
 }
 
 /**

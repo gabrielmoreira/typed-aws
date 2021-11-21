@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::RouteTable
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RouteTable_Type = 'AWS::EC2::RouteTable';
 export const RouteTable_Type = 'AWS::EC2::RouteTable';
@@ -10,10 +10,7 @@ export const RouteTable_Type = 'AWS::EC2::RouteTable';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html}
  */
 export default function RouteTable(props: RouteTable_Properties) {
-  return new CFResource<RouteTable_Type, RouteTable_Properties>(
-    RouteTable_Type,
-    props
-  );
+  return new CfnResource<RouteTable_Properties>(RouteTable_Type, props);
 }
 
 /**

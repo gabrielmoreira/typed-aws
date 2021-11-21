@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationS3
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationS3_Type = 'AWS::DataSync::LocationS3';
 export const LocationS3_Type = 'AWS::DataSync::LocationS3';
@@ -10,10 +10,7 @@ export const LocationS3_Type = 'AWS::DataSync::LocationS3';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html}
  */
 export default function LocationS3(props: LocationS3_Properties) {
-  return new CFResource<LocationS3_Type, LocationS3_Properties>(
-    LocationS3_Type,
-    props
-  );
+  return new CfnResource<LocationS3_Properties>(LocationS3_Type, props);
 }
 
 /**

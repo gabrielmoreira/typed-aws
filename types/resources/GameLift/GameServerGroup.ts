@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::GameServerGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GameServerGroup_Type = 'AWS::GameLift::GameServerGroup';
 export const GameServerGroup_Type = 'AWS::GameLift::GameServerGroup';
@@ -11,7 +11,7 @@ export const GameServerGroup_Type = 'AWS::GameLift::GameServerGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html}
  */
 export default function GameServerGroup(props: GameServerGroup_Properties) {
-  return new CFResource<GameServerGroup_Type, GameServerGroup_Properties>(
+  return new CfnResource<GameServerGroup_Properties>(
     GameServerGroup_Type,
     props
   );

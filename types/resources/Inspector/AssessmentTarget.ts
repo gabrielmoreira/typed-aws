@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Inspector::AssessmentTarget
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AssessmentTarget_Type = 'AWS::Inspector::AssessmentTarget';
 export const AssessmentTarget_Type = 'AWS::Inspector::AssessmentTarget';
@@ -10,7 +10,7 @@ export const AssessmentTarget_Type = 'AWS::Inspector::AssessmentTarget';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html}
  */
 export default function AssessmentTarget(props: AssessmentTarget_Properties) {
-  return new CFResource<AssessmentTarget_Type, AssessmentTarget_Properties>(
+  return new CfnResource<AssessmentTarget_Properties>(
     AssessmentTarget_Type,
     props
   );

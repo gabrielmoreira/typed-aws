@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::LoggingConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LoggingConfiguration_Type =
   'AWS::NetworkFirewall::LoggingConfiguration';
@@ -15,10 +15,10 @@ export const LoggingConfiguration_Type =
 export default function LoggingConfiguration(
   props: LoggingConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LoggingConfiguration_Properties>(
     LoggingConfiguration_Type,
-    LoggingConfiguration_Properties
-  >(LoggingConfiguration_Type, props);
+    props
+  );
 }
 
 /**

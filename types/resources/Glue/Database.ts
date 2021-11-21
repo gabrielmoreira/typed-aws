@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Database
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Database_Type = 'AWS::Glue::Database';
 export const Database_Type = 'AWS::Glue::Database';
@@ -10,10 +10,7 @@ export const Database_Type = 'AWS::Glue::Database';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html}
  */
 export default function Database(props: Database_Properties) {
-  return new CFResource<Database_Type, Database_Properties>(
-    Database_Type,
-    props
-  );
+  return new CfnResource<Database_Properties>(Database_Type, props);
 }
 
 /**

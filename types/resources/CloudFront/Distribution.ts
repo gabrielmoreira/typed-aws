@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::Distribution
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Distribution_Type = 'AWS::CloudFront::Distribution';
 export const Distribution_Type = 'AWS::CloudFront::Distribution';
@@ -10,10 +10,7 @@ export const Distribution_Type = 'AWS::CloudFront::Distribution';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html}
  */
 export default function Distribution(props: Distribution_Properties) {
-  return new CFResource<Distribution_Type, Distribution_Properties>(
-    Distribution_Type,
-    props
-  );
+  return new CfnResource<Distribution_Properties>(Distribution_Type, props);
 }
 
 /**

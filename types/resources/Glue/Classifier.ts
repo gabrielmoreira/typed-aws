@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Classifier
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Classifier_Type = 'AWS::Glue::Classifier';
 export const Classifier_Type = 'AWS::Glue::Classifier';
@@ -10,10 +10,7 @@ export const Classifier_Type = 'AWS::Glue::Classifier';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html}
  */
 export default function Classifier(props: Classifier_Properties) {
-  return new CFResource<Classifier_Type, Classifier_Properties>(
-    Classifier_Type,
-    props
-  );
+  return new CfnResource<Classifier_Properties>(Classifier_Type, props);
 }
 
 /**

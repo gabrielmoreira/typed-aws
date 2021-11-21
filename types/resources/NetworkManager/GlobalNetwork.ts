@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::GlobalNetwork
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GlobalNetwork_Type = 'AWS::NetworkManager::GlobalNetwork';
 export const GlobalNetwork_Type = 'AWS::NetworkManager::GlobalNetwork';
@@ -11,10 +11,7 @@ export const GlobalNetwork_Type = 'AWS::NetworkManager::GlobalNetwork';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html}
  */
 export default function GlobalNetwork(props: GlobalNetwork_Properties) {
-  return new CFResource<GlobalNetwork_Type, GlobalNetwork_Properties>(
-    GlobalNetwork_Type,
-    props
-  );
+  return new CfnResource<GlobalNetwork_Properties>(GlobalNetwork_Type, props);
 }
 
 /**

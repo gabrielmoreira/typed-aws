@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisAnalyticsV2::ApplicationOutput
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApplicationOutput_Type =
   'AWS::KinesisAnalyticsV2::ApplicationOutput';
@@ -13,7 +13,7 @@ export const ApplicationOutput_Type =
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html}
  */
 export default function ApplicationOutput(props: ApplicationOutput_Properties) {
-  return new CFResource<ApplicationOutput_Type, ApplicationOutput_Properties>(
+  return new CfnResource<ApplicationOutput_Properties>(
     ApplicationOutput_Type,
     props
   );

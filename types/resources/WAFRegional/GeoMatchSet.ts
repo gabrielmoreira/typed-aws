@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::GeoMatchSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GeoMatchSet_Type = 'AWS::WAFRegional::GeoMatchSet';
 export const GeoMatchSet_Type = 'AWS::WAFRegional::GeoMatchSet';
@@ -10,10 +10,7 @@ export const GeoMatchSet_Type = 'AWS::WAFRegional::GeoMatchSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html}
  */
 export default function GeoMatchSet(props: GeoMatchSet_Properties) {
-  return new CFResource<GeoMatchSet_Type, GeoMatchSet_Properties>(
-    GeoMatchSet_Type,
-    props
-  );
+  return new CfnResource<GeoMatchSet_Properties>(GeoMatchSet_Type, props);
 }
 
 /**

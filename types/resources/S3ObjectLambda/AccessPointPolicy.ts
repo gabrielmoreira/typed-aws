@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3ObjectLambda::AccessPointPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AccessPointPolicy_Type = 'AWS::S3ObjectLambda::AccessPointPolicy';
 export const AccessPointPolicy_Type = 'AWS::S3ObjectLambda::AccessPointPolicy';
@@ -12,7 +12,7 @@ export const AccessPointPolicy_Type = 'AWS::S3ObjectLambda::AccessPointPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html}
  */
 export default function AccessPointPolicy(props: AccessPointPolicy_Properties) {
-  return new CFResource<AccessPointPolicy_Type, AccessPointPolicy_Properties>(
+  return new CfnResource<AccessPointPolicy_Properties>(
     AccessPointPolicy_Type,
     props
   );

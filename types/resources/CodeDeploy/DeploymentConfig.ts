@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeDeploy::DeploymentConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeploymentConfig_Type = 'AWS::CodeDeploy::DeploymentConfig';
 export const DeploymentConfig_Type = 'AWS::CodeDeploy::DeploymentConfig';
@@ -10,7 +10,7 @@ export const DeploymentConfig_Type = 'AWS::CodeDeploy::DeploymentConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html}
  */
 export default function DeploymentConfig(props: DeploymentConfig_Properties) {
-  return new CFResource<DeploymentConfig_Type, DeploymentConfig_Properties>(
+  return new CfnResource<DeploymentConfig_Properties>(
     DeploymentConfig_Type,
     props
   );

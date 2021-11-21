@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Neptune::DBInstance
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBInstance_Type = 'AWS::Neptune::DBInstance';
 export const DBInstance_Type = 'AWS::Neptune::DBInstance';
@@ -10,10 +10,7 @@ export const DBInstance_Type = 'AWS::Neptune::DBInstance';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html}
  */
 export default function DBInstance(props: DBInstance_Properties) {
-  return new CFResource<DBInstance_Type, DBInstance_Properties>(
-    DBInstance_Type,
-    props
-  );
+  return new CfnResource<DBInstance_Properties>(DBInstance_Type, props);
 }
 
 /**

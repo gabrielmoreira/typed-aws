@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SQS::Queue
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Queue_Type = 'AWS::SQS::Queue';
 export const Queue_Type = 'AWS::SQS::Queue';
@@ -10,7 +10,7 @@ export const Queue_Type = 'AWS::SQS::Queue';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html}
  */
 export default function Queue(props: Queue_Properties) {
-  return new CFResource<Queue_Type, Queue_Properties>(Queue_Type, props);
+  return new CfnResource<Queue_Properties>(Queue_Type, props);
 }
 
 /**

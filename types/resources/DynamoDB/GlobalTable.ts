@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DynamoDB::GlobalTable
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GlobalTable_Type = 'AWS::DynamoDB::GlobalTable';
 export const GlobalTable_Type = 'AWS::DynamoDB::GlobalTable';
@@ -11,10 +11,7 @@ export const GlobalTable_Type = 'AWS::DynamoDB::GlobalTable';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html}
  */
 export default function GlobalTable(props: GlobalTable_Properties) {
-  return new CFResource<GlobalTable_Type, GlobalTable_Properties>(
-    GlobalTable_Type,
-    props
-  );
+  return new CfnResource<GlobalTable_Properties>(GlobalTable_Type, props);
 }
 
 /**

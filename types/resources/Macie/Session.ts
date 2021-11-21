@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Macie::Session
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Session_Type = 'AWS::Macie::Session';
 export const Session_Type = 'AWS::Macie::Session';
@@ -12,7 +12,7 @@ export const Session_Type = 'AWS::Macie::Session';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html}
  */
 export default function Session(props: Session_Properties) {
-  return new CFResource<Session_Type, Session_Properties>(Session_Type, props);
+  return new CfnResource<Session_Properties>(Session_Type, props);
 }
 
 /**

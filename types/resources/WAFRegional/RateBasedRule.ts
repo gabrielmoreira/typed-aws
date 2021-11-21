@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::RateBasedRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RateBasedRule_Type = 'AWS::WAFRegional::RateBasedRule';
 export const RateBasedRule_Type = 'AWS::WAFRegional::RateBasedRule';
@@ -10,10 +10,7 @@ export const RateBasedRule_Type = 'AWS::WAFRegional::RateBasedRule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ratebasedrule.html}
  */
 export default function RateBasedRule(props: RateBasedRule_Properties) {
-  return new CFResource<RateBasedRule_Type, RateBasedRule_Properties>(
-    RateBasedRule_Type,
-    props
-  );
+  return new CfnResource<RateBasedRule_Properties>(RateBasedRule_Type, props);
 }
 
 /**

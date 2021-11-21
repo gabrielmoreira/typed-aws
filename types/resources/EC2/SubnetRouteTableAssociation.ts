@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SubnetRouteTableAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SubnetRouteTableAssociation_Type =
   'AWS::EC2::SubnetRouteTableAssociation';
@@ -15,10 +15,10 @@ export const SubnetRouteTableAssociation_Type =
 export default function SubnetRouteTableAssociation(
   props: SubnetRouteTableAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SubnetRouteTableAssociation_Properties>(
     SubnetRouteTableAssociation_Type,
-    SubnetRouteTableAssociation_Properties
-  >(SubnetRouteTableAssociation_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::Document
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Document_Type = 'AWS::SSM::Document';
 export const Document_Type = 'AWS::SSM::Document';
@@ -12,10 +12,7 @@ export const Document_Type = 'AWS::SSM::Document';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html}
  */
 export default function Document(props: Document_Properties) {
-  return new CFResource<Document_Type, Document_Properties>(
-    Document_Type,
-    props
-  );
+  return new CfnResource<Document_Properties>(Document_Type, props);
 }
 
 /**

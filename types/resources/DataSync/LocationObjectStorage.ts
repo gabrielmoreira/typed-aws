@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationObjectStorage
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationObjectStorage_Type = 'AWS::DataSync::LocationObjectStorage';
 export const LocationObjectStorage_Type =
@@ -13,10 +13,10 @@ export const LocationObjectStorage_Type =
 export default function LocationObjectStorage(
   props: LocationObjectStorage_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LocationObjectStorage_Properties>(
     LocationObjectStorage_Type,
-    LocationObjectStorage_Properties
-  >(LocationObjectStorage_Type, props);
+    props
+  );
 }
 
 /**

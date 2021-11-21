@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::RegexPatternSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RegexPatternSet_Type = 'AWS::WAFRegional::RegexPatternSet';
 export const RegexPatternSet_Type = 'AWS::WAFRegional::RegexPatternSet';
@@ -10,7 +10,7 @@ export const RegexPatternSet_Type = 'AWS::WAFRegional::RegexPatternSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html}
  */
 export default function RegexPatternSet(props: RegexPatternSet_Properties) {
-  return new CFResource<RegexPatternSet_Type, RegexPatternSet_Properties>(
+  return new CfnResource<RegexPatternSet_Properties>(
     RegexPatternSet_Type,
     props
   );

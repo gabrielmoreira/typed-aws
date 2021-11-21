@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::BackupPlan
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type BackupPlan_Type = 'AWS::Backup::BackupPlan';
 export const BackupPlan_Type = 'AWS::Backup::BackupPlan';
@@ -10,10 +10,7 @@ export const BackupPlan_Type = 'AWS::Backup::BackupPlan';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html}
  */
 export default function BackupPlan(props: BackupPlan_Properties) {
-  return new CFResource<BackupPlan_Type, BackupPlan_Properties>(
-    BackupPlan_Type,
-    props
-  );
+  return new CfnResource<BackupPlan_Properties>(BackupPlan_Type, props);
 }
 
 /**

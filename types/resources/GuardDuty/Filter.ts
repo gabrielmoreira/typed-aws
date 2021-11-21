@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::Filter
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Filter_Type = 'AWS::GuardDuty::Filter';
 export const Filter_Type = 'AWS::GuardDuty::Filter';
@@ -10,7 +10,7 @@ export const Filter_Type = 'AWS::GuardDuty::Filter';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-filter.html}
  */
 export default function Filter(props: Filter_Properties) {
-  return new CFResource<Filter_Type, Filter_Properties>(Filter_Type, props);
+  return new CfnResource<Filter_Properties>(Filter_Type, props);
 }
 
 /**

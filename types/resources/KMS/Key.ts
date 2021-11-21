@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KMS::Key
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Key_Type = 'AWS::KMS::Key';
 export const Key_Type = 'AWS::KMS::Key';
@@ -15,7 +15,7 @@ export const Key_Type = 'AWS::KMS::Key';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html}
  */
 export default function Key(props: Key_Properties) {
-  return new CFResource<Key_Type, Key_Properties>(Key_Type, props);
+  return new CfnResource<Key_Properties>(Key_Type, props);
 }
 
 /**

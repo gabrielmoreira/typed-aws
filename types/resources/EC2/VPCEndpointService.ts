@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpointService
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCEndpointService_Type = 'AWS::EC2::VPCEndpointService';
 export const VPCEndpointService_Type = 'AWS::EC2::VPCEndpointService';
@@ -12,7 +12,7 @@ export const VPCEndpointService_Type = 'AWS::EC2::VPCEndpointService';
 export default function VPCEndpointService(
   props: VPCEndpointService_Properties
 ) {
-  return new CFResource<VPCEndpointService_Type, VPCEndpointService_Properties>(
+  return new CfnResource<VPCEndpointService_Properties>(
     VPCEndpointService_Type,
     props
   );

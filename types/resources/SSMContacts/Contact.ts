@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMContacts::Contact
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Contact_Type = 'AWS::SSMContacts::Contact';
 export const Contact_Type = 'AWS::SSMContacts::Contact';
@@ -10,7 +10,7 @@ export const Contact_Type = 'AWS::SSMContacts::Contact';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html}
  */
 export default function Contact(props: Contact_Properties) {
-  return new CFResource<Contact_Type, Contact_Properties>(Contact_Type, props);
+  return new CfnResource<Contact_Properties>(Contact_Type, props);
 }
 
 /**

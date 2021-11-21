@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayRoute
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayRoute_Type = 'AWS::EC2::TransitGatewayRoute';
 export const TransitGatewayRoute_Type = 'AWS::EC2::TransitGatewayRoute';
@@ -12,10 +12,10 @@ export const TransitGatewayRoute_Type = 'AWS::EC2::TransitGatewayRoute';
 export default function TransitGatewayRoute(
   props: TransitGatewayRoute_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayRoute_Properties>(
     TransitGatewayRoute_Type,
-    TransitGatewayRoute_Properties
-  >(TransitGatewayRoute_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::PrefixList
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PrefixList_Type = 'AWS::EC2::PrefixList';
 export const PrefixList_Type = 'AWS::EC2::PrefixList';
@@ -10,10 +10,7 @@ export const PrefixList_Type = 'AWS::EC2::PrefixList';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html}
  */
 export default function PrefixList(props: PrefixList_Properties) {
-  return new CFResource<PrefixList_Type, PrefixList_Properties>(
-    PrefixList_Type,
-    props
-  );
+  return new CfnResource<PrefixList_Properties>(PrefixList_Type, props);
 }
 
 /**

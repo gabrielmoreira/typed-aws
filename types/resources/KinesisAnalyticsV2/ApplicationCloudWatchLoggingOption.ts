@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApplicationCloudWatchLoggingOption_Type =
   'AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption';
@@ -15,10 +15,10 @@ export const ApplicationCloudWatchLoggingOption_Type =
 export default function ApplicationCloudWatchLoggingOption(
   props: ApplicationCloudWatchLoggingOption_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ApplicationCloudWatchLoggingOption_Properties>(
     ApplicationCloudWatchLoggingOption_Type,
-    ApplicationCloudWatchLoggingOption_Properties
-  >(ApplicationCloudWatchLoggingOption_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EKS::Nodegroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Nodegroup_Type = 'AWS::EKS::Nodegroup';
 export const Nodegroup_Type = 'AWS::EKS::Nodegroup';
@@ -10,10 +10,7 @@ export const Nodegroup_Type = 'AWS::EKS::Nodegroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html}
  */
 export default function Nodegroup(props: Nodegroup_Properties) {
-  return new CFResource<Nodegroup_Type, Nodegroup_Properties>(
-    Nodegroup_Type,
-    props
-  );
+  return new CfnResource<Nodegroup_Properties>(Nodegroup_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::ApiMapping
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ApiMapping_Type = 'AWS::ApiGatewayV2::ApiMapping';
 export const ApiMapping_Type = 'AWS::ApiGatewayV2::ApiMapping';
@@ -10,10 +10,7 @@ export const ApiMapping_Type = 'AWS::ApiGatewayV2::ApiMapping';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html}
  */
 export default function ApiMapping(props: ApiMapping_Properties) {
-  return new CFResource<ApiMapping_Type, ApiMapping_Properties>(
-    ApiMapping_Type,
-    props
-  );
+  return new CfnResource<ApiMapping_Properties>(ApiMapping_Type, props);
 }
 
 /**

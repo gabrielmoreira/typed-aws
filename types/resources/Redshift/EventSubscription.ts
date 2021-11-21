@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::EventSubscription
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EventSubscription_Type = 'AWS::Redshift::EventSubscription';
 export const EventSubscription_Type = 'AWS::Redshift::EventSubscription';
@@ -11,7 +11,7 @@ export const EventSubscription_Type = 'AWS::Redshift::EventSubscription';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html}
  */
 export default function EventSubscription(props: EventSubscription_Properties) {
-  return new CFResource<EventSubscription_Type, EventSubscription_Properties>(
+  return new CfnResource<EventSubscription_Properties>(
     EventSubscription_Type,
     props
   );

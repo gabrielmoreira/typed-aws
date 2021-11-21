@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::Role
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Role_Type = 'AWS::IAM::Role';
 export const Role_Type = 'AWS::IAM::Role';
@@ -10,7 +10,7 @@ export const Role_Type = 'AWS::IAM::Role';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html}
  */
 export default function Role(props: Role_Properties) {
-  return new CFResource<Role_Type, Role_Properties>(Role_Type, props);
+  return new CfnResource<Role_Properties>(Role_Type, props);
 }
 
 /**

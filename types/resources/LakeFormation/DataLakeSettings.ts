@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LakeFormation::DataLakeSettings
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DataLakeSettings_Type = 'AWS::LakeFormation::DataLakeSettings';
 export const DataLakeSettings_Type = 'AWS::LakeFormation::DataLakeSettings';
@@ -11,7 +11,7 @@ export const DataLakeSettings_Type = 'AWS::LakeFormation::DataLakeSettings';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html}
  */
 export default function DataLakeSettings(props: DataLakeSettings_Properties) {
-  return new CFResource<DataLakeSettings_Type, DataLakeSettings_Properties>(
+  return new CfnResource<DataLakeSettings_Properties>(
     DataLakeSettings_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Inspector::ResourceGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceGroup_Type = 'AWS::Inspector::ResourceGroup';
 export const ResourceGroup_Type = 'AWS::Inspector::ResourceGroup';
@@ -10,10 +10,7 @@ export const ResourceGroup_Type = 'AWS::Inspector::ResourceGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html}
  */
 export default function ResourceGroup(props: ResourceGroup_Properties) {
-  return new CFResource<ResourceGroup_Type, ResourceGroup_Properties>(
-    ResourceGroup_Type,
-    props
-  );
+  return new CfnResource<ResourceGroup_Properties>(ResourceGroup_Type, props);
 }
 
 /**

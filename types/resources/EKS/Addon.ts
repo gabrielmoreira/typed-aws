@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EKS::Addon
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Addon_Type = 'AWS::EKS::Addon';
 export const Addon_Type = 'AWS::EKS::Addon';
@@ -10,7 +10,7 @@ export const Addon_Type = 'AWS::EKS::Addon';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html}
  */
 export default function Addon(props: Addon_Properties) {
-  return new CFResource<Addon_Type, Addon_Properties>(Addon_Type, props);
+  return new CfnResource<Addon_Properties>(Addon_Type, props);
 }
 
 /**

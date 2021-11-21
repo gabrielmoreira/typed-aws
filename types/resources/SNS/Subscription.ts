@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SNS::Subscription
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Subscription_Type = 'AWS::SNS::Subscription';
 export const Subscription_Type = 'AWS::SNS::Subscription';
@@ -10,10 +10,7 @@ export const Subscription_Type = 'AWS::SNS::Subscription';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html}
  */
 export default function Subscription(props: Subscription_Properties) {
-  return new CFResource<Subscription_Type, Subscription_Properties>(
-    Subscription_Type,
-    props
-  );
+  return new CfnResource<Subscription_Properties>(Subscription_Type, props);
 }
 
 /**

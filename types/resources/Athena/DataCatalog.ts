@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::DataCatalog
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DataCatalog_Type = 'AWS::Athena::DataCatalog';
 export const DataCatalog_Type = 'AWS::Athena::DataCatalog';
@@ -10,10 +10,7 @@ export const DataCatalog_Type = 'AWS::Athena::DataCatalog';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html}
  */
 export default function DataCatalog(props: DataCatalog_Properties) {
-  return new CFResource<DataCatalog_Type, DataCatalog_Properties>(
-    DataCatalog_Type,
-    props
-  );
+  return new CfnResource<DataCatalog_Properties>(DataCatalog_Type, props);
 }
 
 /**

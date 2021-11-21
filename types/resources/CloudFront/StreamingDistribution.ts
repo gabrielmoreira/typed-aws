@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::StreamingDistribution
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StreamingDistribution_Type =
   'AWS::CloudFront::StreamingDistribution';
@@ -15,10 +15,10 @@ export const StreamingDistribution_Type =
 export default function StreamingDistribution(
   props: StreamingDistribution_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<StreamingDistribution_Properties>(
     StreamingDistribution_Type,
-    StreamingDistribution_Properties
-  >(StreamingDistribution_Type, props);
+    props
+  );
 }
 
 /**

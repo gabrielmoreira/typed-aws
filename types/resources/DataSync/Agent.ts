@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::Agent
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Agent_Type = 'AWS::DataSync::Agent';
 export const Agent_Type = 'AWS::DataSync::Agent';
@@ -10,7 +10,7 @@ export const Agent_Type = 'AWS::DataSync::Agent';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html}
  */
 export default function Agent(props: Agent_Properties) {
-  return new CFResource<Agent_Type, Agent_Properties>(Agent_Type, props);
+  return new CfnResource<Agent_Properties>(Agent_Type, props);
 }
 
 /**

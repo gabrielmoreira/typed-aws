@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCDHCPOptionsAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCDHCPOptionsAssociation_Type =
   'AWS::EC2::VPCDHCPOptionsAssociation';
@@ -15,10 +15,10 @@ export const VPCDHCPOptionsAssociation_Type =
 export default function VPCDHCPOptionsAssociation(
   props: VPCDHCPOptionsAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<VPCDHCPOptionsAssociation_Properties>(
     VPCDHCPOptionsAssociation_Type,
-    VPCDHCPOptionsAssociation_Properties
-  >(VPCDHCPOptionsAssociation_Type, props);
+    props
+  );
 }
 
 /**

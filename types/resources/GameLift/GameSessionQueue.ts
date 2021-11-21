@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::GameSessionQueue
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GameSessionQueue_Type = 'AWS::GameLift::GameSessionQueue';
 export const GameSessionQueue_Type = 'AWS::GameLift::GameSessionQueue';
@@ -10,7 +10,7 @@ export const GameSessionQueue_Type = 'AWS::GameLift::GameSessionQueue';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html}
  */
 export default function GameSessionQueue(props: GameSessionQueue_Properties) {
-  return new CFResource<GameSessionQueue_Type, GameSessionQueue_Properties>(
+  return new CfnResource<GameSessionQueue_Properties>(
     GameSessionQueue_Type,
     props
   );

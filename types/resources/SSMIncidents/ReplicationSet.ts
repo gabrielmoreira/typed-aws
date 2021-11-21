@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMIncidents::ReplicationSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicationSet_Type = 'AWS::SSMIncidents::ReplicationSet';
 export const ReplicationSet_Type = 'AWS::SSMIncidents::ReplicationSet';
@@ -10,10 +10,7 @@ export const ReplicationSet_Type = 'AWS::SSMIncidents::ReplicationSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html}
  */
 export default function ReplicationSet(props: ReplicationSet_Properties) {
-  return new CFResource<ReplicationSet_Type, ReplicationSet_Properties>(
-    ReplicationSet_Type,
-    props
-  );
+  return new CfnResource<ReplicationSet_Properties>(ReplicationSet_Type, props);
 }
 
 /**

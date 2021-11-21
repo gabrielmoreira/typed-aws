@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Budgets::Budget
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Budget_Type = 'AWS::Budgets::Budget';
 export const Budget_Type = 'AWS::Budgets::Budget';
@@ -10,7 +10,7 @@ export const Budget_Type = 'AWS::Budgets::Budget';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html}
  */
 export default function Budget(props: Budget_Properties) {
-  return new CFResource<Budget_Type, Budget_Properties>(Budget_Type, props);
+  return new CfnResource<Budget_Properties>(Budget_Type, props);
 }
 
 /**

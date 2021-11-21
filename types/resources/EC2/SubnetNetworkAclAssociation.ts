@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SubnetNetworkAclAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SubnetNetworkAclAssociation_Type =
   'AWS::EC2::SubnetNetworkAclAssociation';
@@ -15,10 +15,10 @@ export const SubnetNetworkAclAssociation_Type =
 export default function SubnetNetworkAclAssociation(
   props: SubnetNetworkAclAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SubnetNetworkAclAssociation_Properties>(
     SubnetNetworkAclAssociation_Type,
-    SubnetNetworkAclAssociation_Properties
-  >(SubnetNetworkAclAssociation_Type, props);
+    props
+  );
 }
 
 /**

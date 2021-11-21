@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolUICustomizationAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolUICustomizationAttachment_Type =
   'AWS::Cognito::UserPoolUICustomizationAttachment';
@@ -15,10 +15,10 @@ export const UserPoolUICustomizationAttachment_Type =
 export default function UserPoolUICustomizationAttachment(
   props: UserPoolUICustomizationAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<UserPoolUICustomizationAttachment_Properties>(
     UserPoolUICustomizationAttachment_Type,
-    UserPoolUICustomizationAttachment_Properties
-  >(UserPoolUICustomizationAttachment_Type, props);
+    props
+  );
 }
 
 /**

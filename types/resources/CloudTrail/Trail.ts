@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudTrail::Trail
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Trail_Type = 'AWS::CloudTrail::Trail';
 export const Trail_Type = 'AWS::CloudTrail::Trail';
@@ -12,7 +12,7 @@ export const Trail_Type = 'AWS::CloudTrail::Trail';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html}
  */
 export default function Trail(props: Trail_Properties) {
-  return new CFResource<Trail_Type, Trail_Properties>(Trail_Type, props);
+  return new CfnResource<Trail_Properties>(Trail_Type, props);
 }
 
 /**

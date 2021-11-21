@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::DocumentationVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DocumentationVersion_Type = 'AWS::ApiGateway::DocumentationVersion';
 export const DocumentationVersion_Type =
@@ -13,10 +13,10 @@ export const DocumentationVersion_Type =
 export default function DocumentationVersion(
   props: DocumentationVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DocumentationVersion_Properties>(
     DocumentationVersion_Type,
-    DocumentationVersion_Properties
-  >(DocumentationVersion_Type, props);
+    props
+  );
 }
 
 /**

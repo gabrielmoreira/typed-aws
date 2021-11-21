@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::FeatureGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FeatureGroup_Type = 'AWS::SageMaker::FeatureGroup';
 export const FeatureGroup_Type = 'AWS::SageMaker::FeatureGroup';
@@ -10,10 +10,7 @@ export const FeatureGroup_Type = 'AWS::SageMaker::FeatureGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html}
  */
 export default function FeatureGroup(props: FeatureGroup_Properties) {
-  return new CFResource<FeatureGroup_Type, FeatureGroup_Properties>(
-    FeatureGroup_Type,
-    props
-  );
+  return new CfnResource<FeatureGroup_Properties>(FeatureGroup_Type, props);
 }
 
 /**

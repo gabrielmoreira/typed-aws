@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisFirehose::DeliveryStream
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeliveryStream_Type = 'AWS::KinesisFirehose::DeliveryStream';
 export const DeliveryStream_Type = 'AWS::KinesisFirehose::DeliveryStream';
@@ -11,10 +11,7 @@ export const DeliveryStream_Type = 'AWS::KinesisFirehose::DeliveryStream';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html}
  */
 export default function DeliveryStream(props: DeliveryStream_Properties) {
-  return new CFResource<DeliveryStream_Type, DeliveryStream_Properties>(
-    DeliveryStream_Type,
-    props
-  );
+  return new CfnResource<DeliveryStream_Properties>(DeliveryStream_Type, props);
 }
 
 /**

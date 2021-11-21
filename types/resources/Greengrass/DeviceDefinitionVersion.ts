@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::DeviceDefinitionVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeviceDefinitionVersion_Type =
   'AWS::Greengrass::DeviceDefinitionVersion';
@@ -15,10 +15,10 @@ export const DeviceDefinitionVersion_Type =
 export default function DeviceDefinitionVersion(
   props: DeviceDefinitionVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DeviceDefinitionVersion_Properties>(
     DeviceDefinitionVersion_Type,
-    DeviceDefinitionVersion_Properties
-  >(DeviceDefinitionVersion_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::EndpointAuthorization
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EndpointAuthorization_Type = 'AWS::Redshift::EndpointAuthorization';
 export const EndpointAuthorization_Type =
@@ -14,10 +14,10 @@ export const EndpointAuthorization_Type =
 export default function EndpointAuthorization(
   props: EndpointAuthorization_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<EndpointAuthorization_Properties>(
     EndpointAuthorization_Type,
-    EndpointAuthorization_Properties
-  >(EndpointAuthorization_Type, props);
+    props
+  );
 }
 
 /**

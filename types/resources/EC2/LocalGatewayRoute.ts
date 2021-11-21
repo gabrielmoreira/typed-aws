@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::LocalGatewayRoute
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocalGatewayRoute_Type = 'AWS::EC2::LocalGatewayRoute';
 export const LocalGatewayRoute_Type = 'AWS::EC2::LocalGatewayRoute';
@@ -10,7 +10,7 @@ export const LocalGatewayRoute_Type = 'AWS::EC2::LocalGatewayRoute';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html}
  */
 export default function LocalGatewayRoute(props: LocalGatewayRoute_Properties) {
-  return new CFResource<LocalGatewayRoute_Type, LocalGatewayRoute_Properties>(
+  return new CfnResource<LocalGatewayRoute_Properties>(
     LocalGatewayRoute_Type,
     props
   );

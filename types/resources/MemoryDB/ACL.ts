@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MemoryDB::ACL
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ACL_Type = 'AWS::MemoryDB::ACL';
 export const ACL_Type = 'AWS::MemoryDB::ACL';
@@ -10,7 +10,7 @@ export const ACL_Type = 'AWS::MemoryDB::ACL';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html}
  */
 export default function ACL(props: ACL_Properties) {
-  return new CFResource<ACL_Type, ACL_Properties>(ACL_Type, props);
+  return new CfnResource<ACL_Properties>(ACL_Type, props);
 }
 
 /**

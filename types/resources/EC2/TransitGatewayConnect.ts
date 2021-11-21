@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayConnect
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayConnect_Type = 'AWS::EC2::TransitGatewayConnect';
 export const TransitGatewayConnect_Type = 'AWS::EC2::TransitGatewayConnect';
@@ -12,10 +12,10 @@ export const TransitGatewayConnect_Type = 'AWS::EC2::TransitGatewayConnect';
 export default function TransitGatewayConnect(
   props: TransitGatewayConnect_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayConnect_Properties>(
     TransitGatewayConnect_Type,
-    TransitGatewayConnect_Properties
-  >(TransitGatewayConnect_Type, props);
+    props
+  );
 }
 
 /**

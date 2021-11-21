@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResolverQueryLoggingConfigAssociation_Type =
   'AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation';
@@ -15,10 +15,10 @@ export const ResolverQueryLoggingConfigAssociation_Type =
 export default function ResolverQueryLoggingConfigAssociation(
   props: ResolverQueryLoggingConfigAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResolverQueryLoggingConfigAssociation_Properties>(
     ResolverQueryLoggingConfigAssociation_Type,
-    ResolverQueryLoggingConfigAssociation_Properties
-  >(ResolverQueryLoggingConfigAssociation_Type, props);
+    props
+  );
 }
 
 /**

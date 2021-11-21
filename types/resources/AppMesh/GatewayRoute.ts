@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::GatewayRoute
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GatewayRoute_Type = 'AWS::AppMesh::GatewayRoute';
 export const GatewayRoute_Type = 'AWS::AppMesh::GatewayRoute';
@@ -10,10 +10,7 @@ export const GatewayRoute_Type = 'AWS::AppMesh::GatewayRoute';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html}
  */
 export default function GatewayRoute(props: GatewayRoute_Properties) {
-  return new CFResource<GatewayRoute_Type, GatewayRoute_Properties>(
-    GatewayRoute_Type,
-    props
-  );
+  return new CfnResource<GatewayRoute_Properties>(GatewayRoute_Type, props);
 }
 
 /**

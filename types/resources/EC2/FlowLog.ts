@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::FlowLog
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FlowLog_Type = 'AWS::EC2::FlowLog';
 export const FlowLog_Type = 'AWS::EC2::FlowLog';
@@ -11,7 +11,7 @@ export const FlowLog_Type = 'AWS::EC2::FlowLog';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html}
  */
 export default function FlowLog(props: FlowLog_Properties) {
-  return new CFResource<FlowLog_Type, FlowLog_Properties>(FlowLog_Type, props);
+  return new CfnResource<FlowLog_Properties>(FlowLog_Type, props);
 }
 
 /**

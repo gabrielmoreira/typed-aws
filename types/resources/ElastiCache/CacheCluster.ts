@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::CacheCluster
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CacheCluster_Type = 'AWS::ElastiCache::CacheCluster';
 export const CacheCluster_Type = 'AWS::ElastiCache::CacheCluster';
@@ -10,10 +10,7 @@ export const CacheCluster_Type = 'AWS::ElastiCache::CacheCluster';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html}
  */
 export default function CacheCluster(props: CacheCluster_Properties) {
-  return new CFResource<CacheCluster_Type, CacheCluster_Properties>(
-    CacheCluster_Type,
-    props
-  );
+  return new CfnResource<CacheCluster_Properties>(CacheCluster_Type, props);
 }
 
 /**

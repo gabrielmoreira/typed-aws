@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticBeanstalk::Environment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Environment_Type = 'AWS::ElasticBeanstalk::Environment';
 export const Environment_Type = 'AWS::ElasticBeanstalk::Environment';
@@ -10,10 +10,7 @@ export const Environment_Type = 'AWS::ElasticBeanstalk::Environment';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html}
  */
 export default function Environment(props: Environment_Properties) {
-  return new CFResource<Environment_Type, Environment_Properties>(
-    Environment_Type,
-    props
-  );
+  return new CfnResource<Environment_Properties>(Environment_Type, props);
 }
 
 /**

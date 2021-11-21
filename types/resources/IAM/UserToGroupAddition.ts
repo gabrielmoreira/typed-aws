@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::UserToGroupAddition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserToGroupAddition_Type = 'AWS::IAM::UserToGroupAddition';
 export const UserToGroupAddition_Type = 'AWS::IAM::UserToGroupAddition';
@@ -12,10 +12,10 @@ export const UserToGroupAddition_Type = 'AWS::IAM::UserToGroupAddition';
 export default function UserToGroupAddition(
   props: UserToGroupAddition_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<UserToGroupAddition_Properties>(
     UserToGroupAddition_Type,
-    UserToGroupAddition_Properties
-  >(UserToGroupAddition_Type, props);
+    props
+  );
 }
 
 /**

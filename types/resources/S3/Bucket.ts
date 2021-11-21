@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::Bucket
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Bucket_Type = 'AWS::S3::Bucket';
 export const Bucket_Type = 'AWS::S3::Bucket';
@@ -10,7 +10,7 @@ export const Bucket_Type = 'AWS::S3::Bucket';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html}
  */
 export default function Bucket(props: Bucket_Properties) {
-  return new CFResource<Bucket_Type, Bucket_Properties>(Bucket_Type, props);
+  return new CfnResource<Bucket_Properties>(Bucket_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverEndpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResolverEndpoint_Type = 'AWS::Route53Resolver::ResolverEndpoint';
 export const ResolverEndpoint_Type = 'AWS::Route53Resolver::ResolverEndpoint';
@@ -11,7 +11,7 @@ export const ResolverEndpoint_Type = 'AWS::Route53Resolver::ResolverEndpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html}
  */
 export default function ResolverEndpoint(props: ResolverEndpoint_Properties) {
-  return new CFResource<ResolverEndpoint_Type, ResolverEndpoint_Properties>(
+  return new CfnResource<ResolverEndpoint_Properties>(
     ResolverEndpoint_Type,
     props
   );

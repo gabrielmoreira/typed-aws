@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResolverRule_Type = 'AWS::Route53Resolver::ResolverRule';
 export const ResolverRule_Type = 'AWS::Route53Resolver::ResolverRule';
@@ -10,10 +10,7 @@ export const ResolverRule_Type = 'AWS::Route53Resolver::ResolverRule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html}
  */
 export default function ResolverRule(props: ResolverRule_Properties) {
-  return new CFResource<ResolverRule_Type, ResolverRule_Properties>(
-    ResolverRule_Type,
-    props
-  );
+  return new CfnResource<ResolverRule_Properties>(ResolverRule_Type, props);
 }
 
 /**

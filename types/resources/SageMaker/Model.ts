@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Model
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Model_Type = 'AWS::SageMaker::Model';
 export const Model_Type = 'AWS::SageMaker::Model';
@@ -10,7 +10,7 @@ export const Model_Type = 'AWS::SageMaker::Model';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html}
  */
 export default function Model(props: Model_Properties) {
-  return new CFResource<Model_Type, Model_Properties>(Model_Type, props);
+  return new CfnResource<Model_Properties>(Model_Type, props);
 }
 
 /**

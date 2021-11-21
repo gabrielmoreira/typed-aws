@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::Mesh
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Mesh_Type = 'AWS::AppMesh::Mesh';
 export const Mesh_Type = 'AWS::AppMesh::Mesh';
@@ -10,7 +10,7 @@ export const Mesh_Type = 'AWS::AppMesh::Mesh';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html}
  */
 export default function Mesh(props: Mesh_Properties) {
-  return new CFResource<Mesh_Type, Mesh_Properties>(Mesh_Type, props);
+  return new CfnResource<Mesh_Properties>(Mesh_Type, props);
 }
 
 /**

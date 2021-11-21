@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::LoggerDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LoggerDefinition_Type = 'AWS::Greengrass::LoggerDefinition';
 export const LoggerDefinition_Type = 'AWS::Greengrass::LoggerDefinition';
@@ -10,7 +10,7 @@ export const LoggerDefinition_Type = 'AWS::Greengrass::LoggerDefinition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html}
  */
 export default function LoggerDefinition(props: LoggerDefinition_Properties) {
-  return new CFResource<LoggerDefinition_Type, LoggerDefinition_Properties>(
+  return new CfnResource<LoggerDefinition_Properties>(
     LoggerDefinition_Type,
     props
   );

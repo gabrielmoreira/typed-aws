@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EMRContainers::VirtualCluster
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VirtualCluster_Type = 'AWS::EMRContainers::VirtualCluster';
 export const VirtualCluster_Type = 'AWS::EMRContainers::VirtualCluster';
@@ -10,10 +10,7 @@ export const VirtualCluster_Type = 'AWS::EMRContainers::VirtualCluster';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html}
  */
 export default function VirtualCluster(props: VirtualCluster_Properties) {
-  return new CFResource<VirtualCluster_Type, VirtualCluster_Properties>(
-    VirtualCluster_Type,
-    props
-  );
+  return new CfnResource<VirtualCluster_Properties>(VirtualCluster_Type, props);
 }
 
 /**

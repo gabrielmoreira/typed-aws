@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::ConnectorDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConnectorDefinition_Type = 'AWS::Greengrass::ConnectorDefinition';
 export const ConnectorDefinition_Type = 'AWS::Greengrass::ConnectorDefinition';
@@ -13,10 +13,10 @@ export const ConnectorDefinition_Type = 'AWS::Greengrass::ConnectorDefinition';
 export default function ConnectorDefinition(
   props: ConnectorDefinition_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConnectorDefinition_Properties>(
     ConnectorDefinition_Type,
-    ConnectorDefinition_Properties
-  >(ConnectorDefinition_Type, props);
+    props
+  );
 }
 
 /**

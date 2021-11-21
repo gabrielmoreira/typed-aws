@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::Master
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Master_Type = 'AWS::GuardDuty::Master';
 export const Master_Type = 'AWS::GuardDuty::Master';
@@ -10,7 +10,7 @@ export const Master_Type = 'AWS::GuardDuty::Master';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html}
  */
 export default function Master(props: Master_Properties) {
-  return new CFResource<Master_Type, Master_Properties>(Master_Type, props);
+  return new CfnResource<Master_Properties>(Master_Type, props);
 }
 
 /**

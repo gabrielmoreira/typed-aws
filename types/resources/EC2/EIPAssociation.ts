@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EIPAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EIPAssociation_Type = 'AWS::EC2::EIPAssociation';
 export const EIPAssociation_Type = 'AWS::EC2::EIPAssociation';
@@ -10,10 +10,7 @@ export const EIPAssociation_Type = 'AWS::EC2::EIPAssociation';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html}
  */
 export default function EIPAssociation(props: EIPAssociation_Properties) {
-  return new CFResource<EIPAssociation_Type, EIPAssociation_Properties>(
-    EIPAssociation_Type,
-    props
-  );
+  return new CfnResource<EIPAssociation_Properties>(EIPAssociation_Type, props);
 }
 
 /**

@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::DataSync::LocationHDFS
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocationHDFS_Type = 'AWS::DataSync::LocationHDFS';
 export const LocationHDFS_Type = 'AWS::DataSync::LocationHDFS';
 
 export default function LocationHDFS(props: LocationHDFS_Properties) {
-  return new CFResource<LocationHDFS_Type, LocationHDFS_Properties>(
-    LocationHDFS_Type,
-    props
-  );
+  return new CfnResource<LocationHDFS_Properties>(LocationHDFS_Type, props);
 }
 
 export type LocationHDFS_Properties =

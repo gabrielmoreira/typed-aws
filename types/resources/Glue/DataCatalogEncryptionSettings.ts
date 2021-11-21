@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::DataCatalogEncryptionSettings
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DataCatalogEncryptionSettings_Type =
   'AWS::Glue::DataCatalogEncryptionSettings';
@@ -15,10 +15,10 @@ export const DataCatalogEncryptionSettings_Type =
 export default function DataCatalogEncryptionSettings(
   props: DataCatalogEncryptionSettings_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DataCatalogEncryptionSettings_Properties>(
     DataCatalogEncryptionSettings_Type,
-    DataCatalogEncryptionSettings_Properties
-  >(DataCatalogEncryptionSettings_Type, props);
+    props
+  );
 }
 
 /**

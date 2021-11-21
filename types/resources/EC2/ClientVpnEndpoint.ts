@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnEndpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClientVpnEndpoint_Type = 'AWS::EC2::ClientVpnEndpoint';
 export const ClientVpnEndpoint_Type = 'AWS::EC2::ClientVpnEndpoint';
@@ -10,7 +10,7 @@ export const ClientVpnEndpoint_Type = 'AWS::EC2::ClientVpnEndpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html}
  */
 export default function ClientVpnEndpoint(props: ClientVpnEndpoint_Properties) {
-  return new CFResource<ClientVpnEndpoint_Type, ClientVpnEndpoint_Properties>(
+  return new CfnResource<ClientVpnEndpoint_Properties>(
     ClientVpnEndpoint_Type,
     props
   );

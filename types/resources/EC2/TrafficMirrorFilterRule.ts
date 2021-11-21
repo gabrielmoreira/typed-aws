@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TrafficMirrorFilterRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TrafficMirrorFilterRule_Type = 'AWS::EC2::TrafficMirrorFilterRule';
 export const TrafficMirrorFilterRule_Type = 'AWS::EC2::TrafficMirrorFilterRule';
@@ -12,10 +12,10 @@ export const TrafficMirrorFilterRule_Type = 'AWS::EC2::TrafficMirrorFilterRule';
 export default function TrafficMirrorFilterRule(
   props: TrafficMirrorFilterRule_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TrafficMirrorFilterRule_Properties>(
     TrafficMirrorFilterRule_Type,
-    TrafficMirrorFilterRule_Properties
-  >(TrafficMirrorFilterRule_Type, props);
+    props
+  );
 }
 
 /**

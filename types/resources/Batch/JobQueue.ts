@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Batch::JobQueue
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type JobQueue_Type = 'AWS::Batch::JobQueue';
 export const JobQueue_Type = 'AWS::Batch::JobQueue';
@@ -10,10 +10,7 @@ export const JobQueue_Type = 'AWS::Batch::JobQueue';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html}
  */
 export default function JobQueue(props: JobQueue_Properties) {
-  return new CFResource<JobQueue_Type, JobQueue_Properties>(
-    JobQueue_Type,
-    props
-  );
+  return new CfnResource<JobQueue_Properties>(JobQueue_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECR::RegistryPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RegistryPolicy_Type = 'AWS::ECR::RegistryPolicy';
 export const RegistryPolicy_Type = 'AWS::ECR::RegistryPolicy';
@@ -15,10 +15,7 @@ export const RegistryPolicy_Type = 'AWS::ECR::RegistryPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-registrypolicy.html}
  */
 export default function RegistryPolicy(props: RegistryPolicy_Properties) {
-  return new CFResource<RegistryPolicy_Type, RegistryPolicy_Properties>(
-    RegistryPolicy_Type,
-    props
-  );
+  return new CfnResource<RegistryPolicy_Properties>(RegistryPolicy_Type, props);
 }
 
 /**

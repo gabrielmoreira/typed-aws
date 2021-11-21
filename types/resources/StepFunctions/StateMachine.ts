@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::StepFunctions::StateMachine
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StateMachine_Type = 'AWS::StepFunctions::StateMachine';
 export const StateMachine_Type = 'AWS::StepFunctions::StateMachine';
@@ -10,10 +10,7 @@ export const StateMachine_Type = 'AWS::StepFunctions::StateMachine';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html}
  */
 export default function StateMachine(props: StateMachine_Properties) {
-  return new CFResource<StateMachine_Type, StateMachine_Properties>(
-    StateMachine_Type,
-    props
-  );
+  return new CfnResource<StateMachine_Properties>(StateMachine_Type, props);
 }
 
 /**

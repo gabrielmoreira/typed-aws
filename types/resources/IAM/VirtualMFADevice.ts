@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::VirtualMFADevice
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VirtualMFADevice_Type = 'AWS::IAM::VirtualMFADevice';
 export const VirtualMFADevice_Type = 'AWS::IAM::VirtualMFADevice';
@@ -10,7 +10,7 @@ export const VirtualMFADevice_Type = 'AWS::IAM::VirtualMFADevice';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html}
  */
 export default function VirtualMFADevice(props: VirtualMFADevice_Properties) {
-  return new CFResource<VirtualMFADevice_Type, VirtualMFADevice_Properties>(
+  return new CfnResource<VirtualMFADevice_Properties>(
     VirtualMFADevice_Type,
     props
   );

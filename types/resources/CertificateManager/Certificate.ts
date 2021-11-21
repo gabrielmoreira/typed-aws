@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CertificateManager::Certificate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Certificate_Type = 'AWS::CertificateManager::Certificate';
 export const Certificate_Type = 'AWS::CertificateManager::Certificate';
@@ -11,10 +11,7 @@ export const Certificate_Type = 'AWS::CertificateManager::Certificate';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html}
  */
 export default function Certificate(props: Certificate_Properties) {
-  return new CFResource<Certificate_Type, Certificate_Properties>(
-    Certificate_Type,
-    props
-  );
+  return new CfnResource<Certificate_Properties>(Certificate_Type, props);
 }
 
 /**

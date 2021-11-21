@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::OrganizationConformancePack
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type OrganizationConformancePack_Type =
   'AWS::Config::OrganizationConformancePack';
@@ -14,10 +14,10 @@ export const OrganizationConformancePack_Type =
 export default function OrganizationConformancePack(
   props: OrganizationConformancePack_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<OrganizationConformancePack_Properties>(
     OrganizationConformancePack_Type,
-    OrganizationConformancePack_Properties
-  >(OrganizationConformancePack_Type, props);
+    props
+  );
 }
 
 /**

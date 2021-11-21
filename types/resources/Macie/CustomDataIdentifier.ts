@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Macie::CustomDataIdentifier
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CustomDataIdentifier_Type = 'AWS::Macie::CustomDataIdentifier';
 export const CustomDataIdentifier_Type = 'AWS::Macie::CustomDataIdentifier';
@@ -12,10 +12,10 @@ export const CustomDataIdentifier_Type = 'AWS::Macie::CustomDataIdentifier';
 export default function CustomDataIdentifier(
   props: CustomDataIdentifier_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CustomDataIdentifier_Properties>(
     CustomDataIdentifier_Type,
-    CustomDataIdentifier_Properties
-  >(CustomDataIdentifier_Type, props);
+    props
+  );
 }
 
 /**

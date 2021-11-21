@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::MultiRegionAccessPoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MultiRegionAccessPoint_Type = 'AWS::S3::MultiRegionAccessPoint';
 export const MultiRegionAccessPoint_Type = 'AWS::S3::MultiRegionAccessPoint';
@@ -14,10 +14,10 @@ export const MultiRegionAccessPoint_Type = 'AWS::S3::MultiRegionAccessPoint';
 export default function MultiRegionAccessPoint(
   props: MultiRegionAccessPoint_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<MultiRegionAccessPoint_Properties>(
     MultiRegionAccessPoint_Type,
-    MultiRegionAccessPoint_Properties
-  >(MultiRegionAccessPoint_Type, props);
+    props
+  );
 }
 
 /**

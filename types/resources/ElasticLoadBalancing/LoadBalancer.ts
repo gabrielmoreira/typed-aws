@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticLoadBalancing::LoadBalancer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LoadBalancer_Type = 'AWS::ElasticLoadBalancing::LoadBalancer';
 export const LoadBalancer_Type = 'AWS::ElasticLoadBalancing::LoadBalancer';
@@ -11,10 +11,7 @@ export const LoadBalancer_Type = 'AWS::ElasticLoadBalancing::LoadBalancer';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html}
  */
 export default function LoadBalancer(props: LoadBalancer_Properties) {
-  return new CFResource<LoadBalancer_Type, LoadBalancer_Properties>(
-    LoadBalancer_Type,
-    props
-  );
+  return new CfnResource<LoadBalancer_Properties>(LoadBalancer_Type, props);
 }
 
 /**

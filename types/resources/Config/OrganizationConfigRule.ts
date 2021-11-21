@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::OrganizationConfigRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type OrganizationConfigRule_Type = 'AWS::Config::OrganizationConfigRule';
 export const OrganizationConfigRule_Type =
@@ -14,10 +14,10 @@ export const OrganizationConfigRule_Type =
 export default function OrganizationConfigRule(
   props: OrganizationConfigRule_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<OrganizationConfigRule_Properties>(
     OrganizationConfigRule_Type,
-    OrganizationConfigRule_Properties
-  >(OrganizationConfigRule_Type, props);
+    props
+  );
 }
 
 /**

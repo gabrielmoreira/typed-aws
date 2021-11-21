@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::Alias
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Alias_Type = 'AWS::Lambda::Alias';
 export const Alias_Type = 'AWS::Lambda::Alias';
@@ -10,7 +10,7 @@ export const Alias_Type = 'AWS::Lambda::Alias';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html}
  */
 export default function Alias(props: Alias_Properties) {
-  return new CFResource<Alias_Type, Alias_Properties>(Alias_Type, props);
+  return new CfnResource<Alias_Properties>(Alias_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::SqlInjectionMatchSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SqlInjectionMatchSet_Type =
   'AWS::WAFRegional::SqlInjectionMatchSet';
@@ -15,10 +15,10 @@ export const SqlInjectionMatchSet_Type =
 export default function SqlInjectionMatchSet(
   props: SqlInjectionMatchSet_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SqlInjectionMatchSet_Properties>(
     SqlInjectionMatchSet_Type,
-    SqlInjectionMatchSet_Properties
-  >(SqlInjectionMatchSet_Type, props);
+    props
+  );
 }
 
 /**

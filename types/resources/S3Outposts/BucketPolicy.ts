@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::BucketPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type BucketPolicy_Type = 'AWS::S3Outposts::BucketPolicy';
 export const BucketPolicy_Type = 'AWS::S3Outposts::BucketPolicy';
@@ -10,10 +10,7 @@ export const BucketPolicy_Type = 'AWS::S3Outposts::BucketPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucketpolicy.html}
  */
 export default function BucketPolicy(props: BucketPolicy_Properties) {
-  return new CFResource<BucketPolicy_Type, BucketPolicy_Properties>(
-    BucketPolicy_Type,
-    props
-  );
+  return new CfnResource<BucketPolicy_Properties>(BucketPolicy_Type, props);
 }
 
 /**

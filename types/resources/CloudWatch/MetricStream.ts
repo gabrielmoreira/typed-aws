@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::CloudWatch::MetricStream
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MetricStream_Type = 'AWS::CloudWatch::MetricStream';
 export const MetricStream_Type = 'AWS::CloudWatch::MetricStream';
 
 export default function MetricStream(props: MetricStream_Properties) {
-  return new CFResource<MetricStream_Type, MetricStream_Properties>(
-    MetricStream_Type,
-    props
-  );
+  return new CfnResource<MetricStream_Properties>(MetricStream_Type, props);
 }
 
 export type MetricStream_Properties =

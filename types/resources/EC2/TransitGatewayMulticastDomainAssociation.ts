@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayMulticastDomainAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayMulticastDomainAssociation_Type =
   'AWS::EC2::TransitGatewayMulticastDomainAssociation';
@@ -14,10 +14,10 @@ export const TransitGatewayMulticastDomainAssociation_Type =
 export default function TransitGatewayMulticastDomainAssociation(
   props: TransitGatewayMulticastDomainAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayMulticastDomainAssociation_Properties>(
     TransitGatewayMulticastDomainAssociation_Type,
-    TransitGatewayMulticastDomainAssociation_Properties
-  >(TransitGatewayMulticastDomainAssociation_Type, props);
+    props
+  );
 }
 
 /**

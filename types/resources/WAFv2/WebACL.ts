@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::WebACL
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WebACL_Type = 'AWS::WAFv2::WebACL';
 export const WebACL_Type = 'AWS::WAFv2::WebACL';
@@ -18,7 +18,7 @@ export const WebACL_Type = 'AWS::WAFv2::WebACL';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html}
  */
 export default function WebACL(props: WebACL_Properties) {
-  return new CFResource<WebACL_Type, WebACL_Properties>(WebACL_Type, props);
+  return new CfnResource<WebACL_Properties>(WebACL_Type, props);
 }
 
 /**

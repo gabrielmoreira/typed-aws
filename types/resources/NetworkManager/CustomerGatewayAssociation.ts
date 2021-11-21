@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::CustomerGatewayAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CustomerGatewayAssociation_Type =
   'AWS::NetworkManager::CustomerGatewayAssociation';
@@ -15,10 +15,10 @@ export const CustomerGatewayAssociation_Type =
 export default function CustomerGatewayAssociation(
   props: CustomerGatewayAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CustomerGatewayAssociation_Properties>(
     CustomerGatewayAssociation_Type,
-    CustomerGatewayAssociation_Properties
-  >(CustomerGatewayAssociation_Type, props);
+    props
+  );
 }
 
 /**

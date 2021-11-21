@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApplicationAutoScaling::ScalableTarget
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ScalableTarget_Type = 'AWS::ApplicationAutoScaling::ScalableTarget';
 export const ScalableTarget_Type =
@@ -12,10 +12,7 @@ export const ScalableTarget_Type =
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html}
  */
 export default function ScalableTarget(props: ScalableTarget_Properties) {
-  return new CFResource<ScalableTarget_Type, ScalableTarget_Properties>(
-    ScalableTarget_Type,
-    props
-  );
+  return new CfnResource<ScalableTarget_Properties>(ScalableTarget_Type, props);
 }
 
 /**

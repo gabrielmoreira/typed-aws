@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Job
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Job_Type = 'AWS::Glue::Job';
 export const Job_Type = 'AWS::Glue::Job';
@@ -10,7 +10,7 @@ export const Job_Type = 'AWS::Glue::Job';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html}
  */
 export default function Job(props: Job_Properties) {
-  return new CFResource<Job_Type, Job_Properties>(Job_Type, props);
+  return new CfnResource<Job_Properties>(Job_Type, props);
 }
 
 /**

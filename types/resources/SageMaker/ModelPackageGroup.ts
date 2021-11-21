@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ModelPackageGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ModelPackageGroup_Type = 'AWS::SageMaker::ModelPackageGroup';
 export const ModelPackageGroup_Type = 'AWS::SageMaker::ModelPackageGroup';
@@ -10,7 +10,7 @@ export const ModelPackageGroup_Type = 'AWS::SageMaker::ModelPackageGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html}
  */
 export default function ModelPackageGroup(props: ModelPackageGroup_Properties) {
-  return new CFResource<ModelPackageGroup_Type, ModelPackageGroup_Properties>(
+  return new CfnResource<ModelPackageGroup_Properties>(
     ModelPackageGroup_Type,
     props
   );

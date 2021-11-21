@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::DomainName
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DomainName_Type = 'AWS::ApiGateway::DomainName';
 export const DomainName_Type = 'AWS::ApiGateway::DomainName';
@@ -10,10 +10,7 @@ export const DomainName_Type = 'AWS::ApiGateway::DomainName';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html}
  */
 export default function DomainName(props: DomainName_Properties) {
-  return new CFResource<DomainName_Type, DomainName_Properties>(
-    DomainName_Type,
-    props
-  );
+  return new CfnResource<DomainName_Properties>(DomainName_Type, props);
 }
 
 /**

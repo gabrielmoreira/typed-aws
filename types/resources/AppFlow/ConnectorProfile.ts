@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppFlow::ConnectorProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConnectorProfile_Type = 'AWS::AppFlow::ConnectorProfile';
 export const ConnectorProfile_Type = 'AWS::AppFlow::ConnectorProfile';
@@ -10,7 +10,7 @@ export const ConnectorProfile_Type = 'AWS::AppFlow::ConnectorProfile';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html}
  */
 export default function ConnectorProfile(props: ConnectorProfile_Properties) {
-  return new CFResource<ConnectorProfile_Type, ConnectorProfile_Properties>(
+  return new CfnResource<ConnectorProfile_Properties>(
     ConnectorProfile_Type,
     props
   );

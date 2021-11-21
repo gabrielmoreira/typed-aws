@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::Stage
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Stage_Type = 'AWS::ApiGatewayV2::Stage';
 export const Stage_Type = 'AWS::ApiGatewayV2::Stage';
@@ -10,7 +10,7 @@ export const Stage_Type = 'AWS::ApiGatewayV2::Stage';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html}
  */
 export default function Stage(props: Stage_Properties) {
-  return new CFResource<Stage_Type, Stage_Properties>(Stage_Type, props);
+  return new CfnResource<Stage_Properties>(Stage_Type, props);
 }
 
 /**

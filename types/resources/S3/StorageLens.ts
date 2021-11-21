@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::StorageLens
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StorageLens_Type = 'AWS::S3::StorageLens';
 export const StorageLens_Type = 'AWS::S3::StorageLens';
@@ -11,10 +11,7 @@ export const StorageLens_Type = 'AWS::S3::StorageLens';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-storagelens.html}
  */
 export default function StorageLens(props: StorageLens_Properties) {
-  return new CFResource<StorageLens_Type, StorageLens_Properties>(
-    StorageLens_Type,
-    props
-  );
+  return new CfnResource<StorageLens_Properties>(StorageLens_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::Script
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Script_Type = 'AWS::GameLift::Script';
 export const Script_Type = 'AWS::GameLift::Script';
@@ -10,7 +10,7 @@ export const Script_Type = 'AWS::GameLift::Script';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html}
  */
 export default function Script(props: Script_Properties) {
-  return new CFResource<Script_Type, Script_Properties>(Script_Type, props);
+  return new CfnResource<Script_Properties>(Script_Type, props);
 }
 
 /**

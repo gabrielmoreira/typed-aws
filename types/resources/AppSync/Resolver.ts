@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::Resolver
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Resolver_Type = 'AWS::AppSync::Resolver';
 export const Resolver_Type = 'AWS::AppSync::Resolver';
@@ -10,10 +10,7 @@ export const Resolver_Type = 'AWS::AppSync::Resolver';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html}
  */
 export default function Resolver(props: Resolver_Properties) {
-  return new CFResource<Resolver_Type, Resolver_Properties>(
-    Resolver_Type,
-    props
-  );
+  return new CfnResource<Resolver_Properties>(Resolver_Type, props);
 }
 
 /**

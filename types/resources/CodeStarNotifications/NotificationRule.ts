@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeStarNotifications::NotificationRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NotificationRule_Type =
   'AWS::CodeStarNotifications::NotificationRule';
@@ -13,7 +13,7 @@ export const NotificationRule_Type =
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html}
  */
 export default function NotificationRule(props: NotificationRule_Properties) {
-  return new CFResource<NotificationRule_Type, NotificationRule_Properties>(
+  return new CfnResource<NotificationRule_Properties>(
     NotificationRule_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::ImageRecipe
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ImageRecipe_Type = 'AWS::ImageBuilder::ImageRecipe';
 export const ImageRecipe_Type = 'AWS::ImageBuilder::ImageRecipe';
@@ -10,10 +10,7 @@ export const ImageRecipe_Type = 'AWS::ImageBuilder::ImageRecipe';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html}
  */
 export default function ImageRecipe(props: ImageRecipe_Properties) {
-  return new CFResource<ImageRecipe_Type, ImageRecipe_Properties>(
-    ImageRecipe_Type,
-    props
-  );
+  return new CfnResource<ImageRecipe_Properties>(ImageRecipe_Type, props);
 }
 
 /**

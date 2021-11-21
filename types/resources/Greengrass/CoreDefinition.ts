@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::CoreDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CoreDefinition_Type = 'AWS::Greengrass::CoreDefinition';
 export const CoreDefinition_Type = 'AWS::Greengrass::CoreDefinition';
@@ -10,10 +10,7 @@ export const CoreDefinition_Type = 'AWS::Greengrass::CoreDefinition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html}
  */
 export default function CoreDefinition(props: CoreDefinition_Properties) {
-  return new CFResource<CoreDefinition_Type, CoreDefinition_Properties>(
-    CoreDefinition_Type,
-    props
-  );
+  return new CfnResource<CoreDefinition_Properties>(CoreDefinition_Type, props);
 }
 
 /**

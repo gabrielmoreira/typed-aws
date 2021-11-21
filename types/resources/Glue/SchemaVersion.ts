@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::SchemaVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SchemaVersion_Type = 'AWS::Glue::SchemaVersion';
 export const SchemaVersion_Type = 'AWS::Glue::SchemaVersion';
@@ -11,10 +11,7 @@ export const SchemaVersion_Type = 'AWS::Glue::SchemaVersion';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html}
  */
 export default function SchemaVersion(props: SchemaVersion_Properties) {
-  return new CFResource<SchemaVersion_Type, SchemaVersion_Properties>(
-    SchemaVersion_Type,
-    props
-  );
+  return new CfnResource<SchemaVersion_Properties>(SchemaVersion_Type, props);
 }
 
 /**

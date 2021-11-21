@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::ConnectorDefinitionVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConnectorDefinitionVersion_Type =
   'AWS::Greengrass::ConnectorDefinitionVersion';
@@ -15,10 +15,10 @@ export const ConnectorDefinitionVersion_Type =
 export default function ConnectorDefinitionVersion(
   props: ConnectorDefinitionVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConnectorDefinitionVersion_Properties>(
     ConnectorDefinitionVersion_Type,
-    ConnectorDefinitionVersion_Properties
-  >(ConnectorDefinitionVersion_Type, props);
+    props
+  );
 }
 
 /**

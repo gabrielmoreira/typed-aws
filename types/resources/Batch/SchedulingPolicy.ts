@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Batch::SchedulingPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SchedulingPolicy_Type = 'AWS::Batch::SchedulingPolicy';
 export const SchedulingPolicy_Type = 'AWS::Batch::SchedulingPolicy';
@@ -10,7 +10,7 @@ export const SchedulingPolicy_Type = 'AWS::Batch::SchedulingPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html}
  */
 export default function SchedulingPolicy(props: SchedulingPolicy_Properties) {
-  return new CFResource<SchedulingPolicy_Type, SchedulingPolicy_Properties>(
+  return new CfnResource<SchedulingPolicy_Properties>(
     SchedulingPolicy_Type,
     props
   );

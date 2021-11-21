@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::Parameter
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Parameter_Type = 'AWS::SSM::Parameter';
 export const Parameter_Type = 'AWS::SSM::Parameter';
@@ -10,10 +10,7 @@ export const Parameter_Type = 'AWS::SSM::Parameter';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html}
  */
 export default function Parameter(props: Parameter_Properties) {
-  return new CFResource<Parameter_Type, Parameter_Properties>(
-    Parameter_Type,
-    props
-  );
+  return new CfnResource<Parameter_Properties>(Parameter_Type, props);
 }
 
 /**

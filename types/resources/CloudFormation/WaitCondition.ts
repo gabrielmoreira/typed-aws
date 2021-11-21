@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::WaitCondition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WaitCondition_Type = 'AWS::CloudFormation::WaitCondition';
 export const WaitCondition_Type = 'AWS::CloudFormation::WaitCondition';
@@ -10,10 +10,7 @@ export const WaitCondition_Type = 'AWS::CloudFormation::WaitCondition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html}
  */
 export default function WaitCondition(props: WaitCondition_Properties) {
-  return new CFResource<WaitCondition_Type, WaitCondition_Properties>(
-    WaitCondition_Type,
-    props
-  );
+  return new CfnResource<WaitCondition_Properties>(WaitCondition_Type, props);
 }
 
 /**

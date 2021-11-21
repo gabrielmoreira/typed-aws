@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ClusterSecurityGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClusterSecurityGroup_Type = 'AWS::Redshift::ClusterSecurityGroup';
 export const ClusterSecurityGroup_Type = 'AWS::Redshift::ClusterSecurityGroup';
@@ -13,10 +13,10 @@ export const ClusterSecurityGroup_Type = 'AWS::Redshift::ClusterSecurityGroup';
 export default function ClusterSecurityGroup(
   props: ClusterSecurityGroup_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ClusterSecurityGroup_Properties>(
     ClusterSecurityGroup_Type,
-    ClusterSecurityGroup_Properties
-  >(ClusterSecurityGroup_Type, props);
+    props
+  );
 }
 
 /**

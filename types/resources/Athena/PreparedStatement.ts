@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::PreparedStatement
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PreparedStatement_Type = 'AWS::Athena::PreparedStatement';
 export const PreparedStatement_Type = 'AWS::Athena::PreparedStatement';
@@ -10,7 +10,7 @@ export const PreparedStatement_Type = 'AWS::Athena::PreparedStatement';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html}
  */
 export default function PreparedStatement(props: PreparedStatement_Properties) {
-  return new CFResource<PreparedStatement_Type, PreparedStatement_Properties>(
+  return new CfnResource<PreparedStatement_Properties>(
     PreparedStatement_Type,
     props
   );

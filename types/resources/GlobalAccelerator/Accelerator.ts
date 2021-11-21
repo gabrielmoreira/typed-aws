@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GlobalAccelerator::Accelerator
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Accelerator_Type = 'AWS::GlobalAccelerator::Accelerator';
 export const Accelerator_Type = 'AWS::GlobalAccelerator::Accelerator';
@@ -11,10 +11,7 @@ export const Accelerator_Type = 'AWS::GlobalAccelerator::Accelerator';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html}
  */
 export default function Accelerator(props: Accelerator_Properties) {
-  return new CFResource<Accelerator_Type, Accelerator_Properties>(
-    Accelerator_Type,
-    props
-  );
+  return new CfnResource<Accelerator_Properties>(Accelerator_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ScheduledAudit
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ScheduledAudit_Type = 'AWS::IoT::ScheduledAudit';
 export const ScheduledAudit_Type = 'AWS::IoT::ScheduledAudit';
@@ -11,10 +11,7 @@ export const ScheduledAudit_Type = 'AWS::IoT::ScheduledAudit';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html}
  */
 export default function ScheduledAudit(props: ScheduledAudit_Properties) {
-  return new CFResource<ScheduledAudit_Type, ScheduledAudit_Properties>(
-    ScheduledAudit_Type,
-    props
-  );
+  return new CfnResource<ScheduledAudit_Properties>(ScheduledAudit_Type, props);
 }
 
 /**

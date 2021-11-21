@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::Archive
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Archive_Type = 'AWS::Events::Archive';
 export const Archive_Type = 'AWS::Events::Archive';
@@ -10,7 +10,7 @@ export const Archive_Type = 'AWS::Events::Archive';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html}
  */
 export default function Archive(props: Archive_Properties) {
-  return new CFResource<Archive_Type, Archive_Properties>(Archive_Type, props);
+  return new CfnResource<Archive_Properties>(Archive_Type, props);
 }
 
 /**

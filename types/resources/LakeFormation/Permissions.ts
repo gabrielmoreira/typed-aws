@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LakeFormation::Permissions
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Permissions_Type = 'AWS::LakeFormation::Permissions';
 export const Permissions_Type = 'AWS::LakeFormation::Permissions';
@@ -10,10 +10,7 @@ export const Permissions_Type = 'AWS::LakeFormation::Permissions';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html}
  */
 export default function Permissions(props: Permissions_Properties) {
-  return new CFResource<Permissions_Type, Permissions_Properties>(
-    Permissions_Type,
-    props
-  );
+  return new CfnResource<Permissions_Properties>(Permissions_Type, props);
 }
 
 /**

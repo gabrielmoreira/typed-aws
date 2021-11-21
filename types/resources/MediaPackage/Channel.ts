@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::Channel
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Channel_Type = 'AWS::MediaPackage::Channel';
 export const Channel_Type = 'AWS::MediaPackage::Channel';
@@ -10,7 +10,7 @@ export const Channel_Type = 'AWS::MediaPackage::Channel';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html}
  */
 export default function Channel(props: Channel_Properties) {
-  return new CFResource<Channel_Type, Channel_Properties>(Channel_Type, props);
+  return new CfnResource<Channel_Properties>(Channel_Type, props);
 }
 
 /**

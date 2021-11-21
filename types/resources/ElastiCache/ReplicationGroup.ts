@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::ReplicationGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicationGroup_Type = 'AWS::ElastiCache::ReplicationGroup';
 export const ReplicationGroup_Type = 'AWS::ElastiCache::ReplicationGroup';
@@ -10,7 +10,7 @@ export const ReplicationGroup_Type = 'AWS::ElastiCache::ReplicationGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html}
  */
 export default function ReplicationGroup(props: ReplicationGroup_Properties) {
-  return new CFResource<ReplicationGroup_Type, ReplicationGroup_Properties>(
+  return new CfnResource<ReplicationGroup_Properties>(
     ReplicationGroup_Type,
     props
   );

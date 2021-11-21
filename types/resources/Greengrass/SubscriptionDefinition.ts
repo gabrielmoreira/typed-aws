@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::SubscriptionDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SubscriptionDefinition_Type =
   'AWS::Greengrass::SubscriptionDefinition';
@@ -15,10 +15,10 @@ export const SubscriptionDefinition_Type =
 export default function SubscriptionDefinition(
   props: SubscriptionDefinition_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SubscriptionDefinition_Properties>(
     SubscriptionDefinition_Type,
-    SubscriptionDefinition_Properties
-  >(SubscriptionDefinition_Type, props);
+    props
+  );
 }
 
 /**

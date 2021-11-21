@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodePipeline::Pipeline
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Pipeline_Type = 'AWS::CodePipeline::Pipeline';
 export const Pipeline_Type = 'AWS::CodePipeline::Pipeline';
@@ -10,10 +10,7 @@ export const Pipeline_Type = 'AWS::CodePipeline::Pipeline';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html}
  */
 export default function Pipeline(props: Pipeline_Properties) {
-  return new CFResource<Pipeline_Type, Pipeline_Properties>(
-    Pipeline_Type,
-    props
-  );
+  return new CfnResource<Pipeline_Properties>(Pipeline_Type, props);
 }
 
 /**

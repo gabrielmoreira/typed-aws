@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::CapacityReservationFleet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CapacityReservationFleet_Type =
   'AWS::EC2::CapacityReservationFleet';
@@ -14,10 +14,10 @@ export const CapacityReservationFleet_Type =
 export default function CapacityReservationFleet(
   props: CapacityReservationFleet_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CapacityReservationFleet_Properties>(
     CapacityReservationFleet_Type,
-    CapacityReservationFleet_Properties
-  >(CapacityReservationFleet_Type, props);
+    props
+  );
 }
 
 /**

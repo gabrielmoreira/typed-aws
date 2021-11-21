@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::DevEndpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DevEndpoint_Type = 'AWS::Glue::DevEndpoint';
 export const DevEndpoint_Type = 'AWS::Glue::DevEndpoint';
@@ -10,10 +10,7 @@ export const DevEndpoint_Type = 'AWS::Glue::DevEndpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html}
  */
 export default function DevEndpoint(props: DevEndpoint_Properties) {
-  return new CFResource<DevEndpoint_Type, DevEndpoint_Properties>(
-    DevEndpoint_Type,
-    props
-  );
+  return new CfnResource<DevEndpoint_Properties>(DevEndpoint_Type, props);
 }
 
 /**

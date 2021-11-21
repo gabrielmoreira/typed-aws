@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::MaintenanceWindow
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type MaintenanceWindow_Type = 'AWS::SSM::MaintenanceWindow';
 export const MaintenanceWindow_Type = 'AWS::SSM::MaintenanceWindow';
@@ -10,7 +10,7 @@ export const MaintenanceWindow_Type = 'AWS::SSM::MaintenanceWindow';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html}
  */
 export default function MaintenanceWindow(props: MaintenanceWindow_Properties) {
-  return new CFResource<MaintenanceWindow_Type, MaintenanceWindow_Properties>(
+  return new CfnResource<MaintenanceWindow_Properties>(
     MaintenanceWindow_Type,
     props
   );

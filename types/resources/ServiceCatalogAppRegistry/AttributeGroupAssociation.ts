@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AttributeGroupAssociation_Type =
   'AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation';
@@ -15,10 +15,10 @@ export const AttributeGroupAssociation_Type =
 export default function AttributeGroupAssociation(
   props: AttributeGroupAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<AttributeGroupAssociation_Properties>(
     AttributeGroupAssociation_Type,
-    AttributeGroupAssociation_Properties
-  >(AttributeGroupAssociation_Type, props);
+    props
+  );
 }
 
 /**

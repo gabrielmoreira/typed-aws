@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPoolGroup_Type = 'AWS::Cognito::UserPoolGroup';
 export const UserPoolGroup_Type = 'AWS::Cognito::UserPoolGroup';
@@ -10,10 +10,7 @@ export const UserPoolGroup_Type = 'AWS::Cognito::UserPoolGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html}
  */
 export default function UserPoolGroup(props: UserPoolGroup_Properties) {
-  return new CFResource<UserPoolGroup_Type, UserPoolGroup_Properties>(
-    UserPoolGroup_Type,
-    props
-  );
+  return new CfnResource<UserPoolGroup_Properties>(UserPoolGroup_Type, props);
 }
 
 /**

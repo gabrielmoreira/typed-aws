@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::GlobalReplicationGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GlobalReplicationGroup_Type =
   'AWS::ElastiCache::GlobalReplicationGroup';
@@ -15,10 +15,10 @@ export const GlobalReplicationGroup_Type =
 export default function GlobalReplicationGroup(
   props: GlobalReplicationGroup_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<GlobalReplicationGroup_Properties>(
     GlobalReplicationGroup_Type,
-    GlobalReplicationGroup_Properties
-  >(GlobalReplicationGroup_Type, props);
+    props
+  );
 }
 
 /**

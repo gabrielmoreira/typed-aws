@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Synthetics::Canary
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Canary_Type = 'AWS::Synthetics::Canary';
 export const Canary_Type = 'AWS::Synthetics::Canary';
@@ -10,7 +10,7 @@ export const Canary_Type = 'AWS::Synthetics::Canary';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html}
  */
 export default function Canary(props: Canary_Properties) {
-  return new CFResource<Canary_Type, Canary_Properties>(Canary_Type, props);
+  return new CfnResource<Canary_Properties>(Canary_Type, props);
 }
 
 /**

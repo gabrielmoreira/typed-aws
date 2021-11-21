@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Detective::Graph
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Graph_Type = 'AWS::Detective::Graph';
 export const Graph_Type = 'AWS::Detective::Graph';
@@ -10,7 +10,7 @@ export const Graph_Type = 'AWS::Detective::Graph';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html}
  */
 export default function Graph(props: Graph_Properties) {
-  return new CFResource<Graph_Type, Graph_Properties>(Graph_Type, props);
+  return new CfnResource<Graph_Properties>(Graph_Type, props);
 }
 
 /**

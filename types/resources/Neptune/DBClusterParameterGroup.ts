@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Neptune::DBClusterParameterGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBClusterParameterGroup_Type =
   'AWS::Neptune::DBClusterParameterGroup';
@@ -15,10 +15,10 @@ export const DBClusterParameterGroup_Type =
 export default function DBClusterParameterGroup(
   props: DBClusterParameterGroup_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<DBClusterParameterGroup_Properties>(
     DBClusterParameterGroup_Type,
-    DBClusterParameterGroup_Properties
-  >(DBClusterParameterGroup_Type, props);
+    props
+  );
 }
 
 /**

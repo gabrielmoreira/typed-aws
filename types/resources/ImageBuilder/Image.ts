@@ -1,12 +1,12 @@
 // CloudFormation Resource AWS::ImageBuilder::Image
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Image_Type = 'AWS::ImageBuilder::Image';
 export const Image_Type = 'AWS::ImageBuilder::Image';
 
 export default function Image(props: Image_Properties) {
-  return new CFResource<Image_Type, Image_Properties>(Image_Type, props);
+  return new CfnResource<Image_Properties>(Image_Type, props);
 }
 
 export type Image_Properties =

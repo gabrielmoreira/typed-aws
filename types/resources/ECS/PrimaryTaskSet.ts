@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::PrimaryTaskSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PrimaryTaskSet_Type = 'AWS::ECS::PrimaryTaskSet';
 export const PrimaryTaskSet_Type = 'AWS::ECS::PrimaryTaskSet';
@@ -11,10 +11,7 @@ export const PrimaryTaskSet_Type = 'AWS::ECS::PrimaryTaskSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html}
  */
 export default function PrimaryTaskSet(props: PrimaryTaskSet_Properties) {
-  return new CFResource<PrimaryTaskSet_Type, PrimaryTaskSet_Properties>(
-    PrimaryTaskSet_Type,
-    props
-  );
+  return new CfnResource<PrimaryTaskSet_Properties>(PrimaryTaskSet_Type, props);
 }
 
 /**

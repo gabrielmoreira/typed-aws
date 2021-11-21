@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnRoute
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClientVpnRoute_Type = 'AWS::EC2::ClientVpnRoute';
 export const ClientVpnRoute_Type = 'AWS::EC2::ClientVpnRoute';
@@ -10,10 +10,7 @@ export const ClientVpnRoute_Type = 'AWS::EC2::ClientVpnRoute';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html}
  */
 export default function ClientVpnRoute(props: ClientVpnRoute_Properties) {
-  return new CFResource<ClientVpnRoute_Type, ClientVpnRoute_Properties>(
-    ClientVpnRoute_Type,
-    props
-  );
+  return new CfnResource<ClientVpnRoute_Properties>(ClientVpnRoute_Type, props);
 }
 
 /**

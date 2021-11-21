@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ClusterParameterGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClusterParameterGroup_Type = 'AWS::Redshift::ClusterParameterGroup';
 export const ClusterParameterGroup_Type =
@@ -14,10 +14,10 @@ export const ClusterParameterGroup_Type =
 export default function ClusterParameterGroup(
   props: ClusterParameterGroup_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ClusterParameterGroup_Properties>(
     ClusterParameterGroup_Type,
-    ClusterParameterGroup_Properties
-  >(ClusterParameterGroup_Type, props);
+    props
+  );
 }
 
 /**

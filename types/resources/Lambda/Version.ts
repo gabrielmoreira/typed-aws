@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::Version
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Version_Type = 'AWS::Lambda::Version';
 export const Version_Type = 'AWS::Lambda::Version';
@@ -10,7 +10,7 @@ export const Version_Type = 'AWS::Lambda::Version';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html}
  */
 export default function Version(props: Version_Properties) {
-  return new CFResource<Version_Type, Version_Properties>(Version_Type, props);
+  return new CfnResource<Version_Properties>(Version_Type, props);
 }
 
 /**

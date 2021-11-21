@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::IPSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type IPSet_Type = 'AWS::WAFRegional::IPSet';
 export const IPSet_Type = 'AWS::WAFRegional::IPSet';
@@ -10,7 +10,7 @@ export const IPSet_Type = 'AWS::WAFRegional::IPSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html}
  */
 export default function IPSet(props: IPSet_Properties) {
-  return new CFResource<IPSet_Type, IPSet_Properties>(IPSet_Type, props);
+  return new CfnResource<IPSet_Properties>(IPSet_Type, props);
 }
 
 /**

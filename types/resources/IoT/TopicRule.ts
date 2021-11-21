@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::TopicRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TopicRule_Type = 'AWS::IoT::TopicRule';
 export const TopicRule_Type = 'AWS::IoT::TopicRule';
@@ -10,10 +10,7 @@ export const TopicRule_Type = 'AWS::IoT::TopicRule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html}
  */
 export default function TopicRule(props: TopicRule_Properties) {
-  return new CFResource<TopicRule_Type, TopicRule_Properties>(
-    TopicRule_Type,
-    props
-  );
+  return new CfnResource<TopicRule_Properties>(TopicRule_Type, props);
 }
 
 /**

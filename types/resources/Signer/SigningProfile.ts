@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Signer::SigningProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SigningProfile_Type = 'AWS::Signer::SigningProfile';
 export const SigningProfile_Type = 'AWS::Signer::SigningProfile';
@@ -11,10 +11,7 @@ export const SigningProfile_Type = 'AWS::Signer::SigningProfile';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html}
  */
 export default function SigningProfile(props: SigningProfile_Properties) {
-  return new CFResource<SigningProfile_Type, SigningProfile_Properties>(
-    SigningProfile_Type,
-    props
-  );
+  return new CfnResource<SigningProfile_Properties>(SigningProfile_Type, props);
 }
 
 /**

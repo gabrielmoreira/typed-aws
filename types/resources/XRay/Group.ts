@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::XRay::Group
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Group_Type = 'AWS::XRay::Group';
 export const Group_Type = 'AWS::XRay::Group';
@@ -11,7 +11,7 @@ export const Group_Type = 'AWS::XRay::Group';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html}
  */
 export default function Group(props: Group_Properties) {
-  return new CFResource<Group_Type, Group_Properties>(Group_Type, props);
+  return new CfnResource<Group_Properties>(Group_Type, props);
 }
 
 /**

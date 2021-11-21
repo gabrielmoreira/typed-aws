@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EMR::Step
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Step_Type = 'AWS::EMR::Step';
 export const Step_Type = 'AWS::EMR::Step';
@@ -10,7 +10,7 @@ export const Step_Type = 'AWS::EMR::Step';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html}
  */
 export default function Step(props: Step_Properties) {
-  return new CFResource<Step_Type, Step_Properties>(Step_Type, props);
+  return new CfnResource<Step_Properties>(Step_Type, props);
 }
 
 /**

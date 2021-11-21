@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::RestApi
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RestApi_Type = 'AWS::ApiGateway::RestApi';
 export const RestApi_Type = 'AWS::ApiGateway::RestApi';
@@ -10,7 +10,7 @@ export const RestApi_Type = 'AWS::ApiGateway::RestApi';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html}
  */
 export default function RestApi(props: RestApi_Properties) {
-  return new CFResource<RestApi_Type, RestApi_Properties>(RestApi_Type, props);
+  return new CfnResource<RestApi_Properties>(RestApi_Type, props);
 }
 
 /**

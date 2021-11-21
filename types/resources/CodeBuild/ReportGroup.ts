@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeBuild::ReportGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReportGroup_Type = 'AWS::CodeBuild::ReportGroup';
 export const ReportGroup_Type = 'AWS::CodeBuild::ReportGroup';
@@ -10,10 +10,7 @@ export const ReportGroup_Type = 'AWS::CodeBuild::ReportGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html}
  */
 export default function ReportGroup(props: ReportGroup_Properties) {
-  return new CFResource<ReportGroup_Type, ReportGroup_Properties>(
-    ReportGroup_Type,
-    props
-  );
+  return new CfnResource<ReportGroup_Properties>(ReportGroup_Type, props);
 }
 
 /**

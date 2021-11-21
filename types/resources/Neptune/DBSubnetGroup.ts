@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Neptune::DBSubnetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBSubnetGroup_Type = 'AWS::Neptune::DBSubnetGroup';
 export const DBSubnetGroup_Type = 'AWS::Neptune::DBSubnetGroup';
@@ -10,10 +10,7 @@ export const DBSubnetGroup_Type = 'AWS::Neptune::DBSubnetGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html}
  */
 export default function DBSubnetGroup(props: DBSubnetGroup_Properties) {
-  return new CFResource<DBSubnetGroup_Type, DBSubnetGroup_Properties>(
-    DBSubnetGroup_Type,
-    props
-  );
+  return new CfnResource<DBSubnetGroup_Properties>(DBSubnetGroup_Type, props);
 }
 
 /**

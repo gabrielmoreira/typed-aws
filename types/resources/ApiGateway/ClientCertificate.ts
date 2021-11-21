@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::ClientCertificate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClientCertificate_Type = 'AWS::ApiGateway::ClientCertificate';
 export const ClientCertificate_Type = 'AWS::ApiGateway::ClientCertificate';
@@ -10,7 +10,7 @@ export const ClientCertificate_Type = 'AWS::ApiGateway::ClientCertificate';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html}
  */
 export default function ClientCertificate(props: ClientCertificate_Properties) {
-  return new CFResource<ClientCertificate_Type, ClientCertificate_Properties>(
+  return new CfnResource<ClientCertificate_Properties>(
     ClientCertificate_Type,
     props
   );

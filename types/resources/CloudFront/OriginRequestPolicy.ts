@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::OriginRequestPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type OriginRequestPolicy_Type = 'AWS::CloudFront::OriginRequestPolicy';
 export const OriginRequestPolicy_Type = 'AWS::CloudFront::OriginRequestPolicy';
@@ -13,10 +13,10 @@ export const OriginRequestPolicy_Type = 'AWS::CloudFront::OriginRequestPolicy';
 export default function OriginRequestPolicy(
   props: OriginRequestPolicy_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<OriginRequestPolicy_Properties>(
     OriginRequestPolicy_Type,
-    OriginRequestPolicy_Properties
-  >(OriginRequestPolicy_Type, props);
+    props
+  );
 }
 
 /**

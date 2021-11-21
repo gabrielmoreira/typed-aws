@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::EventSourceMapping
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EventSourceMapping_Type = 'AWS::Lambda::EventSourceMapping';
 export const EventSourceMapping_Type = 'AWS::Lambda::EventSourceMapping';
@@ -12,7 +12,7 @@ export const EventSourceMapping_Type = 'AWS::Lambda::EventSourceMapping';
 export default function EventSourceMapping(
   props: EventSourceMapping_Properties
 ) {
-  return new CFResource<EventSourceMapping_Type, EventSourceMapping_Properties>(
+  return new CfnResource<EventSourceMapping_Properties>(
     EventSourceMapping_Type,
     props
   );

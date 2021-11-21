@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::StepFunctions::Activity
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Activity_Type = 'AWS::StepFunctions::Activity';
 export const Activity_Type = 'AWS::StepFunctions::Activity';
@@ -10,10 +10,7 @@ export const Activity_Type = 'AWS::StepFunctions::Activity';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html}
  */
 export default function Activity(props: Activity_Properties) {
-  return new CFResource<Activity_Type, Activity_Properties>(
-    Activity_Type,
-    props
-  );
+  return new CfnResource<Activity_Properties>(Activity_Type, props);
 }
 
 /**

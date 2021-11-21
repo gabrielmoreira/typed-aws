@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkAcl
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkAcl_Type = 'AWS::EC2::NetworkAcl';
 export const NetworkAcl_Type = 'AWS::EC2::NetworkAcl';
@@ -10,10 +10,7 @@ export const NetworkAcl_Type = 'AWS::EC2::NetworkAcl';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html}
  */
 export default function NetworkAcl(props: NetworkAcl_Properties) {
-  return new CFResource<NetworkAcl_Type, NetworkAcl_Properties>(
-    NetworkAcl_Type,
-    props
-  );
+  return new CfnResource<NetworkAcl_Properties>(NetworkAcl_Type, props);
 }
 
 /**

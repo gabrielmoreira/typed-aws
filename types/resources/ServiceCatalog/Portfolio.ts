@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::Portfolio
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Portfolio_Type = 'AWS::ServiceCatalog::Portfolio';
 export const Portfolio_Type = 'AWS::ServiceCatalog::Portfolio';
@@ -10,10 +10,7 @@ export const Portfolio_Type = 'AWS::ServiceCatalog::Portfolio';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html}
  */
 export default function Portfolio(props: Portfolio_Properties) {
-  return new CFResource<Portfolio_Type, Portfolio_Properties>(
-    Portfolio_Type,
-    props
-  );
+  return new CfnResource<Portfolio_Properties>(Portfolio_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaConnect::FlowVpcInterface
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FlowVpcInterface_Type = 'AWS::MediaConnect::FlowVpcInterface';
 export const FlowVpcInterface_Type = 'AWS::MediaConnect::FlowVpcInterface';
@@ -10,7 +10,7 @@ export const FlowVpcInterface_Type = 'AWS::MediaConnect::FlowVpcInterface';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html}
  */
 export default function FlowVpcInterface(props: FlowVpcInterface_Properties) {
-  return new CFResource<FlowVpcInterface_Type, FlowVpcInterface_Properties>(
+  return new CfnResource<FlowVpcInterface_Properties>(
     FlowVpcInterface_Type,
     props
   );

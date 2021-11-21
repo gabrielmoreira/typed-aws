@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::SecurityGroupIngress
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecurityGroupIngress_Type =
   'AWS::ElastiCache::SecurityGroupIngress';
@@ -15,10 +15,10 @@ export const SecurityGroupIngress_Type =
 export default function SecurityGroupIngress(
   props: SecurityGroupIngress_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SecurityGroupIngress_Properties>(
     SecurityGroupIngress_Type,
-    SecurityGroupIngress_Properties
-  >(SecurityGroupIngress_Type, props);
+    props
+  );
 }
 
 /**

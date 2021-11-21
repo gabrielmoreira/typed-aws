@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPNConnectionRoute
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPNConnectionRoute_Type = 'AWS::EC2::VPNConnectionRoute';
 export const VPNConnectionRoute_Type = 'AWS::EC2::VPNConnectionRoute';
@@ -12,7 +12,7 @@ export const VPNConnectionRoute_Type = 'AWS::EC2::VPNConnectionRoute';
 export default function VPNConnectionRoute(
   props: VPNConnectionRoute_Properties
 ) {
-  return new CFResource<VPNConnectionRoute_Type, VPNConnectionRoute_Properties>(
+  return new CfnResource<VPNConnectionRoute_Properties>(
     VPNConnectionRoute_Type,
     props
   );

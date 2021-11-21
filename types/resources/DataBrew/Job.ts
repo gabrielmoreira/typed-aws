@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Job
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Job_Type = 'AWS::DataBrew::Job';
 export const Job_Type = 'AWS::DataBrew::Job';
@@ -10,7 +10,7 @@ export const Job_Type = 'AWS::DataBrew::Job';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html}
  */
 export default function Job(props: Job_Properties) {
-  return new CFResource<Job_Type, Job_Properties>(Job_Type, props);
+  return new CfnResource<Job_Properties>(Job_Type, props);
 }
 
 /**

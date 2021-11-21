@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::FirewallRuleGroupAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type FirewallRuleGroupAssociation_Type =
   'AWS::Route53Resolver::FirewallRuleGroupAssociation';
@@ -15,10 +15,10 @@ export const FirewallRuleGroupAssociation_Type =
 export default function FirewallRuleGroupAssociation(
   props: FirewallRuleGroupAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<FirewallRuleGroupAssociation_Properties>(
     FirewallRuleGroupAssociation_Type,
-    FirewallRuleGroupAssociation_Properties
-  >(FirewallRuleGroupAssociation_Type, props);
+    props
+  );
 }
 
 /**

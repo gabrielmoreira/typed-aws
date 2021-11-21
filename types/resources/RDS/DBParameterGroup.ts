@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBParameterGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBParameterGroup_Type = 'AWS::RDS::DBParameterGroup';
 export const DBParameterGroup_Type = 'AWS::RDS::DBParameterGroup';
@@ -10,7 +10,7 @@ export const DBParameterGroup_Type = 'AWS::RDS::DBParameterGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html}
  */
 export default function DBParameterGroup(props: DBParameterGroup_Properties) {
-  return new CFResource<DBParameterGroup_Type, DBParameterGroup_Properties>(
+  return new CfnResource<DBParameterGroup_Properties>(
     DBParameterGroup_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ModelExplainabilityJobDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ModelExplainabilityJobDefinition_Type =
   'AWS::SageMaker::ModelExplainabilityJobDefinition';
@@ -15,10 +15,10 @@ export const ModelExplainabilityJobDefinition_Type =
 export default function ModelExplainabilityJobDefinition(
   props: ModelExplainabilityJobDefinition_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ModelExplainabilityJobDefinition_Properties>(
     ModelExplainabilityJobDefinition_Type,
-    ModelExplainabilityJobDefinition_Properties
-  >(ModelExplainabilityJobDefinition_Type, props);
+    props
+  );
 }
 
 /**

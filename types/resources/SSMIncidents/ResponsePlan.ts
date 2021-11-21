@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMIncidents::ResponsePlan
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResponsePlan_Type = 'AWS::SSMIncidents::ResponsePlan';
 export const ResponsePlan_Type = 'AWS::SSMIncidents::ResponsePlan';
@@ -10,10 +10,7 @@ export const ResponsePlan_Type = 'AWS::SSMIncidents::ResponsePlan';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html}
  */
 export default function ResponsePlan(props: ResponsePlan_Properties) {
-  return new CFResource<ResponsePlan_Type, ResponsePlan_Properties>(
-    ResponsePlan_Type,
-    props
-  );
+  return new CfnResource<ResponsePlan_Properties>(ResponsePlan_Type, props);
 }
 
 /**

@@ -64,7 +64,7 @@ export class ResourceModel {
 
   toString() {
     return `
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ${this.mainModel.getName()}_Type = '${this.mainSchema.namespace}';
 export const ${this.mainModel.getName()}_Type = '${this.mainSchema.namespace}';
@@ -72,7 +72,7 @@ export const ${this.mainModel.getName()}_Type = '${this.mainSchema.namespace}';
 ${formatDoc(
   this.mainModel.getTypeDocumentation()
 )}export default function ${this.mainModel.getName()}(props: ${this.mainModel.getName()}_Properties) {
-  return new CFResource<${this.mainModel.getName()}_Type, ${this.mainModel.getName()}_Properties>(${this.mainModel.getName()}_Type, props);
+  return new CfnResource<${this.mainModel.getName()}_Properties>(${this.mainModel.getName()}_Type, props);
 };
 
 ${this.types

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::InternetGateway
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type InternetGateway_Type = 'AWS::EC2::InternetGateway';
 export const InternetGateway_Type = 'AWS::EC2::InternetGateway';
@@ -10,7 +10,7 @@ export const InternetGateway_Type = 'AWS::EC2::InternetGateway';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html}
  */
 export default function InternetGateway(props: InternetGateway_Properties) {
-  return new CFResource<InternetGateway_Type, InternetGateway_Properties>(
+  return new CfnResource<InternetGateway_Properties>(
     InternetGateway_Type,
     props
   );

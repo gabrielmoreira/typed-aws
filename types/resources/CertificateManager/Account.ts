@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CertificateManager::Account
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Account_Type = 'AWS::CertificateManager::Account';
 export const Account_Type = 'AWS::CertificateManager::Account';
@@ -10,7 +10,7 @@ export const Account_Type = 'AWS::CertificateManager::Account';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html}
  */
 export default function Account(props: Account_Properties) {
-  return new CFResource<Account_Type, Account_Properties>(Account_Type, props);
+  return new CfnResource<Account_Properties>(Account_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Kinesis::Stream
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Stream_Type = 'AWS::Kinesis::Stream';
 export const Stream_Type = 'AWS::Kinesis::Stream';
@@ -10,7 +10,7 @@ export const Stream_Type = 'AWS::Kinesis::Stream';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html}
  */
 export default function Stream(props: Stream_Properties) {
-  return new CFResource<Stream_Type, Stream_Properties>(Stream_Type, props);
+  return new CfnResource<Stream_Properties>(Stream_Type, props);
 }
 
 /**

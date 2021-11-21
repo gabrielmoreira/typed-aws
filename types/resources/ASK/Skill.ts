@@ -1,6 +1,6 @@
 // CloudFormation Resource Alexa::ASK::Skill
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Skill_Type = 'Alexa::ASK::Skill';
 export const Skill_Type = 'Alexa::ASK::Skill';
@@ -10,7 +10,7 @@ export const Skill_Type = 'Alexa::ASK::Skill';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html}
  */
 export default function Skill(props: Skill_Properties) {
-  return new CFResource<Skill_Type, Skill_Properties>(Skill_Type, props);
+  return new CfnResource<Skill_Properties>(Skill_Type, props);
 }
 
 /**

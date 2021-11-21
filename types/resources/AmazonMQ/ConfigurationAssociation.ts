@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AmazonMQ::ConfigurationAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConfigurationAssociation_Type =
   'AWS::AmazonMQ::ConfigurationAssociation';
@@ -15,10 +15,10 @@ export const ConfigurationAssociation_Type =
 export default function ConfigurationAssociation(
   props: ConfigurationAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConfigurationAssociation_Properties>(
     ConfigurationAssociation_Type,
-    ConfigurationAssociation_Properties
-  >(ConfigurationAssociation_Type, props);
+    props
+  );
 }
 
 /**

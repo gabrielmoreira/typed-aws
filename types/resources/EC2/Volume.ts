@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Volume
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Volume_Type = 'AWS::EC2::Volume';
 export const Volume_Type = 'AWS::EC2::Volume';
@@ -10,7 +10,7 @@ export const Volume_Type = 'AWS::EC2::Volume';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html}
  */
 export default function Volume(props: Volume_Properties) {
-  return new CFResource<Volume_Type, Volume_Properties>(Volume_Type, props);
+  return new CfnResource<Volume_Properties>(Volume_Type, props);
 }
 
 /**

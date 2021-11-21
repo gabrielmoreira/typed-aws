@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Schema
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Schema_Type = 'AWS::Glue::Schema';
 export const Schema_Type = 'AWS::Glue::Schema';
@@ -10,7 +10,7 @@ export const Schema_Type = 'AWS::Glue::Schema';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html}
  */
 export default function Schema(props: Schema_Properties) {
-  return new CFResource<Schema_Type, Schema_Properties>(Schema_Type, props);
+  return new CfnResource<Schema_Properties>(Schema_Type, props);
 }
 
 /**

@@ -1,12 +1,12 @@
 // CloudFormation Resource AWS::ImageBuilder::ContainerRecipe
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ContainerRecipe_Type = 'AWS::ImageBuilder::ContainerRecipe';
 export const ContainerRecipe_Type = 'AWS::ImageBuilder::ContainerRecipe';
 
 export default function ContainerRecipe(props: ContainerRecipe_Properties) {
-  return new CFResource<ContainerRecipe_Type, ContainerRecipe_Properties>(
+  return new CfnResource<ContainerRecipe_Properties>(
     ContainerRecipe_Type,
     props
   );

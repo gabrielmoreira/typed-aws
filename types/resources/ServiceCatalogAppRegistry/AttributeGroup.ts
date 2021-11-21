@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalogAppRegistry::AttributeGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AttributeGroup_Type =
   'AWS::ServiceCatalogAppRegistry::AttributeGroup';
@@ -13,10 +13,7 @@ export const AttributeGroup_Type =
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html}
  */
 export default function AttributeGroup(props: AttributeGroup_Properties) {
-  return new CFResource<AttributeGroup_Type, AttributeGroup_Properties>(
-    AttributeGroup_Type,
-    props
-  );
+  return new CfnResource<AttributeGroup_Properties>(AttributeGroup_Type, props);
 }
 
 /**

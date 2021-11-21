@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECR::ReplicationConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicationConfiguration_Type =
   'AWS::ECR::ReplicationConfiguration';
@@ -18,10 +18,10 @@ export const ReplicationConfiguration_Type =
 export default function ReplicationConfiguration(
   props: ReplicationConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ReplicationConfiguration_Properties>(
     ReplicationConfiguration_Type,
-    ReplicationConfiguration_Properties
-  >(ReplicationConfiguration_Type, props);
+    props
+  );
 }
 
 /**

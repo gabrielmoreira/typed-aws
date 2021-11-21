@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::Asset
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Asset_Type = 'AWS::MediaPackage::Asset';
 export const Asset_Type = 'AWS::MediaPackage::Asset';
@@ -10,7 +10,7 @@ export const Asset_Type = 'AWS::MediaPackage::Asset';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html}
  */
 export default function Asset(props: Asset_Properties) {
-  return new CFResource<Asset_Type, Asset_Properties>(Asset_Type, props);
+  return new CfnResource<Asset_Properties>(Asset_Type, props);
 }
 
 /**

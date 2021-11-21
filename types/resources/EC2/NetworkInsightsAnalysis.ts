@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInsightsAnalysis
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkInsightsAnalysis_Type = 'AWS::EC2::NetworkInsightsAnalysis';
 export const NetworkInsightsAnalysis_Type = 'AWS::EC2::NetworkInsightsAnalysis';
@@ -12,10 +12,10 @@ export const NetworkInsightsAnalysis_Type = 'AWS::EC2::NetworkInsightsAnalysis';
 export default function NetworkInsightsAnalysis(
   props: NetworkInsightsAnalysis_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<NetworkInsightsAnalysis_Properties>(
     NetworkInsightsAnalysis_Type,
-    NetworkInsightsAnalysis_Properties
-  >(NetworkInsightsAnalysis_Type, props);
+    props
+  );
 }
 
 /**

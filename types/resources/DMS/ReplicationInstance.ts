@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DMS::ReplicationInstance
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicationInstance_Type = 'AWS::DMS::ReplicationInstance';
 export const ReplicationInstance_Type = 'AWS::DMS::ReplicationInstance';
@@ -12,10 +12,10 @@ export const ReplicationInstance_Type = 'AWS::DMS::ReplicationInstance';
 export default function ReplicationInstance(
   props: ReplicationInstance_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ReplicationInstance_Properties>(
     ReplicationInstance_Type,
-    ReplicationInstance_Properties
-  >(ReplicationInstance_Type, props);
+    props
+  );
 }
 
 /**

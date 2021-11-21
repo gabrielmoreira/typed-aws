@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInsightsPath
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkInsightsPath_Type = 'AWS::EC2::NetworkInsightsPath';
 export const NetworkInsightsPath_Type = 'AWS::EC2::NetworkInsightsPath';
@@ -12,10 +12,10 @@ export const NetworkInsightsPath_Type = 'AWS::EC2::NetworkInsightsPath';
 export default function NetworkInsightsPath(
   props: NetworkInsightsPath_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<NetworkInsightsPath_Properties>(
     NetworkInsightsPath_Type,
-    NetworkInsightsPath_Properties
-  >(NetworkInsightsPath_Type, props);
+    props
+  );
 }
 
 /**

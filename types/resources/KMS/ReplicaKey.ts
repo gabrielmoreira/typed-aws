@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KMS::ReplicaKey
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicaKey_Type = 'AWS::KMS::ReplicaKey';
 export const ReplicaKey_Type = 'AWS::KMS::ReplicaKey';
@@ -12,10 +12,7 @@ export const ReplicaKey_Type = 'AWS::KMS::ReplicaKey';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html}
  */
 export default function ReplicaKey(props: ReplicaKey_Properties) {
-  return new CFResource<ReplicaKey_Type, ReplicaKey_Properties>(
-    ReplicaKey_Type,
-    props
-  );
+  return new CfnResource<ReplicaKey_Properties>(ReplicaKey_Type, props);
 }
 
 /**

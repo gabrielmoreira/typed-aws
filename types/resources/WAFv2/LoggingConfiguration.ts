@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::LoggingConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LoggingConfiguration_Type = 'AWS::WAFv2::LoggingConfiguration';
 export const LoggingConfiguration_Type = 'AWS::WAFv2::LoggingConfiguration';
@@ -12,10 +12,10 @@ export const LoggingConfiguration_Type = 'AWS::WAFv2::LoggingConfiguration';
 export default function LoggingConfiguration(
   props: LoggingConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LoggingConfiguration_Properties>(
     LoggingConfiguration_Type,
-    LoggingConfiguration_Properties
-  >(LoggingConfiguration_Type, props);
+    props
+  );
 }
 
 /**

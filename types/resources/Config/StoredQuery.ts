@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::StoredQuery
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type StoredQuery_Type = 'AWS::Config::StoredQuery';
 export const StoredQuery_Type = 'AWS::Config::StoredQuery';
@@ -10,10 +10,7 @@ export const StoredQuery_Type = 'AWS::Config::StoredQuery';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html}
  */
 export default function StoredQuery(props: StoredQuery_Properties) {
-  return new CFResource<StoredQuery_Type, StoredQuery_Properties>(
-    StoredQuery_Type,
-    props
-  );
+  return new CfnResource<StoredQuery_Properties>(StoredQuery_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Amplify::Domain
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Domain_Type = 'AWS::Amplify::Domain';
 export const Domain_Type = 'AWS::Amplify::Domain';
@@ -11,7 +11,7 @@ export const Domain_Type = 'AWS::Amplify::Domain';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html}
  */
 export default function Domain(props: Domain_Properties) {
-  return new CFResource<Domain_Type, Domain_Properties>(Domain_Type, props);
+  return new CfnResource<Domain_Properties>(Domain_Type, props);
 }
 
 /**

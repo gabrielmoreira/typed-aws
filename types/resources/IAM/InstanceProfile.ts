@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::InstanceProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type InstanceProfile_Type = 'AWS::IAM::InstanceProfile';
 export const InstanceProfile_Type = 'AWS::IAM::InstanceProfile';
@@ -10,7 +10,7 @@ export const InstanceProfile_Type = 'AWS::IAM::InstanceProfile';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html}
  */
 export default function InstanceProfile(props: InstanceProfile_Properties) {
-  return new CFResource<InstanceProfile_Type, InstanceProfile_Properties>(
+  return new CfnResource<InstanceProfile_Properties>(
     InstanceProfile_Type,
     props
   );

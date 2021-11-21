@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::Framework
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Framework_Type = 'AWS::Backup::Framework';
 export const Framework_Type = 'AWS::Backup::Framework';
@@ -12,10 +12,7 @@ export const Framework_Type = 'AWS::Backup::Framework';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html}
  */
 export default function Framework(props: Framework_Properties) {
-  return new CFResource<Framework_Type, Framework_Properties>(
-    Framework_Type,
-    props
-  );
+  return new CfnResource<Framework_Properties>(Framework_Type, props);
 }
 
 /**

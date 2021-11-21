@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Authorizer
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Authorizer_Type = 'AWS::ApiGateway::Authorizer';
 export const Authorizer_Type = 'AWS::ApiGateway::Authorizer';
@@ -12,10 +12,7 @@ export const Authorizer_Type = 'AWS::ApiGateway::Authorizer';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html}
  */
 export default function Authorizer(props: Authorizer_Properties) {
-  return new CFResource<Authorizer_Type, Authorizer_Properties>(
-    Authorizer_Type,
-    props
-  );
+  return new CfnResource<Authorizer_Properties>(Authorizer_Type, props);
 }
 
 /**

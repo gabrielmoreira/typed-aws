@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::ResponseHeadersPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResponseHeadersPolicy_Type =
   'AWS::CloudFront::ResponseHeadersPolicy';
@@ -15,10 +15,10 @@ export const ResponseHeadersPolicy_Type =
 export default function ResponseHeadersPolicy(
   props: ResponseHeadersPolicy_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResponseHeadersPolicy_Properties>(
     ResponseHeadersPolicy_Type,
-    ResponseHeadersPolicy_Properties
-  >(ResponseHeadersPolicy_Type, props);
+    props
+  );
 }
 
 /**

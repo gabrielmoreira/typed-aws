@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::TagOption
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TagOption_Type = 'AWS::ServiceCatalog::TagOption';
 export const TagOption_Type = 'AWS::ServiceCatalog::TagOption';
@@ -10,10 +10,7 @@ export const TagOption_Type = 'AWS::ServiceCatalog::TagOption';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html}
  */
 export default function TagOption(props: TagOption_Properties) {
-  return new CFResource<TagOption_Type, TagOption_Properties>(
-    TagOption_Type,
-    props
-  );
+  return new CfnResource<TagOption_Properties>(TagOption_Type, props);
 }
 
 /**

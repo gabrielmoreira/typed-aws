@@ -6,7 +6,7 @@ import {
   generateIndex,
   generateModuleIndex,
 } from './generator/generate';
-import { createModels, getAllResources } from './generator/models';
+import { createModels, getAllResources } from './generator/codegen';
 import { ResourceFile } from './generator/types';
 import { groupByArray } from './generator/utils';
 import { FileManager } from './generator/file-manager';

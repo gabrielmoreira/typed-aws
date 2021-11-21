@@ -1,15 +1,12 @@
 // CloudFormation Resource AWS::RDS::GlobalCluster
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type GlobalCluster_Type = 'AWS::RDS::GlobalCluster';
 export const GlobalCluster_Type = 'AWS::RDS::GlobalCluster';
 
 export default function GlobalCluster(props: GlobalCluster_Properties) {
-  return new CFResource<GlobalCluster_Type, GlobalCluster_Properties>(
-    GlobalCluster_Type,
-    props
-  );
+  return new CfnResource<GlobalCluster_Properties>(GlobalCluster_Type, props);
 }
 
 export type GlobalCluster_Properties =

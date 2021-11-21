@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::LocalGatewayRouteTableVPCAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LocalGatewayRouteTableVPCAssociation_Type =
   'AWS::EC2::LocalGatewayRouteTableVPCAssociation';
@@ -15,10 +15,10 @@ export const LocalGatewayRouteTableVPCAssociation_Type =
 export default function LocalGatewayRouteTableVPCAssociation(
   props: LocalGatewayRouteTableVPCAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LocalGatewayRouteTableVPCAssociation_Properties>(
     LocalGatewayRouteTableVPCAssociation_Type,
-    LocalGatewayRouteTableVPCAssociation_Properties
-  >(LocalGatewayRouteTableVPCAssociation_Type, props);
+    props
+  );
 }
 
 /**

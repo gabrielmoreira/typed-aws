@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LakeFormation::Resource
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Resource_Type = 'AWS::LakeFormation::Resource';
 export const Resource_Type = 'AWS::LakeFormation::Resource';
@@ -10,10 +10,7 @@ export const Resource_Type = 'AWS::LakeFormation::Resource';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html}
  */
 export default function Resource(props: Resource_Properties) {
-  return new CFResource<Resource_Type, Resource_Properties>(
-    Resource_Type,
-    props
-  );
+  return new CfnResource<Resource_Properties>(Resource_Type, props);
 }
 
 /**

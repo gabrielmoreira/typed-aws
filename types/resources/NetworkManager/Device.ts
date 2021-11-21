@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::Device
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Device_Type = 'AWS::NetworkManager::Device';
 export const Device_Type = 'AWS::NetworkManager::Device';
@@ -10,7 +10,7 @@ export const Device_Type = 'AWS::NetworkManager::Device';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html}
  */
 export default function Device(props: Device_Properties) {
-  return new CFResource<Device_Type, Device_Properties>(Device_Type, props);
+  return new CfnResource<Device_Properties>(Device_Type, props);
 }
 
 /**

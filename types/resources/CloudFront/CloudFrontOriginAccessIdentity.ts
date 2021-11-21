@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::CloudFrontOriginAccessIdentity
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CloudFrontOriginAccessIdentity_Type =
   'AWS::CloudFront::CloudFrontOriginAccessIdentity';
@@ -15,10 +15,10 @@ export const CloudFrontOriginAccessIdentity_Type =
 export default function CloudFrontOriginAccessIdentity(
   props: CloudFrontOriginAccessIdentity_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CloudFrontOriginAccessIdentity_Properties>(
     CloudFrontOriginAccessIdentity_Type,
-    CloudFrontOriginAccessIdentity_Properties
-  >(CloudFrontOriginAccessIdentity_Type, props);
+    props
+  );
 }
 
 /**

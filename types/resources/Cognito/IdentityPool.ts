@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::IdentityPool
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type IdentityPool_Type = 'AWS::Cognito::IdentityPool';
 export const IdentityPool_Type = 'AWS::Cognito::IdentityPool';
@@ -10,10 +10,7 @@ export const IdentityPool_Type = 'AWS::Cognito::IdentityPool';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html}
  */
 export default function IdentityPool(props: IdentityPool_Properties) {
-  return new CFResource<IdentityPool_Type, IdentityPool_Properties>(
-    IdentityPool_Type,
-    props
-  );
+  return new CfnResource<IdentityPool_Properties>(IdentityPool_Type, props);
 }
 
 /**

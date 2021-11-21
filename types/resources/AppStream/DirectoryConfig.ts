@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::DirectoryConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DirectoryConfig_Type = 'AWS::AppStream::DirectoryConfig';
 export const DirectoryConfig_Type = 'AWS::AppStream::DirectoryConfig';
@@ -10,7 +10,7 @@ export const DirectoryConfig_Type = 'AWS::AppStream::DirectoryConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html}
  */
 export default function DirectoryConfig(props: DirectoryConfig_Properties) {
-  return new CFResource<DirectoryConfig_Type, DirectoryConfig_Properties>(
+  return new CfnResource<DirectoryConfig_Properties>(
     DirectoryConfig_Type,
     props
   );

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::LifecycleHook
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LifecycleHook_Type = 'AWS::AutoScaling::LifecycleHook';
 export const LifecycleHook_Type = 'AWS::AutoScaling::LifecycleHook';
@@ -10,10 +10,7 @@ export const LifecycleHook_Type = 'AWS::AutoScaling::LifecycleHook';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html}
  */
 export default function LifecycleHook(props: LifecycleHook_Properties) {
-  return new CFResource<LifecycleHook_Type, LifecycleHook_Properties>(
-    LifecycleHook_Type,
-    props
-  );
+  return new CfnResource<LifecycleHook_Properties>(LifecycleHook_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::ScheduledAction
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ScheduledAction_Type = 'AWS::AutoScaling::ScheduledAction';
 export const ScheduledAction_Type = 'AWS::AutoScaling::ScheduledAction';
@@ -10,7 +10,7 @@ export const ScheduledAction_Type = 'AWS::AutoScaling::ScheduledAction';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html}
  */
 export default function ScheduledAction(props: ScheduledAction_Properties) {
-  return new CFResource<ScheduledAction_Type, ScheduledAction_Properties>(
+  return new CfnResource<ScheduledAction_Properties>(
     ScheduledAction_Type,
     props
   );

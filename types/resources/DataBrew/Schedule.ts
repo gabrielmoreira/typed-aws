@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Schedule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Schedule_Type = 'AWS::DataBrew::Schedule';
 export const Schedule_Type = 'AWS::DataBrew::Schedule';
@@ -10,10 +10,7 @@ export const Schedule_Type = 'AWS::DataBrew::Schedule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html}
  */
 export default function Schedule(props: Schedule_Properties) {
-  return new CFResource<Schedule_Type, Schedule_Properties>(
-    Schedule_Type,
-    props
-  );
+  return new CfnResource<Schedule_Properties>(Schedule_Type, props);
 }
 
 /**

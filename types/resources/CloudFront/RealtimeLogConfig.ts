@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::RealtimeLogConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RealtimeLogConfig_Type = 'AWS::CloudFront::RealtimeLogConfig';
 export const RealtimeLogConfig_Type = 'AWS::CloudFront::RealtimeLogConfig';
@@ -10,7 +10,7 @@ export const RealtimeLogConfig_Type = 'AWS::CloudFront::RealtimeLogConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html}
  */
 export default function RealtimeLogConfig(props: RealtimeLogConfig_Properties) {
-  return new CFResource<RealtimeLogConfig_Type, RealtimeLogConfig_Properties>(
+  return new CfnResource<RealtimeLogConfig_Properties>(
     RealtimeLogConfig_Type,
     props
   );

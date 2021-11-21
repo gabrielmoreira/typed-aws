@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ACMPCA::CertificateAuthority
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CertificateAuthority_Type = 'AWS::ACMPCA::CertificateAuthority';
 export const CertificateAuthority_Type = 'AWS::ACMPCA::CertificateAuthority';
@@ -12,10 +12,10 @@ export const CertificateAuthority_Type = 'AWS::ACMPCA::CertificateAuthority';
 export default function CertificateAuthority(
   props: CertificateAuthority_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<CertificateAuthority_Properties>(
     CertificateAuthority_Type,
-    CertificateAuthority_Properties
-  >(CertificateAuthority_Type, props);
+    props
+  );
 }
 
 /**

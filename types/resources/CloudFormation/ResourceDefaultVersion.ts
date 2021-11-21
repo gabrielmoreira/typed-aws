@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::ResourceDefaultVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceDefaultVersion_Type =
   'AWS::CloudFormation::ResourceDefaultVersion';
@@ -10,10 +10,10 @@ export const ResourceDefaultVersion_Type =
 export default function ResourceDefaultVersion(
   props: ResourceDefaultVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResourceDefaultVersion_Properties>(
     ResourceDefaultVersion_Type,
-    ResourceDefaultVersion_Properties
-  >(ResourceDefaultVersion_Type, props);
+    props
+  );
 }
 
 export type ResourceDefaultVersion_Properties =

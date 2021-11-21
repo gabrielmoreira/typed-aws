@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EnclaveCertificateIamRoleAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EnclaveCertificateIamRoleAssociation_Type =
   'AWS::EC2::EnclaveCertificateIamRoleAssociation';
@@ -17,10 +17,10 @@ export const EnclaveCertificateIamRoleAssociation_Type =
 export default function EnclaveCertificateIamRoleAssociation(
   props: EnclaveCertificateIamRoleAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<EnclaveCertificateIamRoleAssociation_Properties>(
     EnclaveCertificateIamRoleAssociation_Type,
-    EnclaveCertificateIamRoleAssociation_Properties
-  >(EnclaveCertificateIamRoleAssociation_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ClusterSecurityGroupIngress
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ClusterSecurityGroupIngress_Type =
   'AWS::Redshift::ClusterSecurityGroupIngress';
@@ -15,10 +15,10 @@ export const ClusterSecurityGroupIngress_Type =
 export default function ClusterSecurityGroupIngress(
   props: ClusterSecurityGroupIngress_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ClusterSecurityGroupIngress_Properties>(
     ClusterSecurityGroupIngress_Type,
-    ClusterSecurityGroupIngress_Properties
-  >(ClusterSecurityGroupIngress_Type, props);
+    props
+  );
 }
 
 /**

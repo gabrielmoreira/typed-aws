@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ACMPCA::Permission
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Permission_Type = 'AWS::ACMPCA::Permission';
 export const Permission_Type = 'AWS::ACMPCA::Permission';
@@ -10,10 +10,7 @@ export const Permission_Type = 'AWS::ACMPCA::Permission';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html}
  */
 export default function Permission(props: Permission_Properties) {
-  return new CFResource<Permission_Type, Permission_Properties>(
-    Permission_Type,
-    props
-  );
+  return new CfnResource<Permission_Properties>(Permission_Type, props);
 }
 
 /**

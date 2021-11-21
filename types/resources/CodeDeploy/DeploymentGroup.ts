@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeDeploy::DeploymentGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DeploymentGroup_Type = 'AWS::CodeDeploy::DeploymentGroup';
 export const DeploymentGroup_Type = 'AWS::CodeDeploy::DeploymentGroup';
@@ -10,7 +10,7 @@ export const DeploymentGroup_Type = 'AWS::CodeDeploy::DeploymentGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html}
  */
 export default function DeploymentGroup(props: DeploymentGroup_Properties) {
-  return new CFResource<DeploymentGroup_Type, DeploymentGroup_Properties>(
+  return new CfnResource<DeploymentGroup_Properties>(
     DeploymentGroup_Type,
     props
   );

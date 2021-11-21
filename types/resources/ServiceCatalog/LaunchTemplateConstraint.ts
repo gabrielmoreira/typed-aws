@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::LaunchTemplateConstraint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LaunchTemplateConstraint_Type =
   'AWS::ServiceCatalog::LaunchTemplateConstraint';
@@ -15,10 +15,10 @@ export const LaunchTemplateConstraint_Type =
 export default function LaunchTemplateConstraint(
   props: LaunchTemplateConstraint_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LaunchTemplateConstraint_Properties>(
     LaunchTemplateConstraint_Type,
-    LaunchTemplateConstraint_Properties
-  >(LaunchTemplateConstraint_Type, props);
+    props
+  );
 }
 
 /**

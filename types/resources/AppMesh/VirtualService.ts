@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualService
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VirtualService_Type = 'AWS::AppMesh::VirtualService';
 export const VirtualService_Type = 'AWS::AppMesh::VirtualService';
@@ -10,10 +10,7 @@ export const VirtualService_Type = 'AWS::AppMesh::VirtualService';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html}
  */
 export default function VirtualService(props: VirtualService_Properties) {
-  return new CFResource<VirtualService_Type, VirtualService_Properties>(
-    VirtualService_Type,
-    props
-  );
+  return new CfnResource<VirtualService_Properties>(VirtualService_Type, props);
 }
 
 /**

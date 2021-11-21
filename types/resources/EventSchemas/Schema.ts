@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EventSchemas::Schema
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Schema_Type = 'AWS::EventSchemas::Schema';
 export const Schema_Type = 'AWS::EventSchemas::Schema';
@@ -10,7 +10,7 @@ export const Schema_Type = 'AWS::EventSchemas::Schema';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html}
  */
 export default function Schema(props: Schema_Properties) {
-  return new CFResource<Schema_Type, Schema_Properties>(Schema_Type, props);
+  return new CfnResource<Schema_Properties>(Schema_Type, props);
 }
 
 /**

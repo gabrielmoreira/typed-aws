@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticLoadBalancingV2::Listener
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Listener_Type = 'AWS::ElasticLoadBalancingV2::Listener';
 export const Listener_Type = 'AWS::ElasticLoadBalancingV2::Listener';
@@ -11,10 +11,7 @@ export const Listener_Type = 'AWS::ElasticLoadBalancingV2::Listener';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html}
  */
 export default function Listener(props: Listener_Properties) {
-  return new CFResource<Listener_Type, Listener_Properties>(
-    Listener_Type,
-    props
-  );
+  return new CfnResource<Listener_Properties>(Listener_Type, props);
 }
 
 /**

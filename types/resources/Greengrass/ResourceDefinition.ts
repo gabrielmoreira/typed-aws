@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::ResourceDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceDefinition_Type = 'AWS::Greengrass::ResourceDefinition';
 export const ResourceDefinition_Type = 'AWS::Greengrass::ResourceDefinition';
@@ -13,7 +13,7 @@ export const ResourceDefinition_Type = 'AWS::Greengrass::ResourceDefinition';
 export default function ResourceDefinition(
   props: ResourceDefinition_Properties
 ) {
-  return new CFResource<ResourceDefinition_Type, ResourceDefinition_Properties>(
+  return new CfnResource<ResourceDefinition_Properties>(
     ResourceDefinition_Type,
     props
   );

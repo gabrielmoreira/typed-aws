@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Method
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Method_Type = 'AWS::ApiGateway::Method';
 export const Method_Type = 'AWS::ApiGateway::Method';
@@ -10,7 +10,7 @@ export const Method_Type = 'AWS::ApiGateway::Method';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html}
  */
 export default function Method(props: Method_Properties) {
-  return new CFResource<Method_Type, Method_Properties>(Method_Type, props);
+  return new CfnResource<Method_Properties>(Method_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::EventBus
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EventBus_Type = 'AWS::Events::EventBus';
 export const EventBus_Type = 'AWS::Events::EventBus';
@@ -10,10 +10,7 @@ export const EventBus_Type = 'AWS::Events::EventBus';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html}
  */
 export default function EventBus(props: EventBus_Properties) {
-  return new CFResource<EventBus_Type, EventBus_Properties>(
-    EventBus_Type,
-    props
-  );
+  return new CfnResource<EventBus_Properties>(EventBus_Type, props);
 }
 
 /**

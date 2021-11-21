@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::PortfolioPrincipalAssociation
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PortfolioPrincipalAssociation_Type =
   'AWS::ServiceCatalog::PortfolioPrincipalAssociation';
@@ -15,10 +15,10 @@ export const PortfolioPrincipalAssociation_Type =
 export default function PortfolioPrincipalAssociation(
   props: PortfolioPrincipalAssociation_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<PortfolioPrincipalAssociation_Properties>(
     PortfolioPrincipalAssociation_Type,
-    PortfolioPrincipalAssociation_Properties
-  >(PortfolioPrincipalAssociation_Type, props);
+    props
+  );
 }
 
 /**

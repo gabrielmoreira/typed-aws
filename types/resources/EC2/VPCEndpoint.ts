@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpoint
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCEndpoint_Type = 'AWS::EC2::VPCEndpoint';
 export const VPCEndpoint_Type = 'AWS::EC2::VPCEndpoint';
@@ -10,10 +10,7 @@ export const VPCEndpoint_Type = 'AWS::EC2::VPCEndpoint';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html}
  */
 export default function VPCEndpoint(props: VPCEndpoint_Properties) {
-  return new CFResource<VPCEndpoint_Type, VPCEndpoint_Properties>(
-    VPCEndpoint_Type,
-    props
-  );
+  return new CfnResource<VPCEndpoint_Properties>(VPCEndpoint_Type, props);
 }
 
 /**

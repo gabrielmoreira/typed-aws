@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::AccountAuditConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AccountAuditConfiguration_Type =
   'AWS::IoT::AccountAuditConfiguration';
@@ -16,10 +16,10 @@ export const AccountAuditConfiguration_Type =
 export default function AccountAuditConfiguration(
   props: AccountAuditConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<AccountAuditConfiguration_Properties>(
     AccountAuditConfiguration_Type,
-    AccountAuditConfiguration_Properties
-  >(AccountAuditConfiguration_Type, props);
+    props
+  );
 }
 
 /**

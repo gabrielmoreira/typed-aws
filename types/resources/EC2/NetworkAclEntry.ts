@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkAclEntry
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type NetworkAclEntry_Type = 'AWS::EC2::NetworkAclEntry';
 export const NetworkAclEntry_Type = 'AWS::EC2::NetworkAclEntry';
@@ -10,7 +10,7 @@ export const NetworkAclEntry_Type = 'AWS::EC2::NetworkAclEntry';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html}
  */
 export default function NetworkAclEntry(props: NetworkAclEntry_Properties) {
-  return new CFResource<NetworkAclEntry_Type, NetworkAclEntry_Properties>(
+  return new CfnResource<NetworkAclEntry_Properties>(
     NetworkAclEntry_Type,
     props
   );

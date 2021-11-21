@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::LayerVersionPermission
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LayerVersionPermission_Type = 'AWS::Lambda::LayerVersionPermission';
 export const LayerVersionPermission_Type =
@@ -14,10 +14,10 @@ export const LayerVersionPermission_Type =
 export default function LayerVersionPermission(
   props: LayerVersionPermission_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LayerVersionPermission_Properties>(
     LayerVersionPermission_Type,
-    LayerVersionPermission_Properties
-  >(LayerVersionPermission_Type, props);
+    props
+  );
 }
 
 /**

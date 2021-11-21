@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ScheduledAction
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ScheduledAction_Type = 'AWS::Redshift::ScheduledAction';
 export const ScheduledAction_Type = 'AWS::Redshift::ScheduledAction';
@@ -11,7 +11,7 @@ export const ScheduledAction_Type = 'AWS::Redshift::ScheduledAction';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html}
  */
 export default function ScheduledAction(props: ScheduledAction_Properties) {
-  return new CFResource<ScheduledAction_Type, ScheduledAction_Properties>(
+  return new CfnResource<ScheduledAction_Properties>(
     ScheduledAction_Type,
     props
   );

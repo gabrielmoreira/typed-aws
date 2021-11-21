@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DMS::ReplicationTask
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicationTask_Type = 'AWS::DMS::ReplicationTask';
 export const ReplicationTask_Type = 'AWS::DMS::ReplicationTask';
@@ -10,7 +10,7 @@ export const ReplicationTask_Type = 'AWS::DMS::ReplicationTask';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html}
  */
 export default function ReplicationTask(props: ReplicationTask_Properties) {
-  return new CFResource<ReplicationTask_Type, ReplicationTask_Properties>(
+  return new CfnResource<ReplicationTask_Properties>(
     ReplicationTask_Type,
     props
   );

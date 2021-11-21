@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SpotFleet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SpotFleet_Type = 'AWS::EC2::SpotFleet';
 export const SpotFleet_Type = 'AWS::EC2::SpotFleet';
@@ -10,10 +10,7 @@ export const SpotFleet_Type = 'AWS::EC2::SpotFleet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html}
  */
 export default function SpotFleet(props: SpotFleet_Properties) {
-  return new CFResource<SpotFleet_Type, SpotFleet_Properties>(
-    SpotFleet_Type,
-    props
-  );
+  return new CfnResource<SpotFleet_Properties>(SpotFleet_Type, props);
 }
 
 /**

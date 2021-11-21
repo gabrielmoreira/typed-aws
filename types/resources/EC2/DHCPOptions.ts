@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::DHCPOptions
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DHCPOptions_Type = 'AWS::EC2::DHCPOptions';
 export const DHCPOptions_Type = 'AWS::EC2::DHCPOptions';
@@ -10,10 +10,7 @@ export const DHCPOptions_Type = 'AWS::EC2::DHCPOptions';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html}
  */
 export default function DHCPOptions(props: DHCPOptions_Properties) {
-  return new CFResource<DHCPOptions_Type, DHCPOptions_Properties>(
-    DHCPOptions_Type,
-    props
-  );
+  return new CfnResource<DHCPOptions_Properties>(DHCPOptions_Type, props);
 }
 
 /**

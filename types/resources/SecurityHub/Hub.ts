@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecurityHub::Hub
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Hub_Type = 'AWS::SecurityHub::Hub';
 export const Hub_Type = 'AWS::SecurityHub::Hub';
@@ -10,7 +10,7 @@ export const Hub_Type = 'AWS::SecurityHub::Hub';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html}
  */
 export default function Hub(props: Hub_Properties) {
-  return new CFResource<Hub_Type, Hub_Properties>(Hub_Type, props);
+  return new CfnResource<Hub_Properties>(Hub_Type, props);
 }
 
 /**

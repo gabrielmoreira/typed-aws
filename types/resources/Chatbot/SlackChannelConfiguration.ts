@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Chatbot::SlackChannelConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SlackChannelConfiguration_Type =
   'AWS::Chatbot::SlackChannelConfiguration';
@@ -14,10 +14,10 @@ export const SlackChannelConfiguration_Type =
 export default function SlackChannelConfiguration(
   props: SlackChannelConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SlackChannelConfiguration_Properties>(
     SlackChannelConfiguration_Type,
-    SlackChannelConfiguration_Properties
-  >(SlackChannelConfiguration_Type, props);
+    props
+  );
 }
 
 /**

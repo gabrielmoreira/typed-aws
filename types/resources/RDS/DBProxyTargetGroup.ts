@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBProxyTargetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type DBProxyTargetGroup_Type = 'AWS::RDS::DBProxyTargetGroup';
 export const DBProxyTargetGroup_Type = 'AWS::RDS::DBProxyTargetGroup';
@@ -12,7 +12,7 @@ export const DBProxyTargetGroup_Type = 'AWS::RDS::DBProxyTargetGroup';
 export default function DBProxyTargetGroup(
   props: DBProxyTargetGroup_Properties
 ) {
-  return new CFResource<DBProxyTargetGroup_Type, DBProxyTargetGroup_Properties>(
+  return new CfnResource<DBProxyTargetGroup_Properties>(
     DBProxyTargetGroup_Type,
     props
   );

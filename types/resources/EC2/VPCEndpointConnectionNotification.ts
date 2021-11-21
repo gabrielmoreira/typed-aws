@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpointConnectionNotification
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VPCEndpointConnectionNotification_Type =
   'AWS::EC2::VPCEndpointConnectionNotification';
@@ -15,10 +15,10 @@ export const VPCEndpointConnectionNotification_Type =
 export default function VPCEndpointConnectionNotification(
   props: VPCEndpointConnectionNotification_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<VPCEndpointConnectionNotification_Properties>(
     VPCEndpointConnectionNotification_Type,
-    VPCEndpointConnectionNotification_Properties
-  >(VPCEndpointConnectionNotification_Type, props);
+    props
+  );
 }
 
 /**

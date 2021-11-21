@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::UserProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserProfile_Type = 'AWS::OpsWorks::UserProfile';
 export const UserProfile_Type = 'AWS::OpsWorks::UserProfile';
@@ -10,10 +10,7 @@ export const UserProfile_Type = 'AWS::OpsWorks::UserProfile';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html}
  */
 export default function UserProfile(props: UserProfile_Properties) {
-  return new CFResource<UserProfile_Type, UserProfile_Properties>(
-    UserProfile_Type,
-    props
-  );
+  return new CfnResource<UserProfile_Properties>(UserProfile_Type, props);
 }
 
 /**

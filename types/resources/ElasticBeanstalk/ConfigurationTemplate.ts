@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticBeanstalk::ConfigurationTemplate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConfigurationTemplate_Type =
   'AWS::ElasticBeanstalk::ConfigurationTemplate';
@@ -15,10 +15,10 @@ export const ConfigurationTemplate_Type =
 export default function ConfigurationTemplate(
   props: ConfigurationTemplate_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConfigurationTemplate_Properties>(
     ConfigurationTemplate_Type,
-    ConfigurationTemplate_Properties
-  >(ConfigurationTemplate_Type, props);
+    props
+  );
 }
 
 /**

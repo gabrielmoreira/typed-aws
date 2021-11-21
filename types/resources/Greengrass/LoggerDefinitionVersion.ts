@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::LoggerDefinitionVersion
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LoggerDefinitionVersion_Type =
   'AWS::Greengrass::LoggerDefinitionVersion';
@@ -15,10 +15,10 @@ export const LoggerDefinitionVersion_Type =
 export default function LoggerDefinitionVersion(
   props: LoggerDefinitionVersion_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<LoggerDefinitionVersion_Properties>(
     LoggerDefinitionVersion_Type,
-    LoggerDefinitionVersion_Properties
-  >(LoggerDefinitionVersion_Type, props);
+    props
+  );
 }
 
 /**

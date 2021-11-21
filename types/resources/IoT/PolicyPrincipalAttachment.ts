@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::PolicyPrincipalAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type PolicyPrincipalAttachment_Type =
   'AWS::IoT::PolicyPrincipalAttachment';
@@ -15,10 +15,10 @@ export const PolicyPrincipalAttachment_Type =
 export default function PolicyPrincipalAttachment(
   props: PolicyPrincipalAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<PolicyPrincipalAttachment_Properties>(
     PolicyPrincipalAttachment_Type,
-    PolicyPrincipalAttachment_Properties
-  >(PolicyPrincipalAttachment_Type, props);
+    props
+  );
 }
 
 /**

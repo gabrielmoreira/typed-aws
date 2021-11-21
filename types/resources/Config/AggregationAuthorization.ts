@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::AggregationAuthorization
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AggregationAuthorization_Type =
   'AWS::Config::AggregationAuthorization';
@@ -15,10 +15,10 @@ export const AggregationAuthorization_Type =
 export default function AggregationAuthorization(
   props: AggregationAuthorization_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<AggregationAuthorization_Properties>(
     AggregationAuthorization_Type,
-    AggregationAuthorization_Properties
-  >(AggregationAuthorization_Type, props);
+    props
+  );
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::Stack
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Stack_Type = 'AWS::AppStream::Stack';
 export const Stack_Type = 'AWS::AppStream::Stack';
@@ -10,7 +10,7 @@ export const Stack_Type = 'AWS::AppStream::Stack';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html}
  */
 export default function Stack(props: Stack_Properties) {
-  return new CFResource<Stack_Type, Stack_Properties>(Stack_Type, props);
+  return new CfnResource<Stack_Properties>(Stack_Type, props);
 }
 
 /**

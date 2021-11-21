@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SubnetCidrBlock
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SubnetCidrBlock_Type = 'AWS::EC2::SubnetCidrBlock';
 export const SubnetCidrBlock_Type = 'AWS::EC2::SubnetCidrBlock';
@@ -10,7 +10,7 @@ export const SubnetCidrBlock_Type = 'AWS::EC2::SubnetCidrBlock';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html}
  */
 export default function SubnetCidrBlock(props: SubnetCidrBlock_Properties) {
-  return new CFResource<SubnetCidrBlock_Type, SubnetCidrBlock_Properties>(
+  return new CfnResource<SubnetCidrBlock_Properties>(
     SubnetCidrBlock_Type,
     props
   );

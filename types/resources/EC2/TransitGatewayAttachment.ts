@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayAttachment
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TransitGatewayAttachment_Type =
   'AWS::EC2::TransitGatewayAttachment';
@@ -14,10 +14,10 @@ export const TransitGatewayAttachment_Type =
 export default function TransitGatewayAttachment(
   props: TransitGatewayAttachment_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<TransitGatewayAttachment_Properties>(
     TransitGatewayAttachment_Type,
-    TransitGatewayAttachment_Properties
-  >(TransitGatewayAttachment_Type, props);
+    props
+  );
 }
 
 /**

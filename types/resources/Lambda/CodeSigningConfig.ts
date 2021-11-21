@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::CodeSigningConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CodeSigningConfig_Type = 'AWS::Lambda::CodeSigningConfig';
 export const CodeSigningConfig_Type = 'AWS::Lambda::CodeSigningConfig';
@@ -10,7 +10,7 @@ export const CodeSigningConfig_Type = 'AWS::Lambda::CodeSigningConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html}
  */
 export default function CodeSigningConfig(props: CodeSigningConfig_Properties) {
-  return new CFResource<CodeSigningConfig_Type, CodeSigningConfig_Properties>(
+  return new CfnResource<CodeSigningConfig_Properties>(
     CodeSigningConfig_Type,
     props
   );

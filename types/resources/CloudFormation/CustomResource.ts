@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::CustomResource
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CustomResource_Type = 'AWS::CloudFormation::CustomResource';
 export const CustomResource_Type = 'AWS::CloudFormation::CustomResource';
@@ -11,10 +11,7 @@ export const CustomResource_Type = 'AWS::CloudFormation::CustomResource';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html}
  */
 export default function CustomResource(props: CustomResource_Properties) {
-  return new CFResource<CustomResource_Type, CustomResource_Properties>(
-    CustomResource_Type,
-    props
-  );
+  return new CfnResource<CustomResource_Properties>(CustomResource_Type, props);
 }
 
 /**

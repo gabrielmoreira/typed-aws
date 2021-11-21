@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppConfig::ConfigurationProfile
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ConfigurationProfile_Type = 'AWS::AppConfig::ConfigurationProfile';
 export const ConfigurationProfile_Type = 'AWS::AppConfig::ConfigurationProfile';
@@ -13,10 +13,10 @@ export const ConfigurationProfile_Type = 'AWS::AppConfig::ConfigurationProfile';
 export default function ConfigurationProfile(
   props: ConfigurationProfile_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ConfigurationProfile_Properties>(
     ConfigurationProfile_Type,
-    ConfigurationProfile_Properties
-  >(ConfigurationProfile_Type, props);
+    props
+  );
 }
 
 /**

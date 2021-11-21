@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::InsightRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type InsightRule_Type = 'AWS::CloudWatch::InsightRule';
 export const InsightRule_Type = 'AWS::CloudWatch::InsightRule';
@@ -10,10 +10,7 @@ export const InsightRule_Type = 'AWS::CloudWatch::InsightRule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html}
  */
 export default function InsightRule(props: InsightRule_Properties) {
-  return new CFResource<InsightRule_Type, InsightRule_Properties>(
-    InsightRule_Type,
-    props
-  );
+  return new CfnResource<InsightRule_Properties>(InsightRule_Type, props);
 }
 
 /**

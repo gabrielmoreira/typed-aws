@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::LaunchTemplate
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type LaunchTemplate_Type = 'AWS::EC2::LaunchTemplate';
 export const LaunchTemplate_Type = 'AWS::EC2::LaunchTemplate';
@@ -10,10 +10,7 @@ export const LaunchTemplate_Type = 'AWS::EC2::LaunchTemplate';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html}
  */
 export default function LaunchTemplate(props: LaunchTemplate_Properties) {
-  return new CFResource<LaunchTemplate_Type, LaunchTemplate_Properties>(
-    LaunchTemplate_Type,
-    props
-  );
+  return new CfnResource<LaunchTemplate_Properties>(LaunchTemplate_Type, props);
 }
 
 /**

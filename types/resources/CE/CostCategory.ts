@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CE::CostCategory
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type CostCategory_Type = 'AWS::CE::CostCategory';
 export const CostCategory_Type = 'AWS::CE::CostCategory';
@@ -12,10 +12,7 @@ export const CostCategory_Type = 'AWS::CE::CostCategory';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html}
  */
 export default function CostCategory(props: CostCategory_Properties) {
-  return new CFResource<CostCategory_Type, CostCategory_Properties>(
-    CostCategory_Type,
-    props
-  );
+  return new CfnResource<CostCategory_Properties>(CostCategory_Type, props);
 }
 
 /**

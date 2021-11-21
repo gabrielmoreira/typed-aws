@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DMS::ReplicationSubnetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReplicationSubnetGroup_Type = 'AWS::DMS::ReplicationSubnetGroup';
 export const ReplicationSubnetGroup_Type = 'AWS::DMS::ReplicationSubnetGroup';
@@ -12,10 +12,10 @@ export const ReplicationSubnetGroup_Type = 'AWS::DMS::ReplicationSubnetGroup';
 export default function ReplicationSubnetGroup(
   props: ReplicationSubnetGroup_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ReplicationSubnetGroup_Properties>(
     ReplicationSubnetGroup_Type,
-    ReplicationSubnetGroup_Properties
-  >(ReplicationSubnetGroup_Type, props);
+    props
+  );
 }
 
 /**

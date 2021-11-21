@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ResourceSpecificLogging
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ResourceSpecificLogging_Type = 'AWS::IoT::ResourceSpecificLogging';
 export const ResourceSpecificLogging_Type = 'AWS::IoT::ResourceSpecificLogging';
@@ -13,10 +13,10 @@ export const ResourceSpecificLogging_Type = 'AWS::IoT::ResourceSpecificLogging';
 export default function ResourceSpecificLogging(
   props: ResourceSpecificLogging_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<ResourceSpecificLogging_Properties>(
     ResourceSpecificLogging_Type,
-    ResourceSpecificLogging_Properties
-  >(ResourceSpecificLogging_Type, props);
+    props
+  );
 }
 
 /**

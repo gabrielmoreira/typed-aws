@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::AnomalyDetector
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AnomalyDetector_Type = 'AWS::CloudWatch::AnomalyDetector';
 export const AnomalyDetector_Type = 'AWS::CloudWatch::AnomalyDetector';
@@ -10,7 +10,7 @@ export const AnomalyDetector_Type = 'AWS::CloudWatch::AnomalyDetector';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html}
  */
 export default function AnomalyDetector(props: AnomalyDetector_Properties) {
-  return new CFResource<AnomalyDetector_Type, AnomalyDetector_Properties>(
+  return new CfnResource<AnomalyDetector_Properties>(
     AnomalyDetector_Type,
     props
   );

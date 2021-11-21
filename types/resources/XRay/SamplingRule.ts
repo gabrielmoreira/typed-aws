@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::XRay::SamplingRule
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SamplingRule_Type = 'AWS::XRay::SamplingRule';
 export const SamplingRule_Type = 'AWS::XRay::SamplingRule';
@@ -11,10 +11,7 @@ export const SamplingRule_Type = 'AWS::XRay::SamplingRule';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html}
  */
 export default function SamplingRule(props: SamplingRule_Properties) {
-  return new CFResource<SamplingRule_Type, SamplingRule_Properties>(
-    SamplingRule_Type,
-    props
-  );
+  return new CfnResource<SamplingRule_Properties>(SamplingRule_Type, props);
 }
 
 /**

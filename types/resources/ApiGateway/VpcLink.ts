@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::VpcLink
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type VpcLink_Type = 'AWS::ApiGateway::VpcLink';
 export const VpcLink_Type = 'AWS::ApiGateway::VpcLink';
@@ -10,7 +10,7 @@ export const VpcLink_Type = 'AWS::ApiGateway::VpcLink';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html}
  */
 export default function VpcLink(props: VpcLink_Properties) {
-  return new CFResource<VpcLink_Type, VpcLink_Properties>(VpcLink_Type, props);
+  return new CfnResource<VpcLink_Properties>(VpcLink_Type, props);
 }
 
 /**

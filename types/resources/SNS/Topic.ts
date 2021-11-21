@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SNS::Topic
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Topic_Type = 'AWS::SNS::Topic';
 export const Topic_Type = 'AWS::SNS::Topic';
@@ -10,7 +10,7 @@ export const Topic_Type = 'AWS::SNS::Topic';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html}
  */
 export default function Topic(props: Topic_Properties) {
-  return new CFResource<Topic_Type, Topic_Properties>(Topic_Type, props);
+  return new CfnResource<Topic_Properties>(Topic_Type, props);
 }
 
 /**

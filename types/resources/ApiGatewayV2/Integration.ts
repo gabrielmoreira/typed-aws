@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::Integration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Integration_Type = 'AWS::ApiGatewayV2::Integration';
 export const Integration_Type = 'AWS::ApiGatewayV2::Integration';
@@ -10,10 +10,7 @@ export const Integration_Type = 'AWS::ApiGatewayV2::Integration';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html}
  */
 export default function Integration(props: Integration_Properties) {
-  return new CFResource<Integration_Type, Integration_Properties>(
-    Integration_Type,
-    props
-  );
+  return new CfnResource<Integration_Properties>(Integration_Type, props);
 }
 
 /**

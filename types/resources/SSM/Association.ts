@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::Association
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Association_Type = 'AWS::SSM::Association';
 export const Association_Type = 'AWS::SSM::Association';
@@ -12,10 +12,7 @@ export const Association_Type = 'AWS::SSM::Association';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html}
  */
 export default function Association(props: Association_Properties) {
-  return new CFResource<Association_Type, Association_Properties>(
-    Association_Type,
-    props
-  );
+  return new CfnResource<Association_Properties>(Association_Type, props);
 }
 
 /**

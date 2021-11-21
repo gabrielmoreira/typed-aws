@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::WorkGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type WorkGroup_Type = 'AWS::Athena::WorkGroup';
 export const WorkGroup_Type = 'AWS::Athena::WorkGroup';
@@ -10,10 +10,7 @@ export const WorkGroup_Type = 'AWS::Athena::WorkGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html}
  */
 export default function WorkGroup(props: WorkGroup_Properties) {
-  return new CFResource<WorkGroup_Type, WorkGroup_Properties>(
-    WorkGroup_Type,
-    props
-  );
+  return new CfnResource<WorkGroup_Properties>(WorkGroup_Type, props);
 }
 
 /**

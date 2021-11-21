@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cloud9::EnvironmentEC2
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type EnvironmentEC2_Type = 'AWS::Cloud9::EnvironmentEC2';
 export const EnvironmentEC2_Type = 'AWS::Cloud9::EnvironmentEC2';
@@ -10,10 +10,7 @@ export const EnvironmentEC2_Type = 'AWS::Cloud9::EnvironmentEC2';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html}
  */
 export default function EnvironmentEC2(props: EnvironmentEC2_Properties) {
-  return new CFResource<EnvironmentEC2_Type, EnvironmentEC2_Properties>(
-    EnvironmentEC2_Type,
-    props
-  );
+  return new CfnResource<EnvironmentEC2_Properties>(EnvironmentEC2_Type, props);
 }
 
 /**

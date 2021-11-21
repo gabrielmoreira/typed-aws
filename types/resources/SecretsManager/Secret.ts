@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecretsManager::Secret
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Secret_Type = 'AWS::SecretsManager::Secret';
 export const Secret_Type = 'AWS::SecretsManager::Secret';
@@ -10,7 +10,7 @@ export const Secret_Type = 'AWS::SecretsManager::Secret';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html}
  */
 export default function Secret(props: Secret_Properties) {
-  return new CFResource<Secret_Type, Secret_Properties>(Secret_Type, props);
+  return new CfnResource<Secret_Properties>(Secret_Type, props);
 }
 
 /**

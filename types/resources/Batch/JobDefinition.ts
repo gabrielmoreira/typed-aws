@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Batch::JobDefinition
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type JobDefinition_Type = 'AWS::Batch::JobDefinition';
 export const JobDefinition_Type = 'AWS::Batch::JobDefinition';
@@ -10,10 +10,7 @@ export const JobDefinition_Type = 'AWS::Batch::JobDefinition';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html}
  */
 export default function JobDefinition(props: JobDefinition_Properties) {
-  return new CFResource<JobDefinition_Type, JobDefinition_Properties>(
-    JobDefinition_Type,
-    props
-  );
+  return new CfnResource<JobDefinition_Properties>(JobDefinition_Type, props);
 }
 
 /**

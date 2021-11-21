@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::RecordSet
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type RecordSet_Type = 'AWS::Route53::RecordSet';
 export const RecordSet_Type = 'AWS::Route53::RecordSet';
@@ -10,10 +10,7 @@ export const RecordSet_Type = 'AWS::Route53::RecordSet';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html}
  */
 export default function RecordSet(props: RecordSet_Properties) {
-  return new CFResource<RecordSet_Type, RecordSet_Properties>(
-    RecordSet_Type,
-    props
-  );
+  return new CfnResource<RecordSet_Properties>(RecordSet_Type, props);
 }
 
 /**

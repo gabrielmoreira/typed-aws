@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPool
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type UserPool_Type = 'AWS::Cognito::UserPool';
 export const UserPool_Type = 'AWS::Cognito::UserPool';
@@ -10,10 +10,7 @@ export const UserPool_Type = 'AWS::Cognito::UserPool';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html}
  */
 export default function UserPool(props: UserPool_Properties) {
-  return new CFResource<UserPool_Type, UserPool_Properties>(
-    UserPool_Type,
-    props
-  );
+  return new CfnResource<UserPool_Properties>(UserPool_Type, props);
 }
 
 /**

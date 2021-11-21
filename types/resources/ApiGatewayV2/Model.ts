@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::Model
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Model_Type = 'AWS::ApiGatewayV2::Model';
 export const Model_Type = 'AWS::ApiGatewayV2::Model';
@@ -10,7 +10,7 @@ export const Model_Type = 'AWS::ApiGatewayV2::Model';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-model.html}
  */
 export default function Model(props: Model_Properties) {
-  return new CFResource<Model_Type, Model_Properties>(Model_Type, props);
+  return new CfnResource<Model_Properties>(Model_Type, props);
 }
 
 /**

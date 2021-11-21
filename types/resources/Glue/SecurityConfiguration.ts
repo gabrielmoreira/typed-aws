@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::SecurityConfiguration
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type SecurityConfiguration_Type = 'AWS::Glue::SecurityConfiguration';
 export const SecurityConfiguration_Type = 'AWS::Glue::SecurityConfiguration';
@@ -12,10 +12,10 @@ export const SecurityConfiguration_Type = 'AWS::Glue::SecurityConfiguration';
 export default function SecurityConfiguration(
   props: SecurityConfiguration_Properties
 ) {
-  return new CFResource<
+  return new CfnResource<SecurityConfiguration_Properties>(
     SecurityConfiguration_Type,
-    SecurityConfiguration_Properties
-  >(SecurityConfiguration_Type, props);
+    props
+  );
 }
 
 /**

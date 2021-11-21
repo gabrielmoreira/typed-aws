@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LicenseManager::License
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type License_Type = 'AWS::LicenseManager::License';
 export const License_Type = 'AWS::LicenseManager::License';
@@ -10,7 +10,7 @@ export const License_Type = 'AWS::LicenseManager::License';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html}
  */
 export default function License(props: License_Properties) {
-  return new CFResource<License_Type, License_Properties>(License_Type, props);
+  return new CfnResource<License_Properties>(License_Type, props);
 }
 
 /**

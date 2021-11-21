@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::AppImageConfig
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type AppImageConfig_Type = 'AWS::SageMaker::AppImageConfig';
 export const AppImageConfig_Type = 'AWS::SageMaker::AppImageConfig';
@@ -10,10 +10,7 @@ export const AppImageConfig_Type = 'AWS::SageMaker::AppImageConfig';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html}
  */
 export default function AppImageConfig(props: AppImageConfig_Properties) {
-  return new CFResource<AppImageConfig_Type, AppImageConfig_Properties>(
-    AppImageConfig_Type,
-    props
-  );
+  return new CfnResource<AppImageConfig_Properties>(AppImageConfig_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::Route
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type Route_Type = 'AWS::AppMesh::Route';
 export const Route_Type = 'AWS::AppMesh::Route';
@@ -10,7 +10,7 @@ export const Route_Type = 'AWS::AppMesh::Route';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html}
  */
 export default function Route(props: Route_Properties) {
-  return new CFResource<Route_Type, Route_Properties>(Route_Type, props);
+  return new CfnResource<Route_Properties>(Route_Type, props);
 }
 
 /**

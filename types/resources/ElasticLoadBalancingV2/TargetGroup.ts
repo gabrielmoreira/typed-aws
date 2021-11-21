@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticLoadBalancingV2::TargetGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type TargetGroup_Type = 'AWS::ElasticLoadBalancingV2::TargetGroup';
 export const TargetGroup_Type = 'AWS::ElasticLoadBalancingV2::TargetGroup';
@@ -11,10 +11,7 @@ export const TargetGroup_Type = 'AWS::ElasticLoadBalancingV2::TargetGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html}
  */
 export default function TargetGroup(props: TargetGroup_Properties) {
-  return new CFResource<TargetGroup_Type, TargetGroup_Properties>(
-    TargetGroup_Type,
-    props
-  );
+  return new CfnResource<TargetGroup_Properties>(TargetGroup_Type, props);
 }
 
 /**

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApplicationAutoScaling::ScalingPolicy
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ScalingPolicy_Type = 'AWS::ApplicationAutoScaling::ScalingPolicy';
 export const ScalingPolicy_Type = 'AWS::ApplicationAutoScaling::ScalingPolicy';
@@ -11,10 +11,7 @@ export const ScalingPolicy_Type = 'AWS::ApplicationAutoScaling::ScalingPolicy';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html}
  */
 export default function ScalingPolicy(props: ScalingPolicy_Properties) {
-  return new CFResource<ScalingPolicy_Type, ScalingPolicy_Properties>(
-    ScalingPolicy_Type,
-    props
-  );
+  return new CfnResource<ScalingPolicy_Properties>(ScalingPolicy_Type, props);
 }
 
 /**

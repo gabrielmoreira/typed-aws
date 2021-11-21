@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::KeyGroup
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type KeyGroup_Type = 'AWS::CloudFront::KeyGroup';
 export const KeyGroup_Type = 'AWS::CloudFront::KeyGroup';
@@ -10,10 +10,7 @@ export const KeyGroup_Type = 'AWS::CloudFront::KeyGroup';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html}
  */
 export default function KeyGroup(props: KeyGroup_Properties) {
-  return new CFResource<KeyGroup_Type, KeyGroup_Properties>(
-    KeyGroup_Type,
-    props
-  );
+  return new CfnResource<KeyGroup_Properties>(KeyGroup_Type, props);
 }
 
 /**

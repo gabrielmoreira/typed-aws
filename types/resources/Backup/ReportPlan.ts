@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::ReportPlan
 
-import { CFResource } from '../../base';
+import { CfnResource } from '../../base';
 
 export type ReportPlan_Type = 'AWS::Backup::ReportPlan';
 export const ReportPlan_Type = 'AWS::Backup::ReportPlan';
@@ -11,10 +11,7 @@ export const ReportPlan_Type = 'AWS::Backup::ReportPlan';
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html}
  */
 export default function ReportPlan(props: ReportPlan_Properties) {
-  return new CFResource<ReportPlan_Type, ReportPlan_Properties>(
-    ReportPlan_Type,
-    props
-  );
+  return new CfnResource<ReportPlan_Properties>(ReportPlan_Type, props);
 }
 
 /**
