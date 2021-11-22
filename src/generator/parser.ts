@@ -13,6 +13,7 @@ export function parseSchemaJson(json: string) {
   return parseSchemaRegistry(schemaObject);
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function parseSchemaRegistry(schemaObject: Record<string, any>) {
   const registry: SchemaRegistry = {};
   const schemaTypeName = schemaObject['typeName'];

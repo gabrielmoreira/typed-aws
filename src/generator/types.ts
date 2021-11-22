@@ -15,7 +15,7 @@ export type PropertyRef = string;
 export type BaseTypeDefinition = {
   description?: string;
   originalType?: string;
-} & (ConditionalTypes | {});
+} & (ConditionalTypes | Record<string, unknown>);
 
 export type ConditionalTypes = AnyOfType | OneOfType | AllOfType;
 
