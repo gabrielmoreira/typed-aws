@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ScheduledAction
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ScheduledAction_Type = 'AWS::Redshift::ScheduledAction';
 export const ScheduledAction_Type = 'AWS::Redshift::ScheduledAction';
@@ -27,7 +27,7 @@ export type ScheduledAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-scheduledactionname}
    */
-  ScheduledActionName: string;
+  ScheduledActionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-targetaction}
@@ -37,17 +37,17 @@ export type ScheduledAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-schedule}
    */
-  Schedule?: string;
+  Schedule?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-iamrole}
    */
-  IamRole?: string;
+  IamRole?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-scheduledactiondescription}
    */
-  ScheduledActionDescription?: string;
+  ScheduledActionDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-starttime}
@@ -62,8 +62,8 @@ export type ScheduledAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html#cfn-redshift-scheduledaction-enable}
    */
-  Enable?: boolean;
-  State?: 'ACTIVE' | 'DISABLED';
+  Enable?: Resolvable<boolean>;
+  State?: Resolvable<'ACTIVE' | 'DISABLED'>;
   NextInvocations?: timestamp[];
 };
 
@@ -77,27 +77,27 @@ export type ResizeClusterMessage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resizeclustermessage.html#cfn-redshift-scheduledaction-resizeclustermessage-clusteridentifier}
    */
-  ClusterIdentifier: string;
+  ClusterIdentifier: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resizeclustermessage.html#cfn-redshift-scheduledaction-resizeclustermessage-clustertype}
    */
-  ClusterType?: string;
+  ClusterType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resizeclustermessage.html#cfn-redshift-scheduledaction-resizeclustermessage-nodetype}
    */
-  NodeType?: string;
+  NodeType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resizeclustermessage.html#cfn-redshift-scheduledaction-resizeclustermessage-numberofnodes}
    */
-  NumberOfNodes?: number;
+  NumberOfNodes?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resizeclustermessage.html#cfn-redshift-scheduledaction-resizeclustermessage-classic}
    */
-  Classic?: boolean;
+  Classic?: Resolvable<boolean>;
 };
 
 /**
@@ -110,7 +110,7 @@ export type PauseClusterMessage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html#cfn-redshift-scheduledaction-pauseclustermessage-clusteridentifier}
    */
-  ClusterIdentifier: string;
+  ClusterIdentifier: Resolvable<string>;
 };
 
 /**
@@ -123,7 +123,7 @@ export type ResumeClusterMessage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resumeclustermessage.html#cfn-redshift-scheduledaction-resumeclustermessage-clusteridentifier}
    */
-  ClusterIdentifier: string;
+  ClusterIdentifier: Resolvable<string>;
 };
 
 /**
@@ -148,4 +148,4 @@ export type ScheduledActionType = {
   ResumeCluster?: ResumeClusterMessage;
 };
 
-export type timestamp = string;
+export type timestamp = Resolvable<string>;

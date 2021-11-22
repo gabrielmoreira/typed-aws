@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::Archive
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Archive_Type = 'AWS::Events::Archive';
 export const Archive_Type = 'AWS::Events::Archive';
@@ -22,17 +22,17 @@ export type Archive_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-archivename}
    */
-  ArchiveName?: string;
+  ArchiveName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-sourcearn}
    */
-  SourceArn: string;
+  SourceArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-eventpattern}
@@ -40,10 +40,10 @@ export type Archive_Properties = {
   EventPattern?: {
     [k: string]: unknown;
   };
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html#cfn-events-archive-retentiondays}
    */
-  RetentionDays?: number;
+  RetentionDays?: Resolvable<number>;
 };

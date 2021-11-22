@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnEndpoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ClientVpnEndpoint_Type = 'AWS::EC2::ClientVpnEndpoint';
 export const ClientVpnEndpoint_Type = 'AWS::EC2::ClientVpnEndpoint';
@@ -25,7 +25,7 @@ export type ClientVpnEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientcidrblock}
    */
-  ClientCidrBlock: string;
+  ClientCidrBlock: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-clientconnectoptions}
@@ -35,7 +35,7 @@ export type ClientVpnEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-tagspecifications}
@@ -50,17 +50,17 @@ export type ClientVpnEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-servercertificatearn}
    */
-  ServerCertificateArn: string;
+  ServerCertificateArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-dnsservers}
    */
-  DnsServers?: string[];
+  DnsServers?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-securitygroupids}
    */
-  SecurityGroupIds?: string[];
+  SecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-connectionlogoptions}
@@ -70,28 +70,28 @@ export type ClientVpnEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-splittunnel}
    */
-  SplitTunnel?: boolean;
+  SplitTunnel?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-vpcid}
    */
-  VpcId?: string;
+  VpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-selfserviceportal}
    */
-  SelfServicePortal?: string;
+  SelfServicePortal?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-transportprotocol}
    */
-  TransportProtocol?: string;
-  Id?: string;
+  TransportProtocol?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html#cfn-ec2-clientvpnendpoint-vpnport}
    */
-  VpnPort?: number;
+  VpnPort?: Resolvable<number>;
 };
 
 /**
@@ -103,17 +103,17 @@ export type ConnectionLogOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-connectionlogoptions.html#cfn-ec2-clientvpnendpoint-connectionlogoptions-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-connectionlogoptions.html#cfn-ec2-clientvpnendpoint-connectionlogoptions-cloudwatchloggroup}
    */
-  CloudwatchLogGroup?: string;
+  CloudwatchLogGroup?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-connectionlogoptions.html#cfn-ec2-clientvpnendpoint-connectionlogoptions-cloudwatchlogstream}
    */
-  CloudwatchLogStream?: string;
+  CloudwatchLogStream?: Resolvable<string>;
 };
 
 /**
@@ -125,12 +125,12 @@ export type ClientConnectOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientconnectoptions.html#cfn-ec2-clientvpnendpoint-clientconnectoptions-lambdafunctionarn}
    */
-  LambdaFunctionArn?: string;
+  LambdaFunctionArn?: Resolvable<string>;
 };
 
 /**
@@ -142,12 +142,12 @@ export type FederatedAuthenticationRequest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html#cfn-ec2-clientvpnendpoint-federatedauthenticationrequest-samlproviderarn}
    */
-  SAMLProviderArn: string;
+  SAMLProviderArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html#cfn-ec2-clientvpnendpoint-federatedauthenticationrequest-selfservicesamlproviderarn}
    */
-  SelfServiceSAMLProviderArn?: string;
+  SelfServiceSAMLProviderArn?: Resolvable<string>;
 };
 
 /**
@@ -159,7 +159,7 @@ export type DirectoryServiceAuthenticationRequest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.html#cfn-ec2-clientvpnendpoint-directoryserviceauthenticationrequest-directoryid}
    */
-  DirectoryId: string;
+  DirectoryId: Resolvable<string>;
 };
 
 /**
@@ -171,7 +171,7 @@ export type CertificateAuthenticationRequest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.html#cfn-ec2-clientvpnendpoint-certificateauthenticationrequest-clientrootcertificatechainarn}
    */
-  ClientRootCertificateChainArn: string;
+  ClientRootCertificateChainArn: Resolvable<string>;
 };
 
 /**
@@ -188,7 +188,7 @@ export type ClientAuthenticationRequest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory}
@@ -202,8 +202,8 @@ export type ClientAuthenticationRequest = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -215,7 +215,7 @@ export type TagSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-resourcetype}
    */
-  ResourceType: string;
+  ResourceType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-tagspecification.html#cfn-ec2-clientvpnendpoint-tagspecification-tags}

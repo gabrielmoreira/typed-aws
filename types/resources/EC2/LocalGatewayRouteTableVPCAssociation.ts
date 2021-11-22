@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::LocalGatewayRouteTableVPCAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocalGatewayRouteTableVPCAssociation_Type =
   'AWS::EC2::LocalGatewayRouteTableVPCAssociation';
@@ -27,19 +27,19 @@ export default function LocalGatewayRouteTableVPCAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html}
  */
 export type LocalGatewayRouteTableVPCAssociation_Properties = {
-  LocalGatewayId?: string;
+  LocalGatewayId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid}
    */
-  LocalGatewayRouteTableId: string;
-  LocalGatewayRouteTableVpcAssociationId?: string;
-  State?: string;
+  LocalGatewayRouteTableId: Resolvable<string>;
+  LocalGatewayRouteTableVpcAssociationId?: Resolvable<string>;
+  State?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html#cfn-ec2-localgatewayroutetablevpcassociation-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html#cfn-ec2-localgatewayroutetablevpcassociation-tags}
@@ -50,6 +50,6 @@ export type LocalGatewayRouteTableVPCAssociation_Properties = {
 export type Tags = Tag[];
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

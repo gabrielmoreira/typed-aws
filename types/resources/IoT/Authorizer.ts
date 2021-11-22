@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Authorizer
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Authorizer_Type = 'AWS::IoT::Authorizer';
 export const Authorizer_Type = 'AWS::IoT::Authorizer';
@@ -22,28 +22,28 @@ export type Authorizer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-authorizerfunctionarn}
    */
-  AuthorizerFunctionArn: string;
-  Arn?: string;
+  AuthorizerFunctionArn: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-authorizername}
    */
-  AuthorizerName?: string;
+  AuthorizerName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-signingdisabled}
    */
-  SigningDisabled?: boolean;
+  SigningDisabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-status}
    */
-  Status?: 'ACTIVE' | 'INACTIVE';
+  Status?: Resolvable<'ACTIVE' | 'INACTIVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-tokenkeyname}
    */
-  TokenKeyName?: string;
+  TokenKeyName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html#cfn-iot-authorizer-tokensigningpublickeys}
@@ -59,6 +59,6 @@ export type Authorizer_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

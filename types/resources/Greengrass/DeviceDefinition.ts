@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::DeviceDefinition
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DeviceDefinition_Type = 'AWS::Greengrass::DeviceDefinition';
 export const DeviceDefinition_Type = 'AWS::Greengrass::DeviceDefinition';
@@ -21,9 +21,9 @@ export default function DeviceDefinition(props: DeviceDefinition_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html}
  */
 export type DeviceDefinition_Properties = {
-  Id?: string;
-  Arn?: string;
-  LatestVersionArn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
+  LatestVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html#cfn-greengrass-devicedefinition-tags}
@@ -35,7 +35,7 @@ export type DeviceDefinition_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html#cfn-greengrass-devicedefinition-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html#cfn-greengrass-devicedefinition-initialversion}
@@ -52,22 +52,22 @@ export type Device = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-syncshadow}
    */
-  SyncShadow?: boolean;
+  SyncShadow?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-thingarn}
    */
-  ThingArn: string;
+  ThingArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-devicedefinition-device.html#cfn-greengrass-devicedefinition-device-certificatearn}
    */
-  CertificateArn: string;
+  CertificateArn: Resolvable<string>;
 };
 
 /**

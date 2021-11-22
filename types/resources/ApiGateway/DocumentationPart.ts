@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::DocumentationPart
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DocumentationPart_Type = 'AWS::ApiGateway::DocumentationPart';
 export const DocumentationPart_Type = 'AWS::ApiGateway::DocumentationPart';
@@ -21,7 +21,7 @@ export default function DocumentationPart(props: DocumentationPart_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html}
  */
 export type DocumentationPart_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html#cfn-apigateway-documentationpart-location}
@@ -31,12 +31,12 @@ export type DocumentationPart_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html#cfn-apigateway-documentationpart-properties}
    */
-  Properties: string;
+  Properties: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html#cfn-apigateway-documentationpart-restapiid}
    */
-  RestApiId: string;
+  RestApiId: Resolvable<string>;
 };
 
 /**
@@ -48,25 +48,25 @@ export type Location = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-method}
    */
-  Method?: string;
+  Method?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-path}
    */
-  Path?: string;
+  Path?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-statuscode}
    */
-  StatusCode?: string;
+  StatusCode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html#cfn-apigateway-documentationpart-location-type}
    */
-  Type?: string;
+  Type?: Resolvable<string>;
 };

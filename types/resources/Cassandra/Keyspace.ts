@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cassandra::Keyspace
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Keyspace_Type = 'AWS::Cassandra::Keyspace';
 export const Keyspace_Type = 'AWS::Cassandra::Keyspace';
@@ -22,7 +22,7 @@ export type Keyspace_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-keyspacename}
    */
-  KeyspaceName?: string;
+  KeyspaceName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html#cfn-cassandra-keyspace-tags}
@@ -31,6 +31,6 @@ export type Keyspace_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

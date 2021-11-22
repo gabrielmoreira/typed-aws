@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DirectoryService::MicrosoftAD
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MicrosoftAD_Type = 'AWS::DirectoryService::MicrosoftAD';
 export const MicrosoftAD_Type = 'AWS::DirectoryService::MicrosoftAD';
@@ -18,39 +18,39 @@ export default function MicrosoftAD(props: MicrosoftAD_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html}
  */
 export type MicrosoftAD_Properties = {
-  Id?: string;
-  Alias?: string;
-  DnsIpAddresses?: string[];
+  Id?: Resolvable<string>;
+  Alias?: Resolvable<string>;
+  DnsIpAddresses?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-createalias}
    */
-  CreateAlias?: boolean;
+  CreateAlias?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition}
    */
-  Edition?: string;
+  Edition?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-enablesso}
    */
-  EnableSso?: boolean;
+  EnableSso?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-password}
    */
-  Password: string;
+  Password: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-shortname}
    */
-  ShortName?: string;
+  ShortName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-vpcsettings}
@@ -67,10 +67,10 @@ export type VpcSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids}
    */
-  SubnetIds: string[];
+  SubnetIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
 };

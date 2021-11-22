@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::ReportPlan
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ReportPlan_Type = 'AWS::Backup::ReportPlan';
 export const ReportPlan_Type = 'AWS::Backup::ReportPlan';
@@ -24,13 +24,13 @@ export type ReportPlan_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplanname}
    */
-  ReportPlanName?: string;
-  ReportPlanArn?: string;
+  ReportPlanName?: Resolvable<string>;
+  ReportPlanArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplandescription}
    */
-  ReportPlanDescription?: string;
+  ReportPlanDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags}
@@ -41,21 +41,21 @@ export type ReportPlan_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportdeliverychannel}
    */
   ReportDeliveryChannel: {
-    Formats?: string[];
-    S3BucketName: string;
-    S3KeyPrefix?: string;
+    Formats?: Resolvable<string>[];
+    S3BucketName: Resolvable<string>;
+    S3KeyPrefix?: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportsetting}
    */
   ReportSetting: {
-    ReportTemplate: string;
-    FrameworkArns?: string[];
+    ReportTemplate: Resolvable<string>;
+    FrameworkArns?: Resolvable<string>[];
   };
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

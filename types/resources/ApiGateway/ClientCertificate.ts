@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::ClientCertificate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ClientCertificate_Type = 'AWS::ApiGateway::ClientCertificate';
 export const ClientCertificate_Type = 'AWS::ApiGateway::ClientCertificate';
@@ -21,12 +21,12 @@ export default function ClientCertificate(props: ClientCertificate_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html}
  */
 export type ClientCertificate_Properties = {
-  ClientCertificateId?: string;
+  ClientCertificateId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html#cfn-apigateway-clientcertificate-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html#cfn-apigateway-clientcertificate-tags}
@@ -35,6 +35,6 @@ export type ClientCertificate_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

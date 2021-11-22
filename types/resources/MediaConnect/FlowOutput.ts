@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaConnect::FlowOutput
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FlowOutput_Type = 'AWS::MediaConnect::FlowOutput';
 export const FlowOutput_Type = 'AWS::MediaConnect::FlowOutput';
@@ -22,13 +22,13 @@ export type FlowOutput_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-flowarn}
    */
-  FlowArn: string;
-  OutputArn?: string;
+  FlowArn: Resolvable<string>;
+  OutputArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-cidrallowlist}
    */
-  CidrAllowList?: string[];
+  CidrAllowList?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-encryption}
@@ -38,58 +38,54 @@ export type FlowOutput_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-destination}
    */
-  Destination?: string;
+  Destination?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-maxlatency}
    */
-  MaxLatency?: number;
+  MaxLatency?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-minlatency}
    */
-  MinLatency?: number;
+  MinLatency?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-port}
    */
-  Port?: number;
+  Port?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-protocol}
    */
-  Protocol:
-    | 'zixi-push'
-    | 'rtp-fec'
-    | 'rtp'
-    | 'zixi-pull'
-    | 'rist'
-    | 'srt-listener';
+  Protocol: Resolvable<
+    'zixi-push' | 'rtp-fec' | 'rtp' | 'zixi-pull' | 'rist' | 'srt-listener'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-remoteid}
    */
-  RemoteId?: string;
+  RemoteId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-smoothinglatency}
    */
-  SmoothingLatency?: number;
+  SmoothingLatency?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-streamid}
    */
-  StreamId?: string;
+  StreamId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-vpcinterfaceattachment}
@@ -106,22 +102,22 @@ export type Encryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-encryption.html#cfn-mediaconnect-flowoutput-encryption-algorithm}
    */
-  Algorithm?: 'aes128' | 'aes192' | 'aes256';
+  Algorithm?: Resolvable<'aes128' | 'aes192' | 'aes256'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-encryption.html#cfn-mediaconnect-flowoutput-encryption-keytype}
    */
-  KeyType?: 'static-key' | 'srt-password';
+  KeyType?: Resolvable<'static-key' | 'srt-password'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-encryption.html#cfn-mediaconnect-flowoutput-encryption-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-encryption.html#cfn-mediaconnect-flowoutput-encryption-secretarn}
    */
-  SecretArn: string;
+  SecretArn: Resolvable<string>;
 };
 
 /**
@@ -133,5 +129,5 @@ export type VpcInterfaceAttachment = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-vpcinterfaceattachment.html#cfn-mediaconnect-flowoutput-vpcinterfaceattachment-vpcinterfacename}
    */
-  VpcInterfaceName?: string;
+  VpcInterfaceName?: Resolvable<string>;
 };

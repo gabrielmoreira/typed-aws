@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodePipeline::Pipeline
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Pipeline_Type = 'AWS::CodePipeline::Pipeline';
 export const Pipeline_Type = 'AWS::CodePipeline::Pipeline';
@@ -23,7 +23,7 @@ export type Pipeline_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstores}
    */
   ArtifactStores?: ArtifactStoreMap[];
-  Version?: string;
+  Version?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstore}
@@ -43,13 +43,13 @@ export type Pipeline_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-restartexecutiononupdate}
    */
-  RestartExecutionOnUpdate?: boolean;
-  Id?: string;
+  RestartExecutionOnUpdate?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-tags}
@@ -59,7 +59,7 @@ export type Pipeline_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 /**
@@ -93,27 +93,27 @@ export type ActionDeclaration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-region}
    */
-  Region?: string;
+  Region?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-actiondeclaration-namespace}
    */
-  Namespace?: string;
+  Namespace?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-runorder}
    */
-  RunOrder?: number;
+  RunOrder?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -125,12 +125,12 @@ export type BlockerDeclaration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html#cfn-codepipeline-pipeline-stages-blockers-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-blockers.html#cfn-codepipeline-pipeline-stages-blockers-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -142,22 +142,22 @@ export type ActionTypeId = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner}
    */
-  Owner: string;
+  Owner: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-category}
    */
-  Category: string;
+  Category: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-version}
    */
-  Version: string;
+  Version: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider}
    */
-  Provider: string;
+  Provider: Resolvable<string>;
 };
 
 /**
@@ -179,7 +179,7 @@ export type StageDeclaration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages.html#cfn-codepipeline-pipeline-stages-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -191,7 +191,7 @@ export type InputArtifact = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.html#cfn-codepipeline-pipeline-stages-actions-inputartifacts-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -203,7 +203,7 @@ export type ArtifactStore = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey}
@@ -213,7 +213,7 @@ export type ArtifactStore = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html#cfn-codepipeline-pipeline-artifactstore-location}
    */
-  Location: string;
+  Location: Resolvable<string>;
 };
 
 /**
@@ -230,7 +230,7 @@ export type ArtifactStoreMap = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstoremap.html#cfn-codepipeline-pipeline-artifactstoremap-region}
    */
-  Region: string;
+  Region: Resolvable<string>;
 };
 
 /**
@@ -242,12 +242,12 @@ export type StageTransition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html#cfn-codepipeline-pipeline-disableinboundstagetransitions-stagename}
    */
-  StageName: string;
+  StageName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-disableinboundstagetransitions.html#cfn-codepipeline-pipeline-disableinboundstagetransitions-reason}
    */
-  Reason: string;
+  Reason: Resolvable<string>;
 };
 
 /**
@@ -259,17 +259,17 @@ export type EncryptionKey = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.html#cfn-codepipeline-pipeline-artifactstore-encryptionkey-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -281,5 +281,5 @@ export type OutputArtifact = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.html#cfn-codepipeline-pipeline-stages-actions-outputartifacts-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };

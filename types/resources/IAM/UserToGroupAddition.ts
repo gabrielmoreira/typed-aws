@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::UserToGroupAddition
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserToGroupAddition_Type = 'AWS::IAM::UserToGroupAddition';
 export const UserToGroupAddition_Type = 'AWS::IAM::UserToGroupAddition';
@@ -23,15 +23,15 @@ export default function UserToGroupAddition(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html}
  */
 export type UserToGroupAddition_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html#cfn-iam-addusertogroup-groupname}
    */
-  GroupName: string;
+  GroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html#cfn-iam-addusertogroup-users}
    */
-  Users: string[];
+  Users: Resolvable<string>[];
 };

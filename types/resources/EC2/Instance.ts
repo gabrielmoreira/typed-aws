@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Instance
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Instance_Type = 'AWS::EC2::Instance';
 export const Instance_Type = 'AWS::EC2::Instance';
@@ -22,23 +22,23 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-tenancy}
    */
-  Tenancy?: string;
+  Tenancy?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-securitygroups}
    */
-  SecurityGroups?: string[];
-  PrivateDnsName?: string;
+  SecurityGroups?: Resolvable<string>[];
+  PrivateDnsName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-privateipaddress}
    */
-  PrivateIpAddress?: string;
+  PrivateIpAddress?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-userdata}
    */
-  UserData?: string;
+  UserData?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings}
@@ -48,7 +48,7 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-iaminstanceprofile}
    */
-  IamInstanceProfile?: string;
+  IamInstanceProfile?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-ipv6addresses}
@@ -58,17 +58,17 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-kernelid}
    */
-  KernelId?: string;
+  KernelId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-subnetid}
    */
-  SubnetId?: string;
+  SubnetId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-ebsoptimized}
    */
-  EbsOptimized?: boolean;
+  EbsOptimized?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications}
@@ -84,12 +84,12 @@ export type Instance_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-volumes}
    */
   Volumes?: Volume[];
-  PrivateIp?: string;
+  PrivateIp?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-ipv6addresscount}
    */
-  Ipv6AddressCount?: number;
+  Ipv6AddressCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-launchtemplate}
@@ -109,17 +109,17 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-imageid}
    */
-  ImageId?: string;
+  ImageId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-instancetype}
    */
-  InstanceType?: string;
+  InstanceType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-monitoring}
    */
-  Monitoring?: boolean;
+  Monitoring?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-tags}
@@ -129,7 +129,7 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-additionalinfo}
    */
-  AdditionalInfo?: string;
+  AdditionalInfo?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hibernationoptions}
@@ -140,12 +140,12 @@ export type Instance_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-licensespecifications}
    */
   LicenseSpecifications?: LicenseSpecification[];
-  PublicIp?: string;
+  PublicIp?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-instanceinitiatedshutdownbehavior}
    */
-  InstanceInitiatedShutdownBehavior?: string;
+  InstanceInitiatedShutdownBehavior?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-cpuoptions}
@@ -155,48 +155,48 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-availabilityzone}
    */
-  AvailabilityZone?: string;
+  AvailabilityZone?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hostid}
    */
-  HostId?: string;
+  HostId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-hostresourcegrouparn}
    */
-  HostResourceGroupArn?: string;
-  PublicDnsName?: string;
+  HostResourceGroupArn?: Resolvable<string>;
+  PublicDnsName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-securitygroupids}
    */
-  SecurityGroupIds?: string[];
+  SecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-disableapitermination}
    */
-  DisableApiTermination?: boolean;
+  DisableApiTermination?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-keyname}
    */
-  KeyName?: string;
+  KeyName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-ramdiskid}
    */
-  RamdiskId?: string;
+  RamdiskId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-sourcedestcheck}
    */
-  SourceDestCheck?: boolean;
+  SourceDestCheck?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-placementgroupname}
    */
-  PlacementGroupName?: string;
+  PlacementGroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-ssmassociations}
@@ -206,8 +206,8 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-affinity}
    */
-  Affinity?: string;
-  Id?: string;
+  Affinity?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-creditspecification}
@@ -224,17 +224,17 @@ export type LaunchTemplateSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename}
    */
-  LaunchTemplateName?: string;
+  LaunchTemplateName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid}
    */
-  LaunchTemplateId?: string;
+  LaunchTemplateId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version}
    */
-  Version: string;
+  Version: Resolvable<string>;
 };
 
 /**
@@ -246,7 +246,7 @@ export type HibernationOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html#cfn-ec2-instance-hibernationoptions-configured}
    */
-  Configured?: boolean;
+  Configured?: Resolvable<boolean>;
 };
 
 /**
@@ -258,7 +258,7 @@ export type LicenseSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-licensespecification.html#cfn-ec2-instance-licensespecification-licenseconfigurationarn}
    */
-  LicenseConfigurationArn: string;
+  LicenseConfigurationArn: Resolvable<string>;
 };
 
 /**
@@ -270,12 +270,12 @@ export type CpuOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-threadspercore}
    */
-  ThreadsPerCore?: number;
+  ThreadsPerCore?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-cpuoptions.html#cfn-ec2-instance-cpuoptions-corecount}
    */
-  CoreCount?: number;
+  CoreCount?: Resolvable<number>;
 };
 
 /**
@@ -293,7 +293,7 @@ export type InstanceIpv6Address = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-instanceipv6address.html#cfn-ec2-instance-instanceipv6address-ipv6address}
    */
-  Ipv6Address: string;
+  Ipv6Address: Resolvable<string>;
 };
 
 /**
@@ -305,12 +305,12 @@ export type NetworkInterface = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-privateipaddress}
    */
-  PrivateIpAddress?: string;
+  PrivateIpAddress?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-privateipaddresses}
@@ -320,17 +320,17 @@ export type NetworkInterface = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-secondprivateip}
    */
-  SecondaryPrivateIpAddressCount?: number;
+  SecondaryPrivateIpAddressCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-deviceindex}
    */
-  DeviceIndex: string;
+  DeviceIndex: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-groupset}
    */
-  GroupSet?: string[];
+  GroupSet?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#cfn-ec2-instance-networkinterface-ipv6addresses}
@@ -340,27 +340,27 @@ export type NetworkInterface = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-subnetid}
    */
-  SubnetId?: string;
+  SubnetId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-associatepubip}
    */
-  AssociatePublicIpAddress?: boolean;
+  AssociatePublicIpAddress?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-network-iface}
    */
-  NetworkInterfaceId?: string;
+  NetworkInterfaceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#cfn-ec2-instance-networkinterface-ipv6addresscount}
    */
-  Ipv6AddressCount?: number;
+  Ipv6AddressCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-iface-embedded.html#aws-properties-ec2-network-iface-embedded-delete}
    */
-  DeleteOnTermination?: boolean;
+  DeleteOnTermination?: Resolvable<boolean>;
 };
 
 /**
@@ -372,7 +372,7 @@ export type ElasticGpuSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html#cfn-ec2-instance-elasticgpuspecification-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };
 
 /**
@@ -384,12 +384,12 @@ export type ElasticInferenceAccelerator = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html#cfn-ec2-instance-elasticinferenceaccelerator-count}
    */
-  Count?: number;
+  Count?: Resolvable<number>;
 };
 
 /**
@@ -406,7 +406,7 @@ export type SsmAssociation = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html#cfn-ec2-instance-ssmassociations-documentname}
    */
-  DocumentName: string;
+  DocumentName: Resolvable<string>;
 };
 
 /**
@@ -418,12 +418,12 @@ export type AssociationParameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations-associationparameters.html#cfn-ec2-instance-ssmassociations-associationparameters-value}
    */
-  Value: string[];
+  Value: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations-associationparameters.html#cfn-ec2-instance-ssmassociations-associationparameters-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -435,12 +435,12 @@ export type PrivateIpAddressSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-privateipaddress}
    */
-  PrivateIpAddress: string;
+  PrivateIpAddress: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-primary}
    */
-  Primary: boolean;
+  Primary: Resolvable<boolean>;
 };
 
 /**
@@ -452,12 +452,12 @@ export type Volume = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-mount-point.html#cfn-ec2-mountpoint-volumeid}
    */
-  VolumeId: string;
+  VolumeId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-mount-point.html#cfn-ec2-mountpoint-device}
    */
-  Device: string;
+  Device: Resolvable<string>;
 };
 
 /**
@@ -469,7 +469,7 @@ export type EnclaveOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enclaveoptions.html#cfn-ec2-instance-enclaveoptions-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
 };
 
 /**
@@ -481,37 +481,37 @@ export type Ebs = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-snapshotid}
    */
-  SnapshotId?: string;
+  SnapshotId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-volumetype}
    */
-  VolumeType?: string;
+  VolumeType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-instance-ebs-kmskeyid}
    */
-  KmsKeyId?: string;
+  KmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-encrypted}
    */
-  Encrypted?: boolean;
+  Encrypted?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-iops}
    */
-  Iops?: number;
+  Iops?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-volumesize}
    */
-  VolumeSize?: number;
+  VolumeSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html#cfn-ec2-blockdev-template-deleteontermination}
    */
-  DeleteOnTermination?: boolean;
+  DeleteOnTermination?: Resolvable<boolean>;
 };
 
 /**
@@ -528,7 +528,7 @@ export type BlockDeviceMapping = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html#cfn-ec2-blockdev-mapping-virtualname}
    */
-  VirtualName?: string;
+  VirtualName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html#cfn-ec2-blockdev-mapping-ebs}
@@ -538,12 +538,12 @@ export type BlockDeviceMapping = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html#cfn-ec2-blockdev-mapping-devicename}
    */
-  DeviceName: string;
+  DeviceName: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -555,5 +555,5 @@ export type CreditSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-creditspecification.html#cfn-ec2-instance-creditspecification-cpucredits}
    */
-  CPUCredits?: string;
+  CPUCredits?: Resolvable<string>;
 };

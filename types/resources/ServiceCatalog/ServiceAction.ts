@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::ServiceAction
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ServiceAction_Type = 'AWS::ServiceCatalog::ServiceAction';
 export const ServiceAction_Type = 'AWS::ServiceCatalog::ServiceAction';
@@ -22,17 +22,17 @@ export type ServiceAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-acceptlanguage}
    */
-  AcceptLanguage?: 'en' | 'jp' | 'zh';
+  AcceptLanguage?: Resolvable<'en' | 'jp' | 'zh'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definitiontype}
    */
-  DefinitionType: 'SSM_AUTOMATION';
+  DefinitionType: Resolvable<'SSM_AUTOMATION'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-definition}
@@ -42,8 +42,8 @@ export type ServiceAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html#cfn-servicecatalog-serviceaction-description}
    */
-  Description?: string;
-  Id?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -55,10 +55,10 @@ export type DefinitionParameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-serviceaction-definitionparameter.html#cfn-servicecatalog-serviceaction-definitionparameter-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-serviceaction-definitionparameter.html#cfn-servicecatalog-serviceaction-definitionparameter-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };

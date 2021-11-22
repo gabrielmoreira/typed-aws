@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SQS::Queue
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Queue_Type = 'AWS::SQS::Queue';
 export const Queue_Type = 'AWS::SQS::Queue';
@@ -22,37 +22,37 @@ export type Queue_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-receivemsgwaittime}
    */
-  ReceiveMessageWaitTimeSeconds?: number;
+  ReceiveMessageWaitTimeSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-fifothroughputlimit}
    */
-  FifoThroughputLimit?: string;
+  FifoThroughputLimit?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsmasterkeyid}
    */
-  KmsMasterKeyId?: string;
+  KmsMasterKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-fifoqueue}
    */
-  FifoQueue?: boolean;
+  FifoQueue?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-maxmesgsize}
    */
-  MaximumMessageSize?: number;
+  MaximumMessageSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-visiblitytimeout}
    */
-  VisibilityTimeout?: number;
+  VisibilityTimeout?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-kmsdatakeyreuseperiodseconds}
    */
-  KmsDataKeyReusePeriodSeconds?: number;
+  KmsDataKeyReusePeriodSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-redriveallowpolicy}
@@ -64,7 +64,7 @@ export type Queue_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-delayseconds}
    */
-  DelaySeconds?: number;
+  DelaySeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-redrive}
@@ -76,24 +76,24 @@ export type Queue_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-msgretentionperiod}
    */
-  MessageRetentionPeriod?: number;
+  MessageRetentionPeriod?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-deduplicationscope}
    */
-  DeduplicationScope?: string;
+  DeduplicationScope?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-contentbaseddeduplication}
    */
-  ContentBasedDeduplication?: boolean;
-  Id?: string;
-  Arn?: string;
+  ContentBasedDeduplication?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#aws-sqs-queue-name}
    */
-  QueueName?: string;
+  QueueName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html#cfn-sqs-queue-tags}
@@ -102,6 +102,6 @@ export type Queue_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

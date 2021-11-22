@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Neptune::DBInstance
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBInstance_Type = 'AWS::Neptune::DBInstance';
 export const DBInstance_Type = 'AWS::Neptune::DBInstance';
@@ -22,55 +22,55 @@ export type DBInstance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbinstanceclass}
    */
-  DBInstanceClass: string;
-  Port?: string;
+  DBInstanceClass: Resolvable<string>;
+  Port?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbclusteridentifier}
    */
-  DBClusterIdentifier?: string;
+  DBClusterIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-availabilityzone}
    */
-  AvailabilityZone?: string;
+  AvailabilityZone?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-preferredmaintenancewindow}
    */
-  PreferredMaintenanceWindow?: string;
+  PreferredMaintenanceWindow?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-autominorversionupgrade}
    */
-  AutoMinorVersionUpgrade?: boolean;
+  AutoMinorVersionUpgrade?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsubnetgroupname}
    */
-  DBSubnetGroupName?: string;
+  DBSubnetGroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbinstanceidentifier}
    */
-  DBInstanceIdentifier?: string;
+  DBInstanceIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbparametergroupname}
    */
-  DBParameterGroupName?: string;
-  Endpoint?: string;
+  DBParameterGroupName?: Resolvable<string>;
+  Endpoint?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-allowmajorversionupgrade}
    */
-  AllowMajorVersionUpgrade?: boolean;
-  Id?: string;
+  AllowMajorVersionUpgrade?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-dbsnapshotidentifier}
    */
-  DBSnapshotIdentifier?: string;
+  DBSnapshotIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html#cfn-neptune-dbinstance-tags}
@@ -79,6 +79,6 @@ export type DBInstance_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

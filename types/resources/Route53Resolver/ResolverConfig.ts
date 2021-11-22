@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverConfig_Type = 'AWS::Route53Resolver::ResolverConfig';
 export const ResolverConfig_Type = 'AWS::Route53Resolver::ResolverConfig';
@@ -18,17 +18,19 @@ export default function ResolverConfig(props: ResolverConfig_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html}
  */
 export type ResolverConfig_Properties = {
-  Id?: string;
-  OwnerId?: string;
+  Id?: Resolvable<string>;
+  OwnerId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-resourceid}
    */
-  ResourceId: string;
-  AutodefinedReverse?: 'ENABLING' | 'ENABLED' | 'DISABLING' | 'DISABLED';
+  ResourceId: Resolvable<string>;
+  AutodefinedReverse?: Resolvable<
+    'ENABLING' | 'ENABLED' | 'DISABLING' | 'DISABLED'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html#cfn-route53resolver-resolverconfig-autodefinedreverseflag}
    */
-  AutodefinedReverseFlag: 'DISABLE';
+  AutodefinedReverseFlag: Resolvable<'DISABLE'>;
 };

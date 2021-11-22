@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualGateway
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VirtualGateway_Type = 'AWS::AppMesh::VirtualGateway';
 export const VirtualGateway_Type = 'AWS::AppMesh::VirtualGateway';
@@ -18,25 +18,25 @@ export default function VirtualGateway(props: VirtualGateway_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html}
  */
 export type VirtualGateway_Properties = {
-  Uid?: string;
+  Uid?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-virtualgatewayname}
    */
-  VirtualGatewayName?: string;
+  VirtualGatewayName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-meshname}
    */
-  MeshName: string;
+  MeshName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-meshowner}
    */
-  MeshOwner?: string;
-  ResourceOwner?: string;
-  Id?: string;
-  Arn?: string;
+  MeshOwner?: Resolvable<string>;
+  ResourceOwner?: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html#cfn-appmesh-virtualgateway-spec}
@@ -148,12 +148,12 @@ export type VirtualGatewayHttpConnectionPool = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxconnections}
    */
-  MaxConnections: number;
+  MaxConnections: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests}
    */
-  MaxPendingRequests?: number;
+  MaxPendingRequests?: Resolvable<number>;
 };
 
 /**
@@ -170,12 +170,12 @@ export type VirtualGatewayClientPolicyTls = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports}
    */
-  Ports?: number[];
+  Ports?: Resolvable<number>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce}
    */
-  Enforce?: boolean;
+  Enforce?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls.html#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate}
@@ -214,7 +214,7 @@ export type VirtualGatewayTlsValidationContextSdsTrust = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextsdstrust-secretname}
    */
-  SecretName: string;
+  SecretName: Resolvable<string>;
 };
 
 /**
@@ -226,7 +226,7 @@ export type VirtualGatewayFileAccessLog = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html#cfn-appmesh-virtualgateway-virtualgatewayfileaccesslog-path}
    */
-  Path: string;
+  Path: Resolvable<string>;
 };
 
 /**
@@ -272,7 +272,7 @@ export type VirtualGatewayTlsValidationContextFileTrust = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust-certificatechain}
    */
-  CertificateChain: string;
+  CertificateChain: Resolvable<string>;
 };
 
 /**
@@ -284,37 +284,37 @@ export type VirtualGatewayHealthCheckPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-path}
    */
-  Path?: string;
+  Path?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-unhealthythreshold}
    */
-  UnhealthyThreshold: number;
+  UnhealthyThreshold: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-port}
    */
-  Port?: number;
+  Port?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-healthythreshold}
    */
-  HealthyThreshold: number;
+  HealthyThreshold: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-timeoutmillis}
    */
-  TimeoutMillis: number;
+  TimeoutMillis: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-protocol}
    */
-  Protocol: string;
+  Protocol: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html#cfn-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy-intervalmillis}
    */
-  IntervalMillis: number;
+  IntervalMillis: Resolvable<number>;
 };
 
 /**
@@ -326,7 +326,7 @@ export type SubjectAlternativeNameMatchers = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html#cfn-appmesh-virtualgateway-subjectalternativenamematchers-exact}
    */
-  Exact?: string[];
+  Exact?: Resolvable<string>[];
 };
 
 /**
@@ -360,7 +360,7 @@ export type VirtualGatewayListenerTlsAcmCertificate = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-certificatearn}
    */
-  CertificateArn: string;
+  CertificateArn: Resolvable<string>;
 };
 
 /**
@@ -447,7 +447,7 @@ export type VirtualGatewayGrpcConnectionPool = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.html#cfn-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool-maxrequests}
    */
-  MaxRequests: number;
+  MaxRequests: Resolvable<number>;
 };
 
 /**
@@ -459,7 +459,7 @@ export type VirtualGatewayListenerTlsSdsCertificate = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlssdscertificate-secretname}
    */
-  SecretName: string;
+  SecretName: Resolvable<string>;
 };
 
 /**
@@ -471,17 +471,17 @@ export type VirtualGatewayListenerTlsFileCertificate = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-certificatechain}
    */
-  CertificateChain: string;
+  CertificateChain: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate-privatekey}
    */
-  PrivateKey: string;
+  PrivateKey: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -493,12 +493,12 @@ export type VirtualGatewayPortMapping = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-protocol}
    */
-  Protocol: string;
+  Protocol: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayportmapping.html#cfn-appmesh-virtualgateway-virtualgatewayportmapping-port}
    */
-  Port: number;
+  Port: Resolvable<number>;
 };
 
 /**
@@ -510,7 +510,7 @@ export type VirtualGatewayHttp2ConnectionPool = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.html#cfn-appmesh-virtualgateway-virtualgatewayhttp2connectionpool-maxrequests}
    */
-  MaxRequests: number;
+  MaxRequests: Resolvable<number>;
 };
 
 /**
@@ -522,7 +522,7 @@ export type VirtualGatewayTlsValidationContextAcmTrust = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html#cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust-certificateauthorityarns}
    */
-  CertificateAuthorityArns: string[];
+  CertificateAuthorityArns: Resolvable<string>[];
 };
 
 /**
@@ -539,7 +539,7 @@ export type VirtualGatewayListenerTls = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode}
    */
-  Mode: string;
+  Mode: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate}

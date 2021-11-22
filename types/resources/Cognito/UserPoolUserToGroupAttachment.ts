@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolUserToGroupAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserPoolUserToGroupAttachment_Type =
   'AWS::Cognito::UserPoolUserToGroupAttachment';
@@ -31,16 +31,16 @@ export type UserPoolUserToGroupAttachment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname}
    */
-  GroupName: string;
+  GroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid}
    */
-  UserPoolId: string;
-  Id?: string;
+  UserPoolId: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username}
    */
-  Username: string;
+  Username: Resolvable<string>;
 };

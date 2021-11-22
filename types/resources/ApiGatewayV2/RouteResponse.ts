@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::RouteResponse
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RouteResponse_Type = 'AWS::ApiGatewayV2::RouteResponse';
 export const RouteResponse_Type = 'AWS::ApiGatewayV2::RouteResponse';
@@ -18,12 +18,12 @@ export default function RouteResponse(props: RouteResponse_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html}
  */
 export type RouteResponse_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-routeresponsekey}
    */
-  RouteResponseKey: string;
+  RouteResponseKey: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-responseparameters}
@@ -35,17 +35,17 @@ export type RouteResponse_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-routeid}
    */
-  RouteId: string;
+  RouteId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-modelselectionexpression}
    */
-  ModelSelectionExpression?: string;
+  ModelSelectionExpression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html#cfn-apigatewayv2-routeresponse-responsemodels}

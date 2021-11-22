@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::PrimaryTaskSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PrimaryTaskSet_Type = 'AWS::ECS::PrimaryTaskSet';
 export const PrimaryTaskSet_Type = 'AWS::ECS::PrimaryTaskSet';
@@ -24,15 +24,15 @@ export type PrimaryTaskSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html#cfn-ecs-primarytaskset-cluster}
    */
-  Cluster: string;
+  Cluster: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html#cfn-ecs-primarytaskset-tasksetid}
    */
-  TaskSetId: string;
+  TaskSetId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-primarytaskset.html#cfn-ecs-primarytaskset-service}
    */
-  Service: string;
+  Service: Resolvable<string>;
 };

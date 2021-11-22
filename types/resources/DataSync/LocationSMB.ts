@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationSMB
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocationSMB_Type = 'AWS::DataSync::LocationSMB';
 export const LocationSMB_Type = 'AWS::DataSync::LocationSMB';
@@ -22,12 +22,12 @@ export type LocationSMB_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-agentarns}
    */
-  AgentArns: string[];
+  AgentArns: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-domain}
    */
-  Domain?: string;
+  Domain?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-mountoptions}
@@ -37,29 +37,29 @@ export type LocationSMB_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-password}
    */
-  Password: string;
+  Password: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-serverhostname}
    */
-  ServerHostname: string;
+  ServerHostname: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-subdirectory}
    */
-  Subdirectory: string;
+  Subdirectory: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-user}
    */
-  User: string;
+  User: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html#cfn-datasync-locationsmb-tags}
    */
   Tags?: Tag[];
-  LocationArn?: string;
-  LocationUri?: string;
+  LocationArn?: Resolvable<string>;
+  LocationUri?: Resolvable<string>;
 };
 
 /**
@@ -71,10 +71,10 @@ export type MountOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationsmb-mountoptions.html#cfn-datasync-locationsmb-mountoptions-version}
    */
-  Version?: 'AUTOMATIC' | 'SMB2' | 'SMB3';
+  Version?: Resolvable<'AUTOMATIC' | 'SMB2' | 'SMB3'>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

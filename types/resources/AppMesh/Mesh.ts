@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::Mesh
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Mesh_Type = 'AWS::AppMesh::Mesh';
 export const Mesh_Type = 'AWS::AppMesh::Mesh';
@@ -18,16 +18,16 @@ export default function Mesh(props: Mesh_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html}
  */
 export type Mesh_Properties = {
-  Uid?: string;
+  Uid?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html#cfn-appmesh-mesh-meshname}
    */
-  MeshName?: string;
-  MeshOwner?: string;
-  ResourceOwner?: string;
-  Id?: string;
-  Arn?: string;
+  MeshName?: Resolvable<string>;
+  MeshOwner?: Resolvable<string>;
+  ResourceOwner?: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html#cfn-appmesh-mesh-spec}
@@ -61,10 +61,10 @@ export type EgressFilter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-mesh-egressfilter.html#cfn-appmesh-mesh-egressfilter-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

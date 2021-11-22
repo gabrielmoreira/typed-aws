@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Authorizer
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Authorizer_Type = 'AWS::ApiGateway::Authorizer';
 export const Authorizer_Type = 'AWS::ApiGateway::Authorizer';
@@ -26,51 +26,51 @@ export type Authorizer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-restapiid}
    */
-  RestApiId: string;
-  AuthorizerId?: string;
+  RestApiId: Resolvable<string>;
+  AuthorizerId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authtype}
    */
-  AuthType?: string;
+  AuthType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizercredentials}
    */
-  AuthorizerCredentials?: string;
+  AuthorizerCredentials?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizerresultttlinseconds}
    */
-  AuthorizerResultTtlInSeconds?: number;
+  AuthorizerResultTtlInSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-authorizeruri}
    */
-  AuthorizerUri?: string;
+  AuthorizerUri?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-identitysource}
    */
-  IdentitySource?: string;
+  IdentitySource?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-identityvalidationexpression}
    */
-  IdentityValidationExpression?: string;
+  IdentityValidationExpression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-providerarns}
    */
-  ProviderARNs?: string[];
+  ProviderARNs?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html#cfn-apigateway-authorizer-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };

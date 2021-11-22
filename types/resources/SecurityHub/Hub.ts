@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecurityHub::Hub
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Hub_Type = 'AWS::SecurityHub::Hub';
 export const Hub_Type = 'AWS::SecurityHub::Hub';
@@ -18,7 +18,7 @@ export default function Hub(props: Hub_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html}
  */
 export type Hub_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html#cfn-securityhub-hub-tags}

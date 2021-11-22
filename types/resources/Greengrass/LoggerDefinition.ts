@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::LoggerDefinition
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LoggerDefinition_Type = 'AWS::Greengrass::LoggerDefinition';
 export const LoggerDefinition_Type = 'AWS::Greengrass::LoggerDefinition';
@@ -21,9 +21,9 @@ export default function LoggerDefinition(props: LoggerDefinition_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html}
  */
 export type LoggerDefinition_Properties = {
-  Id?: string;
-  Arn?: string;
-  LatestVersionArn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
+  LatestVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-tags}
@@ -35,7 +35,7 @@ export type LoggerDefinition_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion}
@@ -64,25 +64,25 @@ export type Logger = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-space}
    */
-  Space?: number;
+  Space?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-level}
    */
-  Level: string;
+  Level: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-component}
    */
-  Component: string;
+  Component: Resolvable<string>;
 };

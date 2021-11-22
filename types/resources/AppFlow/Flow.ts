@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppFlow::Flow
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Flow_Type = 'AWS::AppFlow::Flow';
 export const Flow_Type = 'AWS::AppFlow::Flow';
@@ -18,22 +18,22 @@ export default function Flow(props: Flow_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html}
  */
 export type Flow_Properties = {
-  FlowArn?: string;
+  FlowArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html#cfn-appflow-flow-flowname}
    */
-  FlowName: string;
+  FlowName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html#cfn-appflow-flow-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html#cfn-appflow-flow-kmsarn}
    */
-  KMSArn?: string;
+  KMSArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html#cfn-appflow-flow-triggerconfig}
@@ -136,7 +136,7 @@ export type Task = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-sourcefields}
    */
-  SourceFields: string[];
+  SourceFields: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-connectoroperator}
@@ -146,7 +146,7 @@ export type Task = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-destinationfield}
    */
-  DestinationField?: string;
+  DestinationField?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-task.html#cfn-appflow-flow-task-tasktype}
@@ -160,8 +160,8 @@ export type Task = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -416,55 +416,55 @@ export type ScheduledTriggerProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression}
    */
-  ScheduleExpression: string;
+  ScheduleExpression: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-datapullmode}
    */
-  DataPullMode?: 'Incremental' | 'Complete';
+  DataPullMode?: Resolvable<'Incremental' | 'Complete'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime}
    */
-  ScheduleStartTime?: number;
+  ScheduleStartTime?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime}
    */
-  ScheduleEndTime?: number;
+  ScheduleEndTime?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-timezone}
    */
-  TimeZone?: string;
+  TimeZone?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset}
    */
-  ScheduleOffset?: number;
+  ScheduleOffset?: Resolvable<number>;
 };
 
-export type TriggerType = 'Scheduled' | 'Event' | 'OnDemand';
+export type TriggerType = Resolvable<'Scheduled' | 'Event' | 'OnDemand'>;
 
-export type Object = string;
+export type ObjectData = Resolvable<string>;
 
-export type EnableDynamicFieldUpdate = boolean;
+export type EnableDynamicFieldUpdate = Resolvable<boolean>;
 
-export type IncludeDeletedRecords = boolean;
+export type IncludeDeletedRecords = Resolvable<boolean>;
 
-export type IncludeAllVersions = boolean;
+export type IncludeAllVersions = Resolvable<boolean>;
 
-export type IncludeRenditions = boolean;
+export type IncludeRenditions = Resolvable<boolean>;
 
-export type IncludeSourceFiles = boolean;
+export type IncludeSourceFiles = Resolvable<boolean>;
 
-export type DocumentType = string;
+export type DocumentType = Resolvable<string>;
 
-export type BucketName = string;
+export type BucketName = Resolvable<string>;
 
-export type UpsolverBucketName = string;
+export type UpsolverBucketName = Resolvable<string>;
 
-export type BucketPrefix = string;
+export type BucketPrefix = Resolvable<string>;
 
 /**
  * {@link
@@ -475,7 +475,7 @@ export type S3InputFormatConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html#cfn-appflow-flow-s3inputformatconfig-s3inputfiletype}
    */
-  S3InputFileType?: 'CSV' | 'JSON';
+  S3InputFileType?: Resolvable<'CSV' | 'JSON'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3inputformatconfig.html}
@@ -492,7 +492,7 @@ export type ErrorHandlingConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-failonfirsterror}
    */
-  FailOnFirstError?: boolean;
+  FailOnFirstError?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-errorhandlingconfig.html#cfn-appflow-flow-errorhandlingconfig-bucketprefix}
@@ -505,17 +505,19 @@ export type ErrorHandlingConfig = {
   BucketName?: BucketName;
 };
 
-export type Name = string;
+export type Name = Resolvable<string>;
 
-export type WriteOperationType = 'INSERT' | 'UPSERT' | 'UPDATE';
+export type WriteOperationType = Resolvable<'INSERT' | 'UPSERT' | 'UPDATE'>;
 
-export type FileType = 'CSV' | 'JSON' | 'PARQUET';
+export type FileType = Resolvable<'CSV' | 'JSON' | 'PARQUET'>;
 
-export type AggregationType = 'None' | 'SingleFile';
+export type AggregationType = Resolvable<'None' | 'SingleFile'>;
 
-export type PrefixType = 'FILENAME' | 'PATH' | 'PATH_AND_FILENAME';
+export type PrefixType = Resolvable<'FILENAME' | 'PATH' | 'PATH_AND_FILENAME'>;
 
-export type PrefixFormat = 'YEAR' | 'MONTH' | 'DAY' | 'HOUR' | 'MINUTE';
+export type PrefixFormat = Resolvable<
+  'YEAR' | 'MONTH' | 'DAY' | 'HOUR' | 'MINUTE'
+>;
 
 /**
  * {@link
@@ -595,7 +597,7 @@ export type UpsolverS3OutputFormatConfig = {
   AggregationConfig?: AggregationConfig;
 };
 
-export type ConnectorType =
+export type ConnectorType = Resolvable<
   | 'SAPOData'
   | 'Salesforce'
   | 'Singular'
@@ -615,9 +617,10 @@ export type ConnectorType =
   | 'Veeva'
   | 'EventBridge'
   | 'Upsolver'
-  | 'LookoutMetrics';
+  | 'LookoutMetrics'
+>;
 
-export type ConnectorProfileName = string;
+export type ConnectorProfileName = Resolvable<string>;
 
 /**
  * {@link
@@ -628,7 +631,7 @@ export type AmplitudeSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-amplitudesourceproperties.html#cfn-appflow-flow-amplitudesourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -640,7 +643,7 @@ export type DatadogSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-datadogsourceproperties.html#cfn-appflow-flow-datadogsourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -652,7 +655,7 @@ export type DynatraceSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-dynatracesourceproperties.html#cfn-appflow-flow-dynatracesourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -664,7 +667,7 @@ export type GoogleAnalyticsSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-googleanalyticssourceproperties.html#cfn-appflow-flow-googleanalyticssourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -676,7 +679,7 @@ export type InforNexusSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-infornexussourceproperties.html#cfn-appflow-flow-infornexussourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -688,7 +691,7 @@ export type MarketoSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketosourceproperties.html#cfn-appflow-flow-marketosourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -722,7 +725,7 @@ export type SAPODataSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-objectpath}
    */
-  ObjectPath: Object;
+  ObjectPath: ObjectData;
 };
 
 /**
@@ -734,7 +737,7 @@ export type SalesforceSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcesourceproperties.html#cfn-appflow-flow-salesforcesourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcesourceproperties.html#cfn-appflow-flow-salesforcesourceproperties-enabledynamicfieldupdate}
@@ -756,7 +759,7 @@ export type ServiceNowSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-servicenowsourceproperties.html#cfn-appflow-flow-servicenowsourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -768,7 +771,7 @@ export type SingularSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-singularsourceproperties.html#cfn-appflow-flow-singularsourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -780,7 +783,7 @@ export type SlackSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-slacksourceproperties.html#cfn-appflow-flow-slacksourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -792,7 +795,7 @@ export type TrendmicroSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-trendmicrosourceproperties.html#cfn-appflow-flow-trendmicrosourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -804,7 +807,7 @@ export type VeevaSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html#cfn-appflow-flow-veevasourceproperties-documenttype}
@@ -836,7 +839,7 @@ export type ZendeskSourceProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendesksourceproperties.html#cfn-appflow-flow-zendesksourceproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
 };
 
 /**
@@ -848,7 +851,7 @@ export type ZendeskDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendeskdestinationproperties.html#cfn-appflow-flow-zendeskdestinationproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendeskdestinationproperties.html#cfn-appflow-flow-zendeskdestinationproperties-errorhandlingconfig}
@@ -858,7 +861,7 @@ export type ZendeskDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendeskdestinationproperties.html#cfn-appflow-flow-zendeskdestinationproperties-idfieldnames}
    */
-  IdFieldNames?: string[];
+  IdFieldNames?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendeskdestinationproperties.html#cfn-appflow-flow-zendeskdestinationproperties-writeoperationtype}
@@ -875,7 +878,7 @@ export type RedshiftDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-redshiftdestinationproperties.html#cfn-appflow-flow-redshiftdestinationproperties-intermediatebucketname}
@@ -924,7 +927,7 @@ export type SalesforceDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcedestinationproperties.html#cfn-appflow-flow-salesforcedestinationproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcedestinationproperties.html#cfn-appflow-flow-salesforcedestinationproperties-errorhandlingconfig}
@@ -934,7 +937,7 @@ export type SalesforceDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcedestinationproperties.html#cfn-appflow-flow-salesforcedestinationproperties-idfieldnames}
    */
-  IdFieldNames?: string[];
+  IdFieldNames?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcedestinationproperties.html#cfn-appflow-flow-salesforcedestinationproperties-writeoperationtype}
@@ -951,7 +954,7 @@ export type SnowflakeDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-snowflakedestinationproperties.html#cfn-appflow-flow-snowflakedestinationproperties-intermediatebucketname}
@@ -978,7 +981,7 @@ export type EventBridgeDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-object}
    */
-  Object: Object;
+  Object: ObjectData;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-eventbridgedestinationproperties.html#cfn-appflow-flow-eventbridgedestinationproperties-errorhandlingconfig}
@@ -1017,12 +1020,12 @@ export type LookoutMetricsDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-lookoutmetricsdestinationproperties.html#cfn-appflow-flow-lookoutmetricsdestinationproperties-object}
    */
-  Object?: Object;
+  Object?: ObjectData;
 };
 
-export type DatetimeTypeFieldName = string;
+export type DatetimeTypeFieldName = Resolvable<string>;
 
-export type TaskType =
+export type TaskType = Resolvable<
   | 'Arithmetic'
   | 'Filter'
   | 'Map'
@@ -1030,9 +1033,10 @@ export type TaskType =
   | 'Mask'
   | 'Merge'
   | 'Truncate'
-  | 'Validate';
+  | 'Validate'
+>;
 
-export type OperatorPropertiesKeys =
+export type OperatorPropertiesKeys = Resolvable<
   | 'VALUE'
   | 'VALUES'
   | 'DATA_TYPE'
@@ -1047,7 +1051,8 @@ export type OperatorPropertiesKeys =
   | 'MATH_OPERATION_FIELDS_ORDER'
   | 'CONCAT_FORMAT'
   | 'SUBFIELD_CATEGORY_MAP'
-  | 'EXCLUDE_SOURCE_FIELDS_LIST';
+  | 'EXCLUDE_SOURCE_FIELDS_LIST'
+>;
 
 /**
  * An object used to store task related info {@link
@@ -1063,12 +1068,12 @@ export type TaskPropertiesObject = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-taskpropertiesobject.html#cfn-appflow-flow-taskpropertiesobject-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
-export type AmplitudeConnectorOperator = 'BETWEEN';
+export type AmplitudeConnectorOperator = Resolvable<'BETWEEN'>;
 
-export type DatadogConnectorOperator =
+export type DatadogConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'BETWEEN'
   | 'EQUAL_TO'
@@ -1083,9 +1088,10 @@ export type DatadogConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type DynatraceConnectorOperator =
+export type DynatraceConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'BETWEEN'
   | 'EQUAL_TO'
@@ -1100,11 +1106,14 @@ export type DynatraceConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type GoogleAnalyticsConnectorOperator = 'PROJECTION' | 'BETWEEN';
+export type GoogleAnalyticsConnectorOperator = Resolvable<
+  'PROJECTION' | 'BETWEEN'
+>;
 
-export type InforNexusConnectorOperator =
+export type InforNexusConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'BETWEEN'
   | 'EQUAL_TO'
@@ -1119,9 +1128,10 @@ export type InforNexusConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type MarketoConnectorOperator =
+export type MarketoConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'LESS_THAN'
   | 'GREATER_THAN'
@@ -1137,9 +1147,10 @@ export type MarketoConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type S3ConnectorOperator =
+export type S3ConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'LESS_THAN'
   | 'GREATER_THAN'
@@ -1159,9 +1170,10 @@ export type S3ConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type SAPODataConnectorOperator =
+export type SAPODataConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'LESS_THAN'
   | 'CONTAINS'
@@ -1182,9 +1194,10 @@ export type SAPODataConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type SalesforceConnectorOperator =
+export type SalesforceConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'LESS_THAN'
   | 'CONTAINS'
@@ -1205,9 +1218,10 @@ export type SalesforceConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type ServiceNowConnectorOperator =
+export type ServiceNowConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'LESS_THAN'
   | 'CONTAINS'
@@ -1228,9 +1242,10 @@ export type ServiceNowConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type SingularConnectorOperator =
+export type SingularConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'EQUAL_TO'
   | 'ADDITION'
@@ -1244,9 +1259,10 @@ export type SingularConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type SlackConnectorOperator =
+export type SlackConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'BETWEEN'
   | 'EQUAL_TO'
@@ -1261,9 +1277,10 @@ export type SlackConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type TrendmicroConnectorOperator =
+export type TrendmicroConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'EQUAL_TO'
   | 'ADDITION'
@@ -1277,9 +1294,10 @@ export type TrendmicroConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type VeevaConnectorOperator =
+export type VeevaConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'LESS_THAN'
   | 'GREATER_THAN'
@@ -1299,9 +1317,10 @@ export type VeevaConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type ZendeskConnectorOperator =
+export type ZendeskConnectorOperator = Resolvable<
   | 'PROJECTION'
   | 'GREATER_THAN'
   | 'ADDITION'
@@ -1315,6 +1334,7 @@ export type ZendeskConnectorOperator =
   | 'VALIDATE_NON_ZERO'
   | 'VALIDATE_NON_NEGATIVE'
   | 'VALIDATE_NUMERIC'
-  | 'NO_OP';
+  | 'NO_OP'
+>;
 
-export type Status = 'Active' | 'Draft' | 'Errored' | 'Suspended';
+export type Status = Resolvable<'Active' | 'Draft' | 'Errored' | 'Suspended'>;

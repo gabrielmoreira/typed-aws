@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::Deployment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Deployment_Type = 'AWS::ApiGatewayV2::Deployment';
 export const Deployment_Type = 'AWS::ApiGatewayV2::Deployment';
@@ -18,20 +18,20 @@ export default function Deployment(props: Deployment_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html}
  */
 export type Deployment_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html#cfn-apigatewayv2-deployment-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html#cfn-apigatewayv2-deployment-stagename}
    */
-  StageName?: string;
+  StageName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html#cfn-apigatewayv2-deployment-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
 };

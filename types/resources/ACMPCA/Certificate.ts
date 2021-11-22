@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ACMPCA::Certificate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Certificate_Type = 'AWS::ACMPCA::Certificate';
 export const Certificate_Type = 'AWS::ACMPCA::Certificate';
@@ -32,12 +32,12 @@ export type Certificate_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-certificatesigningrequest}
    */
-  CertificateSigningRequest: string;
+  CertificateSigningRequest: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-signingalgorithm}
    */
-  SigningAlgorithm: string;
+  SigningAlgorithm: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-templatearn}
@@ -53,7 +53,7 @@ export type Certificate_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html#cfn-acmpca-certificate-validitynotbefore}
    */
   ValidityNotBefore?: Validity;
-  Certificate?: string;
+  Certificate?: Resolvable<string>;
   Arn?: Arn;
 };
 
@@ -76,7 +76,7 @@ export type ApiPassthrough = {
   Subject?: Subject;
 };
 
-export type Arn = string;
+export type Arn = Resolvable<string>;
 
 export type CertificatePolicyList = PolicyInformation[];
 
@@ -89,7 +89,7 @@ export type ExtendedKeyUsage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusagetype}
    */
-  ExtendedKeyUsageType?: string;
+  ExtendedKeyUsageType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-extendedkeyusage.html#cfn-acmpca-certificate-extendedkeyusage-extendedkeyusageobjectidentifier}
@@ -185,47 +185,47 @@ export type KeyUsage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-digitalsignature}
    */
-  DigitalSignature?: boolean;
+  DigitalSignature?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-nonrepudiation}
    */
-  NonRepudiation?: boolean;
+  NonRepudiation?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyencipherment}
    */
-  KeyEncipherment?: boolean;
+  KeyEncipherment?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-dataencipherment}
    */
-  DataEncipherment?: boolean;
+  DataEncipherment?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keyagreement}
    */
-  KeyAgreement?: boolean;
+  KeyAgreement?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-keycertsign}
    */
-  KeyCertSign?: boolean;
+  KeyCertSign?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-crlsign}
    */
-  CRLSign?: boolean;
+  CRLSign?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-encipheronly}
    */
-  EncipherOnly?: boolean;
+  EncipherOnly?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html#cfn-acmpca-certificate-keyusage-decipheronly}
    */
-  DecipherOnly?: boolean;
+  DecipherOnly?: Resolvable<boolean>;
 };
 
 /**
@@ -254,7 +254,7 @@ export type PolicyQualifierInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-policyqualifierid}
    */
-  PolicyQualifierId: string;
+  PolicyQualifierId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html#cfn-acmpca-certificate-policyqualifierinfo-qualifier}
@@ -273,7 +273,7 @@ export type Qualifier = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-qualifier.html#cfn-acmpca-certificate-qualifier-cpsuri}
    */
-  CpsUri: string;
+  CpsUri: Resolvable<string>;
 };
 
 /**
@@ -285,72 +285,72 @@ export type Subject = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-country}
    */
-  Country?: string;
+  Country?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-organization}
    */
-  Organization?: string;
+  Organization?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-organizationalunit}
    */
-  OrganizationalUnit?: string;
+  OrganizationalUnit?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-distinguishednamequalifier}
    */
-  DistinguishedNameQualifier?: string;
+  DistinguishedNameQualifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-state}
    */
-  State?: string;
+  State?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-commonname}
    */
-  CommonName?: string;
+  CommonName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-serialnumber}
    */
-  SerialNumber?: string;
+  SerialNumber?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-locality}
    */
-  Locality?: string;
+  Locality?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-title}
    */
-  Title?: string;
+  Title?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-surname}
    */
-  Surname?: string;
+  Surname?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-givenname}
    */
-  GivenName?: string;
+  GivenName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-initials}
    */
-  Initials?: string;
+  Initials?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-pseudonym}
    */
-  Pseudonym?: string;
+  Pseudonym?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-subject.html#cfn-acmpca-certificate-subject-generationqualifier}
    */
-  GenerationQualifier?: string;
+  GenerationQualifier?: Resolvable<string>;
 };
 
 /**
@@ -362,15 +362,15 @@ export type Validity = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-validity.html#cfn-acmpca-certificate-validity-value}
    */
-  Value: number;
+  Value: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-validity.html#cfn-acmpca-certificate-validity-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };
 
-export type CustomObjectIdentifier = string;
+export type CustomObjectIdentifier = Resolvable<string>;
 
 /**
  * Structure that contains X.509 OtherName information. {@link
@@ -386,12 +386,12 @@ export type OtherName = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-othername.html#cfn-acmpca-certificate-othername-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
-export type Rfc822Name = string;
+export type Rfc822Name = Resolvable<string>;
 
-export type DnsName = string;
+export type DnsName = Resolvable<string>;
 
 /**
  * Structure that contains X.509 EdiPartyName information. {@link
@@ -402,14 +402,14 @@ export type EdiPartyName = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-partyname}
    */
-  PartyName: string;
+  PartyName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-edipartyname.html#cfn-acmpca-certificate-edipartyname-nameassigner}
    */
-  NameAssigner: string;
+  NameAssigner: Resolvable<string>;
 };
 
-export type UniformResourceIdentifier = string;
+export type UniformResourceIdentifier = Resolvable<string>;
 
-export type IpAddress = string;
+export type IpAddress = Resolvable<string>;

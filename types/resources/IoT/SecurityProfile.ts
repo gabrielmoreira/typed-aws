@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::SecurityProfile
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SecurityProfile_Type = 'AWS::IoT::SecurityProfile';
 export const SecurityProfile_Type = 'AWS::IoT::SecurityProfile';
@@ -27,12 +27,12 @@ export type SecurityProfile_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-securityprofilename}
    */
-  SecurityProfileName?: string;
+  SecurityProfileName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-securityprofiledescription}
    */
-  SecurityProfileDescription?: string;
+  SecurityProfileDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-behaviors}
@@ -59,8 +59,8 @@ export type SecurityProfile_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html#cfn-iot-securityprofile-targetarns}
    */
-  TargetArns?: string[];
-  SecurityProfileArn?: string;
+  TargetArns?: Resolvable<string>[];
+  SecurityProfileArn?: Resolvable<string>;
 };
 
 /**
@@ -72,12 +72,12 @@ export type Behavior = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metric}
    */
-  Metric?: string;
+  Metric?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-metricdimension}
@@ -92,7 +92,7 @@ export type Behavior = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html#cfn-iot-securityprofile-behavior-suppressalerts}
    */
-  SuppressAlerts?: boolean;
+  SuppressAlerts?: Resolvable<boolean>;
 };
 
 /**
@@ -104,12 +104,12 @@ export type MetricDimension = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-dimensionname}
    */
-  DimensionName: string;
+  DimensionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricdimension.html#cfn-iot-securityprofile-metricdimension-operator}
    */
-  Operator?: 'IN' | 'NOT_IN';
+  Operator?: Resolvable<'IN' | 'NOT_IN'>;
 };
 
 /**
@@ -121,7 +121,7 @@ export type BehaviorCriteria = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-comparisonoperator}
    */
-  ComparisonOperator?:
+  ComparisonOperator?: Resolvable<
     | 'less-than'
     | 'less-than-equals'
     | 'greater-than'
@@ -131,7 +131,8 @@ export type BehaviorCriteria = {
     | 'in-port-set'
     | 'not-in-port-set'
     | 'in-set'
-    | 'not-in-set';
+    | 'not-in-set'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-value}
@@ -141,17 +142,17 @@ export type BehaviorCriteria = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-durationseconds}
    */
-  DurationSeconds?: number;
+  DurationSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoalarm}
    */
-  ConsecutiveDatapointsToAlarm?: number;
+  ConsecutiveDatapointsToAlarm?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoclear}
    */
-  ConsecutiveDatapointsToClear?: number;
+  ConsecutiveDatapointsToClear?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html#cfn-iot-securityprofile-behaviorcriteria-statisticalthreshold}
@@ -173,32 +174,32 @@ export type MetricValue = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-count}
    */
-  Count?: string;
+  Count?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-cidrs}
    */
-  Cidrs?: string[];
+  Cidrs?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-ports}
    */
-  Ports?: number[];
+  Ports?: Resolvable<number>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-number}
    */
-  Number?: number;
+  Number?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-numbers}
    */
-  Numbers?: number[];
+  Numbers?: Resolvable<number>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html#cfn-iot-securityprofile-metricvalue-strings}
    */
-  Strings?: string[];
+  Strings?: Resolvable<string>[];
 };
 
 /**
@@ -212,7 +213,7 @@ export type StatisticalThreshold = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html#cfn-iot-securityprofile-statisticalthreshold-statistic}
    */
-  Statistic?:
+  Statistic?: Resolvable<
     | 'Average'
     | 'p0'
     | 'p0.1'
@@ -224,7 +225,8 @@ export type StatisticalThreshold = {
     | 'p99'
     | 'p99.9'
     | 'p99.99'
-    | 'p100';
+    | 'p100'
+  >;
 };
 
 /**
@@ -236,7 +238,7 @@ export type MachineLearningDetectionConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html#cfn-iot-securityprofile-machinelearningdetectionconfig-confidencelevel}
    */
-  ConfidenceLevel?: 'LOW' | 'MEDIUM' | 'HIGH';
+  ConfidenceLevel?: Resolvable<'LOW' | 'MEDIUM' | 'HIGH'>;
 };
 
 /**
@@ -248,12 +250,12 @@ export type AlertTarget = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-alerttargetarn}
    */
-  AlertTargetArn: string;
+  AlertTargetArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html#cfn-iot-securityprofile-alerttarget-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
 };
 
 /**
@@ -265,7 +267,7 @@ export type MetricToRetain = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metric}
    */
-  Metric: string;
+  Metric: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metrictoretain.html#cfn-iot-securityprofile-metrictoretain-metricdimension}
@@ -274,6 +276,6 @@ export type MetricToRetain = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

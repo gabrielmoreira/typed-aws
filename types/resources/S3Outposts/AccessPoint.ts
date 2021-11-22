@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::AccessPoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AccessPoint_Type = 'AWS::S3Outposts::AccessPoint';
 export const AccessPoint_Type = 'AWS::S3Outposts::AccessPoint';
@@ -18,17 +18,17 @@ export default function AccessPoint(props: AccessPoint_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html}
  */
 export type AccessPoint_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html#cfn-s3outposts-accesspoint-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html#cfn-s3outposts-accesspoint-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html#cfn-s3outposts-accesspoint-vpcconfiguration}
@@ -52,5 +52,5 @@ export type VpcConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-accesspoint-vpcconfiguration.html#cfn-s3outposts-accesspoint-vpcconfiguration-vpcid}
    */
-  VpcId?: string;
+  VpcId?: Resolvable<string>;
 };

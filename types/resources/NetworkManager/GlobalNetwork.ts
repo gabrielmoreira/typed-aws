@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::GlobalNetwork
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GlobalNetwork_Type = 'AWS::NetworkManager::GlobalNetwork';
 export const GlobalNetwork_Type = 'AWS::NetworkManager::GlobalNetwork';
@@ -20,13 +20,13 @@ export default function GlobalNetwork(props: GlobalNetwork_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html}
  */
 export type GlobalNetwork_Properties = {
-  Arn?: string;
-  Id?: string;
+  Arn?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-globalnetwork.html#cfn-networkmanager-globalnetwork-tags}
@@ -35,6 +35,6 @@ export type GlobalNetwork_Properties = {
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

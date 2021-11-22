@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::VirtualMFADevice
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VirtualMFADevice_Type = 'AWS::IAM::VirtualMFADevice';
 export const VirtualMFADevice_Type = 'AWS::IAM::VirtualMFADevice';
@@ -25,18 +25,18 @@ export type VirtualMFADevice_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-virtualmfadevicename}
    */
-  VirtualMfaDeviceName?: string;
+  VirtualMfaDeviceName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-path}
    */
-  Path?: string;
-  SerialNumber?: string;
+  Path?: Resolvable<string>;
+  SerialNumber?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-users}
    */
-  Users: string[];
+  Users: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html#cfn-iam-virtualmfadevice-tags}
@@ -45,6 +45,6 @@ export type VirtualMFADevice_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ModelBiasJobDefinition
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ModelBiasJobDefinition_Type =
   'AWS::SageMaker::ModelBiasJobDefinition';
@@ -27,7 +27,7 @@ export default function ModelBiasJobDefinition(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html}
  */
 export type ModelBiasJobDefinition_Properties = {
-  JobDefinitionArn?: string;
+  JobDefinitionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html#cfn-sagemaker-modelbiasjobdefinition-jobdefinitionname}
@@ -67,7 +67,7 @@ export type ModelBiasJobDefinition_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html#cfn-sagemaker-modelbiasjobdefinition-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html#cfn-sagemaker-modelbiasjobdefinition-stoppingcondition}
@@ -78,7 +78,7 @@ export type ModelBiasJobDefinition_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html#cfn-sagemaker-modelbiasjobdefinition-tags}
    */
   Tags?: Tag[];
-  CreationTime?: string;
+  CreationTime?: Resolvable<string>;
 };
 
 /**
@@ -111,7 +111,7 @@ export type ConstraintsResource = {
   S3Uri?: S3Uri;
 };
 
-export type S3Uri = string;
+export type S3Uri = Resolvable<string>;
 
 /**
  * Container image configuration object for the monitoring job. {@link
@@ -122,7 +122,7 @@ export type ModelBiasAppSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-modelbiasappspecification.html#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-imageuri}
    */
-  ImageUri: string;
+  ImageUri: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-modelbiasappspecification.html#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-configuri}
@@ -133,7 +133,7 @@ export type ModelBiasAppSpecification = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-modelbiasappspecification.html#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment}
    */
   Environment?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
 };
 
@@ -168,17 +168,17 @@ export type EndpointInput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-localpath}
    */
-  LocalPath: string;
+  LocalPath: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-s3datadistributiontype}
    */
-  S3DataDistributionType?: 'FullyReplicated' | 'ShardedByS3Key';
+  S3DataDistributionType?: Resolvable<'FullyReplicated' | 'ShardedByS3Key'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-s3inputmode}
    */
-  S3InputMode?: 'Pipe' | 'File';
+  S3InputMode?: Resolvable<'Pipe' | 'File'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-starttimeoffset}
@@ -193,22 +193,22 @@ export type EndpointInput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-featuresattribute}
    */
-  FeaturesAttribute?: string;
+  FeaturesAttribute?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-inferenceattribute}
    */
-  InferenceAttribute?: string;
+  InferenceAttribute?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-probabilityattribute}
    */
-  ProbabilityAttribute?: string;
+  ProbabilityAttribute?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html#cfn-sagemaker-modelbiasjobdefinition-endpointinput-probabilitythresholdattribute}
    */
-  ProbabilityThresholdAttribute?: number;
+  ProbabilityThresholdAttribute?: Resolvable<number>;
 };
 
 /**
@@ -220,7 +220,7 @@ export type MonitoringOutputConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelbiasjobdefinition-monitoringoutputconfig-kmskeyid}
    */
-  KmsKeyId?: string;
+  KmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-monitoringoutputconfig.html#cfn-sagemaker-modelbiasjobdefinition-monitoringoutputconfig-monitoringoutputs}
@@ -250,17 +250,17 @@ export type S3Output = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-s3output.html#cfn-sagemaker-modelbiasjobdefinition-s3output-localpath}
    */
-  LocalPath: string;
+  LocalPath: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-s3output.html#cfn-sagemaker-modelbiasjobdefinition-s3output-s3uploadmode}
    */
-  S3UploadMode?: 'Continuous' | 'EndOfJob';
+  S3UploadMode?: Resolvable<'Continuous' | 'EndOfJob'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-s3output.html#cfn-sagemaker-modelbiasjobdefinition-s3output-s3uri}
    */
-  S3Uri: string;
+  S3Uri: Resolvable<string>;
 };
 
 /**
@@ -285,22 +285,22 @@ export type ClusterConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-clusterconfig.html#cfn-sagemaker-modelbiasjobdefinition-clusterconfig-instancecount}
    */
-  InstanceCount: number;
+  InstanceCount: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-clusterconfig.html#cfn-sagemaker-modelbiasjobdefinition-clusterconfig-instancetype}
    */
-  InstanceType: string;
+  InstanceType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-clusterconfig.html#cfn-sagemaker-modelbiasjobdefinition-clusterconfig-volumekmskeyid}
    */
-  VolumeKmsKeyId?: string;
+  VolumeKmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-clusterconfig.html#cfn-sagemaker-modelbiasjobdefinition-clusterconfig-volumesizeingb}
    */
-  VolumeSizeInGB: number;
+  VolumeSizeInGB: Resolvable<number>;
 };
 
 /**
@@ -315,12 +315,12 @@ export type NetworkConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-networkconfig.html#cfn-sagemaker-modelbiasjobdefinition-networkconfig-enableintercontainertrafficencryption}
    */
-  EnableInterContainerTrafficEncryption?: boolean;
+  EnableInterContainerTrafficEncryption?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-networkconfig.html#cfn-sagemaker-modelbiasjobdefinition-networkconfig-enablenetworkisolation}
    */
-  EnableNetworkIsolation?: boolean;
+  EnableNetworkIsolation?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-networkconfig.html#cfn-sagemaker-modelbiasjobdefinition-networkconfig-vpcconfig}
@@ -339,12 +339,12 @@ export type VpcConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-vpcconfig.html#cfn-sagemaker-modelbiasjobdefinition-vpcconfig-securitygroupids}
    */
-  SecurityGroupIds: string[];
+  SecurityGroupIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-vpcconfig.html#cfn-sagemaker-modelbiasjobdefinition-vpcconfig-subnets}
    */
-  Subnets: string[];
+  Subnets: Resolvable<string>[];
 };
 
 /**
@@ -357,21 +357,21 @@ export type StoppingCondition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-stoppingcondition.html#cfn-sagemaker-modelbiasjobdefinition-stoppingcondition-maxruntimeinseconds}
    */
-  MaxRuntimeInSeconds: number;
+  MaxRuntimeInSeconds: Resolvable<number>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
-export type EndpointName = string;
+export type EndpointName = Resolvable<string>;
 
-export type JobDefinitionName = string;
+export type JobDefinitionName = Resolvable<string>;
 
-export type ProcessingJobName = string;
+export type ProcessingJobName = Resolvable<string>;
 
-export type MonitoringTimeOffsetString = string;
+export type MonitoringTimeOffsetString = Resolvable<string>;
 
 /**
  * Ground truth input provided in S3 {@link
@@ -382,5 +382,5 @@ export type MonitoringGroundTruthS3Input = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-monitoringgroundtruths3input.html#cfn-sagemaker-modelbiasjobdefinition-monitoringgroundtruths3input-s3uri}
    */
-  S3Uri: string;
+  S3Uri: Resolvable<string>;
 };

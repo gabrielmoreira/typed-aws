@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::ImagePipeline
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ImagePipeline_Type = 'AWS::ImageBuilder::ImagePipeline';
 export const ImagePipeline_Type = 'AWS::ImageBuilder::ImagePipeline';
@@ -11,17 +11,17 @@ export default function ImagePipeline(props: ImagePipeline_Properties) {
 
 export type ImagePipeline_Properties =
   | {
-      Arn?: string;
+      Arn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-name}
        */
-      Name: string;
+      Name: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-description}
        */
-      Description?: string;
+      Description?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration}
@@ -31,7 +31,7 @@ export type ImagePipeline_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-status}
        */
-      Status?: 'DISABLED' | 'ENABLED';
+      Status?: Resolvable<'DISABLED' | 'ENABLED'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-schedule}
@@ -41,47 +41,47 @@ export type ImagePipeline_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagerecipearn}
        */
-      ImageRecipeArn?: string;
+      ImageRecipeArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-containerrecipearn}
        */
-      ContainerRecipeArn: string;
+      ContainerRecipeArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-distributionconfigurationarn}
        */
-      DistributionConfigurationArn?: string;
+      DistributionConfigurationArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn}
        */
-      InfrastructureConfigurationArn: string;
+      InfrastructureConfigurationArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled}
        */
-      EnhancedImageMetadataEnabled?: boolean;
+      EnhancedImageMetadataEnabled?: Resolvable<boolean>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-tags}
        */
       Tags?: {
-        [k: string]: string;
+        [k: string]: Resolvable<string>;
       };
     }
   | {
-      Arn?: string;
+      Arn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-name}
        */
-      Name: string;
+      Name: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-description}
        */
-      Description?: string;
+      Description?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration}
@@ -91,7 +91,7 @@ export type ImagePipeline_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-status}
        */
-      Status?: 'DISABLED' | 'ENABLED';
+      Status?: Resolvable<'DISABLED' | 'ENABLED'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-schedule}
@@ -101,33 +101,33 @@ export type ImagePipeline_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-imagerecipearn}
        */
-      ImageRecipeArn: string;
+      ImageRecipeArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-containerrecipearn}
        */
-      ContainerRecipeArn?: string;
+      ContainerRecipeArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-distributionconfigurationarn}
        */
-      DistributionConfigurationArn?: string;
+      DistributionConfigurationArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn}
        */
-      InfrastructureConfigurationArn: string;
+      InfrastructureConfigurationArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled}
        */
-      EnhancedImageMetadataEnabled?: boolean;
+      EnhancedImageMetadataEnabled?: Resolvable<boolean>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html#cfn-imagebuilder-imagepipeline-tags}
        */
       Tags?: {
-        [k: string]: string;
+        [k: string]: Resolvable<string>;
       };
     };
 
@@ -140,12 +140,12 @@ export type ImageTestsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-imagetestsenabled}
    */
-  ImageTestsEnabled?: boolean;
+  ImageTestsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.html#cfn-imagebuilder-imagepipeline-imagetestsconfiguration-timeoutminutes}
    */
-  TimeoutMinutes?: number;
+  TimeoutMinutes?: Resolvable<number>;
 };
 
 /**
@@ -157,12 +157,13 @@ export type Schedule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-scheduleexpression}
    */
-  ScheduleExpression?: string;
+  ScheduleExpression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html#cfn-imagebuilder-imagepipeline-schedule-pipelineexecutionstartcondition}
    */
-  PipelineExecutionStartCondition?:
+  PipelineExecutionStartCondition?: Resolvable<
     | 'EXPRESSION_MATCH_ONLY'
-    | 'EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE';
+    | 'EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE'
+  >;
 };

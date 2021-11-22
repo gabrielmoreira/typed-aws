@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolDomain
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserPoolDomain_Type = 'AWS::Cognito::UserPoolDomain';
 export const UserPoolDomain_Type = 'AWS::Cognito::UserPoolDomain';
@@ -22,13 +22,13 @@ export type UserPoolDomain_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-userpoolid}
    */
-  UserPoolId: string;
-  Id?: string;
+  UserPoolId: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-domain}
    */
-  Domain: string;
+  Domain: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig}
@@ -45,5 +45,5 @@ export type CustomDomainConfigType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooldomain-customdomainconfigtype.html#cfn-cognito-userpooldomain-customdomainconfigtype-certificatearn}
    */
-  CertificateArn?: string;
+  CertificateArn?: Resolvable<string>;
 };

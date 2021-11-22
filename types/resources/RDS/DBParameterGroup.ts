@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBParameterGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBParameterGroup_Type = 'AWS::RDS::DBParameterGroup';
 export const DBParameterGroup_Type = 'AWS::RDS::DBParameterGroup';
@@ -21,17 +21,17 @@ export default function DBParameterGroup(props: DBParameterGroup_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html}
  */
 export type DBParameterGroup_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html#cfn-rds-dbparametergroup-description}
    */
-  Description: string;
+  Description: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html#cfn-rds-dbparametergroup-family}
    */
-  Family: string;
+  Family: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html#cfn-rds-dbparametergroup-parameters}
@@ -47,6 +47,6 @@ export type DBParameterGroup_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

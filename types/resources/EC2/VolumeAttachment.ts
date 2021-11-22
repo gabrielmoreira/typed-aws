@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VolumeAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VolumeAttachment_Type = 'AWS::EC2::VolumeAttachment';
 export const VolumeAttachment_Type = 'AWS::EC2::VolumeAttachment';
@@ -25,16 +25,16 @@ export type VolumeAttachment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-volumeid}
    */
-  VolumeId: string;
-  Id?: string;
+  VolumeId: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-instanceid}
    */
-  InstanceId: string;
+  InstanceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-device}
    */
-  Device: string;
+  Device: Resolvable<string>;
 };

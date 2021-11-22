@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::ApiMapping
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ApiMapping_Type = 'AWS::ApiGatewayV2::ApiMapping';
 export const ApiMapping_Type = 'AWS::ApiGatewayV2::ApiMapping';
@@ -18,25 +18,25 @@ export default function ApiMapping(props: ApiMapping_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html}
  */
 export type ApiMapping_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-domainname}
    */
-  DomainName: string;
+  DomainName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-stage}
    */
-  Stage: string;
+  Stage: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-apimappingkey}
    */
-  ApiMappingKey?: string;
+  ApiMappingKey?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html#cfn-apigatewayv2-apimapping-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
 };

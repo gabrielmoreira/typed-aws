@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaConvert::Preset
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Preset_Type = 'AWS::MediaConvert::Preset';
 export const Preset_Type = 'AWS::MediaConvert::Preset';
@@ -22,12 +22,12 @@ export type Preset_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-category}
    */
-  Category?: string;
+  Category?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-settingsjson}
@@ -35,8 +35,8 @@ export type Preset_Properties = {
   SettingsJson: {
     [k: string]: unknown;
   };
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-tags}
@@ -48,5 +48,5 @@ export type Preset_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::Script
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Script_Type = 'AWS::GameLift::Script';
 export const Script_Type = 'AWS::GameLift::Script';
@@ -18,8 +18,8 @@ export default function Script(props: Script_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html}
  */
 export type Script_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-storagelocation}
@@ -29,12 +29,12 @@ export type Script_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-version}
    */
-  Version?: string;
+  Version?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html#cfn-gamelift-script-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 /**
@@ -46,20 +46,20 @@ export type S3Location = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-objectversion}
    */
-  ObjectVersion?: string;
+  ObjectVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html#cfn-gamelift-script-s3location-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
 };

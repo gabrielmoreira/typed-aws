@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::EventBus
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EventBus_Type = 'AWS::Events::EventBus';
 export const EventBus_Type = 'AWS::Events::EventBus';
@@ -18,17 +18,17 @@ export default function EventBus(props: EventBus_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html}
  */
 export type EventBus_Properties = {
-  Id?: string;
-  Policy?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Policy?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html#cfn-events-eventbus-eventsourcename}
    */
-  EventSourceName?: string;
+  EventSourceName?: Resolvable<string>;
 };

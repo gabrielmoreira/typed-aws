@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::CustomResource
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CustomResource_Type = 'AWS::CloudFormation::CustomResource';
 export const CustomResource_Type = 'AWS::CloudFormation::CustomResource';
@@ -20,10 +20,10 @@ export default function CustomResource(props: CustomResource_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html}
  */
 export type CustomResource_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html#cfn-customresource-servicetoken}
    */
-  ServiceToken: string;
+  ServiceToken: Resolvable<string>;
 };

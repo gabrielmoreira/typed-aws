@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::InsightRule
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type InsightRule_Type = 'AWS::CloudWatch::InsightRule';
 export const InsightRule_Type = 'AWS::CloudWatch::InsightRule';
@@ -22,19 +22,19 @@ export type InsightRule_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulestate}
    */
-  RuleState: string;
-  Id?: string;
-  Arn?: string;
+  RuleState: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulebody}
    */
-  RuleBody: string;
+  RuleBody: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-rulename}
    */
-  RuleName: string;
+  RuleName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html#cfn-cloudwatch-insightrule-tags}

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Inspector::ResourceGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResourceGroup_Type = 'AWS::Inspector::ResourceGroup';
 export const ResourceGroup_Type = 'AWS::Inspector::ResourceGroup';
@@ -18,8 +18,8 @@ export default function ResourceGroup(props: ResourceGroup_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html}
  */
 export type ResourceGroup_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html#cfn-inspector-resourcegroup-resourcegrouptags}
@@ -28,6 +28,6 @@ export type ResourceGroup_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

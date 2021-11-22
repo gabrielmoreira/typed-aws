@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeDeploy::Application
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Application_Type = 'AWS::CodeDeploy::Application';
 export const Application_Type = 'AWS::CodeDeploy::Application';
@@ -22,8 +22,8 @@ export type Application_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-applicationname}
    */
-  ApplicationName?: string;
-  Id?: string;
+  ApplicationName?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-tags}
@@ -33,10 +33,10 @@ export type Application_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-computeplatform}
    */
-  ComputePlatform?: string;
+  ComputePlatform?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

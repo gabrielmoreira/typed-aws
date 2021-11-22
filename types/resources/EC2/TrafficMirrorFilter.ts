@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TrafficMirrorFilter
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TrafficMirrorFilter_Type = 'AWS::EC2::TrafficMirrorFilter';
 export const TrafficMirrorFilter_Type = 'AWS::EC2::TrafficMirrorFilter';
@@ -23,17 +23,17 @@ export default function TrafficMirrorFilter(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html}
  */
 export type TrafficMirrorFilter_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html#cfn-ec2-trafficmirrorfilter-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html#cfn-ec2-trafficmirrorfilter-networkservices}
    */
-  NetworkServices?: string[];
+  NetworkServices?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilter.html#cfn-ec2-trafficmirrorfilter-tags}
@@ -42,6 +42,6 @@ export type TrafficMirrorFilter_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::CustomMetric
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CustomMetric_Type = 'AWS::IoT::CustomMetric';
 export const CustomMetric_Type = 'AWS::IoT::CustomMetric';
@@ -22,18 +22,20 @@ export type CustomMetric_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-metricname}
    */
-  MetricName?: string;
+  MetricName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-displayname}
    */
-  DisplayName?: string;
+  DisplayName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-metrictype}
    */
-  MetricType: 'string-list' | 'ip-address-list' | 'number-list' | 'number';
-  MetricArn?: string;
+  MetricType: Resolvable<
+    'string-list' | 'ip-address-list' | 'number-list' | 'number'
+  >;
+  MetricArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html#cfn-iot-custommetric-tags}
@@ -42,6 +44,6 @@ export type CustomMetric_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeStarNotifications::NotificationRule
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NotificationRule_Type =
   'AWS::CodeStarNotifications::NotificationRule';
@@ -29,37 +29,37 @@ export type NotificationRule_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-eventtypeid}
    */
-  EventTypeId?: string;
+  EventTypeId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-createdby}
    */
-  CreatedBy?: string;
+  CreatedBy?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targetaddress}
    */
-  TargetAddress?: string;
+  TargetAddress?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-eventtypeids}
    */
-  EventTypeIds: string[];
+  EventTypeIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-status}
    */
-  Status?: 'ENABLED' | 'DISABLED';
+  Status?: Resolvable<'ENABLED' | 'DISABLED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-detailtype}
    */
-  DetailType: 'BASIC' | 'FULL';
+  DetailType: Resolvable<'BASIC' | 'FULL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-resource}
    */
-  Resource: string;
+  Resource: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-targets}
@@ -76,8 +76,8 @@ export type NotificationRule_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html#cfn-codestarnotifications-notificationrule-name}
    */
-  Name: string;
-  Arn?: string;
+  Name: Resolvable<string>;
+  Arn?: Resolvable<string>;
 };
 
 /**
@@ -89,10 +89,10 @@ export type Target = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestarnotifications-notificationrule-target.html#cfn-codestarnotifications-notificationrule-target-targettype}
    */
-  TargetType: string;
+  TargetType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestarnotifications-notificationrule-target.html#cfn-codestarnotifications-notificationrule-target-targetaddress}
    */
-  TargetAddress: string;
+  TargetAddress: Resolvable<string>;
 };

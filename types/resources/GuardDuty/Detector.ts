@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::Detector
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Detector_Type = 'AWS::GuardDuty::Detector';
 export const Detector_Type = 'AWS::GuardDuty::Detector';
@@ -22,18 +22,18 @@ export type Detector_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html#cfn-guardduty-detector-findingpublishingfrequency}
    */
-  FindingPublishingFrequency?: string;
+  FindingPublishingFrequency?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html#cfn-guardduty-detector-enable}
    */
-  Enable: boolean;
+  Enable: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html#cfn-guardduty-detector-datasources}
    */
   DataSources?: CFNDataSourceConfigurations;
-  Id?: string;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -45,7 +45,7 @@ export type CFNS3LogsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-cfns3logsconfiguration.html#cfn-guardduty-detector-cfns3logsconfiguration-enable}
    */
-  Enable?: boolean;
+  Enable?: Resolvable<boolean>;
 };
 
 /**

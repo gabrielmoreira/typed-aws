@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::Resolver
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Resolver_Type = 'AWS::AppSync::Resolver';
 export const Resolver_Type = 'AWS::AppSync::Resolver';
@@ -22,7 +22,7 @@ export type Resolver_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-typename}
    */
-  TypeName: string;
+  TypeName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-pipelineconfig}
@@ -32,13 +32,13 @@ export type Resolver_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplate}
    */
-  RequestMappingTemplate?: string;
+  RequestMappingTemplate?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplate}
    */
-  ResponseMappingTemplate?: string;
-  ResolverArn?: string;
+  ResponseMappingTemplate?: Resolvable<string>;
+  ResolverArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-syncconfig}
@@ -48,38 +48,38 @@ export type Resolver_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-responsemappingtemplates3location}
    */
-  ResponseMappingTemplateS3Location?: string;
+  ResponseMappingTemplateS3Location?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-datasourcename}
    */
-  DataSourceName?: string;
+  DataSourceName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-kind}
    */
-  Kind?: string;
+  Kind?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-cachingconfig}
    */
   CachingConfig?: CachingConfig;
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-requestmappingtemplates3location}
    */
-  RequestMappingTemplateS3Location?: string;
+  RequestMappingTemplateS3Location?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-fieldname}
    */
-  FieldName: string;
+  FieldName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
 };
 
 /**
@@ -91,7 +91,7 @@ export type PipelineConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html#cfn-appsync-resolver-pipelineconfig-functions}
    */
-  Functions?: string[];
+  Functions?: Resolvable<string>[];
 };
 
 /**
@@ -103,12 +103,12 @@ export type CachingConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-cachingkeys}
    */
-  CachingKeys?: string[];
+  CachingKeys?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html#cfn-appsync-resolver-cachingconfig-ttl}
    */
-  Ttl?: number;
+  Ttl?: Resolvable<number>;
 };
 
 /**
@@ -120,12 +120,12 @@ export type SyncConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-syncconfig.html#cfn-appsync-resolver-syncconfig-conflicthandler}
    */
-  ConflictHandler?: string;
+  ConflictHandler?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-syncconfig.html#cfn-appsync-resolver-syncconfig-conflictdetection}
    */
-  ConflictDetection: string;
+  ConflictDetection: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-syncconfig.html#cfn-appsync-resolver-syncconfig-lambdaconflicthandlerconfig}
@@ -142,5 +142,5 @@ export type LambdaConflictHandlerConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-lambdaconflicthandlerconfig.html#cfn-appsync-resolver-lambdaconflicthandlerconfig-lambdaconflicthandlerarn}
    */
-  LambdaConflictHandlerArn?: string;
+  LambdaConflictHandlerArn?: Resolvable<string>;
 };

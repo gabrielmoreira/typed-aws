@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::SAMLProvider
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SAMLProvider_Type = 'AWS::IAM::SAMLProvider';
 export const SAMLProvider_Type = 'AWS::IAM::SAMLProvider';
@@ -22,13 +22,13 @@ export type SAMLProvider_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-samlmetadatadocument}
    */
-  SamlMetadataDocument: string;
-  Arn?: string;
+  SamlMetadataDocument: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html#cfn-iam-samlprovider-tags}
@@ -37,6 +37,6 @@ export type SAMLProvider_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

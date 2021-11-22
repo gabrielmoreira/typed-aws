@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::BackupVault
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BackupVault_Type = 'AWS::Backup::BackupVault';
 export const BackupVault_Type = 'AWS::Backup::BackupVault';
@@ -26,7 +26,7 @@ export type BackupVault_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaultname}
@@ -37,13 +37,13 @@ export type BackupVault_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags}
    */
   BackupVaultTags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-encryptionkeyarn}
    */
-  EncryptionKeyArn?: string;
+  EncryptionKeyArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-notifications}
@@ -54,7 +54,7 @@ export type BackupVault_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-lockconfiguration}
    */
   LockConfiguration?: LockConfigurationType;
-  BackupVaultArn?: string;
+  BackupVaultArn?: Resolvable<string>;
 };
 
 /**
@@ -66,12 +66,12 @@ export type NotificationObjectType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-backupvaultevents}
    */
-  BackupVaultEvents: string[];
+  BackupVaultEvents: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html#cfn-backup-backupvault-notificationobjecttype-snstopicarn}
    */
-  SNSTopicArn: string;
+  SNSTopicArn: Resolvable<string>;
 };
 
 /**
@@ -83,17 +83,17 @@ export type LockConfigurationType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-lockconfigurationtype.html#cfn-backup-backupvault-lockconfigurationtype-minretentiondays}
    */
-  MinRetentionDays: number;
+  MinRetentionDays: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-lockconfigurationtype.html#cfn-backup-backupvault-lockconfigurationtype-maxretentiondays}
    */
-  MaxRetentionDays?: number;
+  MaxRetentionDays?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-lockconfigurationtype.html#cfn-backup-backupvault-lockconfigurationtype-changeablefordays}
    */
-  ChangeableForDays?: number;
+  ChangeableForDays?: Resolvable<number>;
 };
 
-export type BackupVaultNamePattern = string;
+export type BackupVaultNamePattern = Resolvable<string>;

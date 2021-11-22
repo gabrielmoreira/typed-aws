@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::Component
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Component_Type = 'AWS::ImageBuilder::Component';
 export const Component_Type = 'AWS::ImageBuilder::Component';
@@ -18,59 +18,59 @@ export default function Component(props: Component_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html}
  */
 export type Component_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-version}
    */
-  Version: string;
+  Version: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-changedescription}
    */
-  ChangeDescription?: string;
-  Type?: 'BUILD' | 'TEST';
+  ChangeDescription?: Resolvable<string>;
+  Type?: Resolvable<'BUILD' | 'TEST'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-platform}
    */
-  Platform: 'Windows' | 'Linux';
+  Platform: Resolvable<'Windows' | 'Linux'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-data}
    */
-  Data?: string;
+  Data?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-kmskeyid}
    */
-  KmsKeyId?: string;
-  Encrypted?: boolean;
+  KmsKeyId?: Resolvable<string>;
+  Encrypted?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-tags}
    */
   Tags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-uri}
    */
-  Uri?: string;
+  Uri?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html#cfn-imagebuilder-component-supportedosversions}
    */
-  SupportedOsVersions?: string[];
+  SupportedOsVersions?: Resolvable<string>[];
 };

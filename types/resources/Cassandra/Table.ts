@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cassandra::Table
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Table_Type = 'AWS::Cassandra::Table';
 export const Table_Type = 'AWS::Cassandra::Table';
@@ -22,12 +22,12 @@ export type Table_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-keyspacename}
    */
-  KeyspaceName: string;
+  KeyspaceName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-tablename}
    */
-  TableName?: string;
+  TableName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-regularcolumns}
@@ -52,7 +52,7 @@ export type Table_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-pointintimerecoveryenabled}
    */
-  PointInTimeRecoveryEnabled?: boolean;
+  PointInTimeRecoveryEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-tags}
@@ -62,7 +62,7 @@ export type Table_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-defaulttimetolive}
    */
-  DefaultTimeToLive?: number;
+  DefaultTimeToLive?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html#cfn-cassandra-table-encryptionspecification}
@@ -79,12 +79,12 @@ export type Column = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-column.html#cfn-cassandra-table-column-columnname}
    */
-  ColumnName: string;
+  ColumnName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-column.html#cfn-cassandra-table-column-columntype}
    */
-  ColumnType: string;
+  ColumnType: Resolvable<string>;
 };
 
 /**
@@ -101,7 +101,7 @@ export type ClusteringKeyColumn = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html#cfn-cassandra-table-clusteringkeycolumn-orderby}
    */
-  OrderBy?: 'ASC' | 'DESC';
+  OrderBy?: Resolvable<'ASC' | 'DESC'>;
 };
 
 /**
@@ -114,15 +114,15 @@ export type ProvisionedThroughput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-readcapacityunits}
    */
-  ReadCapacityUnits: number;
+  ReadCapacityUnits: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html#cfn-cassandra-table-provisionedthroughput-writecapacityunits}
    */
-  WriteCapacityUnits: number;
+  WriteCapacityUnits: Resolvable<number>;
 };
 
-export type Mode = 'PROVISIONED' | 'ON_DEMAND';
+export type Mode = Resolvable<'PROVISIONED' | 'ON_DEMAND'>;
 
 /**
  * {@link
@@ -142,8 +142,8 @@ export type BillingMode = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -163,6 +163,8 @@ export type EncryptionSpecification = {
   KmsKeyIdentifier?: KmsKeyIdentifier;
 };
 
-export type EncryptionType = 'AWS_OWNED_KMS_KEY' | 'CUSTOMER_MANAGED_KMS_KEY';
+export type EncryptionType = Resolvable<
+  'AWS_OWNED_KMS_KEY' | 'CUSTOMER_MANAGED_KMS_KEY'
+>;
 
-export type KmsKeyIdentifier = string;
+export type KmsKeyIdentifier = Resolvable<string>;

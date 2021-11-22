@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECR::RegistryPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RegistryPolicy_Type = 'AWS::ECR::RegistryPolicy';
 export const RegistryPolicy_Type = 'AWS::ECR::RegistryPolicy';
@@ -38,4 +38,4 @@ export type RegistryPolicy_Properties = {
   };
 };
 
-export type RegistryId = string;
+export type RegistryId = Resolvable<string>;

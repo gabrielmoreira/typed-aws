@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Model
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Model_Type = 'AWS::ApiGateway::Model';
 export const Model_Type = 'AWS::ApiGateway::Model';
@@ -22,22 +22,22 @@ export type Model_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-contenttype}
    */
-  ContentType?: string;
+  ContentType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-restapiid}
    */
-  RestApiId: string;
+  RestApiId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html#cfn-apigateway-model-schema}
@@ -46,5 +46,5 @@ export type Model_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::CompositeAlarm
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CompositeAlarm_Type = 'AWS::CloudWatch::CompositeAlarm';
 export const CompositeAlarm_Type = 'AWS::CloudWatch::CompositeAlarm';
@@ -22,40 +22,40 @@ export default function CompositeAlarm(props: CompositeAlarm_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html}
  */
 export type CompositeAlarm_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmname}
    */
-  AlarmName: string;
+  AlarmName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmrule}
    */
-  AlarmRule: string;
+  AlarmRule: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmdescription}
    */
-  AlarmDescription?: string;
+  AlarmDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-actionsenabled}
    */
-  ActionsEnabled?: boolean;
+  ActionsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-okactions}
    */
-  OKActions?: string[];
+  OKActions?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-alarmactions}
    */
-  AlarmActions?: string[];
+  AlarmActions?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-insufficientdataactions}
    */
-  InsufficientDataActions?: string[];
+  InsufficientDataActions?: Resolvable<string>[];
 };

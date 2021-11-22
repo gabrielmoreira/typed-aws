@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpenSearchService::Domain
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Domain_Type = 'AWS::OpenSearchService::Domain';
 export const Domain_Type = 'AWS::OpenSearchService::Domain';
@@ -29,7 +29,7 @@ export type Domain_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-domainname}
    */
-  DomainName?: string;
+  DomainName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-accesspolicies}
@@ -41,13 +41,13 @@ export type Domain_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-engineversion}
    */
-  EngineVersion?: string;
+  EngineVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedoptions}
    */
   AdvancedOptions?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
@@ -86,18 +86,18 @@ export type Domain_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-advancedsecurityoptions}
    */
   AdvancedSecurityOptions?: AdvancedSecurityOptionsInput;
-  DomainEndpoint?: string;
+  DomainEndpoint?: Resolvable<string>;
   DomainEndpoints?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-ebsoptions}
    */
   EBSOptions?: EBSOptions;
-  Id?: string;
-  Arn?: string;
-  DomainArn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
+  DomainArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-encryptionatrestoptions}
@@ -120,7 +120,7 @@ export type ZoneAwarenessConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-zoneawarenessconfig.html#cfn-opensearchservice-domain-zoneawarenessconfig-availabilityzonecount}
    */
-  AvailabilityZoneCount?: number;
+  AvailabilityZoneCount?: Resolvable<number>;
 };
 
 /**
@@ -132,22 +132,22 @@ export type ClusterConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-instancecount}
    */
-  InstanceCount?: number;
+  InstanceCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-warmenabled}
    */
-  WarmEnabled?: boolean;
+  WarmEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-warmcount}
    */
-  WarmCount?: number;
+  WarmCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-dedicatedmasterenabled}
    */
-  DedicatedMasterEnabled?: boolean;
+  DedicatedMasterEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-zoneawarenessconfig}
@@ -157,27 +157,27 @@ export type ClusterConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-dedicatedmastercount}
    */
-  DedicatedMasterCount?: number;
+  DedicatedMasterCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-instancetype}
    */
-  InstanceType?: string;
+  InstanceType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-warmtype}
    */
-  WarmType?: string;
+  WarmType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-zoneawarenessenabled}
    */
-  ZoneAwarenessEnabled?: boolean;
+  ZoneAwarenessEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html#cfn-opensearchservice-domain-clusterconfig-dedicatedmastertype}
    */
-  DedicatedMasterType?: string;
+  DedicatedMasterType?: Resolvable<string>;
 };
 
 /**
@@ -189,12 +189,12 @@ export type LogPublishingOption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-cloudwatchlogsloggrouparn}
    */
-  CloudWatchLogsLogGroupArn?: string;
+  CloudWatchLogsLogGroupArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-logpublishingoption.html#cfn-opensearchservice-domain-logpublishingoption-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
 };
 
 /**
@@ -206,7 +206,7 @@ export type SnapshotOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html#cfn-opensearchservice-domain-snapshotoptions-automatedsnapshotstarthour}
    */
-  AutomatedSnapshotStartHour?: number;
+  AutomatedSnapshotStartHour?: Resolvable<number>;
 };
 
 /**
@@ -218,12 +218,12 @@ export type VPCOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-vpcoptions.html#cfn-opensearchservice-domain-vpcoptions-securitygroupids}
    */
-  SecurityGroupIds?: string[];
+  SecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-vpcoptions.html#cfn-opensearchservice-domain-vpcoptions-subnetids}
    */
-  SubnetIds?: string[];
+  SubnetIds?: Resolvable<string>[];
 };
 
 /**
@@ -235,7 +235,7 @@ export type NodeToNodeEncryptionOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html#cfn-opensearchservice-domain-nodetonodeencryptionoptions-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
 };
 
 /**
@@ -247,27 +247,27 @@ export type DomainEndpointOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-customendpointcertificatearn}
    */
-  CustomEndpointCertificateArn?: string;
+  CustomEndpointCertificateArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-customendpointenabled}
    */
-  CustomEndpointEnabled?: boolean;
+  CustomEndpointEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-enforcehttps}
    */
-  EnforceHTTPS?: boolean;
+  EnforceHTTPS?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-customendpoint}
    */
-  CustomEndpoint?: string;
+  CustomEndpoint?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html#cfn-opensearchservice-domain-domainendpointoptions-tlssecuritypolicy}
    */
-  TLSSecurityPolicy?: string;
+  TLSSecurityPolicy?: Resolvable<string>;
 };
 
 /**
@@ -279,22 +279,22 @@ export type CognitoOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-identitypoolid}
    */
-  IdentityPoolId?: string;
+  IdentityPoolId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-userpoolid}
    */
-  UserPoolId?: string;
+  UserPoolId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html#cfn-opensearchservice-domain-cognitooptions-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
 };
 
 /**
@@ -306,17 +306,17 @@ export type MasterUserOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserpassword}
    */
-  MasterUserPassword?: string;
+  MasterUserPassword?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masterusername}
    */
-  MasterUserName?: string;
+  MasterUserName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-masteruseroptions.html#cfn-opensearchservice-domain-masteruseroptions-masteruserarn}
    */
-  MasterUserARN?: string;
+  MasterUserARN?: Resolvable<string>;
 };
 
 /**
@@ -328,7 +328,7 @@ export type AdvancedSecurityOptionsInput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html#cfn-opensearchservice-domain-advancedsecurityoptionsinput-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html#cfn-opensearchservice-domain-advancedsecurityoptionsinput-masteruseroptions}
@@ -338,7 +338,7 @@ export type AdvancedSecurityOptionsInput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html#cfn-opensearchservice-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled}
    */
-  InternalUserDatabaseEnabled?: boolean;
+  InternalUserDatabaseEnabled?: Resolvable<boolean>;
 };
 
 /**
@@ -350,22 +350,22 @@ export type EBSOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-ebsenabled}
    */
-  EBSEnabled?: boolean;
+  EBSEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumetype}
    */
-  VolumeType?: string;
+  VolumeType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-iops}
    */
-  Iops?: number;
+  Iops?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-ebsoptions.html#cfn-opensearchservice-domain-ebsoptions-volumesize}
    */
-  VolumeSize?: number;
+  VolumeSize?: Resolvable<number>;
 };
 
 /**
@@ -377,26 +377,26 @@ export type EncryptionAtRestOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-kmskeyid}
    */
-  KmsKeyId?: string;
+  KmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html#cfn-opensearchservice-domain-encryptionatrestoptions-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 export type ServiceSoftwareOptions = {
-  CurrentVersion?: string;
-  NewVersion?: string;
-  UpdateAvailable?: boolean;
-  Cancellable?: boolean;
-  UpdateStatus?: string;
-  Description?: string;
-  AutomatedUpdateDate?: string;
-  OptionalDeployment?: boolean;
+  CurrentVersion?: Resolvable<string>;
+  NewVersion?: Resolvable<string>;
+  UpdateAvailable?: Resolvable<boolean>;
+  Cancellable?: Resolvable<boolean>;
+  UpdateStatus?: Resolvable<string>;
+  Description?: Resolvable<string>;
+  AutomatedUpdateDate?: Resolvable<string>;
+  OptionalDeployment?: Resolvable<boolean>;
 };

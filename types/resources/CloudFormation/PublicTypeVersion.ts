@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::PublicTypeVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PublicTypeVersion_Type = 'AWS::CloudFormation::PublicTypeVersion';
 export const PublicTypeVersion_Type = 'AWS::CloudFormation::PublicTypeVersion';
@@ -18,58 +18,58 @@ export type PublicTypeVersion_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-arn}
        */
-      Arn?: string;
-      TypeVersionArn?: string;
+      Arn?: Resolvable<string>;
+      TypeVersionArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-publicversionnumber}
        */
-      PublicVersionNumber?: string;
-      PublisherId?: string;
-      PublicTypeArn?: string;
+      PublicVersionNumber?: Resolvable<string>;
+      PublisherId?: Resolvable<string>;
+      PublicTypeArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-typename}
        */
-      TypeName: string;
+      TypeName: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-logdeliverybucket}
        */
-      LogDeliveryBucket?: string;
+      LogDeliveryBucket?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-type}
        */
-      Type: 'RESOURCE' | 'MODULE';
+      Type: Resolvable<'RESOURCE' | 'MODULE'>;
     }
   | {
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-arn}
        */
-      Arn: string;
-      TypeVersionArn?: string;
+      Arn: Resolvable<string>;
+      TypeVersionArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-publicversionnumber}
        */
-      PublicVersionNumber?: string;
-      PublisherId?: string;
-      PublicTypeArn?: string;
+      PublicVersionNumber?: Resolvable<string>;
+      PublisherId?: Resolvable<string>;
+      PublicTypeArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-typename}
        */
-      TypeName?: string;
+      TypeName?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-logdeliverybucket}
        */
-      LogDeliveryBucket?: string;
+      LogDeliveryBucket?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html#cfn-cloudformation-publictypeversion-type}
        */
-      Type?: 'RESOURCE' | 'MODULE';
+      Type?: Resolvable<'RESOURCE' | 'MODULE'>;
     };

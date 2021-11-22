@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Certificate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Certificate_Type = 'AWS::IoT::Certificate';
 export const Certificate_Type = 'AWS::IoT::Certificate';
@@ -24,32 +24,33 @@ export type Certificate_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-cacertificatepem}
    */
-  CACertificatePem?: string;
+  CACertificatePem?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-certificatepem}
    */
-  CertificatePem?: string;
+  CertificatePem?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-certificatesigningrequest}
    */
-  CertificateSigningRequest?: string;
+  CertificateSigningRequest?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-certificatemode}
    */
-  CertificateMode?: 'DEFAULT' | 'SNI_ONLY';
+  CertificateMode?: Resolvable<'DEFAULT' | 'SNI_ONLY'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html#cfn-iot-certificate-status}
    */
-  Status:
+  Status: Resolvable<
     | 'ACTIVE'
     | 'INACTIVE'
     | 'REVOKED'
     | 'PENDING_TRANSFER'
-    | 'PENDING_ACTIVATION';
-  Id?: string;
-  Arn?: string;
+    | 'PENDING_ACTIVATION'
+  >;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
 };

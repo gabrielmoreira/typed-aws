@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualRouter
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VirtualRouter_Type = 'AWS::AppMesh::VirtualRouter';
 export const VirtualRouter_Type = 'AWS::AppMesh::VirtualRouter';
@@ -18,25 +18,25 @@ export default function VirtualRouter(props: VirtualRouter_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html}
  */
 export type VirtualRouter_Properties = {
-  Uid?: string;
+  Uid?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshname}
    */
-  MeshName: string;
+  MeshName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-virtualroutername}
    */
-  VirtualRouterName?: string;
+  VirtualRouterName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshowner}
    */
-  MeshOwner?: string;
-  ResourceOwner?: string;
-  Id?: string;
-  Arn?: string;
+  MeshOwner?: Resolvable<string>;
+  ResourceOwner?: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec}
@@ -74,8 +74,8 @@ export type VirtualRouterListener = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -87,10 +87,10 @@ export type PortMapping = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-protocol}
    */
-  Protocol: string;
+  Protocol: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-port}
    */
-  Port: number;
+  Port: Resolvable<number>;
 };

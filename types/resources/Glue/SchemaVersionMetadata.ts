@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::SchemaVersionMetadata
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SchemaVersionMetadata_Type = 'AWS::Glue::SchemaVersionMetadata';
 export const SchemaVersionMetadata_Type = 'AWS::Glue::SchemaVersionMetadata';
@@ -29,15 +29,15 @@ export type SchemaVersionMetadata_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html#cfn-glue-schemaversionmetadata-schemaversionid}
    */
-  SchemaVersionId: string;
+  SchemaVersionId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html#cfn-glue-schemaversionmetadata-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html#cfn-glue-schemaversionmetadata-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };

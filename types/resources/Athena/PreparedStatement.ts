@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::PreparedStatement
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PreparedStatement_Type = 'AWS::Athena::PreparedStatement';
 export const PreparedStatement_Type = 'AWS::Athena::PreparedStatement';
@@ -25,20 +25,20 @@ export type PreparedStatement_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-statementname}
    */
-  StatementName: string;
+  StatementName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-workgroup}
    */
-  WorkGroup: string;
+  WorkGroup: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html#cfn-athena-preparedstatement-querystatement}
    */
-  QueryStatement: string;
+  QueryStatement: Resolvable<string>;
 };

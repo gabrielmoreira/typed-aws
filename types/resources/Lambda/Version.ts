@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::Version
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Version_Type = 'AWS::Lambda::Version';
 export const Version_Type = 'AWS::Lambda::Version';
@@ -22,7 +22,7 @@ export type Version_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-functionname}
    */
-  FunctionName: string;
+  FunctionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-provisionedconcurrencyconfig}
@@ -32,14 +32,14 @@ export type Version_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-description}
    */
-  Description?: string;
-  Id?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html#cfn-lambda-version-codesha256}
    */
-  CodeSha256?: string;
-  Version?: string;
+  CodeSha256?: Resolvable<string>;
+  Version?: Resolvable<string>;
 };
 
 /**
@@ -51,5 +51,5 @@ export type ProvisionedConcurrencyConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-version-provisionedconcurrencyconfiguration.html#cfn-lambda-version-provisionedconcurrencyconfiguration-provisionedconcurrentexecutions}
    */
-  ProvisionedConcurrentExecutions: number;
+  ProvisionedConcurrentExecutions: Resolvable<number>;
 };

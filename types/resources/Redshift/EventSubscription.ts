@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::EventSubscription
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EventSubscription_Type = 'AWS::Redshift::EventSubscription';
 export const EventSubscription_Type = 'AWS::Redshift::EventSubscription';
@@ -27,62 +27,59 @@ export type EventSubscription_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-subscriptionname}
    */
-  SubscriptionName: string;
+  SubscriptionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-snstopicarn}
    */
-  SnsTopicArn?: string;
+  SnsTopicArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-sourcetype}
    */
-  SourceType?:
+  SourceType?: Resolvable<
     | 'cluster'
     | 'cluster-parameter-group'
     | 'cluster-security-group'
     | 'cluster-snapshot'
-    | 'scheduled-action';
+    | 'scheduled-action'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-sourceids}
    */
-  SourceIds?: string[];
+  SourceIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-eventcategories}
    */
-  EventCategories?: (
-    | 'configuration'
-    | 'management'
-    | 'monitoring'
-    | 'security'
-    | 'pending'
-  )[];
+  EventCategories?: Resolvable<
+    'configuration' | 'management' | 'monitoring' | 'security' | 'pending'
+  >[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-severity}
    */
-  Severity?: 'ERROR' | 'INFO';
+  Severity?: Resolvable<'ERROR' | 'INFO'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html#cfn-redshift-eventsubscription-tags}
    */
   Tags?: Tag[];
-  CustomerAwsId?: string;
-  CustSubscriptionId?: string;
-  Status?: 'active' | 'no-permission' | 'topic-not-exist';
-  SubscriptionCreationTime?: string;
-  SourceIdsList?: string[];
-  EventCategoriesList?: string[];
+  CustomerAwsId?: Resolvable<string>;
+  CustSubscriptionId?: Resolvable<string>;
+  Status?: Resolvable<'active' | 'no-permission' | 'topic-not-exist'>;
+  SubscriptionCreationTime?: Resolvable<string>;
+  SourceIdsList?: Resolvable<string>[];
+  EventCategoriesList?: Resolvable<string>[];
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalogAppRegistry::Application
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Application_Type = 'AWS::ServiceCatalogAppRegistry::Application';
 export const Application_Type = 'AWS::ServiceCatalogAppRegistry::Application';
@@ -18,18 +18,18 @@ export default function Application(props: Application_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html}
  */
 export type Application_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags}
@@ -38,5 +38,5 @@ export type Application_Properties = {
 };
 
 export type Tags = {
-  [k: string]: string;
+  [k: string]: Resolvable<string>;
 };

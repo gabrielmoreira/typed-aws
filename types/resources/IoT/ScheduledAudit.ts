@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ScheduledAudit
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ScheduledAudit_Type = 'AWS::IoT::ScheduledAudit';
 export const ScheduledAudit_Type = 'AWS::IoT::ScheduledAudit';
@@ -24,28 +24,28 @@ export type ScheduledAudit_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-scheduledauditname}
    */
-  ScheduledAuditName?: string;
+  ScheduledAuditName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-frequency}
    */
-  Frequency: 'DAILY' | 'WEEKLY' | 'BIWEEKLY' | 'MONTHLY';
+  Frequency: Resolvable<'DAILY' | 'WEEKLY' | 'BIWEEKLY' | 'MONTHLY'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-dayofmonth}
    */
-  DayOfMonth?: string;
+  DayOfMonth?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-dayofweek}
    */
-  DayOfWeek?: 'SUN' | 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI' | 'SAT';
+  DayOfWeek?: Resolvable<'SUN' | 'MON' | 'TUE' | 'WED' | 'THU' | 'FRI' | 'SAT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-targetchecknames}
    */
-  TargetCheckNames: string[];
-  ScheduledAuditArn?: string;
+  TargetCheckNames: Resolvable<string>[];
+  ScheduledAuditArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html#cfn-iot-scheduledaudit-tags}
@@ -54,6 +54,6 @@ export type ScheduledAudit_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

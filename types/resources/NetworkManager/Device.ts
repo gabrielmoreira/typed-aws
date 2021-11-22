@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::Device
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Device_Type = 'AWS::NetworkManager::Device';
 export const Device_Type = 'AWS::NetworkManager::Device';
@@ -18,13 +18,13 @@ export default function Device(props: Device_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html}
  */
 export type Device_Properties = {
-  DeviceArn?: string;
-  DeviceId?: string;
+  DeviceArn?: Resolvable<string>;
+  DeviceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-tags}
@@ -34,7 +34,7 @@ export type Device_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-globalnetworkid}
    */
-  GlobalNetworkId: string;
+  GlobalNetworkId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-location}
@@ -44,32 +44,32 @@ export type Device_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-model}
    */
-  Model?: string;
+  Model?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-serialnumber}
    */
-  SerialNumber?: string;
+  SerialNumber?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-siteid}
    */
-  SiteId?: string;
+  SiteId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-type}
    */
-  Type?: string;
+  Type?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html#cfn-networkmanager-device-vendor}
    */
-  Vendor?: string;
+  Vendor?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
 /**
@@ -81,15 +81,15 @@ export type Location = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html#cfn-networkmanager-device-location-address}
    */
-  Address?: string;
+  Address?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html#cfn-networkmanager-device-location-latitude}
    */
-  Latitude?: string;
+  Latitude?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-device-location.html#cfn-networkmanager-device-location-longitude}
    */
-  Longitude?: string;
+  Longitude?: Resolvable<string>;
 };

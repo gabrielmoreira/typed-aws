@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::CustomerGatewayAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CustomerGatewayAssociation_Type =
   'AWS::NetworkManager::CustomerGatewayAssociation';
@@ -31,20 +31,20 @@ export type CustomerGatewayAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-globalnetworkid}
    */
-  GlobalNetworkId: string;
+  GlobalNetworkId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-customergatewayarn}
    */
-  CustomerGatewayArn: string;
+  CustomerGatewayArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-deviceid}
    */
-  DeviceId: string;
+  DeviceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html#cfn-networkmanager-customergatewayassociation-linkid}
    */
-  LinkId?: string;
+  LinkId?: Resolvable<string>;
 };

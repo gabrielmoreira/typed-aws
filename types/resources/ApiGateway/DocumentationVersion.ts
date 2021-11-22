@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::DocumentationVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DocumentationVersion_Type = 'AWS::ApiGateway::DocumentationVersion';
 export const DocumentationVersion_Type =
@@ -28,15 +28,15 @@ export type DocumentationVersion_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-documentationversion}
    */
-  DocumentationVersion: string;
+  DocumentationVersion: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-restapiid}
    */
-  RestApiId: string;
+  RestApiId: Resolvable<string>;
 };

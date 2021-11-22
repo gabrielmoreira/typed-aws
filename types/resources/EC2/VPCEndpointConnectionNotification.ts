@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpointConnectionNotification
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPCEndpointConnectionNotification_Type =
   'AWS::EC2::VPCEndpointConnectionNotification';
@@ -31,21 +31,21 @@ export type VPCEndpointConnectionNotification_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionevents}
    */
-  ConnectionEvents: string[];
+  ConnectionEvents: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-vpcendpointid}
    */
-  VPCEndpointId?: string;
-  Id?: string;
+  VPCEndpointId?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-serviceid}
    */
-  ServiceId?: string;
+  ServiceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html#cfn-ec2-vpcendpointconnectionnotification-connectionnotificationarn}
    */
-  ConnectionNotificationArn: string;
+  ConnectionNotificationArn: Resolvable<string>;
 };

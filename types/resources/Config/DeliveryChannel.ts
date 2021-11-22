@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::DeliveryChannel
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DeliveryChannel_Type = 'AWS::Config::DeliveryChannel';
 export const DeliveryChannel_Type = 'AWS::Config::DeliveryChannel';
@@ -25,7 +25,7 @@ export type DeliveryChannel_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3keyprefix}
    */
-  S3KeyPrefix?: string;
+  S3KeyPrefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties}
@@ -35,23 +35,23 @@ export type DeliveryChannel_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3bucketname}
    */
-  S3BucketName: string;
+  S3BucketName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-snstopicarn}
    */
-  SnsTopicARN?: string;
-  Id?: string;
+  SnsTopicARN?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3kmskeyarn}
    */
-  S3KmsKeyArn?: string;
+  S3KmsKeyArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 /**
@@ -63,5 +63,5 @@ export type ConfigSnapshotDeliveryProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency}
    */
-  DeliveryFrequency?: string;
+  DeliveryFrequency?: Resolvable<string>;
 };

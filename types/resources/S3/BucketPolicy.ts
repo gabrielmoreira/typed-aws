@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::BucketPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BucketPolicy_Type = 'AWS::S3::BucketPolicy';
 export const BucketPolicy_Type = 'AWS::S3::BucketPolicy';
@@ -18,12 +18,12 @@ export default function BucketPolicy(props: BucketPolicy_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html}
  */
 export type BucketPolicy_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-policy.html#aws-properties-s3-policy-policydocument}

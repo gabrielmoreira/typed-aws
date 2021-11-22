@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticLoadBalancing::LoadBalancer
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LoadBalancer_Type = 'AWS::ElasticLoadBalancing::LoadBalancer';
 export const LoadBalancer_Type = 'AWS::ElasticLoadBalancing::LoadBalancer';
@@ -24,7 +24,7 @@ export type LoadBalancer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-securitygroups}
    */
-  SecurityGroups?: string[];
+  SecurityGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectiondrainingpolicy}
@@ -39,21 +39,21 @@ export type LoadBalancer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-scheme}
    */
-  Scheme?: string;
+  Scheme?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-availabilityzones}
    */
-  AvailabilityZones?: string[];
-  SourceSecurityGroupOwnerAlias?: string;
+  AvailabilityZones?: Resolvable<string>[];
+  SourceSecurityGroupOwnerAlias?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-healthcheck}
    */
   HealthCheck?: HealthCheck;
-  CanonicalHostedZoneNameID?: string;
-  CanonicalHostedZoneName?: string;
-  DNSName?: string;
+  CanonicalHostedZoneNameID?: Resolvable<string>;
+  CanonicalHostedZoneName?: Resolvable<string>;
+  DNSName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-accessloggingpolicy}
@@ -63,12 +63,12 @@ export type LoadBalancer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-instances}
    */
-  Instances?: string[];
+  Instances?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-elbname}
    */
-  LoadBalancerName?: string;
+  LoadBalancerName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-listeners}
@@ -78,12 +78,12 @@ export type LoadBalancer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-subnets}
    */
-  Subnets?: string[];
+  Subnets?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-crosszone}
    */
-  CrossZone?: boolean;
+  CrossZone?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-appcookiestickinesspolicy}
@@ -94,8 +94,8 @@ export type LoadBalancer_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-lbcookiestickinesspolicy}
    */
   LBCookieStickinessPolicy?: LBCookieStickinessPolicy[];
-  Id?: string;
-  SourceSecurityGroupGroupName?: string;
+  Id?: Resolvable<string>;
+  SourceSecurityGroupGroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectionsettings}
@@ -117,32 +117,32 @@ export type Listeners = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames}
    */
-  PolicyNames?: string[];
+  PolicyNames?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceport}
    */
-  InstancePort: string;
+  InstancePort: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-loadbalancerport}
    */
-  LoadBalancerPort: string;
+  LoadBalancerPort: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-protocol}
    */
-  Protocol: string;
+  Protocol: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-sslcertificateid}
    */
-  SSLCertificateId?: string;
+  SSLCertificateId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-instanceprotocol}
    */
-  InstanceProtocol?: string;
+  InstanceProtocol?: Resolvable<string>;
 };
 
 /**
@@ -154,12 +154,12 @@ export type ConnectionDrainingPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectiondrainingpolicy.html#cfn-elb-connectiondrainingpolicy-timeout}
    */
-  Timeout?: number;
+  Timeout?: Resolvable<number>;
 };
 
 /**
@@ -178,22 +178,22 @@ export type Policies = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policytype}
    */
-  PolicyType: string;
+  PolicyType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-loadbalancerports}
    */
-  LoadBalancerPorts?: string[];
+  LoadBalancerPorts?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-policyname}
    */
-  PolicyName: string;
+  PolicyName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-policy.html#cfn-ec2-elb-policy-instanceports}
    */
-  InstancePorts?: string[];
+  InstancePorts?: Resolvable<string>[];
 };
 
 /**
@@ -205,12 +205,12 @@ export type AppCookieStickinessPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename}
    */
-  CookieName: string;
+  CookieName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname}
    */
-  PolicyName: string;
+  PolicyName: Resolvable<string>;
 };
 
 /**
@@ -222,12 +222,12 @@ export type LBCookieStickinessPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod}
    */
-  CookieExpirationPeriod?: string;
+  CookieExpirationPeriod?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname}
    */
-  PolicyName?: string;
+  PolicyName?: Resolvable<string>;
 };
 
 /**
@@ -239,32 +239,32 @@ export type HealthCheck = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-target}
    */
-  Target: string;
+  Target: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-unhealthythreshold}
    */
-  UnhealthyThreshold: string;
+  UnhealthyThreshold: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-timeout}
    */
-  Timeout: string;
+  Timeout: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-healthythreshold}
    */
-  HealthyThreshold: string;
+  HealthyThreshold: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-health-check.html#cfn-elb-healthcheck-interval}
    */
-  Interval: string;
+  Interval: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -276,22 +276,22 @@ export type AccessLoggingPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketname}
    */
-  S3BucketName: string;
+  S3BucketName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-emitinterval}
    */
-  EmitInterval?: number;
+  EmitInterval?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-accessloggingpolicy.html#cfn-elb-accessloggingpolicy-s3bucketprefix}
    */
-  S3BucketPrefix?: string;
+  S3BucketPrefix?: Resolvable<string>;
 };
 
 /**
@@ -303,5 +303,5 @@ export type ConnectionSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout}
    */
-  IdleTimeout: number;
+  IdleTimeout: Resolvable<number>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::VpcLink
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VpcLink_Type = 'AWS::ApiGatewayV2::VpcLink';
 export const VpcLink_Type = 'AWS::ApiGatewayV2::VpcLink';
@@ -18,17 +18,17 @@ export default function VpcLink(props: VpcLink_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html}
  */
 export type VpcLink_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html#cfn-apigatewayv2-vpclink-subnetids}
    */
-  SubnetIds: string[];
+  SubnetIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html#cfn-apigatewayv2-vpclink-securitygroupids}
    */
-  SecurityGroupIds?: string[];
+  SecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html#cfn-apigatewayv2-vpclink-tags}
@@ -40,5 +40,5 @@ export type VpcLink_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html#cfn-apigatewayv2-vpclink-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };

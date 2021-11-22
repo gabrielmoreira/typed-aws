@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::InternetGateway
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type InternetGateway_Type = 'AWS::EC2::InternetGateway';
 export const InternetGateway_Type = 'AWS::EC2::InternetGateway';
@@ -21,7 +21,7 @@ export default function InternetGateway(props: InternetGateway_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html}
  */
 export type InternetGateway_Properties = {
-  InternetGatewayId?: string;
+  InternetGatewayId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html#cfn-ec2-internetgateway-tags}
@@ -30,6 +30,6 @@ export type InternetGateway_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::Role
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Role_Type = 'AWS::IAM::Role';
 export const Role_Type = 'AWS::IAM::Role';
@@ -18,7 +18,7 @@ export default function Role(props: Role_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html}
  */
 export type Role_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-assumerolepolicydocument}
@@ -27,43 +27,43 @@ export type Role_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-managepolicyarns}
    */
-  ManagedPolicyArns?: string[];
+  ManagedPolicyArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration}
    */
-  MaxSessionDuration?: number;
+  MaxSessionDuration?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-path}
    */
-  Path?: string;
+  Path?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-permissionsboundary}
    */
-  PermissionsBoundary?: string;
+  PermissionsBoundary?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-policies}
    */
   Policies?: Policy[];
-  RoleId?: string;
+  RoleId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-rolename}
    */
-  RoleName?: string;
+  RoleName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-tags}
@@ -82,7 +82,7 @@ export type Policy = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument}
    */
   PolicyDocument:
-    | string
+    | Resolvable<string>
     | {
         [k: string]: unknown;
       };
@@ -90,10 +90,10 @@ export type Policy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname}
    */
-  PolicyName: string;
+  PolicyName: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

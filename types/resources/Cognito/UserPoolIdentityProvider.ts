@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolIdentityProvider
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserPoolIdentityProvider_Type =
   'AWS::Cognito::UserPoolIdentityProvider';
@@ -31,12 +31,12 @@ export type UserPoolIdentityProvider_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providername}
    */
-  ProviderName: string;
+  ProviderName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-userpoolid}
    */
-  UserPoolId: string;
+  UserPoolId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-attributemapping}
@@ -55,11 +55,11 @@ export type UserPoolIdentityProvider_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providertype}
    */
-  ProviderType: string;
-  Id?: string;
+  ProviderType: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-idpidentifiers}
    */
-  IdpIdentifiers?: string[];
+  IdpIdentifiers?: Resolvable<string>[];
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::OriginEndpoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type OriginEndpoint_Type = 'AWS::MediaPackage::OriginEndpoint';
 export const OriginEndpoint_Type = 'AWS::MediaPackage::OriginEndpoint';
@@ -18,48 +18,48 @@ export default function OriginEndpoint(props: OriginEndpoint_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html}
  */
 export type OriginEndpoint_Properties = {
-  Arn?: string;
-  Url?: string;
+  Arn?: Resolvable<string>;
+  Url?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-channelid}
    */
-  ChannelId: string;
+  ChannelId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-whitelist}
    */
-  Whitelist?: string[];
+  Whitelist?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-startoverwindowseconds}
    */
-  StartoverWindowSeconds?: number;
+  StartoverWindowSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-timedelayseconds}
    */
-  TimeDelaySeconds?: number;
+  TimeDelaySeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-manifestname}
    */
-  ManifestName?: string;
+  ManifestName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-origination}
    */
-  Origination?: 'ALLOW' | 'DENY';
+  Origination?: Resolvable<'ALLOW' | 'DENY'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html#cfn-mediapackage-originendpoint-authorization}
@@ -101,12 +101,12 @@ export type MssPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-manifestwindowseconds}
    */
-  ManifestWindowSeconds?: number;
+  ManifestWindowSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-segmentdurationseconds}
    */
-  SegmentDurationSeconds?: number;
+  SegmentDurationSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html#cfn-mediapackage-originendpoint-msspackage-encryption}
@@ -141,55 +141,54 @@ export type DashPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-segmentdurationseconds}
    */
-  SegmentDurationSeconds?: number;
+  SegmentDurationSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-manifestwindowseconds}
    */
-  ManifestWindowSeconds?: number;
+  ManifestWindowSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-profile}
    */
-  Profile?: 'NONE' | 'HBBTV_1_5';
+  Profile?: Resolvable<'NONE' | 'HBBTV_1_5'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-minupdateperiodseconds}
    */
-  MinUpdatePeriodSeconds?: number;
+  MinUpdatePeriodSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-minbuffertimeseconds}
    */
-  MinBufferTimeSeconds?: number;
+  MinBufferTimeSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-suggestedpresentationdelayseconds}
    */
-  SuggestedPresentationDelaySeconds?: number;
+  SuggestedPresentationDelaySeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-periodtriggers}
    */
-  PeriodTriggers?: 'ADS'[];
+  PeriodTriggers?: Resolvable<'ADS'>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-manifestlayout}
    */
-  ManifestLayout?: 'FULL' | 'COMPACT';
+  ManifestLayout?: Resolvable<'FULL' | 'COMPACT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-segmenttemplateformat}
    */
-  SegmentTemplateFormat?:
-    | 'NUMBER_WITH_TIMELINE'
-    | 'TIME_WITH_TIMELINE'
-    | 'NUMBER_WITH_DURATION';
+  SegmentTemplateFormat?: Resolvable<
+    'NUMBER_WITH_TIMELINE' | 'TIME_WITH_TIMELINE' | 'NUMBER_WITH_DURATION'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-adtriggers}
    */
-  AdTriggers?: (
+  AdTriggers?: Resolvable<
     | 'SPLICE_INSERT'
     | 'BREAK'
     | 'PROVIDER_ADVERTISEMENT'
@@ -198,7 +197,7 @@ export type DashPackage = {
     | 'DISTRIBUTOR_PLACEMENT_OPPORTUNITY'
     | 'PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'
     | 'DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'
-  )[];
+  >[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-adsondeliveryrestrictions}
@@ -218,12 +217,12 @@ export type DashPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-utctiming}
    */
-  UtcTiming?: 'HTTP-ISO' | 'HTTP-HEAD' | 'NONE';
+  UtcTiming?: Resolvable<'HTTP-ISO' | 'HTTP-HEAD' | 'NONE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html#cfn-mediapackage-originendpoint-dashpackage-utctiminguri}
    */
-  UtcTimingUri?: string;
+  UtcTimingUri?: Resolvable<string>;
 };
 
 /**
@@ -236,7 +235,7 @@ export type DashEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-keyrotationintervalseconds}
    */
-  KeyRotationIntervalSeconds?: number;
+  KeyRotationIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashencryption.html#cfn-mediapackage-originendpoint-dashencryption-spekekeyprovider}
@@ -253,12 +252,12 @@ export type Authorization = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-secretsrolearn}
    */
-  SecretsRoleArn: string;
+  SecretsRoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-authorization.html#cfn-mediapackage-originendpoint-authorization-cdnidentifiersecret}
    */
-  CdnIdentifierSecret: string;
+  CdnIdentifierSecret: Resolvable<string>;
 };
 
 /**
@@ -270,27 +269,29 @@ export type HlsPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-segmentdurationseconds}
    */
-  SegmentDurationSeconds?: number;
+  SegmentDurationSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlistwindowseconds}
    */
-  PlaylistWindowSeconds?: number;
+  PlaylistWindowSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-playlisttype}
    */
-  PlaylistType?: 'NONE' | 'EVENT' | 'VOD';
+  PlaylistType?: Resolvable<'NONE' | 'EVENT' | 'VOD'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-admarkers}
    */
-  AdMarkers?: 'NONE' | 'SCTE35_ENHANCED' | 'PASSTHROUGH' | 'DATERANGE';
+  AdMarkers?: Resolvable<
+    'NONE' | 'SCTE35_ENHANCED' | 'PASSTHROUGH' | 'DATERANGE'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adtriggers}
    */
-  AdTriggers?: (
+  AdTriggers?: Resolvable<
     | 'SPLICE_INSERT'
     | 'BREAK'
     | 'PROVIDER_ADVERTISEMENT'
@@ -299,7 +300,7 @@ export type HlsPackage = {
     | 'DISTRIBUTOR_PLACEMENT_OPPORTUNITY'
     | 'PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'
     | 'DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'
-  )[];
+  >[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-adsondeliveryrestrictions}
@@ -309,17 +310,17 @@ export type HlsPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-programdatetimeintervalseconds}
    */
-  ProgramDateTimeIntervalSeconds?: number;
+  ProgramDateTimeIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-includeiframeonlystream}
    */
-  IncludeIframeOnlyStream?: boolean;
+  IncludeIframeOnlyStream?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-useaudiorenditiongroup}
    */
-  UseAudioRenditionGroup?: boolean;
+  UseAudioRenditionGroup?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlspackage.html#cfn-mediapackage-originendpoint-hlspackage-encryption}
@@ -341,22 +342,22 @@ export type HlsEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod}
    */
-  EncryptionMethod?: 'AES_128' | 'SAMPLE_AES';
+  EncryptionMethod?: Resolvable<'AES_128' | 'SAMPLE_AES'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-constantinitializationvector}
    */
-  ConstantInitializationVector?: string;
+  ConstantInitializationVector?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds}
    */
-  KeyRotationIntervalSeconds?: number;
+  KeyRotationIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey}
    */
-  RepeatExtXKey?: boolean;
+  RepeatExtXKey?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsencryption.html#cfn-mediapackage-originendpoint-hlsencryption-spekekeyprovider}
@@ -374,12 +375,12 @@ export type CmafPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-segmentdurationseconds}
    */
-  SegmentDurationSeconds?: number;
+  SegmentDurationSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-segmentprefix}
    */
-  SegmentPrefix?: string;
+  SegmentPrefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html#cfn-mediapackage-originendpoint-cmafpackage-encryption}
@@ -407,7 +408,7 @@ export type CmafEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-keyrotationintervalseconds}
    */
-  KeyRotationIntervalSeconds?: number;
+  KeyRotationIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-spekekeyprovider}
@@ -417,7 +418,7 @@ export type CmafEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafencryption.html#cfn-mediapackage-originendpoint-cmafencryption-constantinitializationvector}
    */
-  ConstantInitializationVector?: string;
+  ConstantInitializationVector?: Resolvable<string>;
 };
 
 /**
@@ -429,47 +430,49 @@ export type HlsManifest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-manifestname}
    */
-  ManifestName?: string;
+  ManifestName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-url}
    */
-  Url?: string;
+  Url?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlistwindowseconds}
    */
-  PlaylistWindowSeconds?: number;
+  PlaylistWindowSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-playlisttype}
    */
-  PlaylistType?: 'NONE' | 'EVENT' | 'VOD';
+  PlaylistType?: Resolvable<'NONE' | 'EVENT' | 'VOD'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-admarkers}
    */
-  AdMarkers?: 'NONE' | 'SCTE35_ENHANCED' | 'PASSTHROUGH' | 'DATERANGE';
+  AdMarkers?: Resolvable<
+    'NONE' | 'SCTE35_ENHANCED' | 'PASSTHROUGH' | 'DATERANGE'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-programdatetimeintervalseconds}
    */
-  ProgramDateTimeIntervalSeconds?: number;
+  ProgramDateTimeIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream}
    */
-  IncludeIframeOnlyStream?: boolean;
+  IncludeIframeOnlyStream?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers}
    */
-  AdTriggers?: (
+  AdTriggers?: Resolvable<
     | 'SPLICE_INSERT'
     | 'BREAK'
     | 'PROVIDER_ADVERTISEMENT'
@@ -478,7 +481,7 @@ export type HlsManifest = {
     | 'DISTRIBUTOR_PLACEMENT_OPPORTUNITY'
     | 'PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY'
     | 'DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY'
-  )[];
+  >[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions}
@@ -495,20 +498,19 @@ export type StreamSelection = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-minvideobitspersecond}
    */
-  MinVideoBitsPerSecond?: number;
+  MinVideoBitsPerSecond?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-maxvideobitspersecond}
    */
-  MaxVideoBitsPerSecond?: number;
+  MaxVideoBitsPerSecond?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html#cfn-mediapackage-originendpoint-streamselection-streamorder}
    */
-  StreamOrder?:
-    | 'ORIGINAL'
-    | 'VIDEO_BITRATE_ASCENDING'
-    | 'VIDEO_BITRATE_DESCENDING';
+  StreamOrder?: Resolvable<
+    'ORIGINAL' | 'VIDEO_BITRATE_ASCENDING' | 'VIDEO_BITRATE_DESCENDING'
+  >;
 };
 
 /**
@@ -521,36 +523,34 @@ export type SpekeKeyProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid}
    */
-  ResourceId: string;
+  ResourceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-systemids}
    */
-  SystemIds: string[];
+  SystemIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-url}
    */
-  Url: string;
+  Url: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-spekekeyprovider.html#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn}
    */
-  CertificateArn?: string;
+  CertificateArn?: Resolvable<string>;
 };
 
-export type AdsOnDeliveryRestrictions =
-  | 'NONE'
-  | 'RESTRICTED'
-  | 'UNRESTRICTED'
-  | 'BOTH';
+export type AdsOnDeliveryRestrictions = Resolvable<
+  'NONE' | 'RESTRICTED' | 'UNRESTRICTED' | 'BOTH'
+>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

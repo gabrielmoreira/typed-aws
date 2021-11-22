@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::Site
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Site_Type = 'AWS::NetworkManager::Site';
 export const Site_Type = 'AWS::NetworkManager::Site';
@@ -18,13 +18,13 @@ export default function Site(props: Site_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html}
  */
 export type Site_Properties = {
-  SiteArn?: string;
-  SiteId?: string;
+  SiteArn?: Resolvable<string>;
+  SiteId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-tags}
@@ -34,7 +34,7 @@ export type Site_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-globalnetworkid}
    */
-  GlobalNetworkId: string;
+  GlobalNetworkId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html#cfn-networkmanager-site-location}
@@ -43,8 +43,8 @@ export type Site_Properties = {
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
 /**
@@ -56,15 +56,15 @@ export type Location = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-address}
    */
-  Address?: string;
+  Address?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-latitude}
    */
-  Latitude?: string;
+  Latitude?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-site-location.html#cfn-networkmanager-site-location-longitude}
    */
-  Longitude?: string;
+  Longitude?: Resolvable<string>;
 };

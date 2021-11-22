@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ACMPCA::Permission
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Permission_Type = 'AWS::ACMPCA::Permission';
 export const Permission_Type = 'AWS::ACMPCA::Permission';
@@ -22,20 +22,20 @@ export type Permission_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html#cfn-acmpca-permission-actions}
    */
-  Actions: string[];
+  Actions: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html#cfn-acmpca-permission-certificateauthorityarn}
    */
-  CertificateAuthorityArn: string;
+  CertificateAuthorityArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html#cfn-acmpca-permission-principal}
    */
-  Principal: string;
+  Principal: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html#cfn-acmpca-permission-sourceaccount}
    */
-  SourceAccount?: string;
+  SourceAccount?: Resolvable<string>;
 };

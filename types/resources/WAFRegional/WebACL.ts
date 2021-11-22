@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::WebACL
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WebACL_Type = 'AWS::WAFRegional::WebACL';
 export const WebACL_Type = 'AWS::WAFRegional::WebACL';
@@ -18,12 +18,12 @@ export default function WebACL(props: WebACL_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html}
  */
 export type WebACL_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-metricname}
    */
-  MetricName: string;
+  MetricName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-defaultaction}
@@ -38,7 +38,7 @@ export type WebACL_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -50,7 +50,7 @@ export type Action = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html#cfn-wafregional-webacl-action-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };
 
 /**
@@ -67,10 +67,10 @@ export type Rule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority}
    */
-  Priority: number;
+  Priority: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid}
    */
-  RuleId: string;
+  RuleId: Resolvable<string>;
 };

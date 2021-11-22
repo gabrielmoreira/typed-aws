@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::Image
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Image_Type = 'AWS::ImageBuilder::Image';
 export const Image_Type = 'AWS::ImageBuilder::Image';
@@ -11,8 +11,8 @@ export default function Image(props: Image_Properties) {
 
 export type Image_Properties =
   | {
-      Arn?: string;
-      Name?: string;
+      Arn?: Resolvable<string>;
+      Name?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagetestsconfiguration}
@@ -22,28 +22,28 @@ export type Image_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagerecipearn}
        */
-      ImageRecipeArn?: string;
+      ImageRecipeArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-containerrecipearn}
        */
-      ContainerRecipeArn: string;
+      ContainerRecipeArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-distributionconfigurationarn}
        */
-      DistributionConfigurationArn?: string;
+      DistributionConfigurationArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn}
        */
-      InfrastructureConfigurationArn: string;
-      ImageId?: string;
+      InfrastructureConfigurationArn: Resolvable<string>;
+      ImageId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-enhancedimagemetadataenabled}
        */
-      EnhancedImageMetadataEnabled?: boolean;
+      EnhancedImageMetadataEnabled?: Resolvable<boolean>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-tags}
@@ -53,8 +53,8 @@ export type Image_Properties =
       };
     }
   | {
-      Arn?: string;
-      Name?: string;
+      Arn?: Resolvable<string>;
+      Name?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagetestsconfiguration}
@@ -64,28 +64,28 @@ export type Image_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-imagerecipearn}
        */
-      ImageRecipeArn: string;
+      ImageRecipeArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-containerrecipearn}
        */
-      ContainerRecipeArn?: string;
+      ContainerRecipeArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-distributionconfigurationarn}
        */
-      DistributionConfigurationArn?: string;
+      DistributionConfigurationArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-infrastructureconfigurationarn}
        */
-      InfrastructureConfigurationArn: string;
-      ImageId?: string;
+      InfrastructureConfigurationArn: Resolvable<string>;
+      ImageId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-enhancedimagemetadataenabled}
        */
-      EnhancedImageMetadataEnabled?: boolean;
+      EnhancedImageMetadataEnabled?: Resolvable<boolean>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html#cfn-imagebuilder-image-tags}
@@ -104,12 +104,12 @@ export type ImageTestsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html#cfn-imagebuilder-image-imagetestsconfiguration-imagetestsenabled}
    */
-  ImageTestsEnabled?: boolean;
+  ImageTestsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html#cfn-imagebuilder-image-imagetestsconfiguration-timeoutminutes}
    */
-  TimeoutMinutes?: number;
+  TimeoutMinutes?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagetestsconfiguration.html}

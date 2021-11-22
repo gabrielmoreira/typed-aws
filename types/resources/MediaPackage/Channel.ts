@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::Channel
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Channel_Type = 'AWS::MediaPackage::Channel';
 export const Channel_Type = 'AWS::MediaPackage::Channel';
@@ -18,17 +18,17 @@ export default function Channel(props: Channel_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html}
  */
 export type Channel_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html#cfn-mediapackage-channel-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html#cfn-mediapackage-channel-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   HlsIngest?: HlsIngest;
   /**
    * {@link
@@ -52,15 +52,15 @@ export type HlsIngest = {
 };
 
 export type IngestEndpoint = {
-  Id?: string;
-  Username?: string;
-  Password?: string;
-  Url?: string;
+  Id?: Resolvable<string>;
+  Username?: Resolvable<string>;
+  Password?: Resolvable<string>;
+  Url?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -72,5 +72,5 @@ export type LogConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-logconfiguration.html#cfn-mediapackage-channel-logconfiguration-loggroupname}
    */
-  LogGroupName?: string;
+  LogGroupName?: Resolvable<string>;
 };

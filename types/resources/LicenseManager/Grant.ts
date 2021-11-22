@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LicenseManager::Grant
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Grant_Type = 'AWS::LicenseManager::Grant';
 export const Grant_Type = 'AWS::LicenseManager::Grant';
@@ -25,7 +25,7 @@ export type Grant_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-grantname}
    */
-  GrantName?: string;
+  GrantName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-licensearn}
@@ -35,13 +35,13 @@ export type Grant_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-homeregion}
    */
-  HomeRegion?: string;
-  Version?: string;
+  HomeRegion?: Resolvable<string>;
+  Version?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-allowedoperations}
    */
-  AllowedOperations?: string[];
+  AllowedOperations?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-principals}
@@ -51,7 +51,7 @@ export type Grant_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html#cfn-licensemanager-grant-status}
    */
-  Status?: string;
+  Status?: Resolvable<string>;
 };
 
-export type Arn = string;
+export type Arn = Resolvable<string>;

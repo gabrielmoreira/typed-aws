@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::CustomerGateway
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CustomerGateway_Type = 'AWS::EC2::CustomerGateway';
 export const CustomerGateway_Type = 'AWS::EC2::CustomerGateway';
@@ -21,17 +21,17 @@ export default function CustomerGateway(props: CustomerGateway_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html}
  */
 export type CustomerGateway_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-bgpasn}
    */
-  BgpAsn: number;
+  BgpAsn: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-ipaddress}
    */
-  IpAddress: string;
+  IpAddress: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-tags}
@@ -41,10 +41,10 @@ export type CustomerGateway_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

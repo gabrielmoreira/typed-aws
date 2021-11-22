@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Dataset
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Dataset_Type = 'AWS::DataBrew::Dataset';
 export const Dataset_Type = 'AWS::DataBrew::Dataset';
@@ -22,12 +22,12 @@ export type Dataset_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-format}
    */
-  Format?: 'CSV' | 'JSON' | 'PARQUET' | 'EXCEL';
+  Format?: Resolvable<'CSV' | 'JSON' | 'PARQUET' | 'EXCEL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html#cfn-databrew-dataset-formatoptions}
@@ -59,7 +59,7 @@ export type JsonOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html#cfn-databrew-dataset-jsonoptions-multiline}
    */
-  MultiLine?: boolean;
+  MultiLine?: Resolvable<boolean>;
 };
 
 export type ExcelOptions =
@@ -68,34 +68,34 @@ export type ExcelOptions =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html#cfn-databrew-dataset-exceloptions-sheetnames}
        */
-      SheetNames: string[];
+      SheetNames: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html#cfn-databrew-dataset-exceloptions-sheetindexes}
        */
-      SheetIndexes?: number[];
+      SheetIndexes?: Resolvable<number>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html#cfn-databrew-dataset-exceloptions-headerrow}
        */
-      HeaderRow?: boolean;
+      HeaderRow?: Resolvable<boolean>;
     }
   | {
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html#cfn-databrew-dataset-exceloptions-sheetnames}
        */
-      SheetNames?: string[];
+      SheetNames?: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html#cfn-databrew-dataset-exceloptions-sheetindexes}
        */
-      SheetIndexes: number[];
+      SheetIndexes: Resolvable<number>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html#cfn-databrew-dataset-exceloptions-headerrow}
        */
-      HeaderRow?: boolean;
+      HeaderRow?: Resolvable<boolean>;
     };
 
 /**
@@ -107,12 +107,12 @@ export type CsvOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-delimiter}
    */
-  Delimiter?: string;
+  Delimiter?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html#cfn-databrew-dataset-csvoptions-headerrow}
    */
-  HeaderRow?: boolean;
+  HeaderRow?: Resolvable<boolean>;
 };
 
 /**
@@ -173,12 +173,12 @@ export type S3Location = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-s3location.html#cfn-databrew-dataset-s3location-key}
    */
-  Key?: string;
+  Key?: Resolvable<string>;
 };
 
 /**
@@ -190,17 +190,17 @@ export type DataCatalogInputDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datacataloginputdefinition.html#cfn-databrew-dataset-datacataloginputdefinition-catalogid}
    */
-  CatalogId?: string;
+  CatalogId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datacataloginputdefinition.html#cfn-databrew-dataset-datacataloginputdefinition-databasename}
    */
-  DatabaseName?: string;
+  DatabaseName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datacataloginputdefinition.html#cfn-databrew-dataset-datacataloginputdefinition-tablename}
    */
-  TableName?: string;
+  TableName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datacataloginputdefinition.html#cfn-databrew-dataset-datacataloginputdefinition-tempdirectory}
@@ -217,12 +217,12 @@ export type DatabaseInputDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-databaseinputdefinition.html#cfn-databrew-dataset-databaseinputdefinition-glueconnectionname}
    */
-  GlueConnectionName: string;
+  GlueConnectionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-databaseinputdefinition.html#cfn-databrew-dataset-databaseinputdefinition-databasetablename}
    */
-  DatabaseTableName?: string;
+  DatabaseTableName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-databaseinputdefinition.html#cfn-databrew-dataset-databaseinputdefinition-tempdirectory}
@@ -232,7 +232,7 @@ export type DatabaseInputDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-databaseinputdefinition.html#cfn-databrew-dataset-databaseinputdefinition-querystring}
    */
-  QueryString?: string;
+  QueryString?: Resolvable<string>;
 };
 
 /**
@@ -244,7 +244,7 @@ export type Metadata = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-metadata.html#cfn-databrew-dataset-metadata-sourcearn}
    */
-  SourceArn?: string;
+  SourceArn?: Resolvable<string>;
 };
 
 /**
@@ -278,17 +278,17 @@ export type FilesLimit = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-maxfiles}
    */
-  MaxFiles: number;
+  MaxFiles: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-orderedby}
    */
-  OrderedBy?: 'LAST_MODIFIED_DATE';
+  OrderedBy?: Resolvable<'LAST_MODIFIED_DATE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-fileslimit.html#cfn-databrew-dataset-fileslimit-order}
    */
-  Order?: 'ASCENDING' | 'DESCENDING';
+  Order?: Resolvable<'ASCENDING' | 'DESCENDING'>;
 };
 
 /**
@@ -309,7 +309,7 @@ export type PathParameter = {
   DatasetParameter: DatasetParameter;
 };
 
-export type PathParameterName = string;
+export type PathParameterName = Resolvable<string>;
 
 /**
  * {@link
@@ -325,7 +325,7 @@ export type DatasetParameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-type}
    */
-  Type: 'String' | 'Number' | 'Datetime';
+  Type: Resolvable<'String' | 'Number' | 'Datetime'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-datetimeoptions}
@@ -335,7 +335,7 @@ export type DatasetParameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-createcolumn}
    */
-  CreateColumn?: boolean;
+  CreateColumn?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datasetparameter.html#cfn-databrew-dataset-datasetparameter-filter}
@@ -352,17 +352,17 @@ export type DatetimeOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datetimeoptions.html#cfn-databrew-dataset-datetimeoptions-format}
    */
-  Format: string;
+  Format: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datetimeoptions.html#cfn-databrew-dataset-datetimeoptions-timezoneoffset}
    */
-  TimezoneOffset?: string;
+  TimezoneOffset?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datetimeoptions.html#cfn-databrew-dataset-datetimeoptions-localecode}
    */
-  LocaleCode?: string;
+  LocaleCode?: Resolvable<string>;
 };
 
 /**
@@ -374,7 +374,7 @@ export type FilterExpression = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-expression}
    */
-  Expression: string;
+  Expression: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html#cfn-databrew-dataset-filterexpression-valuesmap}
@@ -392,15 +392,15 @@ export type FilterValue = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-valuereference}
    */
-  ValueReference: string;
+  ValueReference: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filtervalue.html#cfn-databrew-dataset-filtervalue-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

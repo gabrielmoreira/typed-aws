@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::GlobalCluster
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GlobalCluster_Type = 'AWS::RDS::GlobalCluster';
 export const GlobalCluster_Type = 'AWS::RDS::GlobalCluster';
@@ -15,62 +15,62 @@ export type GlobalCluster_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-engine}
        */
-      Engine?: 'aurora' | 'aurora-mysql' | 'aurora-postgresql';
+      Engine?: Resolvable<'aurora' | 'aurora-mysql' | 'aurora-postgresql'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-engineversion}
        */
-      EngineVersion?: string;
+      EngineVersion?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-deletionprotection}
        */
-      DeletionProtection?: boolean;
+      DeletionProtection?: Resolvable<boolean>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalclusteridentifier}
        */
-      GlobalClusterIdentifier?: string;
+      GlobalClusterIdentifier?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-sourcedbclusteridentifier}
        */
-      SourceDBClusterIdentifier: string | string;
+      SourceDBClusterIdentifier: Resolvable<string> | Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-storageencrypted}
        */
-      StorageEncrypted?: boolean;
+      StorageEncrypted?: Resolvable<boolean>;
     }
   | {
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-engine}
        */
-      Engine: 'aurora' | 'aurora-mysql' | 'aurora-postgresql';
+      Engine: Resolvable<'aurora' | 'aurora-mysql' | 'aurora-postgresql'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-engineversion}
        */
-      EngineVersion?: string;
+      EngineVersion?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-deletionprotection}
        */
-      DeletionProtection?: boolean;
+      DeletionProtection?: Resolvable<boolean>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalclusteridentifier}
        */
-      GlobalClusterIdentifier?: string;
+      GlobalClusterIdentifier?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-sourcedbclusteridentifier}
        */
-      SourceDBClusterIdentifier?: string | string;
+      SourceDBClusterIdentifier?: Resolvable<string> | Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-storageencrypted}
        */
-      StorageEncrypted?: boolean;
+      StorageEncrypted?: Resolvable<boolean>;
     };

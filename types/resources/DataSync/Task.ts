@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::Task
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Task_Type = 'AWS::DataSync::Task';
 export const Task_Type = 'AWS::DataSync::Task';
@@ -37,17 +37,17 @@ export type Task_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn}
    */
-  CloudWatchLogGroupArn?: string;
+  CloudWatchLogGroupArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-destinationlocationarn}
    */
-  DestinationLocationArn: string;
+  DestinationLocationArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options}
@@ -62,11 +62,13 @@ export type Task_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-sourcelocationarn}
    */
-  SourceLocationArn: string;
-  TaskArn?: string;
-  ErrorCode?: string;
-  ErrorDetail?: string;
-  Status?: 'AVAILABLE' | 'CREATING' | 'QUEUED' | 'RUNNING' | 'UNAVAILABLE';
+  SourceLocationArn: Resolvable<string>;
+  TaskArn?: Resolvable<string>;
+  ErrorCode?: Resolvable<string>;
+  ErrorDetail?: Resolvable<string>;
+  Status?: Resolvable<
+    'AVAILABLE' | 'CREATING' | 'QUEUED' | 'RUNNING' | 'UNAVAILABLE'
+  >;
   SourceNetworkInterfaceArns?: SourceNetworkInterfaceArns;
   DestinationNetworkInterfaceArns?: DestinationNetworkInterfaceArns;
 };
@@ -81,17 +83,17 @@ export type FilterRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-filterrule.html#cfn-datasync-task-filterrule-filtertype}
    */
-  FilterType?: 'SIMPLE_PATTERN';
+  FilterType?: Resolvable<'SIMPLE_PATTERN'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-filterrule.html#cfn-datasync-task-filterrule-value}
    */
-  Value?: string;
+  Value?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -104,7 +106,7 @@ export type TaskSchedule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression}
    */
-  ScheduleExpression: string;
+  ScheduleExpression: Resolvable<string>;
 };
 
 /**
@@ -117,74 +119,78 @@ export type Options = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-atime}
    */
-  Atime?: 'NONE' | 'BEST_EFFORT';
+  Atime?: Resolvable<'NONE' | 'BEST_EFFORT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-bytespersecond}
    */
-  BytesPerSecond?: number;
+  BytesPerSecond?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-gid}
    */
-  Gid?: 'NONE' | 'INT_VALUE' | 'NAME' | 'BOTH';
+  Gid?: Resolvable<'NONE' | 'INT_VALUE' | 'NAME' | 'BOTH'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-loglevel}
    */
-  LogLevel?: 'OFF' | 'BASIC' | 'TRANSFER';
+  LogLevel?: Resolvable<'OFF' | 'BASIC' | 'TRANSFER'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-mtime}
    */
-  Mtime?: 'NONE' | 'PRESERVE';
+  Mtime?: Resolvable<'NONE' | 'PRESERVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-overwritemode}
    */
-  OverwriteMode?: 'ALWAYS' | 'NEVER';
+  OverwriteMode?: Resolvable<'ALWAYS' | 'NEVER'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-posixpermissions}
    */
-  PosixPermissions?: 'NONE' | 'PRESERVE';
+  PosixPermissions?: Resolvable<'NONE' | 'PRESERVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-preservedeletedfiles}
    */
-  PreserveDeletedFiles?: 'PRESERVE' | 'REMOVE';
+  PreserveDeletedFiles?: Resolvable<'PRESERVE' | 'REMOVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-preservedevices}
    */
-  PreserveDevices?: 'NONE' | 'PRESERVE';
+  PreserveDevices?: Resolvable<'NONE' | 'PRESERVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-securitydescriptorcopyflags}
    */
-  SecurityDescriptorCopyFlags?: 'NONE' | 'OWNER_DACL' | 'OWNER_DACL_SACL';
+  SecurityDescriptorCopyFlags?: Resolvable<
+    'NONE' | 'OWNER_DACL' | 'OWNER_DACL_SACL'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-taskqueueing}
    */
-  TaskQueueing?: 'ENABLED' | 'DISABLED';
+  TaskQueueing?: Resolvable<'ENABLED' | 'DISABLED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-transfermode}
    */
-  TransferMode?: 'CHANGED' | 'ALL';
+  TransferMode?: Resolvable<'CHANGED' | 'ALL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-uid}
    */
-  Uid?: 'NONE' | 'INT_VALUE' | 'NAME' | 'BOTH';
+  Uid?: Resolvable<'NONE' | 'INT_VALUE' | 'NAME' | 'BOTH'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html#cfn-datasync-task-options-verifymode}
    */
-  VerifyMode?: 'POINT_IN_TIME_CONSISTENT' | 'ONLY_FILES_TRANSFERRED' | 'NONE';
+  VerifyMode?: Resolvable<
+    'POINT_IN_TIME_CONSISTENT' | 'ONLY_FILES_TRANSFERRED' | 'NONE'
+  >;
 };
 
-export type SourceNetworkInterfaceArns = string[];
+export type SourceNetworkInterfaceArns = Resolvable<string>[];
 
-export type DestinationNetworkInterfaceArns = string[];
+export type DestinationNetworkInterfaceArns = Resolvable<string>[];

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::LayerVersionPermission
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LayerVersionPermission_Type = 'AWS::Lambda::LayerVersionPermission';
 export const LayerVersionPermission_Type =
@@ -26,25 +26,25 @@ export default function LayerVersionPermission(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html}
  */
 export type LayerVersionPermission_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html#cfn-lambda-layerversionpermission-action}
    */
-  Action: string;
+  Action: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html#cfn-lambda-layerversionpermission-layerversionarn}
    */
-  LayerVersionArn: string;
+  LayerVersionArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html#cfn-lambda-layerversionpermission-organizationid}
    */
-  OrganizationId?: string;
+  OrganizationId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html#cfn-lambda-layerversionpermission-principal}
    */
-  Principal: string;
+  Principal: Resolvable<string>;
 };

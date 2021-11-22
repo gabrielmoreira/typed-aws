@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::CloudFrontOriginAccessIdentity
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CloudFrontOriginAccessIdentity_Type =
   'AWS::CloudFront::CloudFrontOriginAccessIdentity';
@@ -32,8 +32,8 @@ export type CloudFrontOriginAccessIdentity_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig}
    */
   CloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfig;
-  Id?: string;
-  S3CanonicalUserId?: string;
+  Id?: Resolvable<string>;
+  S3CanonicalUserId?: Resolvable<string>;
 };
 
 /**
@@ -45,5 +45,5 @@ export type CloudFrontOriginAccessIdentityConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig-comment}
    */
-  Comment: string;
+  Comment: Resolvable<string>;
 };

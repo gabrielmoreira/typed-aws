@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MemoryDB::User
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type User_Type = 'AWS::MemoryDB::User';
 export const User_Type = 'AWS::MemoryDB::User';
@@ -18,26 +18,26 @@ export default function User(props: User_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html}
  */
 export type User_Properties = {
-  Status?: string;
+  Status?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html#cfn-memorydb-user-username}
    */
-  UserName: string;
+  UserName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html#cfn-memorydb-user-accessstring}
    */
-  AccessString: string;
+  AccessString: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html#cfn-memorydb-user-authenticationmode}
    */
   AuthenticationMode: {
-    Type?: 'password';
-    Passwords?: string[];
+    Type?: Resolvable<'password'>;
+    Passwords?: Resolvable<string>[];
   };
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html#cfn-memorydb-user-tags}
@@ -46,6 +46,6 @@ export type User_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

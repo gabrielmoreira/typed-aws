@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::HealthCheck
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type HealthCheck_Type = 'AWS::Route53::HealthCheck';
 export const HealthCheck_Type = 'AWS::Route53::HealthCheck';
@@ -18,29 +18,31 @@ export default function HealthCheck(props: HealthCheck_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html}
  */
 export type HealthCheck_Properties = {
-  HealthCheckId?: string;
+  HealthCheckId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthcheckconfig}
    */
   HealthCheckConfig: {
     AlarmIdentifier?: AlarmIdentifier;
-    ChildHealthChecks?: string[];
-    EnableSNI?: boolean;
-    FailureThreshold?: number;
-    FullyQualifiedDomainName?: string;
-    HealthThreshold?: number;
-    InsufficientDataHealthStatus?: 'Healthy' | 'LastKnownStatus' | 'Unhealthy';
-    Inverted?: boolean;
-    IPAddress?: string;
-    MeasureLatency?: boolean;
-    Port?: number;
-    Regions?: string[];
-    RequestInterval?: number;
-    ResourcePath?: string;
-    SearchString?: string;
-    RoutingControlArn?: string;
-    Type:
+    ChildHealthChecks?: Resolvable<string>[];
+    EnableSNI?: Resolvable<boolean>;
+    FailureThreshold?: Resolvable<number>;
+    FullyQualifiedDomainName?: Resolvable<string>;
+    HealthThreshold?: Resolvable<number>;
+    InsufficientDataHealthStatus?: Resolvable<
+      'Healthy' | 'LastKnownStatus' | 'Unhealthy'
+    >;
+    Inverted?: Resolvable<boolean>;
+    IPAddress?: Resolvable<string>;
+    MeasureLatency?: Resolvable<boolean>;
+    Port?: Resolvable<number>;
+    Regions?: Resolvable<string>[];
+    RequestInterval?: Resolvable<number>;
+    ResourcePath?: Resolvable<string>;
+    SearchString?: Resolvable<string>;
+    RoutingControlArn?: Resolvable<string>;
+    Type: Resolvable<
       | 'CALCULATED'
       | 'CLOUDWATCH_METRIC'
       | 'HTTP'
@@ -48,7 +50,8 @@ export type HealthCheck_Properties = {
       | 'HTTPS'
       | 'HTTPS_STR_MATCH'
       | 'TCP'
-      | 'RECOVERY_CONTROL';
+      | 'RECOVERY_CONTROL'
+    >;
   };
   /**
    * {@link
@@ -58,8 +61,8 @@ export type HealthCheck_Properties = {
 };
 
 export type AlarmIdentifier = {
-  Name: string;
-  Region: string;
+  Name: Resolvable<string>;
+  Region: Resolvable<string>;
 };
 
 /**
@@ -71,10 +74,10 @@ export type HealthCheckTag = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthcheck-healthchecktag-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::SecurityGroupIngress
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SecurityGroupIngress_Type =
   'AWS::ElastiCache::SecurityGroupIngress';
@@ -27,20 +27,20 @@ export default function SecurityGroupIngress(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html}
  */
 export type SecurityGroupIngress_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html#cfn-elasticache-securitygroupingress-cachesecuritygroupname}
    */
-  CacheSecurityGroupName: string;
+  CacheSecurityGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html#cfn-elasticache-securitygroupingress-ec2securitygroupname}
    */
-  EC2SecurityGroupName: string;
+  EC2SecurityGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group-ingress.html#cfn-elasticache-securitygroupingress-ec2securitygroupownerid}
    */
-  EC2SecurityGroupOwnerId?: string;
+  EC2SecurityGroupOwnerId?: Resolvable<string>;
 };

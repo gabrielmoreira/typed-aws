@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBProxy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBProxy_Type = 'AWS::RDS::DBProxy';
 export const DBProxy_Type = 'AWS::RDS::DBProxy';
@@ -23,54 +23,54 @@ export type DBProxy_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-auth}
    */
   Auth: AuthFormat[];
-  DBProxyArn?: string;
+  DBProxyArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-dbproxyname}
    */
-  DBProxyName: string;
+  DBProxyName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-debuglogging}
    */
-  DebugLogging?: boolean;
-  Endpoint?: string;
+  DebugLogging?: Resolvable<boolean>;
+  Endpoint?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-enginefamily}
    */
-  EngineFamily: 'MYSQL' | 'POSTGRESQL';
+  EngineFamily: Resolvable<'MYSQL' | 'POSTGRESQL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-idleclienttimeout}
    */
-  IdleClientTimeout?: number;
+  IdleClientTimeout?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-requiretls}
    */
-  RequireTLS?: boolean;
+  RequireTLS?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-tags}
    */
   Tags?: TagFormat[];
-  VpcId?: string;
+  VpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-vpcsecuritygroupids}
    */
-  VpcSecurityGroupIds?: string[];
+  VpcSecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#cfn-rds-dbproxy-vpcsubnetids}
    */
-  VpcSubnetIds: string[];
+  VpcSubnetIds: Resolvable<string>[];
 };
 
 /**
@@ -82,27 +82,27 @@ export type AuthFormat = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-authscheme}
    */
-  AuthScheme?: 'SECRETS';
+  AuthScheme?: Resolvable<'SECRETS'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-iamauth}
    */
-  IAMAuth?: 'DISABLED' | 'REQUIRED';
+  IAMAuth?: Resolvable<'DISABLED' | 'REQUIRED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-secretarn}
    */
-  SecretArn?: string;
+  SecretArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html#cfn-rds-dbproxy-authformat-username}
    */
-  UserName?: string;
+  UserName?: Resolvable<string>;
 };
 
 /**
@@ -114,10 +114,10 @@ export type TagFormat = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-tagformat.html#cfn-rds-dbproxy-tagformat-key}
    */
-  Key?: string;
+  Key?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-tagformat.html#cfn-rds-dbproxy-tagformat-value}
    */
-  Value?: string;
+  Value?: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CE::CostCategory
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CostCategory_Type = 'AWS::CE::CostCategory';
 export const CostCategory_Type = 'AWS::CE::CostCategory';
@@ -22,33 +22,33 @@ export default function CostCategory(props: CostCategory_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html}
  */
 export type CostCategory_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   EffectiveStart?: ZonedDateTime;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-ruleversion}
    */
-  RuleVersion: 'CostCategoryExpression.v1';
+  RuleVersion: Resolvable<'CostCategoryExpression.v1'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-rules}
    */
-  Rules: string;
+  Rules: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-splitchargerules}
    */
-  SplitChargeRules?: string;
+  SplitChargeRules?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html#cfn-ce-costcategory-defaultvalue}
    */
-  DefaultValue?: string;
+  DefaultValue?: Resolvable<string>;
 };
 
-export type ZonedDateTime = string;
+export type ZonedDateTime = Resolvable<string>;

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EgressOnlyInternetGateway
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EgressOnlyInternetGateway_Type =
   'AWS::EC2::EgressOnlyInternetGateway';
@@ -27,10 +27,10 @@ export default function EgressOnlyInternetGateway(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html}
  */
 export type EgressOnlyInternetGateway_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-egressonlyinternetgateway.html#cfn-ec2-egressonlyinternetgateway-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
 };

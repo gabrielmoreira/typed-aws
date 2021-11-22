@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBClusterParameterGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBClusterParameterGroup_Type = 'AWS::RDS::DBClusterParameterGroup';
 export const DBClusterParameterGroup_Type = 'AWS::RDS::DBClusterParameterGroup';
@@ -23,17 +23,17 @@ export default function DBClusterParameterGroup(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html}
  */
 export type DBClusterParameterGroup_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-description}
    */
-  Description: string;
+  Description: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-family}
    */
-  Family: string;
+  Family: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html#cfn-rds-dbclusterparametergroup-parameters}
@@ -49,6 +49,6 @@ export type DBClusterParameterGroup_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

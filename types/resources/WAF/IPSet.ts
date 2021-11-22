@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAF::IPSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type IPSet_Type = 'AWS::WAF::IPSet';
 export const IPSet_Type = 'AWS::WAF::IPSet';
@@ -18,7 +18,7 @@ export default function IPSet(props: IPSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html}
  */
 export type IPSet_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html#cfn-waf-ipset-ipsetdescriptors}
@@ -28,7 +28,7 @@ export type IPSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-ipset.html#cfn-waf-ipset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -40,10 +40,10 @@ export type IPSetDescriptor = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-ipset-ipsetdescriptors.html#cfn-waf-ipset-ipsetdescriptors-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-ipset-ipsetdescriptors.html#cfn-waf-ipset-ipsetdescriptors-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };

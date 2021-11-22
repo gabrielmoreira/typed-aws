@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::MitigationAction
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MitigationAction_Type = 'AWS::IoT::MitigationAction';
 export const MitigationAction_Type = 'AWS::IoT::MitigationAction';
@@ -27,12 +27,12 @@ export type MitigationAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-actionname}
    */
-  ActionName?: string;
+  ActionName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-tags}
@@ -43,13 +43,13 @@ export type MitigationAction_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html#cfn-iot-mitigationaction-actionparams}
    */
   ActionParams: ActionParams;
-  MitigationActionArn?: string;
-  MitigationActionId?: string;
+  MitigationActionArn?: Resolvable<string>;
+  MitigationActionId?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -102,12 +102,12 @@ export type AddThingsToThingGroupParams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-addthingstothinggroupparams.html#cfn-iot-mitigationaction-addthingstothinggroupparams-overridedynamicgroups}
    */
-  OverrideDynamicGroups?: boolean;
+  OverrideDynamicGroups?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-addthingstothinggroupparams.html#cfn-iot-mitigationaction-addthingstothinggroupparams-thinggroupnames}
    */
-  ThingGroupNames: string[];
+  ThingGroupNames: Resolvable<string>[];
 };
 
 /**
@@ -120,12 +120,12 @@ export type EnableIoTLoggingParams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-enableiotloggingparams.html#cfn-iot-mitigationaction-enableiotloggingparams-loglevel}
    */
-  LogLevel: 'DEBUG' | 'INFO' | 'ERROR' | 'WARN';
+  LogLevel: Resolvable<'DEBUG' | 'INFO' | 'ERROR' | 'WARN'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-enableiotloggingparams.html#cfn-iot-mitigationaction-enableiotloggingparams-rolearnforlogging}
    */
-  RoleArnForLogging: string;
+  RoleArnForLogging: Resolvable<string>;
 };
 
 /**
@@ -139,7 +139,7 @@ export type PublishFindingToSnsParams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-publishfindingtosnsparams.html#cfn-iot-mitigationaction-publishfindingtosnsparams-topicarn}
    */
-  TopicArn: string;
+  TopicArn: Resolvable<string>;
 };
 
 /**
@@ -152,7 +152,7 @@ export type ReplaceDefaultPolicyVersionParams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-replacedefaultpolicyversionparams.html#cfn-iot-mitigationaction-replacedefaultpolicyversionparams-templatename}
    */
-  TemplateName: 'BLANK_POLICY';
+  TemplateName: Resolvable<'BLANK_POLICY'>;
 };
 
 /**
@@ -165,7 +165,7 @@ export type UpdateCACertificateParams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html#cfn-iot-mitigationaction-updatecacertificateparams-action}
    */
-  Action: 'DEACTIVATE';
+  Action: Resolvable<'DEACTIVATE'>;
 };
 
 /**
@@ -178,5 +178,5 @@ export type UpdateDeviceCertificateParams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html#cfn-iot-mitigationaction-updatedevicecertificateparams-action}
    */
-  Action: 'DEACTIVATE';
+  Action: Resolvable<'DEACTIVATE'>;
 };

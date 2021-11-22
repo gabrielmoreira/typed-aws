@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::FirewallDomainList
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FirewallDomainList_Type =
   'AWS::Route53Resolver::FirewallDomainList';
@@ -25,26 +25,27 @@ export default function FirewallDomainList(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html}
  */
 export type FirewallDomainList_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-name}
    */
-  Name?: string;
-  DomainCount?: number;
-  Status?:
+  Name?: Resolvable<string>;
+  DomainCount?: Resolvable<number>;
+  Status?: Resolvable<
     | 'COMPLETE'
     | 'DELETING'
     | 'UPDATING'
     | 'COMPLETE_IMPORT_FAILED'
     | 'IMPORTING'
-    | 'INACTIVE_OWNER_ACCOUNT_CLOSED';
-  StatusMessage?: string;
-  ManagedOwnerName?: string;
-  CreatorRequestId?: string;
-  CreationTime?: string;
-  ModificationTime?: string;
+    | 'INACTIVE_OWNER_ACCOUNT_CLOSED'
+  >;
+  StatusMessage?: Resolvable<string>;
+  ManagedOwnerName?: Resolvable<string>;
+  CreatorRequestId?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
+  ModificationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-domains}
@@ -54,7 +55,7 @@ export type FirewallDomainList_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-domainfileurl}
    */
-  DomainFileUrl?: string;
+  DomainFileUrl?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html#cfn-route53resolver-firewalldomainlist-tags}
@@ -62,9 +63,9 @@ export type FirewallDomainList_Properties = {
   Tags?: Tag[];
 };
 
-export type Domains = string[];
+export type Domains = Resolvable<string>[];
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

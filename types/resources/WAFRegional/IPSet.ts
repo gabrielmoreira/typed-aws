@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::IPSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type IPSet_Type = 'AWS::WAFRegional::IPSet';
 export const IPSet_Type = 'AWS::WAFRegional::IPSet';
@@ -18,7 +18,7 @@ export default function IPSet(props: IPSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html}
  */
 export type IPSet_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-ipsetdescriptors}
@@ -28,7 +28,7 @@ export type IPSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html#cfn-wafregional-ipset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -40,10 +40,10 @@ export type IPSetDescriptor = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-ipset-ipsetdescriptor.html#cfn-wafregional-ipset-ipsetdescriptor-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-ipset-ipsetdescriptor.html#cfn-wafregional-ipset-ipsetdescriptor-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };

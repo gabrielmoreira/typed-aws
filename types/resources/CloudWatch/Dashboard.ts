@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::Dashboard
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Dashboard_Type = 'AWS::CloudWatch::Dashboard';
 export const Dashboard_Type = 'AWS::CloudWatch::Dashboard';
@@ -22,11 +22,11 @@ export type Dashboard_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardname}
    */
-  DashboardName?: string;
+  DashboardName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html#cfn-cloudwatch-dashboard-dashboardbody}
    */
-  DashboardBody: string;
-  Id?: string;
+  DashboardBody: Resolvable<string>;
+  Id?: Resolvable<string>;
 };

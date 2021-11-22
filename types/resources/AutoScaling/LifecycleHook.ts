@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::LifecycleHook
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LifecycleHook_Type = 'AWS::AutoScaling::LifecycleHook';
 export const LifecycleHook_Type = 'AWS::AutoScaling::LifecycleHook';
@@ -22,40 +22,40 @@ export type LifecycleHook_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-autoscalinggroupname}
    */
-  AutoScalingGroupName: string;
+  AutoScalingGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-defaultresult}
    */
-  DefaultResult?: string;
+  DefaultResult?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-heartbeattimeout}
    */
-  HeartbeatTimeout?: number;
+  HeartbeatTimeout?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-lifecyclehookname}
    */
-  LifecycleHookName?: string;
+  LifecycleHookName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-lifecycletransition}
    */
-  LifecycleTransition: string;
+  LifecycleTransition: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-notificationmetadata}
    */
-  NotificationMetadata?: string;
+  NotificationMetadata?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-notificationtargetarn}
    */
-  NotificationTargetARN?: string;
+  NotificationTargetARN?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html#cfn-autoscaling-lifecyclehook-rolearn}
    */
-  RoleARN?: string;
+  RoleARN?: Resolvable<string>;
 };

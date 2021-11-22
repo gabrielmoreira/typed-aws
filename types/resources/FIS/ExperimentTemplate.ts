@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::FIS::ExperimentTemplate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ExperimentTemplate_Type = 'AWS::FIS::ExperimentTemplate';
 export const ExperimentTemplate_Type = 'AWS::FIS::ExperimentTemplate';
@@ -54,17 +54,17 @@ export type ExperimentTemplate_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-tags}
    */
   Tags: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
 };
 
-export type ExperimentTemplateId = string;
+export type ExperimentTemplateId = Resolvable<string>;
 
-export type ExperimentTemplateDescription = string;
+export type ExperimentTemplateDescription = Resolvable<string>;
 
-export type StopConditionSource = string;
+export type StopConditionSource = Resolvable<string>;
 
-export type StopConditionValue = string;
+export type StopConditionValue = Resolvable<string>;
 
 /**
  * {@link
@@ -86,17 +86,17 @@ export type ExperimentTemplateStopCondition = {
 export type ExperimentTemplateStopConditionList =
   ExperimentTemplateStopCondition[];
 
-export type ResourceType = string;
+export type ResourceType = Resolvable<string>;
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 export type ResourceArnList = ResourceArn[];
 
-export type ExperimentTemplateTargetSelectionMode = string;
+export type ExperimentTemplateTargetSelectionMode = Resolvable<string>;
 
-export type ExperimentTemplateTargetFilterPath = string;
+export type ExperimentTemplateTargetFilterPath = Resolvable<string>;
 
-export type ExperimentTemplateTargetFilterValue = string;
+export type ExperimentTemplateTargetFilterValue = Resolvable<string>;
 
 export type ExperimentTemplateTargetFilterValues =
   ExperimentTemplateTargetFilterValue[];
@@ -142,7 +142,7 @@ export type ExperimentTemplateTarget = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatetarget.html#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags}
    */
   ResourceTags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
@@ -160,15 +160,15 @@ export type ExperimentTemplateTargetMap = {
   [k: string]: ExperimentTemplateTarget;
 };
 
-export type ActionId = string;
+export type ActionId = Resolvable<string>;
 
-export type ExperimentTemplateActionItemDescription = string;
+export type ExperimentTemplateActionItemDescription = Resolvable<string>;
 
-export type ExperimentTemplateActionItemParameter = string;
+export type ExperimentTemplateActionItemParameter = Resolvable<string>;
 
-export type ExperimentTemplateActionItemTarget = string;
+export type ExperimentTemplateActionItemTarget = Resolvable<string>;
 
-export type ExperimentTemplateActionItemStartAfter = string;
+export type ExperimentTemplateActionItemStartAfter = Resolvable<string>;
 
 export type ExperimentTemplateActionItemStartAfterList =
   ExperimentTemplateActionItemStartAfter[];
@@ -213,4 +213,4 @@ export type ExperimentTemplateActionMap = {
   [k: string]: ExperimentTemplateAction;
 };
 
-export type RoleArn = string;
+export type RoleArn = Resolvable<string>;

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::AggregationAuthorization
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AggregationAuthorization_Type =
   'AWS::Config::AggregationAuthorization';
@@ -31,13 +31,13 @@ export type AggregationAuthorization_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-authorizedaccountid}
    */
-  AuthorizedAccountId: string;
+  AuthorizedAccountId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-authorizedawsregion}
    */
-  AuthorizedAwsRegion: string;
-  AggregationAuthorizationArn?: string;
+  AuthorizedAwsRegion: Resolvable<string>;
+  AggregationAuthorizationArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html#cfn-config-aggregationauthorization-tags}
@@ -46,6 +46,6 @@ export type AggregationAuthorization_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

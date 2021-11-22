@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationFSxWindows
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocationFSxWindows_Type = 'AWS::DataSync::LocationFSxWindows';
 export const LocationFSxWindows_Type = 'AWS::DataSync::LocationFSxWindows';
@@ -27,42 +27,42 @@ export type LocationFSxWindows_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-domain}
    */
-  Domain?: string;
+  Domain?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-fsxfilesystemarn}
    */
-  FsxFilesystemArn: string;
+  FsxFilesystemArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-password}
    */
-  Password: string;
+  Password: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-securitygrouparns}
    */
-  SecurityGroupArns: string[];
+  SecurityGroupArns: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-subdirectory}
    */
-  Subdirectory?: string;
+  Subdirectory?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-user}
    */
-  User: string;
+  User: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html#cfn-datasync-locationfsxwindows-tags}
    */
   Tags?: Tag[];
-  LocationArn?: string;
-  LocationUri?: string;
+  LocationArn?: Resolvable<string>;
+  LocationUri?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

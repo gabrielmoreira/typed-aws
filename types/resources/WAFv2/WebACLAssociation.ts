@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::WebACLAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WebACLAssociation_Type = 'AWS::WAFv2::WebACLAssociation';
 export const WebACLAssociation_Type = 'AWS::WAFv2::WebACLAssociation';
@@ -35,4 +35,4 @@ export type WebACLAssociation_Properties = {
   WebACLArn: ResourceArn;
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;

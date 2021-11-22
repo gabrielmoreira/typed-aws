@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInterfacePermission
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NetworkInterfacePermission_Type =
   'AWS::EC2::NetworkInterfacePermission';
@@ -27,20 +27,20 @@ export default function NetworkInterfacePermission(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html}
  */
 export type NetworkInterfacePermission_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html#cfn-ec2-networkinterfacepermission-awsaccountid}
    */
-  AwsAccountId: string;
+  AwsAccountId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html#cfn-ec2-networkinterfacepermission-networkinterfaceid}
    */
-  NetworkInterfaceId: string;
+  NetworkInterfaceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html#cfn-ec2-networkinterfacepermission-permission}
    */
-  Permission: string;
+  Permission: Resolvable<string>;
 };

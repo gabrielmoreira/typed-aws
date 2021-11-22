@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::EventInvokeConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EventInvokeConfig_Type = 'AWS::Lambda::EventInvokeConfig';
 export const EventInvokeConfig_Type = 'AWS::Lambda::EventInvokeConfig';
@@ -25,28 +25,28 @@ export type EventInvokeConfig_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-functionname}
    */
-  FunctionName: string;
+  FunctionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-maximumretryattempts}
    */
-  MaximumRetryAttempts?: number;
+  MaximumRetryAttempts?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-qualifier}
    */
-  Qualifier: string;
+  Qualifier: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig}
    */
   DestinationConfig?: DestinationConfig;
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-maximumeventageinseconds}
    */
-  MaximumEventAgeInSeconds?: number;
+  MaximumEventAgeInSeconds?: Resolvable<number>;
 };
 
 /**
@@ -75,7 +75,7 @@ export type OnSuccess = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig-onsuccess.html#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess-destination}
    */
-  Destination: string;
+  Destination: Resolvable<string>;
 };
 
 /**
@@ -87,5 +87,5 @@ export type OnFailure = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure.html#cfn-lambda-eventinvokeconfig-destinationconfig-onfailure-destination}
    */
-  Destination: string;
+  Destination: Resolvable<string>;
 };

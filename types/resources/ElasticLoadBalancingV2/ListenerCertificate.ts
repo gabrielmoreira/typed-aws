@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElasticLoadBalancingV2::ListenerCertificate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ListenerCertificate_Type =
   'AWS::ElasticLoadBalancingV2::ListenerCertificate';
@@ -31,13 +31,13 @@ export type ListenerCertificate_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html#cfn-elasticloadbalancingv2-listenercertificate-listenerarn}
    */
-  ListenerArn: string;
+  ListenerArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html#cfn-elasticloadbalancingv2-listenercertificate-certificates}
    */
   Certificates: Certificate[];
-  Id?: string;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -49,5 +49,5 @@ export type Certificate = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates.html#cfn-elasticloadbalancingv2-listener-certificates-certificatearn}
    */
-  CertificateArn?: string;
+  CertificateArn?: Resolvable<string>;
 };

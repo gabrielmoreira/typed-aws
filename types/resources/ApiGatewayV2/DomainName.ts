@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGatewayV2::DomainName
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DomainName_Type = 'AWS::ApiGatewayV2::DomainName';
 export const DomainName_Type = 'AWS::ApiGatewayV2::DomainName';
@@ -23,19 +23,19 @@ export type DomainName_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication}
    */
   MutualTlsAuthentication?: MutualTlsAuthentication;
-  RegionalHostedZoneId?: string;
-  RegionalDomainName?: string;
+  RegionalHostedZoneId?: Resolvable<string>;
+  RegionalDomainName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname}
    */
-  DomainName: string;
+  DomainName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations}
    */
   DomainNameConfigurations?: DomainNameConfiguration[];
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags}
@@ -54,12 +54,12 @@ export type MutualTlsAuthentication = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreversion}
    */
-  TruststoreVersion?: string;
+  TruststoreVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreuri}
    */
-  TruststoreUri?: string;
+  TruststoreUri?: Resolvable<string>;
 };
 
 /**
@@ -71,25 +71,25 @@ export type DomainNameConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn}
    */
-  OwnershipVerificationCertificateArn?: string;
+  OwnershipVerificationCertificateArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype}
    */
-  EndpointType?: string;
+  EndpointType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename}
    */
-  CertificateName?: string;
+  CertificateName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy}
    */
-  SecurityPolicy?: string;
+  SecurityPolicy?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn}
    */
-  CertificateArn?: string;
+  CertificateArn?: Resolvable<string>;
 };

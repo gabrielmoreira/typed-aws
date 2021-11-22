@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::MultiRegionAccessPoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MultiRegionAccessPoint_Type = 'AWS::S3::MultiRegionAccessPoint';
 export const MultiRegionAccessPoint_Type = 'AWS::S3::MultiRegionAccessPoint';
@@ -31,9 +31,9 @@ export type MultiRegionAccessPoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-name}
    */
-  Name?: string;
-  Alias?: string;
-  CreatedAt?: string;
+  Name?: Resolvable<string>;
+  Alias?: Resolvable<string>;
+  CreatedAt?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration}
@@ -55,22 +55,22 @@ export type PublicAccessBlockConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspoint-publicaccessblockconfiguration.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration-blockpublicacls}
    */
-  BlockPublicAcls?: boolean;
+  BlockPublicAcls?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspoint-publicaccessblockconfiguration.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration-ignorepublicacls}
    */
-  IgnorePublicAcls?: boolean;
+  IgnorePublicAcls?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspoint-publicaccessblockconfiguration.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration-blockpublicpolicy}
    */
-  BlockPublicPolicy?: boolean;
+  BlockPublicPolicy?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspoint-publicaccessblockconfiguration.html#cfn-s3-multiregionaccesspoint-publicaccessblockconfiguration-restrictpublicbuckets}
    */
-  RestrictPublicBuckets?: boolean;
+  RestrictPublicBuckets?: Resolvable<boolean>;
 };
 
 /**
@@ -82,5 +82,5 @@ export type Region = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspoint-region.html#cfn-s3-multiregionaccesspoint-region-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
 };

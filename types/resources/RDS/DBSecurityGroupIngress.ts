@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBSecurityGroupIngress
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBSecurityGroupIngress_Type = 'AWS::RDS::DBSecurityGroupIngress';
 export const DBSecurityGroupIngress_Type = 'AWS::RDS::DBSecurityGroupIngress';
@@ -23,30 +23,30 @@ export default function DBSecurityGroupIngress(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html}
  */
 export type DBSecurityGroupIngress_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-cidrip}
    */
-  CIDRIP?: string;
+  CIDRIP?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-dbsecuritygroupname}
    */
-  DBSecurityGroupName: string;
+  DBSecurityGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupid}
    */
-  EC2SecurityGroupId?: string;
+  EC2SecurityGroupId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupname}
    */
-  EC2SecurityGroupName?: string;
+  EC2SecurityGroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupownerid}
    */
-  EC2SecurityGroupOwnerId?: string;
+  EC2SecurityGroupOwnerId?: Resolvable<string>;
 };

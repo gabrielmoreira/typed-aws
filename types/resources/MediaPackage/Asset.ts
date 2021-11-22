@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::Asset
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Asset_Type = 'AWS::MediaPackage::Asset';
 export const Asset_Type = 'AWS::MediaPackage::Asset';
@@ -18,34 +18,34 @@ export default function Asset(props: Asset_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html}
  */
 export type Asset_Properties = {
-  Arn?: string;
-  CreatedAt?: string;
+  Arn?: Resolvable<string>;
+  CreatedAt?: Resolvable<string>;
   EgressEndpoints?: EgressEndpoint[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-packaginggroupid}
    */
-  PackagingGroupId: string;
+  PackagingGroupId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-resourceid}
    */
-  ResourceId?: string;
+  ResourceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-sourcearn}
    */
-  SourceArn: string;
+  SourceArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-sourcerolearn}
    */
-  SourceRoleArn: string;
+  SourceRoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html#cfn-mediapackage-asset-tags}
@@ -63,15 +63,15 @@ export type EgressEndpoint = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-asset-egressendpoint.html#cfn-mediapackage-asset-egressendpoint-packagingconfigurationid}
    */
-  PackagingConfigurationId: string;
+  PackagingConfigurationId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-asset-egressendpoint.html#cfn-mediapackage-asset-egressendpoint-url}
    */
-  Url: string;
+  Url: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

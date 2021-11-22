@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3ObjectLambda::AccessPointPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AccessPointPolicy_Type = 'AWS::S3ObjectLambda::AccessPointPolicy';
 export const AccessPointPolicy_Type = 'AWS::S3ObjectLambda::AccessPointPolicy';
@@ -29,7 +29,7 @@ export type AccessPointPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html#cfn-s3objectlambda-accesspointpolicy-objectlambdaaccesspoint}
    */
-  ObjectLambdaAccessPoint: string;
+  ObjectLambdaAccessPoint: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html#cfn-s3objectlambda-accesspointpolicy-policydocument}

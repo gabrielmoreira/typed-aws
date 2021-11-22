@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayMulticastGroupSource
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayMulticastGroupSource_Type =
   'AWS::EC2::TransitGatewayMulticastGroupSource';
@@ -33,23 +33,23 @@ export type TransitGatewayMulticastGroupSource_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html#cfn-ec2-transitgatewaymulticastgroupsource-groupipaddress}
    */
-  GroupIpAddress: string;
-  TransitGatewayAttachmentId?: string;
+  GroupIpAddress: Resolvable<string>;
+  TransitGatewayAttachmentId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html#cfn-ec2-transitgatewaymulticastgroupsource-transitgatewaymulticastdomainid}
    */
-  TransitGatewayMulticastDomainId: string;
-  SubnetId?: string;
-  ResourceId?: string;
-  ResourceType?: string;
+  TransitGatewayMulticastDomainId: Resolvable<string>;
+  SubnetId?: Resolvable<string>;
+  ResourceId?: Resolvable<string>;
+  ResourceType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html#cfn-ec2-transitgatewaymulticastgroupsource-networkinterfaceid}
    */
-  NetworkInterfaceId: string;
-  GroupMember?: boolean;
-  GroupSource?: boolean;
-  MemberType?: string;
-  SourceType?: string;
+  NetworkInterfaceId: Resolvable<string>;
+  GroupMember?: Resolvable<boolean>;
+  GroupSource?: Resolvable<boolean>;
+  MemberType?: Resolvable<string>;
+  SourceType?: Resolvable<string>;
 };

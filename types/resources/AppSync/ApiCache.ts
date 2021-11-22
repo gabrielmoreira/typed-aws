@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::ApiCache
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ApiCache_Type = 'AWS::AppSync::ApiCache';
 export const ApiCache_Type = 'AWS::AppSync::ApiCache';
@@ -22,31 +22,31 @@ export type ApiCache_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-transitencryptionenabled}
    */
-  TransitEncryptionEnabled?: boolean;
+  TransitEncryptionEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-atrestencryptionenabled}
    */
-  AtRestEncryptionEnabled?: boolean;
-  Id?: string;
+  AtRestEncryptionEnabled?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-apicachingbehavior}
    */
-  ApiCachingBehavior: string;
+  ApiCachingBehavior: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html#cfn-appsync-apicache-ttl}
    */
-  Ttl: number;
+  Ttl: Resolvable<number>;
 };

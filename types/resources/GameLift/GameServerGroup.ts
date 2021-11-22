@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::GameServerGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GameServerGroup_Type = 'AWS::GameLift::GameServerGroup';
 export const GameServerGroup_Type = 'AWS::GameLift::GameServerGroup';
@@ -105,7 +105,7 @@ export type AutoScalingPolicy = {
   TargetTrackingConfiguration: TargetTrackingConfiguration;
 };
 
-export type EstimatedInstanceWarmup = number;
+export type EstimatedInstanceWarmup = Resolvable<number>;
 
 /**
  * Settings for a target-based scaling policy applied to Auto Scaling
@@ -120,20 +120,23 @@ export type TargetTrackingConfiguration = {
   TargetValue: TargetValue;
 };
 
-export type TargetValue = number;
+export type TargetValue = Resolvable<number>;
 
-export type BalancingStrategy =
-  | 'SPOT_ONLY'
-  | 'SPOT_PREFERRED'
-  | 'ON_DEMAND_ONLY';
+export type BalancingStrategy = Resolvable<
+  'SPOT_ONLY' | 'SPOT_PREFERRED' | 'ON_DEMAND_ONLY'
+>;
 
-export type DeleteOption = 'SAFE_DELETE' | 'FORCE_DELETE' | 'RETAIN';
+export type DeleteOption = Resolvable<
+  'SAFE_DELETE' | 'FORCE_DELETE' | 'RETAIN'
+>;
 
-export type GameServerGroupName = string;
+export type GameServerGroupName = Resolvable<string>;
 
-export type GameServerProtectionPolicy = 'NO_PROTECTION' | 'FULL_PROTECTION';
+export type GameServerProtectionPolicy = Resolvable<
+  'NO_PROTECTION' | 'FULL_PROTECTION'
+>;
 
-export type GameServerGroupArn = string;
+export type GameServerGroupArn = Resolvable<string>;
 
 export type InstanceDefinitions = InstanceDefinition[];
 
@@ -154,9 +157,9 @@ export type InstanceDefinition = {
   WeightedCapacity?: WeightedCapacity;
 };
 
-export type InstanceType = string;
+export type InstanceType = Resolvable<string>;
 
-export type WeightedCapacity = string;
+export type WeightedCapacity = Resolvable<string>;
 
 /**
  * The EC2 launch template that contains configuration settings and game
@@ -182,26 +185,26 @@ export type LaunchTemplate = {
   Version?: Version;
 };
 
-export type LaunchTemplateId = string;
+export type LaunchTemplateId = Resolvable<string>;
 
-export type LaunchTemplateName = string;
+export type LaunchTemplateName = Resolvable<string>;
 
-export type Version = string;
+export type Version = Resolvable<string>;
 
-export type MaxSize = number;
+export type MaxSize = Resolvable<number>;
 
-export type MinSize = number;
+export type MinSize = Resolvable<number>;
 
-export type RoleArn = string;
+export type RoleArn = Resolvable<string>;
 
 export type Tags = Tag[];
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
-export type VpcSubnets = string[];
+export type VpcSubnets = Resolvable<string>[];
 
 export type GameServerGroup = {
   AutoScalingGroupArn?: AutoScalingGroupArn;
@@ -218,21 +221,22 @@ export type GameServerGroup = {
   SuspendedActions?: SuspendedActions;
 };
 
-export type AutoScalingGroupArn = string;
+export type AutoScalingGroupArn = Resolvable<string>;
 
-export type CreationTime = string;
+export type CreationTime = Resolvable<string>;
 
-export type LastUpdatedTime = string;
+export type LastUpdatedTime = Resolvable<string>;
 
-export type Status =
+export type Status = Resolvable<
   | 'NEW'
   | 'ACTIVATING'
   | 'ACTIVE'
   | 'DELETE_SCHEDULED'
   | 'DELETING'
   | 'DELETED'
-  | 'ERROR';
+  | 'ERROR'
+>;
 
-export type StatusReason = string;
+export type StatusReason = Resolvable<string>;
 
-export type SuspendedActions = 'REPLACE_INSTANCE_TYPES'[];
+export type SuspendedActions = Resolvable<'REPLACE_INSTANCE_TYPES'>[];

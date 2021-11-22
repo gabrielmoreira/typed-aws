@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::KeySigningKey
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type KeySigningKey_Type = 'AWS::Route53::KeySigningKey';
 export const KeySigningKey_Type = 'AWS::Route53::KeySigningKey';
@@ -24,20 +24,20 @@ export type KeySigningKey_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html#cfn-route53-keysigningkey-hostedzoneid}
    */
-  HostedZoneId: string;
+  HostedZoneId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html#cfn-route53-keysigningkey-status}
    */
-  Status: 'ACTIVE' | 'INACTIVE';
+  Status: Resolvable<'ACTIVE' | 'INACTIVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html#cfn-route53-keysigningkey-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html#cfn-route53-keysigningkey-keymanagementservicearn}
    */
-  KeyManagementServiceArn: string;
+  KeyManagementServiceArn: Resolvable<string>;
 };

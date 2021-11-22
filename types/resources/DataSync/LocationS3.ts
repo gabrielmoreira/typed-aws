@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationS3
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocationS3_Type = 'AWS::DataSync::LocationS3';
 export const LocationS3_Type = 'AWS::DataSync::LocationS3';
@@ -27,30 +27,31 @@ export type LocationS3_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-s3bucketarn}
    */
-  S3BucketArn: string;
+  S3BucketArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-subdirectory}
    */
-  Subdirectory?: string;
+  Subdirectory?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-s3storageclass}
    */
-  S3StorageClass?:
+  S3StorageClass?: Resolvable<
     | 'STANDARD'
     | 'STANDARD_IA'
     | 'ONEZONE_IA'
     | 'INTELLIGENT_TIERING'
     | 'GLACIER'
-    | 'DEEP_ARCHIVE';
+    | 'DEEP_ARCHIVE'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html#cfn-datasync-locations3-tags}
    */
   Tags?: Tag[];
-  LocationArn?: string;
-  LocationUri?: string;
+  LocationArn?: Resolvable<string>;
+  LocationUri?: Resolvable<string>;
 };
 
 /**
@@ -63,10 +64,10 @@ export type S3Config = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locations3-s3config.html#cfn-datasync-locations3-s3config-bucketaccessrolearn}
    */
-  BucketAccessRoleArn: string;
+  BucketAccessRoleArn: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

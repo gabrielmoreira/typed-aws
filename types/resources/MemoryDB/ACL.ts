@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MemoryDB::ACL
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ACL_Type = 'AWS::MemoryDB::ACL';
 export const ACL_Type = 'AWS::MemoryDB::ACL';
@@ -18,18 +18,18 @@ export default function ACL(props: ACL_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html}
  */
 export type ACL_Properties = {
-  Status?: string;
+  Status?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html#cfn-memorydb-acl-aclname}
    */
-  ACLName: string;
+  ACLName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html#cfn-memorydb-acl-usernames}
    */
-  UserNames?: string[];
-  Arn?: string;
+  UserNames?: Resolvable<string>[];
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html#cfn-memorydb-acl-tags}
@@ -38,6 +38,6 @@ export type ACL_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Detective::MemberInvitation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MemberInvitation_Type = 'AWS::Detective::MemberInvitation';
 export const MemberInvitation_Type = 'AWS::Detective::MemberInvitation';
@@ -25,25 +25,25 @@ export type MemberInvitation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-grapharn}
    */
-  GraphArn: string;
+  GraphArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-memberid}
    */
-  MemberId: string;
+  MemberId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-memberemailaddress}
    */
-  MemberEmailAddress: string;
+  MemberEmailAddress: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-disableemailnotification}
    */
-  DisableEmailNotification?: boolean;
+  DisableEmailNotification?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html#cfn-detective-memberinvitation-message}
    */
-  Message?: string;
+  Message?: Resolvable<string>;
 };

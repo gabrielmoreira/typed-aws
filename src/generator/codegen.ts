@@ -64,7 +64,7 @@ export class ResourceModel {
 
   toString() {
     return `
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ${this.mainModel.getName()}_Type = '${this.mainSchema.namespace}';
 export const ${this.mainModel.getName()}_Type = '${this.mainSchema.namespace}';
@@ -108,8 +108,8 @@ class TypeModel<Type extends TypeDefinition = TypeDefinition> {
   }
 
   getName() {
-    if (this.name) return this.name;
-    return this.names.join('_');
+    if (this.name) return normalizeName(this.name);
+    return normalizeName(this.names.join('_'));
   }
 
   getPropertyDocs(propertyName?: string | typeof AnyProperty) {
@@ -139,9 +139,12 @@ class StringTypeModel extends TypeModel<StringType> {
   }
   toString() {
     if (this.schema.enum) {
-      return this.schema.enum.map((item) => `'${item}'`).join(' | ');
+      const enumTypeLiteral = this.schema.enum
+        .map((item) => `'${item}'`)
+        .join(' | ');
+      return `Resolvable<${enumTypeLiteral}>`;
     }
-    return `string`;
+    return `Resolvable<string>`;
   }
 }
 
@@ -165,7 +168,7 @@ class NumberTypeModel extends TypeModel<NumberType> {
     super(schema, names, specs);
   }
   toString() {
-    return `number`;
+    return `Resolvable<number>`;
   }
 }
 
@@ -178,7 +181,7 @@ class BooleanTypeModel extends TypeModel<BooleanType> {
     super(schema, names, specs);
   }
   toString() {
-    return `boolean`;
+    return `Resolvable<boolean>`;
   }
 }
 
@@ -335,7 +338,7 @@ class MemberModel {
     }: ${
       this.isUnknown
         ? 'unknown'
-        : this.type?.toString() || 'unknown // PROPERTY MODEL??'
+        : normalizeName(this.type?.toString()) || 'unknown // PROPERTY MODEL??'
     }`;
   }
 }
@@ -419,6 +422,7 @@ function createConditionalModel(
   names: string[],
   specs: SpecRegistry
 ): TypeModel | null {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
   const { anyOf, allOf, oneOf, not, ...parentSchema } = schema as any;
   const addSubSchemas = (
     subSchemas: TypeDefinition[],
@@ -443,4 +447,10 @@ function createConditionalModel(
     return unionModel;
   }
   return null;
+}
+
+function normalizeName(name?: string) {
+  if (!name) return name;
+  if (name === 'Object') return 'ObjectData';
+  return name;
 }

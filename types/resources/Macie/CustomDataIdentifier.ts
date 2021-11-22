@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Macie::CustomDataIdentifier
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CustomDataIdentifier_Type = 'AWS::Macie::CustomDataIdentifier';
 export const CustomDataIdentifier_Type = 'AWS::Macie::CustomDataIdentifier';
@@ -27,32 +27,32 @@ export type CustomDataIdentifier_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-regex}
    */
-  Regex: string;
+  Regex: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-maximummatchdistance}
    */
-  MaximumMatchDistance?: number;
+  MaximumMatchDistance?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-keywords}
    */
-  Keywords?: string[];
+  Keywords?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html#cfn-macie-customdataidentifier-ignorewords}
    */
-  IgnoreWords?: string[];
-  Id?: string;
-  Arn?: string;
+  IgnoreWords?: Resolvable<string>[];
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
 };

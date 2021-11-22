@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GlobalAccelerator::Listener
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Listener_Type = 'AWS::GlobalAccelerator::Listener';
 export const Listener_Type = 'AWS::GlobalAccelerator::Listener';
@@ -18,12 +18,12 @@ export default function Listener(props: Listener_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html}
  */
 export type Listener_Properties = {
-  ListenerArn?: string;
+  ListenerArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-acceleratorarn}
    */
-  AcceleratorArn: string;
+  AcceleratorArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-portranges}
@@ -33,15 +33,15 @@ export type Listener_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-protocol}
    */
-  Protocol: 'TCP' | 'UDP';
+  Protocol: Resolvable<'TCP' | 'UDP'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html#cfn-globalaccelerator-listener-clientaffinity}
    */
-  ClientAffinity?: 'NONE' | 'SOURCE_IP';
+  ClientAffinity?: Resolvable<'NONE' | 'SOURCE_IP'>;
 };
 
-export type Port = number;
+export type Port = Resolvable<number>;
 
 /**
  * A port range to support for connections from  clients to your

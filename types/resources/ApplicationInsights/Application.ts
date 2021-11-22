@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApplicationInsights::Application
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Application_Type = 'AWS::ApplicationInsights::Application';
 export const Application_Type = 'AWS::ApplicationInsights::Application';
@@ -22,23 +22,23 @@ export type Application_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-resourcegroupname}
    */
-  ResourceGroupName: string;
-  ApplicationARN?: string;
+  ResourceGroupName: Resolvable<string>;
+  ApplicationARN?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-cwemonitorenabled}
    */
-  CWEMonitorEnabled?: boolean;
+  CWEMonitorEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-opscenterenabled}
    */
-  OpsCenterEnabled?: boolean;
+  OpsCenterEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-opsitemsnstopicarn}
    */
-  OpsItemSNSTopicArn?: string;
+  OpsItemSNSTopicArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-tags}
@@ -58,7 +58,7 @@ export type Application_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-autoconfigurationenabled}
    */
-  AutoConfigurationEnabled?: boolean;
+  AutoConfigurationEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-componentmonitoringsettings}
@@ -67,8 +67,8 @@ export type Application_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -80,12 +80,12 @@ export type CustomComponent = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-componentname}
    */
-  ComponentName: string;
+  ComponentName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-customcomponent.html#cfn-applicationinsights-application-customcomponent-resourcelist}
    */
-  ResourceList: string[];
+  ResourceList: Resolvable<string>[];
 };
 
 /**
@@ -97,7 +97,7 @@ export type LogPatternSet = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-patternsetname}
    */
-  PatternSetName: string;
+  PatternSetName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html#cfn-applicationinsights-application-logpatternset-logpatterns}
@@ -114,17 +114,17 @@ export type LogPattern = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-patternname}
    */
-  PatternName: string;
+  PatternName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-pattern}
    */
-  Pattern: string;
+  Pattern: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpattern.html#cfn-applicationinsights-application-logpattern-rank}
    */
-  Rank: number;
+  Rank: Resolvable<number>;
 };
 
 export type ComponentMonitoringSetting =
@@ -133,25 +133,24 @@ export type ComponentMonitoringSetting =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname}
        */
-      ComponentName: string;
+      ComponentName: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn}
        */
-      ComponentARN?: string;
+      ComponentARN?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-tier}
        */
-      Tier?: string;
+      Tier?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentconfigurationmode}
        */
-      ComponentConfigurationMode?:
-        | 'DEFAULT'
-        | 'DEFAULT_WITH_OVERWRITE'
-        | 'CUSTOM';
+      ComponentConfigurationMode?: Resolvable<
+        'DEFAULT' | 'DEFAULT_WITH_OVERWRITE' | 'CUSTOM'
+      >;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-defaultoverwritecomponentconfiguration}
@@ -168,25 +167,24 @@ export type ComponentMonitoringSetting =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentname}
        */
-      ComponentName?: string;
+      ComponentName?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentarn}
        */
-      ComponentARN: string;
+      ComponentARN: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-tier}
        */
-      Tier?: string;
+      Tier?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-componentconfigurationmode}
        */
-      ComponentConfigurationMode?:
-        | 'DEFAULT'
-        | 'DEFAULT_WITH_OVERWRITE'
-        | 'CUSTOM';
+      ComponentConfigurationMode?: Resolvable<
+        'DEFAULT' | 'DEFAULT_WITH_OVERWRITE' | 'CUSTOM'
+      >;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-componentmonitoringsetting.html#cfn-applicationinsights-application-componentmonitoringsetting-defaultoverwritecomponentconfiguration}
@@ -279,17 +277,17 @@ export type JMXPrometheusExporter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-jmxurl}
    */
-  JMXURL?: string;
+  JMXURL?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-hostport}
    */
-  HostPort?: string;
+  HostPort?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-jmxprometheusexporter.html#cfn-applicationinsights-application-jmxprometheusexporter-prometheusport}
    */
-  PrometheusPort?: string;
+  PrometheusPort?: Resolvable<string>;
 };
 
 /**
@@ -301,7 +299,7 @@ export type AlarmMetric = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarmmetric.html#cfn-applicationinsights-application-alarmmetric-alarmmetricname}
    */
-  AlarmMetricName: string;
+  AlarmMetricName: Resolvable<string>;
 };
 
 /**
@@ -313,27 +311,27 @@ export type Log = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-loggroupname}
    */
-  LogGroupName?: string;
+  LogGroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logpath}
    */
-  LogPath?: string;
+  LogPath?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-logtype}
    */
-  LogType: string;
+  LogType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-encoding}
    */
-  Encoding?: 'utf-8' | 'utf-16' | 'ascii';
+  Encoding?: Resolvable<'utf-8' | 'utf-16' | 'ascii'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html#cfn-applicationinsights-application-log-patternset}
    */
-  PatternSet?: string;
+  PatternSet?: Resolvable<string>;
 };
 
 /**
@@ -345,12 +343,12 @@ export type WindowsEvent = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-loggroupname}
    */
-  LogGroupName: string;
+  LogGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventname}
    */
-  EventName: string;
+  EventName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-eventlevels}
@@ -360,15 +358,12 @@ export type WindowsEvent = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html#cfn-applicationinsights-application-windowsevent-patternset}
    */
-  PatternSet?: string;
+  PatternSet?: Resolvable<string>;
 };
 
-export type EventLevel =
-  | 'INFORMATION'
-  | 'WARNING'
-  | 'ERROR'
-  | 'CRITICAL'
-  | 'VERBOSE';
+export type EventLevel = Resolvable<
+  'INFORMATION' | 'WARNING' | 'ERROR' | 'CRITICAL' | 'VERBOSE'
+>;
 
 /**
  * A CloudWatch alarm to be monitored for the component. {@link
@@ -379,12 +374,12 @@ export type Alarm = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarm.html#cfn-applicationinsights-application-alarm-alarmname}
    */
-  AlarmName: string;
+  AlarmName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-alarm.html#cfn-applicationinsights-application-alarm-severity}
    */
-  Severity?: 'HIGH' | 'MEDIUM' | 'LOW';
+  Severity?: Resolvable<'HIGH' | 'MEDIUM' | 'LOW'>;
 };
 
 /**
@@ -396,7 +391,7 @@ export type SubComponentTypeConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponenttypeconfiguration.html#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponenttype}
    */
-  SubComponentType: 'AWS::EC2::Instance' | 'AWS::EC2::Volume';
+  SubComponentType: Resolvable<'AWS::EC2::Instance' | 'AWS::EC2::Volume'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponenttypeconfiguration.html#cfn-applicationinsights-application-subcomponenttypeconfiguration-subcomponentconfigurationdetails}

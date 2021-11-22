@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBProxyTargetGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBProxyTargetGroup_Type = 'AWS::RDS::DBProxyTargetGroup';
 export const DBProxyTargetGroup_Type = 'AWS::RDS::DBProxyTargetGroup';
@@ -27,13 +27,13 @@ export type DBProxyTargetGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbproxyname}
    */
-  DBProxyName: string;
-  TargetGroupArn?: string;
+  DBProxyName: Resolvable<string>;
+  TargetGroupArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-targetgroupname}
    */
-  TargetGroupName: 'default';
+  TargetGroupName: Resolvable<'default'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo}
@@ -43,12 +43,12 @@ export type DBProxyTargetGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers}
    */
-  DBInstanceIdentifiers?: string[];
+  DBInstanceIdentifiers?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html#cfn-rds-dbproxytargetgroup-dbclusteridentifiers}
    */
-  DBClusterIdentifiers?: string[];
+  DBClusterIdentifiers?: Resolvable<string>[];
 };
 
 /**
@@ -60,25 +60,25 @@ export type ConnectionPoolConfigurationInfoFormat = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-maxconnectionspercent}
    */
-  MaxConnectionsPercent?: number;
+  MaxConnectionsPercent?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-maxidleconnectionspercent}
    */
-  MaxIdleConnectionsPercent?: number;
+  MaxIdleConnectionsPercent?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-connectionborrowtimeout}
    */
-  ConnectionBorrowTimeout?: number;
+  ConnectionBorrowTimeout?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-sessionpinningfilters}
    */
-  SessionPinningFilters?: string[];
+  SessionPinningFilters?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-initquery}
    */
-  InitQuery?: string;
+  InitQuery?: Resolvable<string>;
 };

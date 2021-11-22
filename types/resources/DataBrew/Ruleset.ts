@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Ruleset
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Ruleset_Type = 'AWS::DataBrew::Ruleset';
 export const Ruleset_Type = 'AWS::DataBrew::Ruleset';
@@ -22,17 +22,17 @@ export type Ruleset_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html#cfn-databrew-ruleset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html#cfn-databrew-ruleset-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html#cfn-databrew-ruleset-targetarn}
    */
-  TargetArn: string;
+  TargetArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html#cfn-databrew-ruleset-rules}
@@ -45,7 +45,7 @@ export type Ruleset_Properties = {
   Tags?: Tag[];
 };
 
-export type Expression = string;
+export type Expression = Resolvable<string>;
 
 /**
  * A key-value pair to associate expression's substitution variable names
@@ -57,25 +57,23 @@ export type SubstitutionValue = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-valuereference}
    */
-  ValueReference: string;
+  ValueReference: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html#cfn-databrew-ruleset-substitutionvalue-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 export type ValuesMap = SubstitutionValue[];
 
-export type ThresholdValue = number;
+export type ThresholdValue = Resolvable<number>;
 
-export type ThresholdType =
-  | 'GREATER_THAN_OR_EQUAL'
-  | 'LESS_THAN_OR_EQUAL'
-  | 'GREATER_THAN'
-  | 'LESS_THAN';
+export type ThresholdType = Resolvable<
+  'GREATER_THAN_OR_EQUAL' | 'LESS_THAN_OR_EQUAL' | 'GREATER_THAN' | 'LESS_THAN'
+>;
 
-export type ThresholdUnit = 'COUNT' | 'PERCENTAGE';
+export type ThresholdUnit = Resolvable<'COUNT' | 'PERCENTAGE'>;
 
 /**
  * {@link
@@ -109,15 +107,15 @@ export type ColumnSelector = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-columnselector.html#cfn-databrew-ruleset-columnselector-regex}
    */
-  Regex?: string;
+  Regex?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-columnselector.html#cfn-databrew-ruleset-columnselector-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
-export type Disabled = boolean;
+export type Disabled = Resolvable<boolean>;
 
 /**
  * Data quality rule for a target resource (dataset) {@link
@@ -128,7 +126,7 @@ export type Rule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-rule.html#cfn-databrew-ruleset-rule-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-rule.html#cfn-databrew-ruleset-rule-disabled}
@@ -157,6 +155,6 @@ export type Rule = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

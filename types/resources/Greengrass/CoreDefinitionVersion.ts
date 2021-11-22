@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::CoreDefinitionVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CoreDefinitionVersion_Type =
   'AWS::Greengrass::CoreDefinitionVersion';
@@ -36,8 +36,8 @@ export type CoreDefinitionVersion_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html#cfn-greengrass-coredefinitionversion-coredefinitionid}
    */
-  CoreDefinitionId: string;
-  Id?: string;
+  CoreDefinitionId: Resolvable<string>;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -49,20 +49,20 @@ export type Core = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-syncshadow}
    */
-  SyncShadow?: boolean;
+  SyncShadow?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-thingarn}
    */
-  ThingArn: string;
+  ThingArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-coredefinitionversion-core.html#cfn-greengrass-coredefinitionversion-core-certificatearn}
    */
-  CertificateArn: string;
+  CertificateArn: Resolvable<string>;
 };

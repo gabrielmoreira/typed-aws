@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::UserProfile
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserProfile_Type = 'AWS::SageMaker::UserProfile';
 export const UserProfile_Type = 'AWS::SageMaker::UserProfile';
@@ -18,27 +18,27 @@ export default function UserProfile(props: UserProfile_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html}
  */
 export type UserProfile_Properties = {
-  UserProfileArn?: string;
+  UserProfileArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html#cfn-sagemaker-userprofile-domainid}
    */
-  DomainId: string;
+  DomainId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html#cfn-sagemaker-userprofile-singlesignonuseridentifier}
    */
-  SingleSignOnUserIdentifier?: string;
+  SingleSignOnUserIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html#cfn-sagemaker-userprofile-singlesignonuservalue}
    */
-  SingleSignOnUserValue?: string;
+  SingleSignOnUserValue?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html#cfn-sagemaker-userprofile-userprofilename}
    */
-  UserProfileName: string;
+  UserProfileName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html#cfn-sagemaker-userprofile-usersettings}
@@ -63,7 +63,7 @@ export type UserSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-executionrole}
    */
-  ExecutionRole?: string;
+  ExecutionRole?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-jupyterserverappsettings}
@@ -78,7 +78,7 @@ export type UserSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-securitygroups}
    */
-  SecurityGroups?: string[];
+  SecurityGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-sharingsettings}
@@ -107,7 +107,7 @@ export type ResourceSpec = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-instancetype}
    */
-  InstanceType?:
+  InstanceType?: Resolvable<
     | 'system'
     | 'ml.t3.micro'
     | 'ml.t3.small'
@@ -139,17 +139,18 @@ export type ResourceSpec = {
     | 'ml.g4dn.4xlarge'
     | 'ml.g4dn.8xlarge'
     | 'ml.g4dn.12xlarge'
-    | 'ml.g4dn.16xlarge';
+    | 'ml.g4dn.16xlarge'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-sagemakerimagearn}
    */
-  SageMakerImageArn?: string;
+  SageMakerImageArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html#cfn-sagemaker-userprofile-resourcespec-sagemakerimageversionarn}
    */
-  SageMakerImageVersionArn?: string;
+  SageMakerImageVersionArn?: Resolvable<string>;
 };
 
 /**
@@ -178,17 +179,17 @@ export type CustomImage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customimage.html#cfn-sagemaker-userprofile-customimage-appimageconfigname}
    */
-  AppImageConfigName: string;
+  AppImageConfigName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customimage.html#cfn-sagemaker-userprofile-customimage-imagename}
    */
-  ImageName: string;
+  ImageName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customimage.html#cfn-sagemaker-userprofile-customimage-imageversionnumber}
    */
-  ImageVersionNumber?: number;
+  ImageVersionNumber?: Resolvable<number>;
 };
 
 /**
@@ -203,20 +204,20 @@ export type SharingSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-sharingsettings.html#cfn-sagemaker-userprofile-sharingsettings-notebookoutputoption}
    */
-  NotebookOutputOption?: 'Allowed' | 'Disabled';
+  NotebookOutputOption?: Resolvable<'Allowed' | 'Disabled'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-sharingsettings.html#cfn-sagemaker-userprofile-sharingsettings-s3kmskeyid}
    */
-  S3KmsKeyId?: string;
+  S3KmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-sharingsettings.html#cfn-sagemaker-userprofile-sharingsettings-s3outputpath}
    */
-  S3OutputPath?: string;
+  S3OutputPath?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

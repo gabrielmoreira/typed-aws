@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::ServerCertificate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ServerCertificate_Type = 'AWS::IAM::ServerCertificate';
 export const ServerCertificate_Type = 'AWS::IAM::ServerCertificate';
@@ -25,28 +25,28 @@ export type ServerCertificate_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-certificatebody}
    */
-  CertificateBody?: string;
+  CertificateBody?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-certificatechain}
    */
-  CertificateChain?: string;
+  CertificateChain?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-servercertificatename}
    */
-  ServerCertificateName?: string;
+  ServerCertificateName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-path}
    */
-  Path?: string;
+  Path?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-privatekey}
    */
-  PrivateKey?: string;
-  Arn?: string;
+  PrivateKey?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html#cfn-iam-servercertificate-tags}
@@ -55,6 +55,6 @@ export type ServerCertificate_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

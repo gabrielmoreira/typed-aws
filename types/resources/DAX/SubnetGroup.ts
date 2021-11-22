@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DAX::SubnetGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SubnetGroup_Type = 'AWS::DAX::SubnetGroup';
 export const SubnetGroup_Type = 'AWS::DAX::SubnetGroup';
@@ -22,16 +22,16 @@ export type SubnetGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-description}
    */
-  Description?: string;
-  Id?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetids}
    */
-  SubnetIds: string[];
+  SubnetIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html#cfn-dax-subnetgroup-subnetgroupname}
    */
-  SubnetGroupName?: string;
+  SubnetGroupName?: Resolvable<string>;
 };

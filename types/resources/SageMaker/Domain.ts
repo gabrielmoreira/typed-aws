@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Domain
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Domain_Type = 'AWS::SageMaker::Domain';
 export const Domain_Type = 'AWS::SageMaker::Domain';
@@ -18,18 +18,18 @@ export default function Domain(props: Domain_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html}
  */
 export type Domain_Properties = {
-  DomainArn?: string;
-  Url?: string;
+  DomainArn?: Resolvable<string>;
+  Url?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-appnetworkaccesstype}
    */
-  AppNetworkAccessType?: 'PublicInternetOnly' | 'VpcOnly';
+  AppNetworkAccessType?: Resolvable<'PublicInternetOnly' | 'VpcOnly'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-authmode}
    */
-  AuthMode: 'SSO' | 'IAM';
+  AuthMode: Resolvable<'SSO' | 'IAM'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultusersettings}
@@ -39,17 +39,17 @@ export type Domain_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-domainname}
    */
-  DomainName: string;
+  DomainName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-kmskeyid}
    */
-  KmsKeyId?: string;
+  KmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-subnetids}
    */
-  SubnetIds: string[];
+  SubnetIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-tags}
@@ -59,10 +59,10 @@ export type Domain_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-vpcid}
    */
-  VpcId: string;
-  DomainId?: string;
-  HomeEfsFileSystemId?: string;
-  SingleSignOnManagedApplicationInstanceId?: string;
+  VpcId: Resolvable<string>;
+  DomainId?: Resolvable<string>;
+  HomeEfsFileSystemId?: Resolvable<string>;
+  SingleSignOnManagedApplicationInstanceId?: Resolvable<string>;
 };
 
 /**
@@ -77,7 +77,7 @@ export type UserSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-executionrole}
    */
-  ExecutionRole?: string;
+  ExecutionRole?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-jupyterserverappsettings}
@@ -92,7 +92,7 @@ export type UserSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-securitygroups}
    */
-  SecurityGroups?: string[];
+  SecurityGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-sharingsettings}
@@ -121,7 +121,7 @@ export type ResourceSpec = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-instancetype}
    */
-  InstanceType?:
+  InstanceType?: Resolvable<
     | 'system'
     | 'ml.t3.micro'
     | 'ml.t3.small'
@@ -153,17 +153,18 @@ export type ResourceSpec = {
     | 'ml.g4dn.4xlarge'
     | 'ml.g4dn.8xlarge'
     | 'ml.g4dn.12xlarge'
-    | 'ml.g4dn.16xlarge';
+    | 'ml.g4dn.16xlarge'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimagearn}
    */
-  SageMakerImageArn?: string;
+  SageMakerImageArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-resourcespec.html#cfn-sagemaker-domain-resourcespec-sagemakerimageversionarn}
    */
-  SageMakerImageVersionArn?: string;
+  SageMakerImageVersionArn?: Resolvable<string>;
 };
 
 /**
@@ -192,17 +193,17 @@ export type CustomImage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-appimageconfigname}
    */
-  AppImageConfigName: string;
+  AppImageConfigName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imagename}
    */
-  ImageName: string;
+  ImageName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-customimage.html#cfn-sagemaker-domain-customimage-imageversionnumber}
    */
-  ImageVersionNumber?: number;
+  ImageVersionNumber?: Resolvable<number>;
 };
 
 /**
@@ -217,20 +218,20 @@ export type SharingSettings = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-notebookoutputoption}
    */
-  NotebookOutputOption?: 'Allowed' | 'Disabled';
+  NotebookOutputOption?: Resolvable<'Allowed' | 'Disabled'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3kmskeyid}
    */
-  S3KmsKeyId?: string;
+  S3KmsKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-sharingsettings.html#cfn-sagemaker-domain-sharingsettings-s3outputpath}
    */
-  S3OutputPath?: string;
+  S3OutputPath?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

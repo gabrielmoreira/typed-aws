@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::PortfolioPrincipalAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PortfolioPrincipalAssociation_Type =
   'AWS::ServiceCatalog::PortfolioPrincipalAssociation';
@@ -27,25 +27,25 @@ export default function PortfolioPrincipalAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html}
  */
 export type PortfolioPrincipalAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principalarn}
    */
-  PrincipalARN: string;
+  PrincipalARN: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage}
    */
-  AcceptLanguage?: string;
+  AcceptLanguage?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-portfolioid}
    */
-  PortfolioId: string;
+  PortfolioId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principaltype}
    */
-  PrincipalType: string;
+  PrincipalType: Resolvable<string>;
 };

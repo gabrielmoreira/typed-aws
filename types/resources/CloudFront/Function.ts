@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::Function
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Function_Type = 'AWS::CloudFront::Function';
 export const Function_Type = 'AWS::CloudFront::Function';
@@ -22,13 +22,13 @@ export type Function_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-autopublish}
    */
-  AutoPublish?: boolean;
-  FunctionARN?: string;
+  AutoPublish?: Resolvable<boolean>;
+  FunctionARN?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-functioncode}
    */
-  FunctionCode?: string;
+  FunctionCode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-functionconfig}
@@ -39,8 +39,8 @@ export type Function_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html#cfn-cloudfront-function-name}
    */
-  Name: string;
-  Stage?: string;
+  Name: Resolvable<string>;
+  Stage?: Resolvable<string>;
 };
 
 /**
@@ -52,12 +52,12 @@ export type FunctionConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionconfig.html#cfn-cloudfront-function-functionconfig-comment}
    */
-  Comment: string;
+  Comment: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionconfig.html#cfn-cloudfront-function-functionconfig-runtime}
    */
-  Runtime: string;
+  Runtime: Resolvable<string>;
 };
 
 /**
@@ -69,5 +69,5 @@ export type FunctionMetadata = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-function-functionmetadata.html#cfn-cloudfront-function-functionmetadata-functionarn}
    */
-  FunctionARN?: string;
+  FunctionARN?: Resolvable<string>;
 };

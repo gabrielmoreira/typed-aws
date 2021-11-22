@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SubnetCidrBlock
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SubnetCidrBlock_Type = 'AWS::EC2::SubnetCidrBlock';
 export const SubnetCidrBlock_Type = 'AWS::EC2::SubnetCidrBlock';
@@ -21,15 +21,15 @@ export default function SubnetCidrBlock(props: SubnetCidrBlock_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html}
  */
 export type SubnetCidrBlock_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-ipv6cidrblock}
    */
-  Ipv6CidrBlock: string;
+  Ipv6CidrBlock: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html#cfn-ec2-subnetcidrblock-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };

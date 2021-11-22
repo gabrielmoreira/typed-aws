@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::WarmPool
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WarmPool_Type = 'AWS::AutoScaling::WarmPool';
 export const WarmPool_Type = 'AWS::AutoScaling::WarmPool';
@@ -22,20 +22,20 @@ export type WarmPool_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html#cfn-autoscaling-warmpool-autoscalinggroupname}
    */
-  AutoScalingGroupName: string;
+  AutoScalingGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html#cfn-autoscaling-warmpool-maxgrouppreparedcapacity}
    */
-  MaxGroupPreparedCapacity?: number;
+  MaxGroupPreparedCapacity?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html#cfn-autoscaling-warmpool-minsize}
    */
-  MinSize?: number;
+  MinSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html#cfn-autoscaling-warmpool-poolstate}
    */
-  PoolState?: string;
+  PoolState?: Resolvable<string>;
 };

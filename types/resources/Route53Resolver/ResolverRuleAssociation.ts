@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverRuleAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverRuleAssociation_Type =
   'AWS::Route53Resolver::ResolverRuleAssociation';
@@ -31,16 +31,16 @@ export type ResolverRuleAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-resolverruleid}
    */
-  ResolverRuleId: string;
-  ResolverRuleAssociationId?: string;
+  ResolverRuleId: Resolvable<string>;
+  ResolverRuleAssociationId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-vpcid}
    */
-  VPCId: string;
+  VPCId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };

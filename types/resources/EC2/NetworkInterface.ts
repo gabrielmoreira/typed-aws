@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInterface
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NetworkInterface_Type = 'AWS::EC2::NetworkInterface';
 export const NetworkInterface_Type = 'AWS::EC2::NetworkInterface';
@@ -25,12 +25,12 @@ export type NetworkInterface_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-privateipaddress}
    */
-  PrivateIpAddress?: string;
+  PrivateIpAddress?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-privateipaddresses}
@@ -40,13 +40,13 @@ export type NetworkInterface_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-secondaryprivateipcount}
    */
-  SecondaryPrivateIpAddressCount?: number;
-  PrimaryPrivateIpAddress?: string;
+  SecondaryPrivateIpAddressCount?: Resolvable<number>;
+  PrimaryPrivateIpAddress?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-groupset}
    */
-  GroupSet?: string[];
+  GroupSet?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-ec2-networkinterface-ipv6addresses}
@@ -56,24 +56,24 @@ export type NetworkInterface_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-sourcedestcheck}
    */
-  SourceDestCheck?: boolean;
+  SourceDestCheck?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-ec2-networkinterface-interfacetype}
    */
-  InterfaceType?: string;
-  SecondaryPrivateIpAddresses?: string[];
+  InterfaceType?: Resolvable<string>;
+  SecondaryPrivateIpAddresses?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-ec2-networkinterface-ipv6addresscount}
    */
-  Ipv6AddressCount?: number;
-  Id?: string;
+  Ipv6AddressCount?: Resolvable<number>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html#cfn-awsec2networkinterface-tags}
@@ -90,12 +90,12 @@ export type PrivateIpAddressSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-privateipaddress}
    */
-  PrivateIpAddress: string;
+  PrivateIpAddress: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-network-interface-privateipspec.html#cfn-ec2-networkinterface-privateipspecification-primary}
    */
-  Primary: boolean;
+  Primary: Resolvable<boolean>;
 };
 
 /**
@@ -107,10 +107,10 @@ export type InstanceIpv6Address = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinterface-instanceipv6address.html#cfn-ec2-networkinterface-instanceipv6address-ipv6address}
    */
-  Ipv6Address: string;
+  Ipv6Address: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

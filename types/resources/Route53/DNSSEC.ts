@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::DNSSEC
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DNSSEC_Type = 'AWS::Route53::DNSSEC';
 export const DNSSEC_Type = 'AWS::Route53::DNSSEC';
@@ -24,5 +24,5 @@ export type DNSSEC_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html#cfn-route53-dnssec-hostedzoneid}
    */
-  HostedZoneId: string;
+  HostedZoneId: Resolvable<string>;
 };

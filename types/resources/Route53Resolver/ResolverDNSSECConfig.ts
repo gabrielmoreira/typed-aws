@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverDNSSECConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverDNSSECConfig_Type =
   'AWS::Route53Resolver::ResolverDNSSECConfig';
@@ -25,12 +25,14 @@ export default function ResolverDNSSECConfig(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html}
  */
 export type ResolverDNSSECConfig_Properties = {
-  Id?: string;
-  OwnerId?: string;
+  Id?: Resolvable<string>;
+  OwnerId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html#cfn-route53resolver-resolverdnssecconfig-resourceid}
    */
-  ResourceId?: string;
-  ValidationStatus?: 'ENABLING' | 'ENABLED' | 'DISABLING' | 'DISABLED';
+  ResourceId?: Resolvable<string>;
+  ValidationStatus?: Resolvable<
+    'ENABLING' | 'ENABLED' | 'DISABLING' | 'DISABLED'
+  >;
 };

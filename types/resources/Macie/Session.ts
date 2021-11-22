@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Macie::Session
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Session_Type = 'AWS::Macie::Session';
 export const Session_Type = 'AWS::Macie::Session';
@@ -22,16 +22,18 @@ export default function Session(props: Session_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html}
  */
 export type Session_Properties = {
-  AwsAccountId?: string;
+  AwsAccountId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html#cfn-macie-session-status}
    */
-  Status?: 'ENABLED' | 'PAUSED';
+  Status?: Resolvable<'ENABLED' | 'PAUSED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html#cfn-macie-session-findingpublishingfrequency}
    */
-  FindingPublishingFrequency?: 'FIFTEEN_MINUTES' | 'ONE_HOUR' | 'SIX_HOURS';
-  ServiceRole?: string;
+  FindingPublishingFrequency?: Resolvable<
+    'FIFTEEN_MINUTES' | 'ONE_HOUR' | 'SIX_HOURS'
+  >;
+  ServiceRole?: Resolvable<string>;
 };

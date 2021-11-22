@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::StackUserAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type StackUserAssociation_Type = 'AWS::AppStream::StackUserAssociation';
 export const StackUserAssociation_Type = 'AWS::AppStream::StackUserAssociation';
@@ -29,21 +29,21 @@ export type StackUserAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-sendemailnotification}
    */
-  SendEmailNotification?: boolean;
+  SendEmailNotification?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-username}
    */
-  UserName: string;
-  Id?: string;
+  UserName: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-stackname}
    */
-  StackName: string;
+  StackName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html#cfn-appstream-stackuserassociation-authenticationtype}
    */
-  AuthenticationType: string;
+  AuthenticationType: Resolvable<string>;
 };

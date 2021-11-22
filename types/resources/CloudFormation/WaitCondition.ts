@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::WaitCondition
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WaitCondition_Type = 'AWS::CloudFormation::WaitCondition';
 export const WaitCondition_Type = 'AWS::CloudFormation::WaitCondition';
@@ -18,7 +18,7 @@ export default function WaitCondition(props: WaitCondition_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html}
  */
 export type WaitCondition_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   Data?: {
     [k: string]: unknown;
   };
@@ -26,15 +26,15 @@ export type WaitCondition_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-count}
    */
-  Count?: number;
+  Count?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-handle}
    */
-  Handle?: string;
+  Handle?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html#cfn-waitcondition-timeout}
    */
-  Timeout?: string;
+  Timeout?: Resolvable<string>;
 };

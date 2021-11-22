@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::RegexPatternSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RegexPatternSet_Type = 'AWS::WAFRegional::RegexPatternSet';
 export const RegexPatternSet_Type = 'AWS::WAFRegional::RegexPatternSet';
@@ -21,15 +21,15 @@ export default function RegexPatternSet(props: RegexPatternSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html}
  */
 export type RegexPatternSet_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html#cfn-wafregional-regexpatternset-regexpatternstrings}
    */
-  RegexPatternStrings: string[];
+  RegexPatternStrings: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html#cfn-wafregional-regexpatternset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };

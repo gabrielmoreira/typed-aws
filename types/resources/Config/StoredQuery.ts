@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::StoredQuery
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type StoredQuery_Type = 'AWS::Config::StoredQuery';
 export const StoredQuery_Type = 'AWS::Config::StoredQuery';
@@ -18,23 +18,23 @@ export default function StoredQuery(props: StoredQuery_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html}
  */
 export type StoredQuery_Properties = {
-  QueryArn?: string;
-  QueryId?: string;
+  QueryArn?: Resolvable<string>;
+  QueryId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-queryname}
    */
-  QueryName: string;
+  QueryName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-querydescription}
    */
-  QueryDescription?: string;
+  QueryDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-queryexpression}
    */
-  QueryExpression: string;
+  QueryExpression: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html#cfn-config-storedquery-tags}
@@ -43,6 +43,6 @@ export type StoredQuery_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

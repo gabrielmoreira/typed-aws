@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverRule
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverRule_Type = 'AWS::Route53Resolver::ResolverRule';
 export const ResolverRule_Type = 'AWS::Route53Resolver::ResolverRule';
@@ -22,22 +22,22 @@ export type ResolverRule_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-resolverendpointid}
    */
-  ResolverEndpointId?: string;
+  ResolverEndpointId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-domainname}
    */
-  DomainName: string;
+  DomainName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-ruletype}
    */
-  RuleType: 'FORWARD' | 'SYSTEM' | 'RECURSIVE';
+  RuleType: Resolvable<'FORWARD' | 'SYSTEM' | 'RECURSIVE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-tags}
@@ -48,8 +48,8 @@ export type ResolverRule_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-targetips}
    */
   TargetIps?: TargetAddress[];
-  Arn?: string;
-  ResolverRuleId?: string;
+  Arn?: Resolvable<string>;
+  ResolverRuleId?: Resolvable<string>;
 };
 
 /**
@@ -61,15 +61,15 @@ export type TargetAddress = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-ip}
    */
-  Ip: string;
+  Ip: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-port}
    */
-  Port?: string;
+  Port?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::NotebookInstanceLifecycleConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NotebookInstanceLifecycleConfig_Type =
   'AWS::SageMaker::NotebookInstanceLifecycleConfig';
@@ -32,12 +32,12 @@ export type NotebookInstanceLifecycleConfig_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart}
    */
   OnStart?: NotebookInstanceLifecycleHook[];
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname}
    */
-  NotebookInstanceLifecycleConfigName?: string;
+  NotebookInstanceLifecycleConfigName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate}
@@ -54,5 +54,5 @@ export type NotebookInstanceLifecycleHook = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content}
    */
-  Content?: string;
+  Content?: Resolvable<string>;
 };

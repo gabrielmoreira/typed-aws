@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::DirectoryConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DirectoryConfig_Type = 'AWS::AppStream::DirectoryConfig';
 export const DirectoryConfig_Type = 'AWS::AppStream::DirectoryConfig';
@@ -25,18 +25,18 @@ export type DirectoryConfig_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-organizationalunitdistinguishednames}
    */
-  OrganizationalUnitDistinguishedNames: string[];
+  OrganizationalUnitDistinguishedNames: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-serviceaccountcredentials}
    */
   ServiceAccountCredentials: ServiceAccountCredentials;
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html#cfn-appstream-directoryconfig-directoryname}
    */
-  DirectoryName: string;
+  DirectoryName: Resolvable<string>;
 };
 
 /**
@@ -48,10 +48,10 @@ export type ServiceAccountCredentials = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountname}
    */
-  AccountName: string;
+  AccountName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-serviceaccountcredentials.html#cfn-appstream-directoryconfig-serviceaccountcredentials-accountpassword}
    */
-  AccountPassword: string;
+  AccountPassword: Resolvable<string>;
 };

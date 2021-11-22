@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisAnalytics::Application
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Application_Type = 'AWS::KinesisAnalytics::Application';
 export const Application_Type = 'AWS::KinesisAnalytics::Application';
@@ -22,8 +22,8 @@ export type Application_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationname}
    */
-  ApplicationName?: string;
-  Id?: string;
+  ApplicationName?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-inputs}
@@ -33,12 +33,12 @@ export type Application_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationdescription}
    */
-  ApplicationDescription?: string;
+  ApplicationDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationcode}
    */
-  ApplicationCode?: string;
+  ApplicationCode?: Resolvable<string>;
 };
 
 /**
@@ -50,7 +50,7 @@ export type Input = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-nameprefix}
    */
-  NamePrefix: string;
+  NamePrefix: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-inputschema}
@@ -87,7 +87,7 @@ export type InputSchema = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordencoding}
    */
-  RecordEncoding?: string;
+  RecordEncoding?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputschema.html#cfn-kinesisanalytics-application-inputschema-recordcolumns}
@@ -109,12 +109,12 @@ export type KinesisStreamsInput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-resourcearn}
    */
-  ResourceARN: string;
+  ResourceARN: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisstreamsinput.html#cfn-kinesisanalytics-application-kinesisstreamsinput-rolearn}
    */
-  RoleARN: string;
+  RoleARN: Resolvable<string>;
 };
 
 /**
@@ -126,12 +126,12 @@ export type KinesisFirehoseInput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn}
    */
-  ResourceARN: string;
+  ResourceARN: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-kinesisfirehoseinput.html#cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn}
    */
-  RoleARN: string;
+  RoleARN: Resolvable<string>;
 };
 
 /**
@@ -155,7 +155,7 @@ export type RecordFormat = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordformat.html#cfn-kinesisanalytics-application-recordformat-recordformattype}
    */
-  RecordFormatType: string;
+  RecordFormatType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordformat.html#cfn-kinesisanalytics-application-recordformat-mappingparameters}
@@ -172,17 +172,17 @@ export type RecordColumn = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordcolumn.html#cfn-kinesisanalytics-application-recordcolumn-mapping}
    */
-  Mapping?: string;
+  Mapping?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordcolumn.html#cfn-kinesisanalytics-application-recordcolumn-sqltype}
    */
-  SqlType: string;
+  SqlType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordcolumn.html#cfn-kinesisanalytics-application-recordcolumn-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -194,7 +194,7 @@ export type JSONMappingParameters = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html#cfn-kinesisanalytics-application-jsonmappingparameters-recordrowpath}
    */
-  RecordRowPath: string;
+  RecordRowPath: Resolvable<string>;
 };
 
 /**
@@ -223,7 +223,7 @@ export type InputParallelism = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputparallelism.html#cfn-kinesisanalytics-application-inputparallelism-count}
    */
-  Count?: number;
+  Count?: Resolvable<number>;
 };
 
 /**
@@ -235,12 +235,12 @@ export type InputLambdaProcessor = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-resourcearn}
    */
-  ResourceARN: string;
+  ResourceARN: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html#cfn-kinesisanalytics-application-inputlambdaprocessor-rolearn}
    */
-  RoleARN: string;
+  RoleARN: Resolvable<string>;
 };
 
 /**
@@ -252,10 +252,10 @@ export type CSVMappingParameters = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordcolumndelimiter}
    */
-  RecordColumnDelimiter: string;
+  RecordColumnDelimiter: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-csvmappingparameters.html#cfn-kinesisanalytics-application-csvmappingparameters-recordrowdelimiter}
    */
-  RecordRowDelimiter: string;
+  RecordRowDelimiter: Resolvable<string>;
 };

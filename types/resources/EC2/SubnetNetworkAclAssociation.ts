@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SubnetNetworkAclAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SubnetNetworkAclAssociation_Type =
   'AWS::EC2::SubnetNetworkAclAssociation';
@@ -31,11 +31,11 @@ export type SubnetNetworkAclAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html#cfn-ec2-subnetnetworkaclassociation-associationid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html#cfn-ec2-subnetnetworkaclassociation-networkaclid}
    */
-  NetworkAclId: string;
-  AssociationId?: string;
+  NetworkAclId: Resolvable<string>;
+  AssociationId?: Resolvable<string>;
 };

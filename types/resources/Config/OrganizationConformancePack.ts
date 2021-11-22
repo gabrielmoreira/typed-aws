@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::OrganizationConformancePack
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type OrganizationConformancePack_Type =
   'AWS::Config::OrganizationConformancePack';
@@ -29,27 +29,27 @@ export type OrganizationConformancePack_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-organizationconformancepackname}
    */
-  OrganizationConformancePackName: string;
+  OrganizationConformancePackName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-templates3uri}
    */
-  TemplateS3Uri?: string;
+  TemplateS3Uri?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-templatebody}
    */
-  TemplateBody?: string;
+  TemplateBody?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-deliverys3bucket}
    */
-  DeliveryS3Bucket?: string;
+  DeliveryS3Bucket?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-deliverys3keyprefix}
    */
-  DeliveryS3KeyPrefix?: string;
+  DeliveryS3KeyPrefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html#cfn-config-organizationconformancepack-conformancepackinputparameters}
@@ -85,8 +85,8 @@ export type ConformancePackInputParameter = {
   [k: string]: unknown;
 };
 
-export type ParameterName = string;
+export type ParameterName = Resolvable<string>;
 
-export type ParameterValue = string;
+export type ParameterValue = Resolvable<string>;
 
-export type AccountId = string;
+export type AccountId = Resolvable<string>;

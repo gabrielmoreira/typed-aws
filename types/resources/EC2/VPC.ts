@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPC
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPC_Type = 'AWS::EC2::VPC';
 export const VPC_Type = 'AWS::EC2::VPC';
@@ -18,31 +18,31 @@ export default function VPC(props: VPC_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html}
  */
 export type VPC_Properties = {
-  VpcId?: string;
+  VpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-cidrblock}
    */
-  CidrBlock: string;
-  CidrBlockAssociations?: string[];
-  DefaultNetworkAcl?: string;
-  DefaultSecurityGroup?: string;
-  Ipv6CidrBlocks?: string[];
+  CidrBlock: Resolvable<string>;
+  CidrBlockAssociations?: Resolvable<string>[];
+  DefaultNetworkAcl?: Resolvable<string>;
+  DefaultSecurityGroup?: Resolvable<string>;
+  Ipv6CidrBlocks?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-EnableDnsHostnames}
    */
-  EnableDnsHostnames?: boolean;
+  EnableDnsHostnames?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-EnableDnsSupport}
    */
-  EnableDnsSupport?: boolean;
+  EnableDnsSupport?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-instancetenancy}
    */
-  InstanceTenancy?: string;
+  InstanceTenancy?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-tags}
@@ -51,6 +51,6 @@ export type VPC_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

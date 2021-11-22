@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationHDFS
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocationHDFS_Type = 'AWS::DataSync::LocationHDFS';
 export const LocationHDFS_Type = 'AWS::DataSync::LocationHDFS';
@@ -20,17 +20,17 @@ export type LocationHDFS_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-blocksize}
        */
-      BlockSize?: number;
+      BlockSize?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-replicationfactor}
        */
-      ReplicationFactor?: number;
+      ReplicationFactor?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kmskeyprovideruri}
        */
-      KmsKeyProviderUri?: string;
+      KmsKeyProviderUri?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-qopconfiguration}
@@ -40,27 +40,27 @@ export type LocationHDFS_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-authenticationtype}
        */
-      AuthenticationType: 'SIMPLE' | 'KERBEROS';
+      AuthenticationType: Resolvable<'SIMPLE' | 'KERBEROS'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-simpleuser}
        */
-      SimpleUser: string;
+      SimpleUser: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberosprincipal}
        */
-      KerberosPrincipal?: string;
+      KerberosPrincipal?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberoskeytab}
        */
-      KerberosKeytab?: string;
+      KerberosKeytab?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberoskrb5conf}
        */
-      KerberosKrb5Conf?: string;
+      KerberosKrb5Conf?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-tags}
@@ -70,14 +70,14 @@ export type LocationHDFS_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-agentarns}
        */
-      AgentArns: string[];
+      AgentArns: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-subdirectory}
        */
-      Subdirectory?: string;
-      LocationArn?: string;
-      LocationUri?: string;
+      Subdirectory?: Resolvable<string>;
+      LocationArn?: Resolvable<string>;
+      LocationUri?: Resolvable<string>;
     }
   | {
       /**
@@ -89,17 +89,17 @@ export type LocationHDFS_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-blocksize}
        */
-      BlockSize?: number;
+      BlockSize?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-replicationfactor}
        */
-      ReplicationFactor?: number;
+      ReplicationFactor?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kmskeyprovideruri}
        */
-      KmsKeyProviderUri?: string;
+      KmsKeyProviderUri?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-qopconfiguration}
@@ -109,27 +109,27 @@ export type LocationHDFS_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-authenticationtype}
        */
-      AuthenticationType: 'SIMPLE' | 'KERBEROS';
+      AuthenticationType: Resolvable<'SIMPLE' | 'KERBEROS'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-simpleuser}
        */
-      SimpleUser?: string;
+      SimpleUser?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberosprincipal}
        */
-      KerberosPrincipal: string;
+      KerberosPrincipal: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberoskeytab}
        */
-      KerberosKeytab?: string;
+      KerberosKeytab?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-kerberoskrb5conf}
        */
-      KerberosKrb5Conf?: string;
+      KerberosKrb5Conf?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-tags}
@@ -139,14 +139,14 @@ export type LocationHDFS_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-agentarns}
        */
-      AgentArns: string[];
+      AgentArns: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html#cfn-datasync-locationhdfs-subdirectory}
        */
-      Subdirectory?: string;
-      LocationArn?: string;
-      LocationUri?: string;
+      Subdirectory?: Resolvable<string>;
+      LocationArn?: Resolvable<string>;
+      LocationUri?: Resolvable<string>;
     };
 
 /**
@@ -158,17 +158,17 @@ export type NameNode = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationhdfs-namenode.html#cfn-datasync-locationhdfs-namenode-hostname}
    */
-  Hostname: string;
+  Hostname: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationhdfs-namenode.html#cfn-datasync-locationhdfs-namenode-port}
    */
-  Port: number;
+  Port: Resolvable<number>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -182,14 +182,14 @@ export type QopConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationhdfs-qopconfiguration.html#cfn-datasync-locationhdfs-qopconfiguration-rpcprotection}
    */
-  RpcProtection?: 'AUTHENTICATION' | 'INTEGRITY' | 'PRIVACY' | 'DISABLED';
+  RpcProtection?: Resolvable<
+    'AUTHENTICATION' | 'INTEGRITY' | 'PRIVACY' | 'DISABLED'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationhdfs-qopconfiguration.html#cfn-datasync-locationhdfs-qopconfiguration-datatransferprotection}
    */
-  DataTransferProtection?:
-    | 'AUTHENTICATION'
-    | 'INTEGRITY'
-    | 'PRIVACY'
-    | 'DISABLED';
+  DataTransferProtection?: Resolvable<
+    'AUTHENTICATION' | 'INTEGRITY' | 'PRIVACY' | 'DISABLED'
+  >;
 };

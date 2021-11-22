@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::User
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type User_Type = 'AWS::IAM::User';
 export const User_Type = 'AWS::IAM::User';
@@ -22,12 +22,12 @@ export type User_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-path}
    */
-  Path?: string;
+  Path?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-managepolicyarns}
    */
-  ManagedPolicyArns?: string[];
+  ManagedPolicyArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-policies}
@@ -37,14 +37,14 @@ export type User_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-username}
    */
-  UserName?: string;
+  UserName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-groups}
    */
-  Groups?: string[];
-  Id?: string;
-  Arn?: string;
+  Groups?: Resolvable<string>[];
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-loginprofile}
@@ -59,7 +59,7 @@ export type User_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-permissionsboundary}
    */
-  PermissionsBoundary?: string;
+  PermissionsBoundary?: Resolvable<string>;
 };
 
 /**
@@ -78,12 +78,12 @@ export type Policy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname}
    */
-  PolicyName: string;
+  PolicyName: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -95,10 +95,10 @@ export type LoginProfile = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-passwordresetrequired}
    */
-  PasswordResetRequired?: boolean;
+  PasswordResetRequired?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html#cfn-iam-user-loginprofile-password}
    */
-  Password: string;
+  Password: Resolvable<string>;
 };

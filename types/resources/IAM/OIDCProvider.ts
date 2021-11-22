@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::OIDCProvider
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type OIDCProvider_Type = 'AWS::IAM::OIDCProvider';
 export const OIDCProvider_Type = 'AWS::IAM::OIDCProvider';
@@ -22,18 +22,18 @@ export type OIDCProvider_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-clientidlist}
    */
-  ClientIdList?: string[];
+  ClientIdList?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-url}
    */
-  Url?: string;
+  Url?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-thumbprintlist}
    */
-  ThumbprintList: string[];
-  Arn?: string;
+  ThumbprintList: Resolvable<string>[];
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html#cfn-iam-oidcprovider-tags}
@@ -42,6 +42,6 @@ export type OIDCProvider_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::ModuleDefaultVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ModuleDefaultVersion_Type =
   'AWS::CloudFormation::ModuleDefaultVersion';
@@ -22,32 +22,32 @@ export type ModuleDefaultVersion_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-arn}
        */
-      Arn: string;
+      Arn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-modulename}
        */
-      ModuleName?: string;
+      ModuleName?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-versionid}
        */
-      VersionId?: string;
+      VersionId?: Resolvable<string>;
     }
   | {
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-arn}
        */
-      Arn?: string;
+      Arn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-modulename}
        */
-      ModuleName: string;
+      ModuleName: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-versionid}
        */
-      VersionId: string;
+      VersionId: Resolvable<string>;
     };

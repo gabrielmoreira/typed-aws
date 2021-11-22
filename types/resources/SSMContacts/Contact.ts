@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMContacts::Contact
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Contact_Type = 'AWS::SSMContacts::Contact';
 export const Contact_Type = 'AWS::SSMContacts::Contact';
@@ -22,23 +22,23 @@ export type Contact_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-alias}
    */
-  Alias: string;
+  Alias: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-displayname}
    */
-  DisplayName: string;
+  DisplayName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-type}
    */
-  Type: 'PERSONAL' | 'CUSTOM' | 'SERVICE' | 'ESCALATION';
+  Type: Resolvable<'PERSONAL' | 'CUSTOM' | 'SERVICE' | 'ESCALATION'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html#cfn-ssmcontacts-contact-plan}
    */
   Plan: Stage[];
-  Arn?: string;
+  Arn?: Resolvable<string>;
 };
 
 /**
@@ -51,12 +51,12 @@ export type ContactTargetInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-contactid}
    */
-  ContactId: string;
+  ContactId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-contacttargetinfo.html#cfn-ssmcontacts-contact-contacttargetinfo-isessential}
    */
-  IsEssential: boolean;
+  IsEssential: Resolvable<boolean>;
 };
 
 /**
@@ -69,12 +69,12 @@ export type ChannelTargetInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-channelid}
    */
-  ChannelId: string;
+  ChannelId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-channeltargetinfo.html#cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes}
    */
-  RetryIntervalInMinutes: number;
+  RetryIntervalInMinutes: Resolvable<number>;
 };
 
 /**
@@ -87,7 +87,7 @@ export type Stage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-stage.html#cfn-ssmcontacts-contact-stage-durationinminutes}
    */
-  DurationInMinutes: number;
+  DurationInMinutes: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-stage.html#cfn-ssmcontacts-contact-stage-targets}

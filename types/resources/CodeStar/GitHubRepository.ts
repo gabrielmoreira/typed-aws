@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeStar::GitHubRepository
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GitHubRepository_Type = 'AWS::CodeStar::GitHubRepository';
 export const GitHubRepository_Type = 'AWS::CodeStar::GitHubRepository';
@@ -25,33 +25,33 @@ export type GitHubRepository_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-enableissues}
    */
-  EnableIssues?: boolean;
+  EnableIssues?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-connectionarn}
    */
-  ConnectionArn?: string;
+  ConnectionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryname}
    */
-  RepositoryName: string;
+  RepositoryName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryaccesstoken}
    */
-  RepositoryAccessToken?: string;
-  Id?: string;
+  RepositoryAccessToken?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositoryowner}
    */
-  RepositoryOwner: string;
+  RepositoryOwner: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-isprivate}
    */
-  IsPrivate?: boolean;
+  IsPrivate?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-code}
@@ -61,7 +61,7 @@ export type GitHubRepository_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html#cfn-codestar-githubrepository-repositorydescription}
    */
-  RepositoryDescription?: string;
+  RepositoryDescription?: Resolvable<string>;
 };
 
 /**
@@ -73,17 +73,17 @@ export type S3 = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestar-githubrepository-s3.html#cfn-codestar-githubrepository-s3-objectversion}
    */
-  ObjectVersion?: string;
+  ObjectVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestar-githubrepository-s3.html#cfn-codestar-githubrepository-s3-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestar-githubrepository-s3.html#cfn-codestar-githubrepository-s3-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
 };
 
 /**

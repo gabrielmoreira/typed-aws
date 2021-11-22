@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppFlow::ConnectorProfile
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ConnectorProfile_Type = 'AWS::AppFlow::ConnectorProfile';
 export const ConnectorProfile_Type = 'AWS::AppFlow::ConnectorProfile';
@@ -21,17 +21,17 @@ export default function ConnectorProfile(props: ConnectorProfile_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html}
  */
 export type ConnectorProfile_Properties = {
-  ConnectorProfileArn?: string;
+  ConnectorProfileArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofilename}
    */
-  ConnectorProfileName: string;
+  ConnectorProfileName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-kmsarn}
    */
-  KMSArn?: string;
+  KMSArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectortype}
@@ -41,16 +41,16 @@ export type ConnectorProfile_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectionmode}
    */
-  ConnectionMode: 'Public' | 'Private';
+  ConnectionMode: Resolvable<'Public' | 'Private'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html#cfn-appflow-connectorprofile-connectorprofileconfig}
    */
   ConnectorProfileConfig?: ConnectorProfileConfig;
-  CredentialsArn?: string;
+  CredentialsArn?: Resolvable<string>;
 };
 
-export type ConnectorType =
+export type ConnectorType = Resolvable<
   | 'Salesforce'
   | 'Singular'
   | 'Slack'
@@ -66,7 +66,8 @@ export type ConnectorType =
   | 'Dynatrace'
   | 'Infornexus'
   | 'Amplitude'
-  | 'Veeva';
+  | 'Veeva'
+>;
 
 /**
  * Connector specific configurations needed to create connector profile
@@ -668,7 +669,7 @@ export type SalesforceConnectorProfileProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html#cfn-appflow-connectorprofile-salesforceconnectorprofileproperties-issandboxenvironment}
    */
-  isSandboxEnvironment?: boolean;
+  isSandboxEnvironment?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.html}
@@ -955,53 +956,53 @@ export type ZendeskConnectorProfileProperties = {
   [k: string]: unknown;
 };
 
-export type ClientId = string;
+export type ClientId = Resolvable<string>;
 
-export type ClientSecret = string;
+export type ClientSecret = Resolvable<string>;
 
-export type InstanceUrl = string;
+export type InstanceUrl = Resolvable<string>;
 
-export type AccessToken = string;
+export type AccessToken = Resolvable<string>;
 
-export type ApiKey = string;
+export type ApiKey = Resolvable<string>;
 
-export type ApiSecretKey = string;
+export type ApiSecretKey = Resolvable<string>;
 
-export type ApiToken = string;
+export type ApiToken = Resolvable<string>;
 
-export type ApplicationKey = string;
+export type ApplicationKey = Resolvable<string>;
 
-export type AuthCode = string;
+export type AuthCode = Resolvable<string>;
 
-export type BucketName = string;
+export type BucketName = Resolvable<string>;
 
-export type BucketPrefix = string;
+export type BucketPrefix = Resolvable<string>;
 
-export type Key = string;
+export type Key = Resolvable<string>;
 
-export type DatabaseUrl = string;
+export type DatabaseUrl = Resolvable<string>;
 
-export type RoleArn = string;
+export type RoleArn = Resolvable<string>;
 
-export type Warehouse = string;
+export type Warehouse = Resolvable<string>;
 
-export type Stage = string;
+export type Stage = Resolvable<string>;
 
-export type PrivateLinkServiceName = string;
+export type PrivateLinkServiceName = Resolvable<string>;
 
-export type AccountName = string;
+export type AccountName = Resolvable<string>;
 
-export type RefreshToken = string;
+export type RefreshToken = Resolvable<string>;
 
-export type Region = string;
+export type Region = Resolvable<string>;
 
-export type SecretKey = string;
+export type SecretKey = Resolvable<string>;
 
-export type AccessKeyId = string;
+export type AccessKeyId = Resolvable<string>;
 
-export type Username = string;
+export type Username = Resolvable<string>;
 
-export type Password = string;
+export type Password = Resolvable<string>;
 
 /**
  * {@link
@@ -1012,12 +1013,12 @@ export type ConnectorOAuthRequest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-authcode}
    */
-  AuthCode?: string;
+  AuthCode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html#cfn-appflow-connectorprofile-connectoroauthrequest-redirecturi}
    */
-  RedirectUri?: string;
+  RedirectUri?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectoroauthrequest.html}
@@ -1025,17 +1026,17 @@ export type ConnectorOAuthRequest = {
   [k: string]: unknown;
 };
 
-export type ClientCredentialsArn = string;
+export type ClientCredentialsArn = Resolvable<string>;
 
-export type ApplicationHostUrl = string;
+export type ApplicationHostUrl = Resolvable<string>;
 
-export type ApplicationServicePath = string;
+export type ApplicationServicePath = Resolvable<string>;
 
-export type ClientNumber = string;
+export type ClientNumber = Resolvable<string>;
 
-export type LogonLanguage = string;
+export type LogonLanguage = Resolvable<string>;
 
-export type PortNumber = number;
+export type PortNumber = Resolvable<number>;
 
 /**
  * {@link
@@ -1046,17 +1047,17 @@ export type OAuthProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-authcodeurl}
    */
-  AuthCodeUrl?: string;
+  AuthCodeUrl?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-tokenurl}
    */
-  TokenUrl?: string;
+  TokenUrl?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html#cfn-appflow-connectorprofile-oauthproperties-oauthscopes}
    */
-  OAuthScopes?: string[];
+  OAuthScopes?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html}

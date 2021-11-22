@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::AccessPoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AccessPoint_Type = 'AWS::S3::AccessPoint';
 export const AccessPoint_Type = 'AWS::S3::AccessPoint';
@@ -24,13 +24,13 @@ export type AccessPoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-name}
    */
-  Name?: string;
-  Alias?: string;
+  Name?: Resolvable<string>;
+  Alias?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-vpcconfiguration}
@@ -53,10 +53,10 @@ export type AccessPoint_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html#cfn-s3-accesspoint-policystatus}
    */
   PolicyStatus?: {
-    IsPublic?: 'true' | 'false';
+    IsPublic?: Resolvable<'true' | 'false'>;
     [k: string]: unknown;
   };
-  NetworkOrigin?: 'Internet' | 'VPC';
+  NetworkOrigin?: Resolvable<'Internet' | 'VPC'>;
   Arn?: Arn;
 };
 
@@ -70,7 +70,7 @@ export type VpcConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html#cfn-s3-accesspoint-vpcconfiguration-vpcid}
    */
-  VpcId?: string;
+  VpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html}
@@ -87,22 +87,22 @@ export type PublicAccessBlockConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-publicaccessblockconfiguration.html#cfn-s3-accesspoint-publicaccessblockconfiguration-blockpublicacls}
    */
-  BlockPublicAcls?: boolean;
+  BlockPublicAcls?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-publicaccessblockconfiguration.html#cfn-s3-accesspoint-publicaccessblockconfiguration-ignorepublicacls}
    */
-  IgnorePublicAcls?: boolean;
+  IgnorePublicAcls?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-publicaccessblockconfiguration.html#cfn-s3-accesspoint-publicaccessblockconfiguration-blockpublicpolicy}
    */
-  BlockPublicPolicy?: boolean;
+  BlockPublicPolicy?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-publicaccessblockconfiguration.html#cfn-s3-accesspoint-publicaccessblockconfiguration-restrictpublicbuckets}
    */
-  RestrictPublicBuckets?: boolean;
+  RestrictPublicBuckets?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-publicaccessblockconfiguration.html}
@@ -110,4 +110,4 @@ export type PublicAccessBlockConfiguration = {
   [k: string]: unknown;
 };
 
-export type Arn = string;
+export type Arn = Resolvable<string>;

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::XRay::Group
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Group_Type = 'AWS::XRay::Group';
 export const Group_Type = 'AWS::XRay::Group';
@@ -24,13 +24,13 @@ export type Group_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html#cfn-xray-group-filterexpression}
    */
-  FilterExpression?: string;
+  FilterExpression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html#cfn-xray-group-groupname}
    */
-  GroupName?: string;
-  GroupARN?: string;
+  GroupName?: Resolvable<string>;
+  GroupARN?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html#cfn-xray-group-insightsconfiguration}
@@ -52,15 +52,15 @@ export type InsightsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-group-insightsconfiguration.html#cfn-xray-group-insightsconfiguration-insightsenabled}
    */
-  InsightsEnabled?: boolean;
+  InsightsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-group-insightsconfiguration.html#cfn-xray-group-insightsconfiguration-notificationsenabled}
    */
-  NotificationsEnabled?: boolean;
+  NotificationsEnabled?: Resolvable<boolean>;
 };
 
 export type Tags = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 }[];

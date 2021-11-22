@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpointService
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPCEndpointService_Type = 'AWS::EC2::VPCEndpointService';
 export const VPCEndpointService_Type = 'AWS::EC2::VPCEndpointService';
@@ -27,16 +27,16 @@ export type VPCEndpointService_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-networkloadbalancerarns}
    */
-  NetworkLoadBalancerArns?: string[];
-  Id?: string;
+  NetworkLoadBalancerArns?: Resolvable<string>[];
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-acceptancerequired}
    */
-  AcceptanceRequired?: boolean;
+  AcceptanceRequired?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns}
    */
-  GatewayLoadBalancerArns?: string[];
+  GatewayLoadBalancerArns?: Resolvable<string>[];
 };

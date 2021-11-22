@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LakeFormation::Resource
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Resource_Type = 'AWS::LakeFormation::Resource';
 export const Resource_Type = 'AWS::LakeFormation::Resource';
@@ -22,16 +22,16 @@ export type Resource_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-resourcearn}
    */
-  ResourceArn: string;
-  Id?: string;
+  ResourceArn: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-useservicelinkedrole}
    */
-  UseServiceLinkedRole: boolean;
+  UseServiceLinkedRole: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-resource.html#cfn-lakeformation-resource-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
 };

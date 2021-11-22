@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecretsManager::SecretTargetAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SecretTargetAttachment_Type =
   'AWS::SecretsManager::SecretTargetAttachment';
@@ -27,20 +27,20 @@ export default function SecretTargetAttachment(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html}
  */
 export type SecretTargetAttachment_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-secretid}
    */
-  SecretId: string;
+  SecretId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targettype}
    */
-  TargetType: string;
+  TargetType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-targetid}
    */
-  TargetId: string;
+  TargetId: Resolvable<string>;
 };

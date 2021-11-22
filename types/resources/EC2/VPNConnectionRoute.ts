@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPNConnectionRoute
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPNConnectionRoute_Type = 'AWS::EC2::VPNConnectionRoute';
 export const VPNConnectionRoute_Type = 'AWS::EC2::VPNConnectionRoute';
@@ -23,15 +23,15 @@ export default function VPNConnectionRoute(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html}
  */
 export type VPNConnectionRoute_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html#cfn-ec2-vpnconnectionroute-cidrblock}
    */
-  DestinationCidrBlock: string;
+  DestinationCidrBlock: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection-route.html#cfn-ec2-vpnconnectionroute-connectionid}
    */
-  VpnConnectionId: string;
+  VpnConnectionId: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ApplicationCloudWatchLoggingOption_Type =
   'AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption';
@@ -36,8 +36,8 @@ export type ApplicationCloudWatchLoggingOption_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname}
    */
-  ApplicationName: string;
-  Id?: string;
+  ApplicationName: Resolvable<string>;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -49,5 +49,5 @@ export type CloudWatchLoggingOption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.html#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption-logstreamarn}
    */
-  LogStreamARN: string;
+  LogStreamARN: Resolvable<string>;
 };

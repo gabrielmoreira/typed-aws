@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Resource
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Resource_Type = 'AWS::ApiGateway::Resource';
 export const Resource_Type = 'AWS::ApiGateway::Resource';
@@ -18,20 +18,20 @@ export default function Resource(props: Resource_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html}
  */
 export type Resource_Properties = {
-  ResourceId?: string;
+  ResourceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html#cfn-apigateway-resource-restapiid}
    */
-  RestApiId: string;
+  RestApiId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html#cfn-apigateway-resource-parentid}
    */
-  ParentId: string;
+  ParentId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html#cfn-apigateway-resource-pathpart}
    */
-  PathPart: string;
+  PathPart: Resolvable<string>;
 };

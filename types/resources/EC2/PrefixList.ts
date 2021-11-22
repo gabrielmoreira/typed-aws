@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::PrefixList
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PrefixList_Type = 'AWS::EC2::PrefixList';
 export const PrefixList_Type = 'AWS::EC2::PrefixList';
@@ -22,20 +22,20 @@ export type PrefixList_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-prefixlistname}
    */
-  PrefixListName: string;
-  PrefixListId?: string;
-  OwnerId?: string;
+  PrefixListName: Resolvable<string>;
+  PrefixListId?: Resolvable<string>;
+  OwnerId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-addressfamily}
    */
-  AddressFamily: 'IPv4' | 'IPv6';
+  AddressFamily: Resolvable<'IPv4' | 'IPv6'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-maxentries}
    */
-  MaxEntries: number;
-  Version?: number;
+  MaxEntries: Resolvable<number>;
+  Version?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-tags}
@@ -46,12 +46,12 @@ export type PrefixList_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-entries}
    */
   Entries?: Entry[];
-  Arn?: string;
+  Arn?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value?: string;
+  Key: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
 /**
@@ -63,10 +63,10 @@ export type Entry = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-prefixlist-entry.html#cfn-ec2-prefixlist-entry-cidr}
    */
-  Cidr: string;
+  Cidr: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-prefixlist-entry.html#cfn-ec2-prefixlist-entry-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
 };

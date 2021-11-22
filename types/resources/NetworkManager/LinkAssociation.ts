@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::LinkAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LinkAssociation_Type = 'AWS::NetworkManager::LinkAssociation';
 export const LinkAssociation_Type = 'AWS::NetworkManager::LinkAssociation';
@@ -29,15 +29,15 @@ export type LinkAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-globalnetworkid}
    */
-  GlobalNetworkId: string;
+  GlobalNetworkId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-deviceid}
    */
-  DeviceId: string;
+  DeviceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html#cfn-networkmanager-linkassociation-linkid}
    */
-  LinkId: string;
+  LinkId: Resolvable<string>;
 };

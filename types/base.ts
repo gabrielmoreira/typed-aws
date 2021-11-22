@@ -7,6 +7,7 @@ import {
   UpdateReplacePolicy,
 } from './cfn';
 import { IntrinsicFunction, Resolvable } from './dataTypes';
+export { Resolvable };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export class CfnResource<TProps extends CfnResourceProps>
@@ -70,6 +71,11 @@ export class CfnResource<TProps extends CfnResourceProps>
 
   updatePolicy(policy: UpdatePolicy) {
     this.UpdatePolicy = policy;
+    return this;
+  }
+
+  updateReplacePolicy(policy: UpdateReplacePolicy) {
+    this.UpdateReplacePolicy = policy;
     return this;
   }
 

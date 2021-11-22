@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkAcl
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NetworkAcl_Type = 'AWS::EC2::NetworkAcl';
 export const NetworkAcl_Type = 'AWS::EC2::NetworkAcl';
@@ -18,7 +18,7 @@ export default function NetworkAcl(props: NetworkAcl_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html}
  */
 export type NetworkAcl_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html#cfn-ec2-networkacl-tags}
@@ -28,10 +28,10 @@ export type NetworkAcl_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html#cfn-ec2-networkacl-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

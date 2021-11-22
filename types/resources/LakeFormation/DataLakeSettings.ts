@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::LakeFormation::DataLakeSettings
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DataLakeSettings_Type = 'AWS::LakeFormation::DataLakeSettings';
 export const DataLakeSettings_Type = 'AWS::LakeFormation::DataLakeSettings';
@@ -32,8 +32,8 @@ export type DataLakeSettings_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html#cfn-lakeformation-datalakesettings-trustedresourceowners}
    */
-  TrustedResourceOwners?: string[];
-  Id?: string;
+  TrustedResourceOwners?: Resolvable<string>[];
+  Id?: Resolvable<string>;
 };
 
 /**

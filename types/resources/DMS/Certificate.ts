@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DMS::Certificate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Certificate_Type = 'AWS::DMS::Certificate';
 export const Certificate_Type = 'AWS::DMS::Certificate';
@@ -18,20 +18,20 @@ export default function Certificate(props: Certificate_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html}
  */
 export type Certificate_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificateidentifier}
    */
-  CertificateIdentifier?: string;
+  CertificateIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificatepem}
    */
-  CertificatePem?: string;
+  CertificatePem?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html#cfn-dms-certificate-certificatewallet}
    */
-  CertificateWallet?: string;
+  CertificateWallet?: Resolvable<string>;
 };

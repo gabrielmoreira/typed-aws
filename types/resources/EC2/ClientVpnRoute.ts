@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnRoute
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ClientVpnRoute_Type = 'AWS::EC2::ClientVpnRoute';
 export const ClientVpnRoute_Type = 'AWS::EC2::ClientVpnRoute';
@@ -18,25 +18,25 @@ export default function ClientVpnRoute(props: ClientVpnRoute_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html}
  */
 export type ClientVpnRoute_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html#cfn-ec2-clientvpnroute-clientvpnendpointid}
    */
-  ClientVpnEndpointId: string;
+  ClientVpnEndpointId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html#cfn-ec2-clientvpnroute-targetvpcsubnetid}
    */
-  TargetVpcSubnetId: string;
+  TargetVpcSubnetId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html#cfn-ec2-clientvpnroute-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html#cfn-ec2-clientvpnroute-destinationcidrblock}
    */
-  DestinationCidrBlock: string;
+  DestinationCidrBlock: Resolvable<string>;
 };

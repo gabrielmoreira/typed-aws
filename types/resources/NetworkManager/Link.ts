@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::Link
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Link_Type = 'AWS::NetworkManager::Link';
 export const Link_Type = 'AWS::NetworkManager::Link';
@@ -18,18 +18,18 @@ export default function Link(props: Link_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html}
  */
 export type Link_Properties = {
-  LinkArn?: string;
-  LinkId?: string;
+  LinkArn?: Resolvable<string>;
+  LinkId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-globalnetworkid}
    */
-  GlobalNetworkId: string;
+  GlobalNetworkId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-siteid}
    */
-  SiteId: string;
+  SiteId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-bandwidth}
@@ -39,12 +39,12 @@ export type Link_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-provider}
    */
-  Provider?: string;
+  Provider?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-tags}
@@ -54,12 +54,12 @@ export type Link_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html#cfn-networkmanager-link-type}
    */
-  Type?: string;
+  Type?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
 /**
@@ -71,10 +71,10 @@ export type Bandwidth = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html#cfn-networkmanager-link-bandwidth-downloadspeed}
    */
-  DownloadSpeed?: number;
+  DownloadSpeed?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html#cfn-networkmanager-link-bandwidth-uploadspeed}
    */
-  UploadSpeed?: number;
+  UploadSpeed?: Resolvable<number>;
 };

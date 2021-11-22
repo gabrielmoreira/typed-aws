@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::ConnectorDefinition
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ConnectorDefinition_Type = 'AWS::Greengrass::ConnectorDefinition';
 export const ConnectorDefinition_Type = 'AWS::Greengrass::ConnectorDefinition';
@@ -25,14 +25,14 @@ export default function ConnectorDefinition(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html}
  */
 export type ConnectorDefinition_Properties = {
-  LatestVersionArn?: string;
-  Id?: string;
-  Arn?: string;
+  LatestVersionArn?: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html#cfn-greengrass-connectordefinition-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html#cfn-greengrass-connectordefinition-initialversion}
@@ -68,7 +68,7 @@ export type Connector = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html#cfn-greengrass-connectordefinition-connector-connectorarn}
    */
-  ConnectorArn: string;
+  ConnectorArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html#cfn-greengrass-connectordefinition-connector-parameters}
@@ -80,5 +80,5 @@ export type Connector = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connector.html#cfn-greengrass-connectordefinition-connector-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
 };

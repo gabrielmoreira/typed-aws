@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EventSchemas::RegistryPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RegistryPolicy_Type = 'AWS::EventSchemas::RegistryPolicy';
 export const RegistryPolicy_Type = 'AWS::EventSchemas::RegistryPolicy';
@@ -18,7 +18,7 @@ export default function RegistryPolicy(props: RegistryPolicy_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html}
  */
 export type RegistryPolicy_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-policy}
@@ -30,10 +30,10 @@ export type RegistryPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-registryname}
    */
-  RegistryName: string;
+  RegistryName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html#cfn-eventschemas-registrypolicy-revisionid}
    */
-  RevisionId?: string;
+  RevisionId?: Resolvable<string>;
 };

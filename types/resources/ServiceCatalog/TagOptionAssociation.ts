@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::TagOptionAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TagOptionAssociation_Type =
   'AWS::ServiceCatalog::TagOptionAssociation';
@@ -27,15 +27,15 @@ export default function TagOptionAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html}
  */
 export type TagOptionAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-tagoptionid}
    */
-  TagOptionId: string;
+  TagOptionId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-resourceid}
    */
-  ResourceId: string;
+  ResourceId: Resolvable<string>;
 };

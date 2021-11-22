@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SecretsManager::ResourcePolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResourcePolicy_Type = 'AWS::SecretsManager::ResourcePolicy';
 export const ResourcePolicy_Type = 'AWS::SecretsManager::ResourcePolicy';
@@ -27,15 +27,15 @@ export type ResourcePolicy_Properties = {
   ResourcePolicy: {
     [k: string]: unknown;
   };
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html#cfn-secretsmanager-resourcepolicy-blockpublicpolicy}
    */
-  BlockPublicPolicy?: boolean;
+  BlockPublicPolicy?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html#cfn-secretsmanager-resourcepolicy-secretid}
    */
-  SecretId: string;
+  SecretId: Resolvable<string>;
 };

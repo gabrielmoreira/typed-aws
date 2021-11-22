@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RAM::ResourceShare
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResourceShare_Type = 'AWS::RAM::ResourceShare';
 export const ResourceShare_Type = 'AWS::RAM::ResourceShare';
@@ -22,24 +22,24 @@ export type ResourceShare_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-permissionarns}
    */
-  PermissionArns?: string[];
+  PermissionArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-principals}
    */
-  Principals?: string[];
+  Principals?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-allowexternalprincipals}
    */
-  AllowExternalPrincipals?: boolean;
-  Id?: string;
-  Arn?: string;
+  AllowExternalPrincipals?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-resourcearns}
    */
-  ResourceArns?: string[];
+  ResourceArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-tags}
@@ -49,10 +49,10 @@ export type ResourceShare_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html#cfn-ram-resourceshare-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

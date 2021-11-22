@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AuditManager::Assessment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Assessment_Type = 'AWS::AuditManager::Assessment';
 export const Assessment_Type = 'AWS::AuditManager::Assessment';
@@ -71,15 +71,15 @@ export type Assessment_Properties = {
   Description?: AssessmentDescription;
 };
 
-export type FrameworkId = string;
+export type FrameworkId = Resolvable<string>;
 
-export type UUID = string;
+export type UUID = Resolvable<string>;
 
-export type AccountId = string;
+export type AccountId = Resolvable<string>;
 
-export type EmailAddress = string;
+export type EmailAddress = Resolvable<string>;
 
-export type AccountName = string;
+export type AccountName = Resolvable<string>;
 
 /**
  * The AWS account associated with the assessment. {@link
@@ -103,23 +103,25 @@ export type AWSAccount = {
   Name?: AccountName;
 };
 
-export type AssessmentArn = string;
+export type AssessmentArn = Resolvable<string>;
 
-export type Timestamp = number;
+export type Timestamp = Resolvable<number>;
 
-export type ControlSetId = string;
+export type ControlSetId = Resolvable<string>;
 
-export type CreatedBy = string;
+export type CreatedBy = Resolvable<string>;
 
-export type IamArn = string;
+export type IamArn = Resolvable<string>;
 
-export type AssessmentName = string;
+export type AssessmentName = Resolvable<string>;
 
-export type DelegationComment = string;
+export type DelegationComment = Resolvable<string>;
 
-export type RoleType = 'PROCESS_OWNER' | 'RESOURCE_OWNER';
+export type RoleType = Resolvable<'PROCESS_OWNER' | 'RESOURCE_OWNER'>;
 
-export type DelegationStatus = 'IN_PROGRESS' | 'UNDER_REVIEW' | 'COMPLETE';
+export type DelegationStatus = Resolvable<
+  'IN_PROGRESS' | 'UNDER_REVIEW' | 'COMPLETE'
+>;
 
 /**
  * The assignment of a control set to a delegate for review. {@link
@@ -201,7 +203,7 @@ export type Role = {
   RoleType?: RoleType;
 };
 
-export type AWSServiceName = string;
+export type AWSServiceName = Resolvable<string>;
 
 /**
  * An AWS service such as Amazon S3, AWS CloudTrail, and so on. {@link
@@ -233,9 +235,9 @@ export type Scope = {
   AwsServices?: AWSService[];
 };
 
-export type S3Url = string;
+export type S3Url = Resolvable<string>;
 
-export type AssessmentReportDestinationType = 'S3';
+export type AssessmentReportDestinationType = Resolvable<'S3'>;
 
 /**
  * The destination in which evidence reports are stored for the specified
@@ -255,11 +257,11 @@ export type AssessmentReportsDestination = {
   DestinationType?: AssessmentReportDestinationType;
 };
 
-export type AssessmentStatus = 'ACTIVE' | 'INACTIVE';
+export type AssessmentStatus = Resolvable<'ACTIVE' | 'INACTIVE'>;
 
-export type AssessmentDescription = string;
+export type AssessmentDescription = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

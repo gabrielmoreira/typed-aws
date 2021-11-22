@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::FMS::NotificationChannel
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NotificationChannel_Type = 'AWS::FMS::NotificationChannel';
 export const NotificationChannel_Type = 'AWS::FMS::NotificationChannel';
@@ -37,4 +37,4 @@ export type NotificationChannel_Properties = {
   SnsTopicArn: ResourceArn;
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;

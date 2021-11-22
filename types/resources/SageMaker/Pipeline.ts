@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Pipeline
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Pipeline_Type = 'AWS::SageMaker::Pipeline';
 export const Pipeline_Type = 'AWS::SageMaker::Pipeline';
@@ -22,24 +22,24 @@ export type Pipeline_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinename}
    */
-  PipelineName: string;
+  PipelineName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedisplayname}
    */
-  PipelineDisplayName?: string;
+  PipelineDisplayName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedescription}
    */
-  PipelineDescription?: string;
+  PipelineDescription?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedefinition}
    */
   PipelineDefinition:
     | {
-        PipelineDefinitionBody: string;
+        PipelineDefinitionBody: Resolvable<string>;
       }
     | {
         PipelineDefinitionS3Location: S3Location;
@@ -48,7 +48,7 @@ export type Pipeline_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags}
@@ -57,13 +57,13 @@ export type Pipeline_Properties = {
 };
 
 export type S3Location = {
-  Bucket: string;
-  Key: string;
-  Version?: string;
-  ETag?: string;
+  Bucket: Resolvable<string>;
+  Key: Resolvable<string>;
+  Version?: Resolvable<string>;
+  ETag?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

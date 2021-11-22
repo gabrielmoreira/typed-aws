@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Amplify::Domain
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Domain_Type = 'AWS::Amplify::Domain';
 export const Domain_Type = 'AWS::Amplify::Domain';
@@ -24,31 +24,31 @@ export type Domain_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-appid}
    */
-  AppId: string;
-  Arn?: string;
+  AppId: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-autosubdomaincreationpatterns}
    */
-  AutoSubDomainCreationPatterns?: string[];
+  AutoSubDomainCreationPatterns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-autosubdomainiamrole}
    */
-  AutoSubDomainIAMRole?: string;
-  CertificateRecord?: string;
+  AutoSubDomainIAMRole?: Resolvable<string>;
+  CertificateRecord?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-domainname}
    */
-  DomainName: string;
-  DomainStatus?: string;
+  DomainName: Resolvable<string>;
+  DomainStatus?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-enableautosubdomain}
    */
-  EnableAutoSubDomain?: boolean;
-  StatusReason?: string;
+  EnableAutoSubDomain?: Resolvable<boolean>;
+  StatusReason?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-subdomainsettings}
@@ -65,10 +65,10 @@ export type SubDomainSetting = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-prefix}
    */
-  Prefix: string;
+  Prefix: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-domain-subdomainsetting.html#cfn-amplify-domain-subdomainsetting-branchname}
    */
-  BranchName: string;
+  BranchName: Resolvable<string>;
 };

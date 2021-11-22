@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NatGateway
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NatGateway_Type = 'AWS::EC2::NatGateway';
 export const NatGateway_Type = 'AWS::EC2::NatGateway';
@@ -22,13 +22,13 @@ export type NatGateway_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-subnetid}
    */
-  SubnetId: string;
-  Id?: string;
+  SubnetId: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-connectivitytype}
    */
-  ConnectivityType?: string;
+  ConnectivityType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-tags}
@@ -38,10 +38,10 @@ export type NatGateway_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-allocationid}
    */
-  AllocationId?: string;
+  AllocationId?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

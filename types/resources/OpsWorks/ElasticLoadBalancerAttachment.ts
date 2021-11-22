@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::ElasticLoadBalancerAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ElasticLoadBalancerAttachment_Type =
   'AWS::OpsWorks::ElasticLoadBalancerAttachment';
@@ -27,15 +27,15 @@ export default function ElasticLoadBalancerAttachment(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html}
  */
 export type ElasticLoadBalancerAttachment_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html#cfn-opsworks-elbattachment-elbname}
    */
-  ElasticLoadBalancerName: string;
+  ElasticLoadBalancerName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elbattachment.html#cfn-opsworks-elbattachment-layerid}
    */
-  LayerId: string;
+  LayerId: Resolvable<string>;
 };

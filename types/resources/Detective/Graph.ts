@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Detective::Graph
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Graph_Type = 'AWS::Detective::Graph';
 export const Graph_Type = 'AWS::Detective::Graph';
@@ -18,7 +18,7 @@ export default function Graph(props: Graph_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html}
  */
 export type Graph_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html#cfn-detective-graph-tags}
@@ -27,6 +27,6 @@ export type Graph_Properties = {
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

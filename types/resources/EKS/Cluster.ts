@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EKS::Cluster
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Cluster_Type = 'AWS::EKS::Cluster';
 export const Cluster_Type = 'AWS::EKS::Cluster';
@@ -37,7 +37,7 @@ export type Cluster_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-resourcesvpcconfig}
@@ -47,28 +47,28 @@ export type Cluster_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version}
    */
-  Version?: string;
+  Version?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-tags}
    */
   Tags?: Tag[];
-  Arn?: string;
-  Endpoint?: string;
-  CertificateAuthorityData?: string;
-  ClusterSecurityGroupId?: string;
-  EncryptionConfigKeyArn?: string;
-  OpenIdConnectIssuerUrl?: string;
+  Arn?: Resolvable<string>;
+  Endpoint?: Resolvable<string>;
+  CertificateAuthorityData?: Resolvable<string>;
+  ClusterSecurityGroupId?: Resolvable<string>;
+  EncryptionConfigKeyArn?: Resolvable<string>;
+  OpenIdConnectIssuerUrl?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -81,13 +81,13 @@ export type EncryptionConfig = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-provider}
    */
   Provider?: {
-    KeyArn?: string;
+    KeyArn?: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html#cfn-eks-cluster-encryptionconfig-resources}
    */
-  Resources?: string[];
+  Resources?: Resolvable<string>[];
 };
 
 /**
@@ -100,27 +100,27 @@ export type ResourcesVpcConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-endpointprivateaccess}
    */
-  EndpointPrivateAccess?: boolean;
+  EndpointPrivateAccess?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-endpointpublicaccess}
    */
-  EndpointPublicAccess?: boolean;
+  EndpointPublicAccess?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-publicaccesscidrs}
    */
-  PublicAccessCidrs?: string[];
+  PublicAccessCidrs?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-securitygroupids}
    */
-  SecurityGroupIds?: string[];
+  SecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-subnetids}
    */
-  SubnetIds: string[];
+  SubnetIds: Resolvable<string>[];
 };
 
 /**
@@ -132,7 +132,9 @@ export type LoggingTypeConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html#cfn-eks-cluster-loggingtypeconfig-type}
    */
-  Type?: 'api' | 'audit' | 'authenticator' | 'controllerManager' | 'scheduler';
+  Type?: Resolvable<
+    'api' | 'audit' | 'authenticator' | 'controllerManager' | 'scheduler'
+  >;
 };
 
 export type EnabledTypes = LoggingTypeConfig[];
@@ -173,5 +175,5 @@ export type KubernetesNetworkConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-serviceipv4cidr}
    */
-  ServiceIpv4Cidr?: string;
+  ServiceIpv4Cidr?: Resolvable<string>;
 };

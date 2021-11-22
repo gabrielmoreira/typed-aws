@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SQS::QueuePolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type QueuePolicy_Type = 'AWS::SQS::QueuePolicy';
 export const QueuePolicy_Type = 'AWS::SQS::QueuePolicy';
@@ -18,7 +18,7 @@ export default function QueuePolicy(props: QueuePolicy_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html}
  */
 export type QueuePolicy_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html#cfn-sqs-queuepolicy-policydocument}
@@ -27,10 +27,10 @@ export type QueuePolicy_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html#cfn-sqs-queuepolicy-queues}
    */
-  Queues: string[];
+  Queues: Resolvable<string>[];
 };

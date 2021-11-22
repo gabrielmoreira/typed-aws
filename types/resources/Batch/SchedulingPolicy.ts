@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Batch::SchedulingPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SchedulingPolicy_Type = 'AWS::Batch::SchedulingPolicy';
 export const SchedulingPolicy_Type = 'AWS::Batch::SchedulingPolicy';
@@ -25,7 +25,7 @@ export type SchedulingPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   Arn?: ResourceArn;
   /**
    * {@link
@@ -37,11 +37,11 @@ export type SchedulingPolicy_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html#cfn-batch-schedulingpolicy-tags}
    */
   Tags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 /**
  * Fair Share Policy for the Job Queue. {@link
@@ -52,12 +52,12 @@ export type FairsharePolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-sharedecayseconds}
    */
-  ShareDecaySeconds?: number;
+  ShareDecaySeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-computereservation}
    */
-  ComputeReservation?: number;
+  ComputeReservation?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-fairsharepolicy.html#cfn-batch-schedulingpolicy-fairsharepolicy-sharedistribution}
@@ -74,10 +74,10 @@ export type ShareAttributes = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-shareidentifier}
    */
-  ShareIdentifier?: string;
+  ShareIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html#cfn-batch-schedulingpolicy-shareattributes-weightfactor}
    */
-  WeightFactor?: number;
+  WeightFactor?: Resolvable<number>;
 };

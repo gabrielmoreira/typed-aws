@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ResourceSpecificLogging
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResourceSpecificLogging_Type = 'AWS::IoT::ResourceSpecificLogging';
 export const ResourceSpecificLogging_Type = 'AWS::IoT::ResourceSpecificLogging';
@@ -29,16 +29,16 @@ export type ResourceSpecificLogging_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html#cfn-iot-resourcespecificlogging-targettype}
    */
-  TargetType: 'THING_GROUP';
+  TargetType: Resolvable<'THING_GROUP'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html#cfn-iot-resourcespecificlogging-targetname}
    */
-  TargetName: string;
+  TargetName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html#cfn-iot-resourcespecificlogging-loglevel}
    */
-  LogLevel: 'ERROR' | 'WARN' | 'INFO' | 'DEBUG' | 'DISABLED';
-  TargetId?: string;
+  LogLevel: Resolvable<'ERROR' | 'WARN' | 'INFO' | 'DEBUG' | 'DISABLED'>;
+  TargetId?: Resolvable<string>;
 };

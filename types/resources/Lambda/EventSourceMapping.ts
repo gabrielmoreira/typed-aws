@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::EventSourceMapping
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EventSourceMapping_Type = 'AWS::Lambda::EventSourceMapping';
 export const EventSourceMapping_Type = 'AWS::Lambda::EventSourceMapping';
@@ -23,17 +23,17 @@ export default function EventSourceMapping(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html}
  */
 export type EventSourceMapping_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize}
    */
-  BatchSize?: number;
+  BatchSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror}
    */
-  BisectBatchOnFunctionError?: boolean;
+  BisectBatchOnFunctionError?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-destinationconfig}
@@ -43,12 +43,12 @@ export type EventSourceMapping_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-eventsourcearn}
    */
-  EventSourceArn?: string;
+  EventSourceArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-filtercriteria}
@@ -60,47 +60,47 @@ export type EventSourceMapping_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname}
    */
-  FunctionName: string;
+  FunctionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds}
    */
-  MaximumBatchingWindowInSeconds?: number;
+  MaximumBatchingWindowInSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumrecordageinseconds}
    */
-  MaximumRecordAgeInSeconds?: number;
+  MaximumRecordAgeInSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumretryattempts}
    */
-  MaximumRetryAttempts?: number;
+  MaximumRetryAttempts?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-parallelizationfactor}
    */
-  ParallelizationFactor?: number;
+  ParallelizationFactor?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition}
    */
-  StartingPosition?: string;
+  StartingPosition?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingpositiontimestamp}
    */
-  StartingPositionTimestamp?: number;
+  StartingPositionTimestamp?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-topics}
    */
-  Topics?: string[];
+  Topics?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-queues}
    */
-  Queues?: string[];
+  Queues?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-sourceaccessconfigurations}
@@ -110,12 +110,12 @@ export type EventSourceMapping_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-tumblingwindowinseconds}
    */
-  TumblingWindowInSeconds?: number;
+  TumblingWindowInSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionresponsetypes}
    */
-  FunctionResponseTypes?: 'ReportBatchItemFailures'[];
+  FunctionResponseTypes?: Resolvable<'ReportBatchItemFailures'>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource}
@@ -137,7 +137,7 @@ export type DestinationConfig = {
 };
 
 export type Filter = {
-  Pattern?: string;
+  Pattern?: Resolvable<string>;
 };
 
 /**
@@ -149,7 +149,7 @@ export type OnFailure = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html#cfn-lambda-eventsourcemapping-onfailure-destination}
    */
-  Destination?: string;
+  Destination?: Resolvable<string>;
 };
 
 /**
@@ -161,7 +161,7 @@ export type SourceAccessConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-type}
    */
-  Type?:
+  Type?: Resolvable<
     | 'BASIC_AUTH'
     | 'VPC_SUBNET'
     | 'VPC_SECURITY_GROUP'
@@ -169,12 +169,13 @@ export type SourceAccessConfiguration = {
     | 'SASL_SCRAM_256_AUTH'
     | 'VIRTUAL_HOST'
     | 'CLIENT_CERTIFICATE_TLS_AUTH'
-    | 'SERVER_ROOT_CA_CERTIFICATE';
+    | 'SERVER_ROOT_CA_CERTIFICATE'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.html#cfn-lambda-eventsourcemapping-sourceaccessconfiguration-uri}
    */
-  URI?: string;
+  URI?: Resolvable<string>;
 };
 
 /**
@@ -200,5 +201,5 @@ export type Endpoints = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html#cfn-lambda-eventsourcemapping-endpoints-kafkabootstrapservers}
    */
-  KafkaBootstrapServers?: string[];
+  KafkaBootstrapServers?: Resolvable<string>[];
 };

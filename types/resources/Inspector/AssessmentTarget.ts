@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Inspector::AssessmentTarget
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AssessmentTarget_Type = 'AWS::Inspector::AssessmentTarget';
 export const AssessmentTarget_Type = 'AWS::Inspector::AssessmentTarget';
@@ -21,16 +21,16 @@ export default function AssessmentTarget(props: AssessmentTarget_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html}
  */
 export type AssessmentTarget_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html#cfn-inspector-assessmenttarget-assessmenttargetname}
    */
-  AssessmentTargetName?: string;
+  AssessmentTargetName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttarget.html#cfn-inspector-assessmenttarget-resourcegrouparn}
    */
-  ResourceGroupArn?: string;
+  ResourceGroupArn?: Resolvable<string>;
 };

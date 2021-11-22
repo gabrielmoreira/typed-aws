@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::NetworkInsightsPath
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NetworkInsightsPath_Type = 'AWS::EC2::NetworkInsightsPath';
 export const NetworkInsightsPath_Type = 'AWS::EC2::NetworkInsightsPath';
@@ -23,9 +23,9 @@ export default function NetworkInsightsPath(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html}
  */
 export type NetworkInsightsPath_Properties = {
-  NetworkInsightsPathId?: string;
-  NetworkInsightsPathArn?: string;
-  CreatedDate?: string;
+  NetworkInsightsPathId?: Resolvable<string>;
+  NetworkInsightsPathArn?: Resolvable<string>;
+  CreatedDate?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html#cfn-ec2-networkinsightspath-sourceip}
@@ -40,12 +40,12 @@ export type NetworkInsightsPath_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html#cfn-ec2-networkinsightspath-source}
    */
-  Source: string;
+  Source: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html#cfn-ec2-networkinsightspath-destination}
    */
-  Destination: string;
+  Destination: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html#cfn-ec2-networkinsightspath-protocol}
@@ -66,12 +66,12 @@ export type NetworkInsightsPath_Properties = {
 export type Tags = Tag[];
 
 export type Tag = {
-  Key: string;
-  Value?: string;
+  Key: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
-export type IpAddress = string;
+export type IpAddress = Resolvable<string>;
 
-export type Protocol = 'tcp' | 'udp';
+export type Protocol = Resolvable<'tcp' | 'udp'>;
 
-export type Port = number;
+export type Port = Resolvable<number>;

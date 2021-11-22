@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SNS::Topic
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Topic_Type = 'AWS::SNS::Topic';
 export const Topic_Type = 'AWS::SNS::Topic';
@@ -22,23 +22,23 @@ export type Topic_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-kmsmasterkeyid}
    */
-  KmsMasterKeyId?: string;
+  KmsMasterKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-displayname}
    */
-  DisplayName?: string;
+  DisplayName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-fifotopic}
    */
-  FifoTopic?: boolean;
+  FifoTopic?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-contentbaseddeduplication}
    */
-  ContentBasedDeduplication?: boolean;
-  Id?: string;
+  ContentBasedDeduplication?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-subscription}
@@ -53,12 +53,12 @@ export type Topic_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html#cfn-sns-topic-topicname}
    */
-  TopicName?: string;
+  TopicName?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -70,10 +70,10 @@ export type Subscription = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint}
    */
-  Endpoint: string;
+  Endpoint: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol}
    */
-  Protocol: string;
+  Protocol: Resolvable<string>;
 };

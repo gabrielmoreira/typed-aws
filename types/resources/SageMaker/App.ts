@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::App
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type App_Type = 'AWS::SageMaker::App';
 export const App_Type = 'AWS::SageMaker::App';
@@ -18,22 +18,22 @@ export default function App(props: App_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html}
  */
 export type App_Properties = {
-  AppArn?: string;
+  AppArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-appname}
    */
-  AppName: string;
+  AppName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-apptype}
    */
-  AppType: 'JupyterServer' | 'KernelGateway';
+  AppType: Resolvable<'JupyterServer' | 'KernelGateway'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-domainid}
    */
-  DomainId: string;
+  DomainId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-resourcespec}
@@ -48,7 +48,7 @@ export type App_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html#cfn-sagemaker-app-userprofilename}
    */
-  UserProfileName: string;
+  UserProfileName: Resolvable<string>;
 };
 
 /**
@@ -60,7 +60,7 @@ export type ResourceSpec = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-instancetype}
    */
-  InstanceType?:
+  InstanceType?: Resolvable<
     | 'system'
     | 'ml.t3.micro'
     | 'ml.t3.small'
@@ -92,20 +92,21 @@ export type ResourceSpec = {
     | 'ml.g4dn.4xlarge'
     | 'ml.g4dn.8xlarge'
     | 'ml.g4dn.12xlarge'
-    | 'ml.g4dn.16xlarge';
+    | 'ml.g4dn.16xlarge'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-sagemakerimagearn}
    */
-  SageMakerImageArn?: string;
+  SageMakerImageArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-app-resourcespec.html#cfn-sagemaker-app-resourcespec-sagemakerimageversionarn}
    */
-  SageMakerImageVersionArn?: string;
+  SageMakerImageVersionArn?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

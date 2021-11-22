@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Project
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Project_Type = 'AWS::SageMaker::Project';
 export const Project_Type = 'AWS::SageMaker::Project';
@@ -35,7 +35,7 @@ export type Project_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-projectdescription}
    */
   ProjectDescription?: ProjectDescription;
-  CreationTime?: string;
+  CreationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html#cfn-sagemaker-project-servicecatalogprovisioningdetails}
@@ -50,38 +50,39 @@ export type Project_Properties = {
     ProvisionedProductId?: ProvisioningArtifactId;
     ProvisionedProductStatusMessage?: ProvisionedProductStatusMessage;
   };
-  ProjectStatus?:
+  ProjectStatus?: Resolvable<
     | 'Pending'
     | 'CreateInProgress'
     | 'CreateCompleted'
     | 'CreateFailed'
     | 'DeleteInProgress'
     | 'DeleteFailed'
-    | 'DeleteCompleted';
+    | 'DeleteCompleted'
+  >;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
-export type ProjectDescription = string;
+export type ProjectDescription = Resolvable<string>;
 
-export type ProjectId = string;
+export type ProjectId = Resolvable<string>;
 
-export type ProvisionedProductStatusMessage = string;
+export type ProvisionedProductStatusMessage = Resolvable<string>;
 
-export type ProjectName = string;
+export type ProjectName = Resolvable<string>;
 
-export type ProjectArn = string;
+export type ProjectArn = Resolvable<string>;
 
-export type ProductId = string;
+export type ProductId = Resolvable<string>;
 
-export type ProvisioningArtifactId = string;
+export type ProvisioningArtifactId = Resolvable<string>;
 
-export type PathId = string;
+export type PathId = Resolvable<string>;
 
 export type ProvisioningParameter = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

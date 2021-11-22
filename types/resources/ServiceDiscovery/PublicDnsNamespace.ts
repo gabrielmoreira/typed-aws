@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::PublicDnsNamespace
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PublicDnsNamespace_Type =
   'AWS::ServiceDiscovery::PublicDnsNamespace';
@@ -27,13 +27,13 @@ export default function PublicDnsNamespace(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html}
  */
 export type PublicDnsNamespace_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-description}
    */
-  Description?: string;
-  Arn?: string;
+  Description?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-properties}
@@ -48,7 +48,7 @@ export type PublicDnsNamespace_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html#cfn-servicediscovery-publicdnsnamespace-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -60,12 +60,12 @@ export type SOA = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-soa.html#cfn-servicediscovery-publicdnsnamespace-soa-ttl}
    */
-  TTL?: number;
+  TTL?: Resolvable<number>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**

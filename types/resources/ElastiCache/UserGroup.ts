@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::UserGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserGroup_Type = 'AWS::ElastiCache::UserGroup';
 export const UserGroup_Type = 'AWS::ElastiCache::UserGroup';
@@ -18,21 +18,21 @@ export default function UserGroup(props: UserGroup_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html}
  */
 export type UserGroup_Properties = {
-  Status?: string;
+  Status?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-usergroupid}
    */
-  UserGroupId: string;
+  UserGroupId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine}
    */
-  Engine: 'redis';
+  Engine: Resolvable<'redis'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-userids}
    */
-  UserIds?: string[];
-  Arn?: string;
+  UserIds?: Resolvable<string>[];
+  Arn?: Resolvable<string>;
 };

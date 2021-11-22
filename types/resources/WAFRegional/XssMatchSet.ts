@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::XssMatchSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type XssMatchSet_Type = 'AWS::WAFRegional::XssMatchSet';
 export const XssMatchSet_Type = 'AWS::WAFRegional::XssMatchSet';
@@ -18,7 +18,7 @@ export default function XssMatchSet(props: XssMatchSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html}
  */
 export type XssMatchSet_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-xssmatchtuples}
@@ -28,7 +28,7 @@ export type XssMatchSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-xssmatchset.html#cfn-wafregional-xssmatchset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -40,7 +40,7 @@ export type XssMatchTuple = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-xssmatchset-xssmatchtuple.html#cfn-wafregional-xssmatchset-xssmatchtuple-texttransformation}
    */
-  TextTransformation: string;
+  TextTransformation: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-xssmatchset-xssmatchtuple.html#cfn-wafregional-xssmatchset-xssmatchtuple-fieldtomatch}
@@ -57,10 +57,10 @@ export type FieldToMatch = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-xssmatchset-fieldtomatch.html#cfn-wafregional-xssmatchset-fieldtomatch-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-xssmatchset-fieldtomatch.html#cfn-wafregional-xssmatchset-fieldtomatch-data}
    */
-  Data?: string;
+  Data?: Resolvable<string>;
 };

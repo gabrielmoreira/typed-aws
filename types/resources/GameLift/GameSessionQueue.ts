@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::GameSessionQueue
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GameSessionQueue_Type = 'AWS::GameLift::GameSessionQueue';
 export const GameSessionQueue_Type = 'AWS::GameLift::GameSessionQueue';
@@ -25,7 +25,7 @@ export type GameSessionQueue_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-timeoutinseconds}
    */
-  TimeoutInSeconds?: number;
+  TimeoutInSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies}
@@ -40,24 +40,24 @@ export type GameSessionQueue_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-notificationtarget}
    */
-  NotificationTarget?: string;
+  NotificationTarget?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-filterconfiguration}
    */
   FilterConfiguration?: FilterConfiguration;
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-customeventdata}
    */
-  CustomEventData?: string;
+  CustomEventData?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-priorityconfiguration}
@@ -74,12 +74,12 @@ export type PlayerLatencyPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-policydurationseconds}
    */
-  PolicyDurationSeconds?: number;
+  PolicyDurationSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.html#cfn-gamelift-gamesessionqueue-playerlatencypolicy-maximumindividualplayerlatencymilliseconds}
    */
-  MaximumIndividualPlayerLatencyMilliseconds?: number;
+  MaximumIndividualPlayerLatencyMilliseconds?: Resolvable<number>;
 };
 
 /**
@@ -91,7 +91,7 @@ export type Destination = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html#cfn-gamelift-gamesessionqueue-destination-destinationarn}
    */
-  DestinationArn?: string;
+  DestinationArn?: Resolvable<string>;
 };
 
 /**
@@ -103,7 +103,7 @@ export type FilterConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-filterconfiguration.html#cfn-gamelift-gamesessionqueue-filterconfiguration-allowedlocations}
    */
-  AllowedLocations?: string[];
+  AllowedLocations?: Resolvable<string>[];
 };
 
 /**
@@ -115,10 +115,10 @@ export type PriorityConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-priorityconfiguration.html#cfn-gamelift-gamesessionqueue-priorityconfiguration-priorityorder}
    */
-  PriorityOrder?: string[];
+  PriorityOrder?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-priorityconfiguration.html#cfn-gamelift-gamesessionqueue-priorityconfiguration-locationorder}
    */
-  LocationOrder?: string[];
+  LocationOrder?: Resolvable<string>[];
 };

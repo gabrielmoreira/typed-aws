@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::Volume
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Volume_Type = 'AWS::OpsWorks::Volume';
 export const Volume_Type = 'AWS::OpsWorks::Volume';
@@ -18,25 +18,25 @@ export default function Volume(props: Volume_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html}
  */
 export type Volume_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-ec2volumeid}
    */
-  Ec2VolumeId: string;
+  Ec2VolumeId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-mountpoint}
    */
-  MountPoint?: string;
+  MountPoint?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html#cfn-opsworks-volume-stackid}
    */
-  StackId: string;
+  StackId: Resolvable<string>;
 };

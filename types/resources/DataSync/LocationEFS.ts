@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationEFS
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocationEFS_Type = 'AWS::DataSync::LocationEFS';
 export const LocationEFS_Type = 'AWS::DataSync::LocationEFS';
@@ -27,19 +27,19 @@ export type LocationEFS_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-efsfilesystemarn}
    */
-  EfsFilesystemArn: string;
+  EfsFilesystemArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-subdirectory}
    */
-  Subdirectory?: string;
+  Subdirectory?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html#cfn-datasync-locationefs-tags}
    */
   Tags?: Tag[];
-  LocationArn?: string;
-  LocationUri?: string;
+  LocationArn?: Resolvable<string>;
+  LocationUri?: Resolvable<string>;
 };
 
 /**
@@ -52,15 +52,15 @@ export type Ec2Config = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationefs-ec2config.html#cfn-datasync-locationefs-ec2config-securitygrouparns}
    */
-  SecurityGroupArns: string[];
+  SecurityGroupArns: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationefs-ec2config.html#cfn-datasync-locationefs-ec2config-subnetarn}
    */
-  SubnetArn: string;
+  SubnetArn: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

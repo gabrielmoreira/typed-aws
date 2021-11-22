@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::EndpointAccess
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EndpointAccess_Type = 'AWS::Redshift::EndpointAccess';
 export const EndpointAccess_Type = 'AWS::Redshift::EndpointAccess';
@@ -18,39 +18,39 @@ export default function EndpointAccess(props: EndpointAccess_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html}
  */
 export type EndpointAccess_Properties = {
-  Address?: string;
+  Address?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-clusteridentifier}
    */
-  ClusterIdentifier?: string;
+  ClusterIdentifier?: Resolvable<string>;
   VpcSecurityGroups?: VpcSecurityGroup[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-resourceowner}
    */
-  ResourceOwner?: string;
-  EndpointStatus?: string;
+  ResourceOwner?: Resolvable<string>;
+  EndpointStatus?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-endpointname}
    */
-  EndpointName: string;
-  EndpointCreateTime?: string;
+  EndpointName: Resolvable<string>;
+  EndpointCreateTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-subnetgroupname}
    */
-  SubnetGroupName?: string;
-  Port?: number;
+  SubnetGroupName?: Resolvable<string>;
+  Port?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html#cfn-redshift-endpointaccess-vpcsecuritygroupids}
    */
-  VpcSecurityGroupIds: string[];
+  VpcSecurityGroupIds: Resolvable<string>[];
   VpcEndpoint?: {
-    VpcEndpointId?: string;
-    VpcId?: string;
+    VpcEndpointId?: Resolvable<string>;
+    VpcId?: Resolvable<string>;
     NetworkInterfaces?: NetworkInterface[];
   };
 };
@@ -64,17 +64,17 @@ export type VpcSecurityGroup = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-vpcsecuritygroupid}
    */
-  VpcSecurityGroupId?: string;
+  VpcSecurityGroupId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html#cfn-redshift-endpointaccess-vpcsecuritygroup-status}
    */
-  Status?: string;
+  Status?: Resolvable<string>;
 };
 
 export type NetworkInterface = {
-  NetworkInterfaceId?: string;
-  SubnetId?: string;
-  PrivateIpAddress?: string;
-  AvailabilityZone?: string;
+  NetworkInterfaceId?: Resolvable<string>;
+  SubnetId?: Resolvable<string>;
+  PrivateIpAddress?: Resolvable<string>;
+  AvailabilityZone?: Resolvable<string>;
 };

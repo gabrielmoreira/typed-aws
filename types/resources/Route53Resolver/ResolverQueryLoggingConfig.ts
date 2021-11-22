@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverQueryLoggingConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverQueryLoggingConfig_Type =
   'AWS::Route53Resolver::ResolverQueryLoggingConfig';
@@ -27,22 +27,22 @@ export default function ResolverQueryLoggingConfig(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html}
  */
 export type ResolverQueryLoggingConfig_Properties = {
-  Id?: string;
-  OwnerId?: string;
-  Status?: 'CREATING' | 'CREATED' | 'DELETING' | 'FAILED';
-  ShareStatus?: 'NOT_SHARED' | 'SHARED_WITH_ME' | 'SHARED_BY_ME';
-  AssociationCount?: number;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  OwnerId?: Resolvable<string>;
+  Status?: Resolvable<'CREATING' | 'CREATED' | 'DELETING' | 'FAILED'>;
+  ShareStatus?: Resolvable<'NOT_SHARED' | 'SHARED_WITH_ME' | 'SHARED_BY_ME'>;
+  AssociationCount?: Resolvable<number>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-name}
    */
-  Name?: string;
-  CreatorRequestId?: string;
+  Name?: Resolvable<string>;
+  CreatorRequestId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html#cfn-route53resolver-resolverqueryloggingconfig-destinationarn}
    */
-  DestinationArn?: string;
-  CreationTime?: string;
+  DestinationArn?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
 };

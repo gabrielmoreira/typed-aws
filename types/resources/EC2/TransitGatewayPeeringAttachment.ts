@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayPeeringAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayPeeringAttachment_Type =
   'AWS::EC2::TransitGatewayPeeringAttachment';
@@ -35,30 +35,30 @@ export type TransitGatewayPeeringAttachment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-transitgatewayid}
    */
-  TransitGatewayId: string;
+  TransitGatewayId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid}
    */
-  PeerTransitGatewayId: string;
+  PeerTransitGatewayId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peeraccountid}
    */
-  PeerAccountId: string;
-  State?: string;
-  CreationTime?: string;
+  PeerAccountId: Resolvable<string>;
+  State?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-peerregion}
    */
-  PeerRegion: string;
+  PeerRegion: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html#cfn-ec2-transitgatewaypeeringattachment-tags}
    */
   Tags?: Tag[];
-  TransitGatewayAttachmentId?: string;
+  TransitGatewayAttachmentId?: Resolvable<string>;
 };
 
 /**
@@ -70,15 +70,15 @@ export type TransitGatewayPeeringAttachmentOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewaypeeringattachment-transitgatewaypeeringattachmentoptions.html#cfn-ec2-transitgatewaypeeringattachment-transitgatewaypeeringattachmentoptions-dynamicrouting}
    */
-  DynamicRouting?: string;
+  DynamicRouting?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value?: string;
-  Key?: string;
+  Value?: Resolvable<string>;
+  Key?: Resolvable<string>;
 };
 
 export type PeeringAttachmentStatus = {
-  Message?: string;
-  Code?: string;
+  Message?: Resolvable<string>;
+  Code?: Resolvable<string>;
 };

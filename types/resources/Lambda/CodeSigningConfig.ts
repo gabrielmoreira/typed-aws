@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::CodeSigningConfig
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CodeSigningConfig_Type = 'AWS::Lambda::CodeSigningConfig';
 export const CodeSigningConfig_Type = 'AWS::Lambda::CodeSigningConfig';
@@ -25,7 +25,7 @@ export type CodeSigningConfig_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-allowedpublishers}
@@ -36,8 +36,8 @@ export type CodeSigningConfig_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-codesigningpolicies}
    */
   CodeSigningPolicies?: CodeSigningPolicies;
-  CodeSigningConfigId?: string;
-  CodeSigningConfigArn?: string;
+  CodeSigningConfigId?: Resolvable<string>;
+  CodeSigningConfigArn?: Resolvable<string>;
 };
 
 /**
@@ -51,7 +51,7 @@ export type AllowedPublishers = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-codesigningconfig-allowedpublishers.html#cfn-lambda-codesigningconfig-allowedpublishers-signingprofileversionarns}
    */
-  SigningProfileVersionArns: string[];
+  SigningProfileVersionArns: Resolvable<string>[];
 };
 
 /**
@@ -63,5 +63,5 @@ export type CodeSigningPolicies = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-codesigningconfig-codesigningpolicies.html#cfn-lambda-codesigningconfig-codesigningpolicies-untrustedartifactondeployment}
    */
-  UntrustedArtifactOnDeployment: 'Warn' | 'Enforce';
+  UntrustedArtifactOnDeployment: Resolvable<'Warn' | 'Enforce'>;
 };

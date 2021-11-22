@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFRegional::GeoMatchSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GeoMatchSet_Type = 'AWS::WAFRegional::GeoMatchSet';
 export const GeoMatchSet_Type = 'AWS::WAFRegional::GeoMatchSet';
@@ -18,7 +18,7 @@ export default function GeoMatchSet(props: GeoMatchSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html}
  */
 export type GeoMatchSet_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html#cfn-wafregional-geomatchset-geomatchconstraints}
@@ -28,7 +28,7 @@ export type GeoMatchSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html#cfn-wafregional-geomatchset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -40,10 +40,10 @@ export type GeoMatchConstraint = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-geomatchset-geomatchconstraint.html#cfn-wafregional-geomatchset-geomatchconstraint-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-geomatchset-geomatchconstraint.html#cfn-wafregional-geomatchset-geomatchconstraint-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::NamedQuery
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type NamedQuery_Type = 'AWS::Athena::NamedQuery';
 export const NamedQuery_Type = 'AWS::Athena::NamedQuery';
@@ -22,26 +22,26 @@ export type NamedQuery_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-database}
    */
-  Database: string;
+  Database: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-querystring}
    */
-  QueryString: string;
+  QueryString: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html#cfn-athena-namedquery-workgroup}
    */
-  WorkGroup?: string;
-  NamedQueryId?: string;
+  WorkGroup?: Resolvable<string>;
+  NamedQueryId?: Resolvable<string>;
 };

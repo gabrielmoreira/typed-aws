@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::VpcLink
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VpcLink_Type = 'AWS::ApiGateway::VpcLink';
 export const VpcLink_Type = 'AWS::ApiGateway::VpcLink';
@@ -22,13 +22,13 @@ export type VpcLink_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-description}
    */
-  Description?: string;
-  Id?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-targetarns}
    */
-  TargetArns: string[];
+  TargetArns: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-tags}
@@ -38,10 +38,10 @@ export type VpcLink_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html#cfn-apigateway-vpclink-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

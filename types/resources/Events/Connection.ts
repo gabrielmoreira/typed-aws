@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Events::Connection
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Connection_Type = 'AWS::Events::Connection';
 export const Connection_Type = 'AWS::Events::Connection';
@@ -22,19 +22,21 @@ export type Connection_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-name}
    */
-  Name?: string;
-  Arn?: string;
-  SecretArn?: string;
+  Name?: Resolvable<string>;
+  Arn?: Resolvable<string>;
+  SecretArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authorizationtype}
    */
-  AuthorizationType: 'API_KEY' | 'BASIC' | 'OAUTH_CLIENT_CREDENTIALS';
+  AuthorizationType: Resolvable<
+    'API_KEY' | 'BASIC' | 'OAUTH_CLIENT_CREDENTIALS'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters}
@@ -81,25 +83,25 @@ export type AuthParameters =
     };
 
 export type BasicAuthParameters = {
-  Username: string;
-  Password: string;
+  Username: Resolvable<string>;
+  Password: Resolvable<string>;
 };
 
 export type OAuthParameters = {
   ClientParameters: ClientParameters;
-  AuthorizationEndpoint: string;
-  HttpMethod: 'GET' | 'POST' | 'PUT';
+  AuthorizationEndpoint: Resolvable<string>;
+  HttpMethod: Resolvable<'GET' | 'POST' | 'PUT'>;
   OAuthHttpParameters?: ConnectionHttpParameters;
 };
 
 export type ApiKeyAuthParameters = {
-  ApiKeyName: string;
-  ApiKeyValue: string;
+  ApiKeyName: Resolvable<string>;
+  ApiKeyValue: Resolvable<string>;
 };
 
 export type ClientParameters = {
-  ClientID: string;
-  ClientSecret: string;
+  ClientID: Resolvable<string>;
+  ClientSecret: Resolvable<string>;
 };
 
 export type ConnectionHttpParameters = {
@@ -109,7 +111,7 @@ export type ConnectionHttpParameters = {
 };
 
 export type Parameter = {
-  Key: string;
-  Value: string;
-  IsValueSecret?: boolean;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
+  IsValueSecret?: Resolvable<boolean>;
 };

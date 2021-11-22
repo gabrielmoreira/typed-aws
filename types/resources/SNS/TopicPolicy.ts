@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SNS::TopicPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TopicPolicy_Type = 'AWS::SNS::TopicPolicy';
 export const TopicPolicy_Type = 'AWS::SNS::TopicPolicy';
@@ -18,7 +18,7 @@ export default function TopicPolicy(props: TopicPolicy_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html}
  */
 export type TopicPolicy_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-policydocument}
@@ -30,5 +30,5 @@ export type TopicPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-topics}
    */
-  Topics: string[];
+  Topics: Resolvable<string>[];
 };

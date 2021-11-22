@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::Fleet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Fleet_Type = 'AWS::GameLift::Fleet';
 export const Fleet_Type = 'AWS::GameLift::Fleet';
@@ -19,12 +19,12 @@ export type Fleet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances}
    */
-  DesiredEC2Instances?: number;
+  DesiredEC2Instances?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions}
@@ -34,81 +34,83 @@ export type Fleet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype}
    */
-  EC2InstanceType: string;
+  EC2InstanceType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype}
    */
-  FleetType?: 'ON_DEMAND' | 'SPOT';
+  FleetType?: Resolvable<'ON_DEMAND' | 'SPOT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn}
    */
-  InstanceRoleARN?: string;
+  InstanceRoleARN?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations}
    */
   Locations?: LocationConfiguration[];
-  LogPaths?: string[];
+  LogPaths?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize}
    */
-  MaxSize?: number;
+  MaxSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-metricgroups}
    */
-  MetricGroups?: string[];
+  MetricGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize}
    */
-  MinSize?: number;
+  MinSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-newgamesessionprotectionpolicy}
    */
-  NewGameSessionProtectionPolicy?: 'FullProtection' | 'NoProtection';
+  NewGameSessionProtectionPolicy?: Resolvable<
+    'FullProtection' | 'NoProtection'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcawsaccountid}
    */
-  PeerVpcAwsAccountId?: string;
+  PeerVpcAwsAccountId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid}
    */
-  PeerVpcId?: string;
+  PeerVpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-resourcecreationlimitpolicy}
    */
   ResourceCreationLimitPolicy?: ResourceCreationLimitPolicy;
-  FleetId?: string;
+  FleetId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid}
    */
-  BuildId?: string;
+  BuildId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid}
    */
-  ScriptId?: string;
+  ScriptId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-runtimeconfiguration}
    */
   RuntimeConfiguration?: RuntimeConfiguration;
-  ServerLaunchParameters?: string;
-  ServerLaunchPath?: string;
+  ServerLaunchParameters?: Resolvable<string>;
+  ServerLaunchPath?: Resolvable<string>;
 } & (
   | {
       /**
@@ -120,12 +122,12 @@ export type Fleet_Properties = {
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description}
        */
-      Description?: string;
+      Description?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances}
        */
-      DesiredEC2Instances?: number;
+      DesiredEC2Instances?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions}
@@ -135,81 +137,83 @@ export type Fleet_Properties = {
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype}
        */
-      EC2InstanceType?: string;
+      EC2InstanceType?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype}
        */
-      FleetType?: 'ON_DEMAND' | 'SPOT';
+      FleetType?: Resolvable<'ON_DEMAND' | 'SPOT'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn}
        */
-      InstanceRoleARN?: string;
+      InstanceRoleARN?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations}
        */
       Locations?: LocationConfiguration[];
-      LogPaths?: string[];
+      LogPaths?: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize}
        */
-      MaxSize?: number;
+      MaxSize?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-metricgroups}
        */
-      MetricGroups?: string[];
+      MetricGroups?: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize}
        */
-      MinSize?: number;
+      MinSize?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name}
        */
-      Name?: string;
+      Name?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-newgamesessionprotectionpolicy}
        */
-      NewGameSessionProtectionPolicy?: 'FullProtection' | 'NoProtection';
+      NewGameSessionProtectionPolicy?: Resolvable<
+        'FullProtection' | 'NoProtection'
+      >;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcawsaccountid}
        */
-      PeerVpcAwsAccountId?: string;
+      PeerVpcAwsAccountId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid}
        */
-      PeerVpcId?: string;
+      PeerVpcId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-resourcecreationlimitpolicy}
        */
       ResourceCreationLimitPolicy?: ResourceCreationLimitPolicy;
-      FleetId?: string;
+      FleetId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid}
        */
-      BuildId: string;
+      BuildId: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid}
        */
-      ScriptId?: string;
+      ScriptId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-runtimeconfiguration}
        */
       RuntimeConfiguration?: RuntimeConfiguration;
-      ServerLaunchParameters?: string;
-      ServerLaunchPath?: string;
+      ServerLaunchParameters?: Resolvable<string>;
+      ServerLaunchPath?: Resolvable<string>;
     }
   | {
       /**
@@ -221,12 +225,12 @@ export type Fleet_Properties = {
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description}
        */
-      Description?: string;
+      Description?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances}
        */
-      DesiredEC2Instances?: number;
+      DesiredEC2Instances?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions}
@@ -236,81 +240,83 @@ export type Fleet_Properties = {
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype}
        */
-      EC2InstanceType?: string;
+      EC2InstanceType?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype}
        */
-      FleetType?: 'ON_DEMAND' | 'SPOT';
+      FleetType?: Resolvable<'ON_DEMAND' | 'SPOT'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn}
        */
-      InstanceRoleARN?: string;
+      InstanceRoleARN?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations}
        */
       Locations?: LocationConfiguration[];
-      LogPaths?: string[];
+      LogPaths?: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize}
        */
-      MaxSize?: number;
+      MaxSize?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-metricgroups}
        */
-      MetricGroups?: string[];
+      MetricGroups?: Resolvable<string>[];
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize}
        */
-      MinSize?: number;
+      MinSize?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name}
        */
-      Name?: string;
+      Name?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-newgamesessionprotectionpolicy}
        */
-      NewGameSessionProtectionPolicy?: 'FullProtection' | 'NoProtection';
+      NewGameSessionProtectionPolicy?: Resolvable<
+        'FullProtection' | 'NoProtection'
+      >;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcawsaccountid}
        */
-      PeerVpcAwsAccountId?: string;
+      PeerVpcAwsAccountId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid}
        */
-      PeerVpcId?: string;
+      PeerVpcId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-resourcecreationlimitpolicy}
        */
       ResourceCreationLimitPolicy?: ResourceCreationLimitPolicy;
-      FleetId?: string;
+      FleetId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid}
        */
-      BuildId?: string;
+      BuildId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid}
        */
-      ScriptId: string;
+      ScriptId: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-runtimeconfiguration}
        */
       RuntimeConfiguration?: RuntimeConfiguration;
-      ServerLaunchParameters?: string;
-      ServerLaunchPath?: string;
+      ServerLaunchParameters?: Resolvable<string>;
+      ServerLaunchPath?: Resolvable<string>;
     }
 ) &
   (
@@ -324,12 +330,12 @@ export type Fleet_Properties = {
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description}
          */
-        Description?: string;
+        Description?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances}
          */
-        DesiredEC2Instances?: number;
+        DesiredEC2Instances?: Resolvable<number>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions}
@@ -339,81 +345,83 @@ export type Fleet_Properties = {
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype}
          */
-        EC2InstanceType?: string;
+        EC2InstanceType?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype}
          */
-        FleetType?: 'ON_DEMAND' | 'SPOT';
+        FleetType?: Resolvable<'ON_DEMAND' | 'SPOT'>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn}
          */
-        InstanceRoleARN?: string;
+        InstanceRoleARN?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations}
          */
         Locations?: LocationConfiguration[];
-        LogPaths?: string[];
+        LogPaths?: Resolvable<string>[];
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize}
          */
-        MaxSize?: number;
+        MaxSize?: Resolvable<number>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-metricgroups}
          */
-        MetricGroups?: string[];
+        MetricGroups?: Resolvable<string>[];
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize}
          */
-        MinSize?: number;
+        MinSize?: Resolvable<number>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name}
          */
-        Name?: string;
+        Name?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-newgamesessionprotectionpolicy}
          */
-        NewGameSessionProtectionPolicy?: 'FullProtection' | 'NoProtection';
+        NewGameSessionProtectionPolicy?: Resolvable<
+          'FullProtection' | 'NoProtection'
+        >;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcawsaccountid}
          */
-        PeerVpcAwsAccountId?: string;
+        PeerVpcAwsAccountId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid}
          */
-        PeerVpcId?: string;
+        PeerVpcId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-resourcecreationlimitpolicy}
          */
         ResourceCreationLimitPolicy?: ResourceCreationLimitPolicy;
-        FleetId?: string;
+        FleetId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid}
          */
-        BuildId?: string;
+        BuildId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid}
          */
-        ScriptId?: string;
+        ScriptId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-runtimeconfiguration}
          */
         RuntimeConfiguration: RuntimeConfiguration;
-        ServerLaunchParameters?: string;
-        ServerLaunchPath?: string;
+        ServerLaunchParameters?: Resolvable<string>;
+        ServerLaunchPath?: Resolvable<string>;
       }
     | {
         /**
@@ -425,12 +433,12 @@ export type Fleet_Properties = {
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-description}
          */
-        Description?: string;
+        Description?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-desiredec2instances}
          */
-        DesiredEC2Instances?: number;
+        DesiredEC2Instances?: Resolvable<number>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions}
@@ -440,81 +448,83 @@ export type Fleet_Properties = {
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2instancetype}
          */
-        EC2InstanceType?: string;
+        EC2InstanceType?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-fleettype}
          */
-        FleetType?: 'ON_DEMAND' | 'SPOT';
+        FleetType?: Resolvable<'ON_DEMAND' | 'SPOT'>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn}
          */
-        InstanceRoleARN?: string;
+        InstanceRoleARN?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations}
          */
         Locations?: LocationConfiguration[];
-        LogPaths?: string[];
+        LogPaths?: Resolvable<string>[];
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-maxsize}
          */
-        MaxSize?: number;
+        MaxSize?: Resolvable<number>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-metricgroups}
          */
-        MetricGroups?: string[];
+        MetricGroups?: Resolvable<string>[];
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-minsize}
          */
-        MinSize?: number;
+        MinSize?: Resolvable<number>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-name}
          */
-        Name?: string;
+        Name?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-newgamesessionprotectionpolicy}
          */
-        NewGameSessionProtectionPolicy?: 'FullProtection' | 'NoProtection';
+        NewGameSessionProtectionPolicy?: Resolvable<
+          'FullProtection' | 'NoProtection'
+        >;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcawsaccountid}
          */
-        PeerVpcAwsAccountId?: string;
+        PeerVpcAwsAccountId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-peervpcid}
          */
-        PeerVpcId?: string;
+        PeerVpcId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-resourcecreationlimitpolicy}
          */
         ResourceCreationLimitPolicy?: ResourceCreationLimitPolicy;
-        FleetId?: string;
+        FleetId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-buildid}
          */
-        BuildId?: string;
+        BuildId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-scriptid}
          */
-        ScriptId?: string;
+        ScriptId?: Resolvable<string>;
         /**
          * {@link
          * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-runtimeconfiguration}
          */
         RuntimeConfiguration?: RuntimeConfiguration;
-        ServerLaunchParameters: string;
-        ServerLaunchPath: string;
+        ServerLaunchParameters: Resolvable<string>;
+        ServerLaunchPath: Resolvable<string>;
       }
   );
 
@@ -529,17 +539,17 @@ export type LocationCapacity = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-desiredec2instances}
    */
-  DesiredEC2Instances: number;
+  DesiredEC2Instances: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-minsize}
    */
-  MinSize: number;
+  MinSize: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationcapacity.html#cfn-gamelift-fleet-locationcapacity-maxsize}
    */
-  MaxSize: number;
+  MaxSize: Resolvable<number>;
 };
 
 /**
@@ -556,7 +566,7 @@ export type CertificateConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-certificateconfiguration.html#cfn-gamelift-fleet-certificateconfiguration-certificatetype}
    */
-  CertificateType: 'DISABLED' | 'GENERATED';
+  CertificateType: Resolvable<'DISABLED' | 'GENERATED'>;
 };
 
 /**
@@ -576,25 +586,25 @@ export type IpPermission = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ippermission.html#cfn-gamelift-fleet-ippermission-fromport}
    */
-  FromPort: number;
+  FromPort: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ippermission.html#cfn-gamelift-fleet-ippermission-iprange}
    */
-  IpRange: string;
+  IpRange: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ippermission.html#cfn-gamelift-fleet-ippermission-protocol}
    */
-  Protocol: 'TCP' | 'UDP';
+  Protocol: Resolvable<'TCP' | 'UDP'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ippermission.html#cfn-gamelift-fleet-ippermission-toport}
    */
-  ToPort: number;
+  ToPort: Resolvable<number>;
 };
 
-export type Location = string;
+export type Location = Resolvable<string>;
 
 /**
  * A remote location where a multi-location fleet can deploy EC2
@@ -633,12 +643,12 @@ export type ResourceCreationLimitPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator}
    */
-  NewGameSessionsPerCreator?: number;
+  NewGameSessionsPerCreator?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-resourcecreationlimitpolicy.html#cfn-gamelift-fleet-resourcecreationlimitpolicy-policyperiodinminutes}
    */
-  PolicyPeriodInMinutes?: number;
+  PolicyPeriodInMinutes?: Resolvable<number>;
 };
 
 /**
@@ -668,12 +678,12 @@ export type RuntimeConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-runtimeconfiguration.html#cfn-gamelift-fleet-runtimeconfiguration-gamesessionactivationtimeoutseconds}
    */
-  GameSessionActivationTimeoutSeconds?: number;
+  GameSessionActivationTimeoutSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-runtimeconfiguration.html#cfn-gamelift-fleet-runtimeconfiguration-maxconcurrentgamesessionactivations}
    */
-  MaxConcurrentGameSessionActivations?: number;
+  MaxConcurrentGameSessionActivations?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-runtimeconfiguration.html#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses}
@@ -695,15 +705,15 @@ export type ServerProcess = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-concurrentexecutions}
    */
-  ConcurrentExecutions: number;
+  ConcurrentExecutions: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-launchpath}
    */
-  LaunchPath: string;
+  LaunchPath: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html#cfn-gamelift-fleet-serverprocess-parameters}
    */
-  Parameters?: string;
+  Parameters?: Resolvable<string>;
 };

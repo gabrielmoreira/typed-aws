@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMIncidents::ResponsePlan
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResponsePlan_Type = 'AWS::SSMIncidents::ResponsePlan';
 export const ResponsePlan_Type = 'AWS::SSMIncidents::ResponsePlan';
@@ -18,17 +18,17 @@ export default function ResponsePlan(props: ResponsePlan_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html}
  */
 export type ResponsePlan_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-displayname}
    */
-  DisplayName?: string;
+  DisplayName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html#cfn-ssmincidents-responseplan-chatchannel}
@@ -56,9 +56,9 @@ export type ResponsePlan_Properties = {
   IncidentTemplate: IncidentTemplate;
 };
 
-export type SSMContact = string;
+export type SSMContact = Resolvable<string>;
 
-export type SnsArn = string;
+export type SnsArn = Resolvable<string>;
 
 /**
  * A notification target. {@link
@@ -94,22 +94,24 @@ export type SsmAutomation = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentname}
    */
-  DocumentName: string;
+  DocumentName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-documentversion}
    */
-  DocumentVersion?: string;
+  DocumentVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-targetaccount}
    */
-  TargetAccount?: 'IMPACTED_ACCOUNT' | 'RESPONSE_PLAN_OWNER_ACCOUNT';
+  TargetAccount?: Resolvable<
+    'IMPACTED_ACCOUNT' | 'RESPONSE_PLAN_OWNER_ACCOUNT'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html#cfn-ssmincidents-responseplan-ssmautomation-parameters}
@@ -126,7 +128,7 @@ export type SsmParameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html#cfn-ssmincidents-responseplan-ssmparameter-values}
@@ -134,11 +136,11 @@ export type SsmParameter = {
   Values: SsmParameterValue[];
 };
 
-export type SsmParameterValue = string;
+export type SsmParameterValue = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -150,12 +152,12 @@ export type IncidentTemplate = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-dedupestring}
    */
-  DedupeString?: string;
+  DedupeString?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-impact}
    */
-  Impact: number;
+  Impact: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-notificationtargets}
@@ -165,12 +167,12 @@ export type IncidentTemplate = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-summary}
    */
-  Summary?: string;
+  Summary?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html#cfn-ssmincidents-responseplan-incidenttemplate-title}
    */
-  Title: string;
+  Title: Resolvable<string>;
 };
 
 export type ChatbotSns = SnsArn[];

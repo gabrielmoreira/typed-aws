@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Chatbot::SlackChannelConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SlackChannelConfiguration_Type =
   'AWS::Chatbot::SlackChannelConfiguration';
@@ -25,37 +25,37 @@ export default function SlackChannelConfiguration(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html}
  */
 export type SlackChannelConfiguration_Properties = {
-  UserRoleRequired?: boolean;
+  UserRoleRequired?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-logginglevel}
    */
-  LoggingLevel?: string;
+  LoggingLevel?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-snstopicarns}
    */
-  SnsTopicArns?: string[];
-  GuardrailPolicies?: string[];
+  SnsTopicArns?: Resolvable<string>[];
+  GuardrailPolicies?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackworkspaceid}
    */
-  SlackWorkspaceId: string;
+  SlackWorkspaceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-slackchannelid}
    */
-  SlackChannelId: string;
+  SlackChannelId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-iamrolearn}
    */
-  IamRoleArn: string;
+  IamRoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html#cfn-chatbot-slackchannelconfiguration-configurationname}
    */
-  ConfigurationName: string;
-  Arn?: string;
+  ConfigurationName: Resolvable<string>;
+  Arn?: Resolvable<string>;
 };

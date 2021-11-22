@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::RequestValidator
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RequestValidator_Type = 'AWS::ApiGateway::RequestValidator';
 export const RequestValidator_Type = 'AWS::ApiGateway::RequestValidator';
@@ -21,25 +21,25 @@ export default function RequestValidator(props: RequestValidator_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html}
  */
 export type RequestValidator_Properties = {
-  RequestValidatorId?: string;
+  RequestValidatorId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-restapiid}
    */
-  RestApiId: string;
+  RestApiId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-validaterequestbody}
    */
-  ValidateRequestBody?: boolean;
+  ValidateRequestBody?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html#cfn-apigateway-requestvalidator-validaterequestparameters}
    */
-  ValidateRequestParameters?: boolean;
+  ValidateRequestParameters?: Resolvable<boolean>;
 };

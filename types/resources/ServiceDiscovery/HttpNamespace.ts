@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::HttpNamespace
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type HttpNamespace_Type = 'AWS::ServiceDiscovery::HttpNamespace';
 export const HttpNamespace_Type = 'AWS::ServiceDiscovery::HttpNamespace';
@@ -20,13 +20,13 @@ export default function HttpNamespace(props: HttpNamespace_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html}
  */
 export type HttpNamespace_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html#cfn-servicediscovery-httpnamespace-description}
    */
-  Description?: string;
-  Arn?: string;
+  Description?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html#cfn-servicediscovery-httpnamespace-tags}
@@ -36,10 +36,10 @@ export type HttpNamespace_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html#cfn-servicediscovery-httpnamespace-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

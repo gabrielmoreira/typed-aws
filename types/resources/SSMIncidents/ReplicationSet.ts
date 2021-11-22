@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMIncidents::ReplicationSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ReplicationSet_Type = 'AWS::SSMIncidents::ReplicationSet';
 export const ReplicationSet_Type = 'AWS::SSMIncidents::ReplicationSet';
@@ -31,9 +31,9 @@ export type ReplicationSet_Properties = {
   DeletionProtected?: DeletionProtected;
 };
 
-export type Arn = string;
+export type Arn = Resolvable<string>;
 
-export type RegionName = string;
+export type RegionName = Resolvable<string>;
 
 /**
  * The ReplicationSet regional configuration. {@link
@@ -64,6 +64,6 @@ export type RegionConfiguration = {
   SseKmsKeyId: Arn;
 };
 
-export type DeletionProtected = boolean;
+export type DeletionProtected = Resolvable<boolean>;
 
 export type RegionList = ReplicationRegion[];

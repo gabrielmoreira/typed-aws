@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppMesh::VirtualService
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VirtualService_Type = 'AWS::AppMesh::VirtualService';
 export const VirtualService_Type = 'AWS::AppMesh::VirtualService';
@@ -18,25 +18,25 @@ export default function VirtualService(props: VirtualService_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html}
  */
 export type VirtualService_Properties = {
-  Uid?: string;
+  Uid?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-meshname}
    */
-  MeshName: string;
+  MeshName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-meshowner}
    */
-  MeshOwner?: string;
-  ResourceOwner?: string;
-  Id?: string;
+  MeshOwner?: Resolvable<string>;
+  ResourceOwner?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-virtualservicename}
    */
-  VirtualServiceName: string;
-  Arn?: string;
+  VirtualServiceName: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html#cfn-appmesh-virtualservice-spec}
@@ -58,7 +58,7 @@ export type VirtualNodeServiceProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.html#cfn-appmesh-virtualservice-virtualnodeserviceprovider-virtualnodename}
    */
-  VirtualNodeName: string;
+  VirtualNodeName: Resolvable<string>;
 };
 
 /**
@@ -79,8 +79,8 @@ export type VirtualServiceProvider = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -104,5 +104,5 @@ export type VirtualRouterServiceProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualservice-virtualrouterserviceprovider.html#cfn-appmesh-virtualservice-virtualrouterserviceprovider-virtualroutername}
    */
-  VirtualRouterName: string;
+  VirtualRouterName: Resolvable<string>;
 };

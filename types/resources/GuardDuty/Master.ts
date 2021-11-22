@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GuardDuty::Master
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Master_Type = 'AWS::GuardDuty::Master';
 export const Master_Type = 'AWS::GuardDuty::Master';
@@ -22,15 +22,15 @@ export type Master_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-detectorid}
    */
-  DetectorId: string;
+  DetectorId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-masterid}
    */
-  MasterId: string;
+  MasterId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid}
    */
-  InvitationId?: string;
+  InvitationId?: Resolvable<string>;
 };

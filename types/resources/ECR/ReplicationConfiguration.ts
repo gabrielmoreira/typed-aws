@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECR::ReplicationConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ReplicationConfiguration_Type =
   'AWS::ECR::ReplicationConfiguration';
@@ -38,7 +38,7 @@ export type ReplicationConfiguration_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html#cfn-ecr-replicationconfiguration-replicationconfiguration}
    */
   ReplicationConfiguration: ReplicationConfiguration;
-  RegistryId?: string;
+  RegistryId?: Resolvable<string>;
 };
 
 /**
@@ -90,9 +90,9 @@ export type RepositoryFilter = {
   FilterType: FilterType;
 };
 
-export type Filter = string;
+export type Filter = Resolvable<string>;
 
-export type FilterType = 'PREFIX_MATCH';
+export type FilterType = Resolvable<'PREFIX_MATCH'>;
 
 /**
  * An array of objects representing the details of a replication
@@ -112,6 +112,6 @@ export type ReplicationDestination = {
   RegistryId: RegistryId;
 };
 
-export type RegistryId = string;
+export type RegistryId = Resolvable<string>;
 
-export type Region = string;
+export type Region = Resolvable<string>;

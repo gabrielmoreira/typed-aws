@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppConfig::Environment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Environment_Type = 'AWS::AppConfig::Environment';
 export const Environment_Type = 'AWS::AppConfig::Environment';
@@ -27,13 +27,13 @@ export type Environment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-description}
    */
-  Description?: string;
-  Id?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-applicationid}
    */
-  ApplicationId: string;
+  ApplicationId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-tags}
@@ -43,7 +43,7 @@ export type Environment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html#cfn-appconfig-environment-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -55,12 +55,12 @@ export type Monitors = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmarn}
    */
-  AlarmArn?: string;
+  AlarmArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html#cfn-appconfig-environment-monitors-alarmrolearn}
    */
-  AlarmRoleArn?: string;
+  AlarmRoleArn?: Resolvable<string>;
 };
 
 /**
@@ -72,10 +72,10 @@ export type Tags = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-tags.html#cfn-appconfig-environment-tags-value}
    */
-  Value?: string;
+  Value?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-tags.html#cfn-appconfig-environment-tags-key}
    */
-  Key?: string;
+  Key?: Resolvable<string>;
 };

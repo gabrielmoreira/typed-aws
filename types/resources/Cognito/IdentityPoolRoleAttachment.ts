@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::IdentityPoolRoleAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type IdentityPoolRoleAttachment_Type =
   'AWS::Cognito::IdentityPoolRoleAttachment';
@@ -31,7 +31,7 @@ export type IdentityPoolRoleAttachment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-identitypoolid}
    */
-  IdentityPoolId: string;
+  IdentityPoolId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-roles}
@@ -39,7 +39,7 @@ export type IdentityPoolRoleAttachment_Properties = {
   Roles?: {
     [k: string]: unknown;
   };
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-rolemappings}

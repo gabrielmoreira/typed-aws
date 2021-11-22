@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::PublicKey
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PublicKey_Type = 'AWS::CloudFront::PublicKey';
 export const PublicKey_Type = 'AWS::CloudFront::PublicKey';
@@ -18,8 +18,8 @@ export default function PublicKey(props: PublicKey_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html}
  */
 export type PublicKey_Properties = {
-  CreatedTime?: string;
-  Id?: string;
+  CreatedTime?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html#cfn-cloudfront-publickey-publickeyconfig}
@@ -36,20 +36,20 @@ export type PublicKeyConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-callerreference}
    */
-  CallerReference: string;
+  CallerReference: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-comment}
    */
-  Comment?: string;
+  Comment?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-encodedkey}
    */
-  EncodedKey: string;
+  EncodedKey: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html#cfn-cloudfront-publickey-publickeyconfig-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };

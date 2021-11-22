@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Host
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Host_Type = 'AWS::EC2::Host';
 export const Host_Type = 'AWS::EC2::Host';
@@ -18,25 +18,25 @@ export default function Host(props: Host_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html}
  */
 export type Host_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-autoplacement}
    */
-  AutoPlacement?: string;
+  AutoPlacement?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-availabilityzone}
    */
-  AvailabilityZone: string;
+  AvailabilityZone: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-hostrecovery}
    */
-  HostRecovery?: string;
+  HostRecovery?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html#cfn-ec2-host-instancetype}
    */
-  InstanceType: string;
+  InstanceType: Resolvable<string>;
 };

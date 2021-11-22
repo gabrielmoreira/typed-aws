@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Batch::JobQueue
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type JobQueue_Type = 'AWS::Batch::JobQueue';
 export const JobQueue_Type = 'AWS::Batch::JobQueue';
@@ -27,23 +27,23 @@ export type JobQueue_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-priority}
    */
-  Priority: number;
+  Priority: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-state}
    */
-  State?: string;
+  State?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-schedulingpolicyarn}
    */
-  SchedulingPolicyArn?: string;
-  Id?: string;
+  SchedulingPolicyArn?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuename}
    */
-  JobQueueName?: string;
+  JobQueueName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-tags}
@@ -62,10 +62,10 @@ export type ComputeEnvironmentOrder = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment}
    */
-  ComputeEnvironment: string;
+  ComputeEnvironment: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-computeenvironmentorder.html#cfn-batch-jobqueue-computeenvironmentorder-order}
    */
-  Order: number;
+  Order: Resolvable<number>;
 };

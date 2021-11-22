@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::Framework
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Framework_Type = 'AWS::Backup::Framework';
 export const Framework_Type = 'AWS::Backup::Framework';
@@ -26,21 +26,21 @@ export type Framework_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkname}
    */
-  FrameworkName?: string;
+  FrameworkName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkdescription}
    */
-  FrameworkDescription?: string;
-  FrameworkArn?: string;
-  DeploymentStatus?: string;
-  CreationTime?: number;
+  FrameworkDescription?: Resolvable<string>;
+  FrameworkArn?: Resolvable<string>;
+  DeploymentStatus?: Resolvable<string>;
+  CreationTime?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols}
    */
   FrameworkControls: FrameworkControl[];
-  FrameworkStatus?: string;
+  FrameworkStatus?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags}
@@ -57,7 +57,7 @@ export type FrameworkControl = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname}
    */
-  ControlName: string;
+  ControlName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters}
@@ -68,8 +68,8 @@ export type FrameworkControl = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope}
    */
   ControlScope?: {
-    ComplianceResourceIds?: string[];
-    ComplianceResourceTypes?: string[];
+    ComplianceResourceIds?: Resolvable<string>[];
+    ComplianceResourceTypes?: Resolvable<string>[];
     Tags?: Tag[];
   };
 };
@@ -83,15 +83,15 @@ export type ControlInputParameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername}
    */
-  ParameterName: string;
+  ParameterName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue}
    */
-  ParameterValue: string;
+  ParameterValue: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayRoute
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayRoute_Type = 'AWS::EC2::TransitGatewayRoute';
 export const TransitGatewayRoute_Type = 'AWS::EC2::TransitGatewayRoute';
@@ -23,25 +23,25 @@ export default function TransitGatewayRoute(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html}
  */
 export type TransitGatewayRoute_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html#cfn-ec2-transitgatewayroute-transitgatewayroutetableid}
    */
-  TransitGatewayRouteTableId: string;
+  TransitGatewayRouteTableId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html#cfn-ec2-transitgatewayroute-destinationcidrblock}
    */
-  DestinationCidrBlock?: string;
+  DestinationCidrBlock?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html#cfn-ec2-transitgatewayroute-blackhole}
    */
-  Blackhole?: boolean;
+  Blackhole?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html#cfn-ec2-transitgatewayroute-transitgatewayattachmentid}
    */
-  TransitGatewayAttachmentId?: string;
+  TransitGatewayAttachmentId?: Resolvable<string>;
 };

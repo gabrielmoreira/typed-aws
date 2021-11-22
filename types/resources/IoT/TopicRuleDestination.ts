@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::TopicRuleDestination
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TopicRuleDestination_Type = 'AWS::IoT::TopicRuleDestination';
 export const TopicRuleDestination_Type = 'AWS::IoT::TopicRuleDestination';
@@ -23,7 +23,7 @@ export default function TopicRuleDestination(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html}
  */
 export type TopicRuleDestination_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-status}
@@ -34,7 +34,7 @@ export type TopicRuleDestination_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-httpurlproperties}
    */
   HttpUrlProperties?: HttpUrlDestinationSummary;
-  StatusReason?: string;
+  StatusReason?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html#cfn-iot-topicruledestination-vpcproperties}
@@ -42,7 +42,9 @@ export type TopicRuleDestination_Properties = {
   VpcProperties?: VpcDestinationProperties;
 };
 
-export type TopicRuleDestinationStatus = 'ENABLED' | 'IN_PROGRESS' | 'DISABLED';
+export type TopicRuleDestinationStatus = Resolvable<
+  'ENABLED' | 'IN_PROGRESS' | 'DISABLED'
+>;
 
 /**
  * {@link
@@ -53,7 +55,7 @@ export type HttpUrlDestinationSummary = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-httpurldestinationsummary.html#cfn-iot-topicruledestination-httpurldestinationsummary-confirmationurl}
    */
-  ConfirmationUrl?: string;
+  ConfirmationUrl?: Resolvable<string>;
 };
 
 /**
@@ -65,20 +67,20 @@ export type VpcDestinationProperties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-subnetids}
    */
-  SubnetIds?: string[];
+  SubnetIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-securitygroups}
    */
-  SecurityGroups?: string[];
+  SecurityGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-vpcid}
    */
-  VpcId?: string;
+  VpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html#cfn-iot-topicruledestination-vpcdestinationproperties-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
 };

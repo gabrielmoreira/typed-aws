@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalogAppRegistry::AttributeGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AttributeGroup_Type =
   'AWS::ServiceCatalogAppRegistry::AttributeGroup';
@@ -22,18 +22,18 @@ export default function AttributeGroup(props: AttributeGroup_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html}
  */
 export type AttributeGroup_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html#cfn-servicecatalogappregistry-attributegroup-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html#cfn-servicecatalogappregistry-attributegroup-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html#cfn-servicecatalogappregistry-attributegroup-attributes}
@@ -49,5 +49,5 @@ export type AttributeGroup_Properties = {
 };
 
 export type Tags = {
-  [k: string]: string;
+  [k: string]: Resolvable<string>;
 };

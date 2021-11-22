@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::PrivateDnsNamespace
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PrivateDnsNamespace_Type =
   'AWS::ServiceDiscovery::PrivateDnsNamespace';
@@ -31,14 +31,14 @@ export type PrivateDnsNamespace_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc}
    */
-  Vpc: string;
-  Id?: string;
-  Arn?: string;
+  Vpc: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties}
@@ -53,7 +53,7 @@ export type PrivateDnsNamespace_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -77,12 +77,12 @@ export type SOA = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-soa.html#cfn-servicediscovery-privatednsnamespace-soa-ttl}
    */
-  TTL?: number;
+  TTL?: Resolvable<number>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**

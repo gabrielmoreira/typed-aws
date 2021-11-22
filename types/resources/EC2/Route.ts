@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::Route
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Route_Type = 'AWS::EC2::Route';
 export const Route_Type = 'AWS::EC2::Route';
@@ -22,66 +22,66 @@ export type Route_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationipv6cidrblock}
    */
-  DestinationIpv6CidrBlock?: string;
+  DestinationIpv6CidrBlock?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-routetableid}
    */
-  RouteTableId: string;
+  RouteTableId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-instanceid}
    */
-  InstanceId?: string;
+  InstanceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-localgatewayid}
    */
-  LocalGatewayId?: string;
+  LocalGatewayId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-carriergatewayid}
    */
-  CarrierGatewayId?: string;
+  CarrierGatewayId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-destinationcidrblock}
    */
-  DestinationCidrBlock?: string;
+  DestinationCidrBlock?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-gatewayid}
    */
-  GatewayId?: string;
+  GatewayId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-networkinterfaceid}
    */
-  NetworkInterfaceId?: string;
+  NetworkInterfaceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-vpcendpointid}
    */
-  VpcEndpointId?: string;
+  VpcEndpointId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-transitgatewayid}
    */
-  TransitGatewayId?: string;
+  TransitGatewayId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-vpcpeeringconnectionid}
    */
-  VpcPeeringConnectionId?: string;
+  VpcPeeringConnectionId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-egressonlyinternetgatewayid}
    */
-  EgressOnlyInternetGatewayId?: string;
-  Id?: string;
+  EgressOnlyInternetGatewayId?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html#cfn-ec2-route-natgatewayid}
    */
-  NatGatewayId?: string;
+  NatGatewayId?: Resolvable<string>;
 };

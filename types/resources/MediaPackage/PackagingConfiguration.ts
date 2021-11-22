@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MediaPackage::PackagingConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PackagingConfiguration_Type =
   'AWS::MediaPackage::PackagingConfiguration';
@@ -29,13 +29,13 @@ export type PackagingConfiguration_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-packaginggroupid}
    */
-  PackagingGroupId: string;
-  Arn?: string;
+  PackagingGroupId: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html#cfn-mediapackage-packagingconfiguration-cmafpackage}
@@ -63,7 +63,7 @@ export type PackagingConfiguration_Properties = {
   Tags?: Tag[];
 };
 
-export type RoleArn = string;
+export type RoleArn = Resolvable<string>;
 
 /**
  * A configuration for accessing an external Secure Packager and Encoder
@@ -80,12 +80,12 @@ export type SpekeKeyProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.html#cfn-mediapackage-packagingconfiguration-spekekeyprovider-systemids}
    */
-  SystemIds: string[];
+  SystemIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.html#cfn-mediapackage-packagingconfiguration-spekekeyprovider-url}
    */
-  Url: string;
+  Url: Resolvable<string>;
 };
 
 /**
@@ -97,25 +97,24 @@ export type StreamSelection = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-streamselection.html#cfn-mediapackage-packagingconfiguration-streamselection-maxvideobitspersecond}
    */
-  MaxVideoBitsPerSecond?: number;
+  MaxVideoBitsPerSecond?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-streamselection.html#cfn-mediapackage-packagingconfiguration-streamselection-minvideobitspersecond}
    */
-  MinVideoBitsPerSecond?: number;
+  MinVideoBitsPerSecond?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-streamselection.html#cfn-mediapackage-packagingconfiguration-streamselection-streamorder}
    */
-  StreamOrder?:
-    | 'ORIGINAL'
-    | 'VIDEO_BITRATE_ASCENDING'
-    | 'VIDEO_BITRATE_DESCENDING';
+  StreamOrder?: Resolvable<
+    'ORIGINAL' | 'VIDEO_BITRATE_ASCENDING' | 'VIDEO_BITRATE_DESCENDING'
+  >;
 };
 
-export type SegmentDurationSeconds = number;
+export type SegmentDurationSeconds = Resolvable<number>;
 
-export type ManifestName = string;
+export type ManifestName = Resolvable<string>;
 
 /**
  * An HTTP Live Streaming (HLS) manifest configuration. {@link
@@ -126,12 +125,12 @@ export type HlsManifest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-admarkers}
    */
-  AdMarkers?: 'NONE' | 'SCTE35_ENHANCED' | 'PASSTHROUGH';
+  AdMarkers?: Resolvable<'NONE' | 'SCTE35_ENHANCED' | 'PASSTHROUGH'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-includeiframeonlystream}
    */
-  IncludeIframeOnlyStream?: boolean;
+  IncludeIframeOnlyStream?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-manifestname}
@@ -141,12 +140,12 @@ export type HlsManifest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-programdatetimeintervalseconds}
    */
-  ProgramDateTimeIntervalSeconds?: number;
+  ProgramDateTimeIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-repeatextxkey}
    */
-  RepeatExtXKey?: boolean;
+  RepeatExtXKey?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsmanifest.html#cfn-mediapackage-packagingconfiguration-hlsmanifest-streamselection}
@@ -163,7 +162,7 @@ export type DashManifest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestlayout}
    */
-  ManifestLayout?: 'FULL' | 'COMPACT';
+  ManifestLayout?: Resolvable<'FULL' | 'COMPACT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-manifestname}
@@ -173,12 +172,12 @@ export type DashManifest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-minbuffertimeseconds}
    */
-  MinBufferTimeSeconds?: number;
+  MinBufferTimeSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-profile}
    */
-  Profile?: 'NONE' | 'HBBTV_1_5';
+  Profile?: Resolvable<'NONE' | 'HBBTV_1_5'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashmanifest.html#cfn-mediapackage-packagingconfiguration-dashmanifest-streamselection}
@@ -239,7 +238,7 @@ export type CmafPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-cmafpackage.html#cfn-mediapackage-packagingconfiguration-cmafpackage-includeencoderconfigurationinsegments}
    */
-  IncludeEncoderConfigurationInSegments?: boolean;
+  IncludeEncoderConfigurationInSegments?: Resolvable<boolean>;
 };
 
 /**
@@ -275,7 +274,7 @@ export type DashPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers}
    */
-  PeriodTriggers?: 'ADS'[];
+  PeriodTriggers?: Resolvable<'ADS'>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-segmentdurationseconds}
@@ -285,15 +284,14 @@ export type DashPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-segmenttemplateformat}
    */
-  SegmentTemplateFormat?:
-    | 'NUMBER_WITH_TIMELINE'
-    | 'TIME_WITH_TIMELINE'
-    | 'NUMBER_WITH_DURATION';
+  SegmentTemplateFormat?: Resolvable<
+    'NUMBER_WITH_TIMELINE' | 'TIME_WITH_TIMELINE' | 'NUMBER_WITH_DURATION'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html#cfn-mediapackage-packagingconfiguration-dashpackage-includeencoderconfigurationinsegments}
    */
-  IncludeEncoderConfigurationInSegments?: boolean;
+  IncludeEncoderConfigurationInSegments?: Resolvable<boolean>;
 };
 
 /**
@@ -305,12 +303,12 @@ export type HlsEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-constantinitializationvector}
    */
-  ConstantInitializationVector?: string;
+  ConstantInitializationVector?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-encryptionmethod}
    */
-  EncryptionMethod?: 'AES_128' | 'SAMPLE_AES';
+  EncryptionMethod?: Resolvable<'AES_128' | 'SAMPLE_AES'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlsencryption.html#cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider}
@@ -342,7 +340,7 @@ export type HlsPackage = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-hlspackage.html#cfn-mediapackage-packagingconfiguration-hlspackage-useaudiorenditiongroup}
    */
-  UseAudioRenditionGroup?: boolean;
+  UseAudioRenditionGroup?: Resolvable<boolean>;
 };
 
 /**
@@ -380,6 +378,6 @@ export type MssPackage = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

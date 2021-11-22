@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::IPSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type IPSet_Type = 'AWS::WAFv2::IPSet';
 export const IPSet_Type = 'AWS::WAFv2::IPSet';
@@ -54,21 +54,21 @@ export type IPSet_Properties = {
   Tags?: Tag[];
 };
 
-export type EntityName = string;
+export type EntityName = Resolvable<string>;
 
-export type EntityDescription = string;
+export type EntityDescription = Resolvable<string>;
 
-export type EntityId = string;
+export type EntityId = Resolvable<string>;
 
-export type Scope = 'CLOUDFRONT' | 'REGIONAL';
+export type Scope = Resolvable<'CLOUDFRONT' | 'REGIONAL'>;
 
-export type IPAddressVersion = 'IPV4' | 'IPV6';
+export type IPAddressVersion = Resolvable<'IPV4' | 'IPV6'>;
 
-export type IPAddress = string;
+export type IPAddress = Resolvable<string>;
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

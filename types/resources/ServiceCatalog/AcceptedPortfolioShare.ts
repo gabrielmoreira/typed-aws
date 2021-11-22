@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::AcceptedPortfolioShare
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AcceptedPortfolioShare_Type =
   'AWS::ServiceCatalog::AcceptedPortfolioShare';
@@ -27,15 +27,15 @@ export default function AcceptedPortfolioShare(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html}
  */
 export type AcceptedPortfolioShare_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-acceptlanguage}
    */
-  AcceptLanguage?: string;
+  AcceptLanguage?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-portfolioid}
    */
-  PortfolioId: string;
+  PortfolioId: Resolvable<string>;
 };

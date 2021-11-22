@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAF::WebACL
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WebACL_Type = 'AWS::WAF::WebACL';
 export const WebACL_Type = 'AWS::WAF::WebACL';
@@ -18,7 +18,7 @@ export default function WebACL(props: WebACL_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html}
  */
 export type WebACL_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-defaultaction}
@@ -28,12 +28,12 @@ export type WebACL_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-metricname}
    */
-  MetricName: string;
+  MetricName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html#cfn-waf-webacl-rules}
@@ -55,12 +55,12 @@ export type ActivatedRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-priority}
    */
-  Priority: number;
+  Priority: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-rules.html#cfn-waf-webacl-rules-ruleid}
    */
-  RuleId: string;
+  RuleId: Resolvable<string>;
 };
 
 /**
@@ -72,5 +72,5 @@ export type WafAction = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-action.html#cfn-waf-webacl-action-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };

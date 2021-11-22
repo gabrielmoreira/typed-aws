@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::GatewayRouteTableAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GatewayRouteTableAssociation_Type =
   'AWS::EC2::GatewayRouteTableAssociation';
@@ -35,11 +35,11 @@ export type GatewayRouteTableAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-routetableid}
    */
-  RouteTableId: string;
+  RouteTableId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html#cfn-ec2-gatewayroutetableassociation-gatewayid}
    */
-  GatewayId: string;
-  AssociationId?: string;
+  GatewayId: Resolvable<string>;
+  AssociationId?: Resolvable<string>;
 };

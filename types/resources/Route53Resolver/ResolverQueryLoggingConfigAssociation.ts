@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverQueryLoggingConfigAssociation_Type =
   'AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation';
@@ -27,25 +27,26 @@ export default function ResolverQueryLoggingConfigAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html}
  */
 export type ResolverQueryLoggingConfigAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html#cfn-route53resolver-resolverqueryloggingconfigassociation-resolverquerylogconfigid}
    */
-  ResolverQueryLogConfigId?: string;
+  ResolverQueryLogConfigId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html#cfn-route53resolver-resolverqueryloggingconfigassociation-resourceid}
    */
-  ResourceId?: string;
-  Status?:
+  ResourceId?: Resolvable<string>;
+  Status?: Resolvable<
     | 'CREATING'
     | 'ACTIVE'
     | 'ACTION_NEEDED'
     | 'DELETING'
     | 'FAILED'
-    | 'OVERRIDDEN';
-  Error?: 'NONE' | 'DESTINATION_NOT_FOUND' | 'ACCESS_DENIED';
-  ErrorMessage?: string;
-  CreationTime?: string;
+    | 'OVERRIDDEN'
+  >;
+  Error?: Resolvable<'NONE' | 'DESTINATION_NOT_FOUND' | 'ACCESS_DENIED'>;
+  ErrorMessage?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
 };

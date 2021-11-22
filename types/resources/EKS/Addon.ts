@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EKS::Addon
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Addon_Type = 'AWS::EKS::Addon';
 export const Addon_Type = 'AWS::EKS::Addon';
@@ -22,28 +22,28 @@ export type Addon_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-clustername}
    */
-  ClusterName: string;
+  ClusterName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-addonname}
    */
-  AddonName: string;
+  AddonName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-addonversion}
    */
-  AddonVersion?: string;
+  AddonVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-resolveconflicts}
    */
-  ResolveConflicts?: 'NONE' | 'OVERWRITE';
+  ResolveConflicts?: Resolvable<'NONE' | 'OVERWRITE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-serviceaccountrolearn}
    */
-  ServiceAccountRoleArn?: string;
-  Arn?: string;
+  ServiceAccountRoleArn?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html#cfn-eks-addon-tags}
@@ -52,6 +52,6 @@ export type Addon_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::SchemaVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SchemaVersion_Type = 'AWS::Glue::SchemaVersion';
 export const SchemaVersion_Type = 'AWS::Glue::SchemaVersion';
@@ -29,8 +29,8 @@ export type SchemaVersion_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html#cfn-glue-schemaversion-schemadefinition}
    */
-  SchemaDefinition: string;
-  VersionId?: string;
+  SchemaDefinition: Resolvable<string>;
+  VersionId?: Resolvable<string>;
 };
 
 /**
@@ -43,15 +43,15 @@ export type Schema = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schemaversion-schema.html#cfn-glue-schemaversion-schema-schemaarn}
    */
-  SchemaArn?: string;
+  SchemaArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schemaversion-schema.html#cfn-glue-schemaversion-schema-schemaname}
    */
-  SchemaName?: string;
+  SchemaName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schemaversion-schema.html#cfn-glue-schemaversion-schema-registryname}
    */
-  RegistryName?: string;
+  RegistryName?: Resolvable<string>;
 };

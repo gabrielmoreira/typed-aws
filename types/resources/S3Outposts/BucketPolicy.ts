@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::BucketPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BucketPolicy_Type = 'AWS::S3Outposts::BucketPolicy';
 export const BucketPolicy_Type = 'AWS::S3Outposts::BucketPolicy';
@@ -22,7 +22,7 @@ export type BucketPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucketpolicy.html#cfn-s3outposts-bucketpolicy-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucketpolicy.html#cfn-s3outposts-bucketpolicy-policydocument}

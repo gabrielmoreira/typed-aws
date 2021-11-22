@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::BackupSelection
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BackupSelection_Type = 'AWS::Backup::BackupSelection';
 export const BackupSelection_Type = 'AWS::Backup::BackupSelection';
@@ -21,18 +21,18 @@ export default function BackupSelection(props: BackupSelection_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html}
  */
 export type BackupSelection_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html#cfn-backup-backupselection-backupplanid}
    */
-  BackupPlanId: string;
+  BackupPlanId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html#cfn-backup-backupselection-backupselection}
    */
   BackupSelection: BackupSelectionResourceType;
-  SelectionId?: string;
+  SelectionId?: Resolvable<string>;
 };
 
 /**
@@ -44,7 +44,7 @@ export type BackupSelectionResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn}
    */
-  IamRoleArn: string;
+  IamRoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-listoftags}
@@ -54,17 +54,17 @@ export type BackupSelectionResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-resources}
    */
-  Resources?: string[];
+  Resources?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-selectionname}
    */
-  SelectionName: string;
+  SelectionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-notresources}
    */
-  NotResources?: string[];
+  NotResources?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html#cfn-backup-backupselection-backupselectionresourcetype-conditions}
@@ -78,8 +78,8 @@ export type BackupSelectionResourceType = {
 };
 
 export type ConditionParameter = {
-  ConditionKey?: string;
-  ConditionValue?: string;
+  ConditionKey?: Resolvable<string>;
+  ConditionValue?: Resolvable<string>;
 };
 
 /**
@@ -91,15 +91,15 @@ export type ConditionResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionresourcetype.html#cfn-backup-backupselection-conditionresourcetype-conditionkey}
    */
-  ConditionKey: string;
+  ConditionKey: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionresourcetype.html#cfn-backup-backupselection-conditionresourcetype-conditionvalue}
    */
-  ConditionValue: string;
+  ConditionValue: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditionresourcetype.html#cfn-backup-backupselection-conditionresourcetype-conditiontype}
    */
-  ConditionType: string;
+  ConditionType: Resolvable<string>;
 };

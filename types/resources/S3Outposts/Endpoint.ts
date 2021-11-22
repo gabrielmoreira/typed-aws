@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::Endpoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Endpoint_Type = 'AWS::S3Outposts::Endpoint';
 export const Endpoint_Type = 'AWS::S3Outposts::Endpoint';
@@ -18,40 +18,40 @@ export default function Endpoint(props: Endpoint_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html}
  */
 export type Endpoint_Properties = {
-  Arn?: string;
-  CidrBlock?: string;
+  Arn?: Resolvable<string>;
+  CidrBlock?: Resolvable<string>;
   CreationTime?: iso8601UTC;
-  Id?: string;
+  Id?: Resolvable<string>;
   NetworkInterfaces?: NetworkInterface[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-outpostid}
    */
-  OutpostId: string;
+  OutpostId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-securitygroupid}
    */
-  SecurityGroupId: string;
-  Status?: 'Available' | 'Pending' | 'Deleting';
+  SecurityGroupId: Resolvable<string>;
+  Status?: Resolvable<'Available' | 'Pending' | 'Deleting'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-accesstype}
    */
-  AccessType?: 'CustomerOwnedIp' | 'Private';
+  AccessType?: Resolvable<'CustomerOwnedIp' | 'Private'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html#cfn-s3outposts-endpoint-customerownedipv4pool}
    */
-  CustomerOwnedIpv4Pool?: string;
+  CustomerOwnedIpv4Pool?: Resolvable<string>;
 };
 
-export type iso8601UTC = string;
+export type iso8601UTC = Resolvable<string>;
 
 /**
  * The container for the network interface. {@link
@@ -62,5 +62,5 @@ export type NetworkInterface = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-endpoint-networkinterface.html#cfn-s3outposts-endpoint-networkinterface-networkinterfaceid}
    */
-  NetworkInterfaceId: string;
+  NetworkInterfaceId: Resolvable<string>;
 };

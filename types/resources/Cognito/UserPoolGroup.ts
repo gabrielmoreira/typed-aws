@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserPoolGroup_Type = 'AWS::Cognito::UserPoolGroup';
 export const UserPoolGroup_Type = 'AWS::Cognito::UserPoolGroup';
@@ -22,26 +22,26 @@ export type UserPoolGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname}
    */
-  GroupName?: string;
+  GroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-userpoolid}
    */
-  UserPoolId: string;
-  Id?: string;
+  UserPoolId: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-precedence}
    */
-  Precedence?: number;
+  Precedence?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::AccessKey
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AccessKey_Type = 'AWS::IAM::AccessKey';
 export const AccessKey_Type = 'AWS::IAM::AccessKey';
@@ -18,21 +18,21 @@ export default function AccessKey(props: AccessKey_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html}
  */
 export type AccessKey_Properties = {
-  Id?: string;
-  SecretAccessKey?: string;
+  Id?: Resolvable<string>;
+  SecretAccessKey?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-serial}
    */
-  Serial?: number;
+  Serial?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-status}
    */
-  Status?: string;
+  Status?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-username}
    */
-  UserName: string;
+  UserName: Resolvable<string>;
 };

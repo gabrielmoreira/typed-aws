@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::Agent
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Agent_Type = 'AWS::DataSync::Agent';
 export const Agent_Type = 'AWS::DataSync::Agent';
@@ -22,37 +22,37 @@ export type Agent_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-agentname}
    */
-  AgentName?: string;
+  AgentName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-activationkey}
    */
-  ActivationKey: string;
+  ActivationKey: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-securitygrouparns}
    */
-  SecurityGroupArns?: string[];
+  SecurityGroupArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-subnetarns}
    */
-  SubnetArns?: string[];
+  SubnetArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-vpcendpointid}
    */
-  VpcEndpointId?: string;
-  EndpointType?: 'FIPS' | 'PUBLIC' | 'PRIVATE_LINK';
+  VpcEndpointId?: Resolvable<string>;
+  EndpointType?: Resolvable<'FIPS' | 'PUBLIC' | 'PRIVATE_LINK'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html#cfn-datasync-agent-tags}
    */
   Tags?: Tag[];
-  AgentArn?: string;
+  AgentArn?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

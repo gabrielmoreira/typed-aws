@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFront::KeyGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type KeyGroup_Type = 'AWS::CloudFront::KeyGroup';
 export const KeyGroup_Type = 'AWS::CloudFront::KeyGroup';
@@ -18,13 +18,13 @@ export default function KeyGroup(props: KeyGroup_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html}
  */
 export type KeyGroup_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html#cfn-cloudfront-keygroup-keygroupconfig}
    */
   KeyGroupConfig: KeyGroupConfig;
-  LastModifiedTime?: string;
+  LastModifiedTime?: Resolvable<string>;
 };
 
 /**
@@ -36,15 +36,15 @@ export type KeyGroupConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keygroup-keygroupconfig.html#cfn-cloudfront-keygroup-keygroupconfig-comment}
    */
-  Comment?: string;
+  Comment?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keygroup-keygroupconfig.html#cfn-cloudfront-keygroup-keygroupconfig-items}
    */
-  Items: string[];
+  Items: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keygroup-keygroupconfig.html#cfn-cloudfront-keygroup-keygroupconfig-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Thing
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Thing_Type = 'AWS::IoT::Thing';
 export const Thing_Type = 'AWS::IoT::Thing';
@@ -18,7 +18,7 @@ export default function Thing(props: Thing_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html}
  */
 export type Thing_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-attributepayload}
@@ -28,7 +28,7 @@ export type Thing_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-thingname}
    */
-  ThingName?: string;
+  ThingName?: Resolvable<string>;
 };
 
 /**

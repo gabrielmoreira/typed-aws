@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolUICustomizationAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserPoolUICustomizationAttachment_Type =
   'AWS::Cognito::UserPoolUICustomizationAttachment';
@@ -31,16 +31,16 @@ export type UserPoolUICustomizationAttachment_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-clientid}
    */
-  ClientId: string;
+  ClientId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-css}
    */
-  CSS?: string;
+  CSS?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-userpoolid}
    */
-  UserPoolId: string;
-  Id?: string;
+  UserPoolId: Resolvable<string>;
+  Id?: Resolvable<string>;
 };

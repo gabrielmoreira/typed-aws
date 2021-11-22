@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::InstanceProfile
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type InstanceProfile_Type = 'AWS::IAM::InstanceProfile';
 export const InstanceProfile_Type = 'AWS::IAM::InstanceProfile';
@@ -25,17 +25,17 @@ export type InstanceProfile_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-path}
    */
-  Path?: string;
+  Path?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-roles}
    */
-  Roles: string[];
+  Roles: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html#cfn-iam-instanceprofile-instanceprofilename}
    */
-  InstanceProfileName?: string;
-  Id?: string;
-  Arn?: string;
+  InstanceProfileName?: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
 };

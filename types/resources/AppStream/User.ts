@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::User
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type User_Type = 'AWS::AppStream::User';
 export const User_Type = 'AWS::AppStream::User';
@@ -22,26 +22,26 @@ export type User_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-username}
    */
-  UserName: string;
+  UserName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-lastname}
    */
-  LastName?: string;
-  Id?: string;
+  LastName?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-firstname}
    */
-  FirstName?: string;
+  FirstName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-messageaction}
    */
-  MessageAction?: string;
+  MessageAction?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html#cfn-appstream-user-authenticationtype}
    */
-  AuthenticationType: string;
+  AuthenticationType: Resolvable<string>;
 };

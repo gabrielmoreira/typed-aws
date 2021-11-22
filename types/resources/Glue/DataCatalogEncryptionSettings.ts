@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::DataCatalogEncryptionSettings
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DataCatalogEncryptionSettings_Type =
   'AWS::Glue::DataCatalogEncryptionSettings';
@@ -27,7 +27,7 @@ export default function DataCatalogEncryptionSettings(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html}
  */
 export type DataCatalogEncryptionSettings_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings}
@@ -37,7 +37,7 @@ export type DataCatalogEncryptionSettings_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html#cfn-glue-datacatalogencryptionsettings-catalogid}
    */
-  CatalogId: string;
+  CatalogId: Resolvable<string>;
 };
 
 /**
@@ -66,12 +66,12 @@ export type EncryptionAtRest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-catalogencryptionmode}
    */
-  CatalogEncryptionMode?: string;
+  CatalogEncryptionMode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.html#cfn-glue-datacatalogencryptionsettings-encryptionatrest-sseawskmskeyid}
    */
-  SseAwsKmsKeyId?: string;
+  SseAwsKmsKeyId?: Resolvable<string>;
 };
 
 /**
@@ -83,10 +83,10 @@ export type ConnectionPasswordEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-returnconnectionpasswordencrypted}
    */
-  ReturnConnectionPasswordEncrypted?: boolean;
+  ReturnConnectionPasswordEncrypted?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.html#cfn-glue-datacatalogencryptionsettings-connectionpasswordencryption-kmskeyid}
    */
-  KmsKeyId?: string;
+  KmsKeyId?: Resolvable<string>;
 };

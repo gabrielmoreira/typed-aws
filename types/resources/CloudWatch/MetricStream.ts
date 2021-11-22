@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudWatch::MetricStream
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MetricStream_Type = 'AWS::CloudWatch::MetricStream';
 export const MetricStream_Type = 'AWS::CloudWatch::MetricStream';
@@ -11,8 +11,8 @@ export default function MetricStream(props: MetricStream_Properties) {
 
 export type MetricStream_Properties =
   | {
-      Arn?: string;
-      CreationDate?: string;
+      Arn?: Resolvable<string>;
+      CreationDate?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-excludefilters}
@@ -22,29 +22,29 @@ export type MetricStream_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-firehosearn}
        */
-      FirehoseArn: string;
+      FirehoseArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-includefilters}
        */
       IncludeFilters?: MetricStreamFilter[];
-      LastUpdateDate?: string;
+      LastUpdateDate?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-name}
        */
-      Name?: string;
+      Name?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-rolearn}
        */
-      RoleArn: string;
-      State?: string;
+      RoleArn: Resolvable<string>;
+      State?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-outputformat}
        */
-      OutputFormat: string;
+      OutputFormat: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-tags}
@@ -52,8 +52,8 @@ export type MetricStream_Properties =
       Tags?: Tag[];
     }
   | {
-      Arn?: string;
-      CreationDate?: string;
+      Arn?: Resolvable<string>;
+      CreationDate?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-excludefilters}
@@ -63,29 +63,29 @@ export type MetricStream_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-firehosearn}
        */
-      FirehoseArn: string;
+      FirehoseArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-includefilters}
        */
       IncludeFilters?: MetricStreamFilter[];
-      LastUpdateDate?: string;
+      LastUpdateDate?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-name}
        */
-      Name?: string;
+      Name?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-rolearn}
        */
-      RoleArn: string;
-      State?: string;
+      RoleArn: Resolvable<string>;
+      State?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-outputformat}
        */
-      OutputFormat: string;
+      OutputFormat: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-tags}
@@ -94,8 +94,8 @@ export type MetricStream_Properties =
     }
   | (
       | {
-          Arn?: string;
-          CreationDate?: string;
+          Arn?: Resolvable<string>;
+          CreationDate?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-excludefilters}
@@ -105,29 +105,29 @@ export type MetricStream_Properties =
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-firehosearn}
            */
-          FirehoseArn?: string;
+          FirehoseArn?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-includefilters}
            */
           IncludeFilters: MetricStreamFilter[];
-          LastUpdateDate?: string;
+          LastUpdateDate?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-name}
            */
-          Name?: string;
+          Name?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-rolearn}
            */
-          RoleArn?: string;
-          State?: string;
+          RoleArn?: Resolvable<string>;
+          State?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-outputformat}
            */
-          OutputFormat?: string;
+          OutputFormat?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-tags}
@@ -135,8 +135,8 @@ export type MetricStream_Properties =
           Tags?: Tag[];
         }
       | {
-          Arn?: string;
-          CreationDate?: string;
+          Arn?: Resolvable<string>;
+          CreationDate?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-excludefilters}
@@ -146,29 +146,29 @@ export type MetricStream_Properties =
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-firehosearn}
            */
-          FirehoseArn?: string;
+          FirehoseArn?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-includefilters}
            */
           IncludeFilters?: MetricStreamFilter[];
-          LastUpdateDate?: string;
+          LastUpdateDate?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-name}
            */
-          Name?: string;
+          Name?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-rolearn}
            */
-          RoleArn?: string;
-          State?: string;
+          RoleArn?: Resolvable<string>;
+          State?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-outputformat}
            */
-          OutputFormat?: string;
+          OutputFormat?: Resolvable<string>;
           /**
            * {@link
            * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html#cfn-cloudwatch-metricstream-tags}
@@ -186,10 +186,10 @@ export type MetricStreamFilter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html#cfn-cloudwatch-metricstream-metricstreamfilter-namespace}
    */
-  Namespace: string;
+  Namespace: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value?: string;
+  Key: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

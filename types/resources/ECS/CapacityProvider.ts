@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::CapacityProvider
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CapacityProvider_Type = 'AWS::ECS::CapacityProvider';
 export const CapacityProvider_Type = 'AWS::ECS::CapacityProvider';
@@ -30,7 +30,7 @@ export type CapacityProvider_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-tags}
@@ -48,27 +48,27 @@ export type ManagedScaling = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-minimumscalingstepsize}
    */
-  MinimumScalingStepSize?: number;
+  MinimumScalingStepSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-maximumscalingstepsize}
    */
-  MaximumScalingStepSize?: number;
+  MaximumScalingStepSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-status}
    */
-  Status?: 'DISABLED' | 'ENABLED';
+  Status?: Resolvable<'DISABLED' | 'ENABLED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-targetcapacity}
    */
-  TargetCapacity?: number;
+  TargetCapacity?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html#cfn-ecs-capacityprovider-managedscaling-instancewarmupperiod}
    */
-  InstanceWarmupPeriod?: number;
+  InstanceWarmupPeriod?: Resolvable<number>;
 };
 
 /**
@@ -80,7 +80,7 @@ export type AutoScalingGroupProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-autoscalinggroupprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider-autoscalinggrouparn}
    */
-  AutoScalingGroupArn: string;
+  AutoScalingGroupArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-autoscalinggroupprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedscaling}
@@ -90,10 +90,10 @@ export type AutoScalingGroupProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-autoscalinggroupprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedterminationprotection}
    */
-  ManagedTerminationProtection?: 'DISABLED' | 'ENABLED';
+  ManagedTerminationProtection?: Resolvable<'DISABLED' | 'ENABLED'>;
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

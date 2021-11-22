@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPCEndpoint_Type = 'AWS::EC2::VPCEndpoint';
 export const VPCEndpoint_Type = 'AWS::EC2::VPCEndpoint';
@@ -18,10 +18,10 @@ export default function VPCEndpoint(props: VPCEndpoint_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html}
  */
 export type VPCEndpoint_Properties = {
-  Id?: string;
-  CreationTimestamp?: string;
-  DnsEntries?: string[];
-  NetworkInterfaceIds?: string[];
+  Id?: Resolvable<string>;
+  CreationTimestamp?: Resolvable<string>;
+  DnsEntries?: Resolvable<string>[];
+  NetworkInterfaceIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument}
@@ -33,35 +33,35 @@ export type VPCEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-privatednsenabled}
    */
-  PrivateDnsEnabled?: boolean;
+  PrivateDnsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-routetableids}
    */
-  RouteTableIds?: string[];
+  RouteTableIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids}
    */
-  SecurityGroupIds?: string[];
+  SecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename}
    */
-  ServiceName: string;
+  ServiceName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids}
    */
-  SubnetIds?: string[];
+  SubnetIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype}
    */
-  VpcEndpointType?: string;
+  VpcEndpointType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KinesisAnalyticsV2::ApplicationOutput
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ApplicationOutput_Type =
   'AWS::KinesisAnalyticsV2::ApplicationOutput';
@@ -29,13 +29,13 @@ export type ApplicationOutput_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-applicationname}
    */
-  ApplicationName: string;
+  ApplicationName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output}
    */
   Output: Output;
-  Id?: string;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -67,7 +67,7 @@ export type Output = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-output.html#cfn-kinesisanalyticsv2-applicationoutput-output-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 /**
@@ -79,7 +79,7 @@ export type DestinationSchema = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema.html#cfn-kinesisanalyticsv2-applicationoutput-destinationschema-recordformattype}
    */
-  RecordFormatType?: string;
+  RecordFormatType?: Resolvable<string>;
 };
 
 /**
@@ -91,7 +91,7 @@ export type LambdaOutput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html#cfn-kinesisanalyticsv2-applicationoutput-lambdaoutput-resourcearn}
    */
-  ResourceARN: string;
+  ResourceARN: Resolvable<string>;
 };
 
 /**
@@ -103,7 +103,7 @@ export type KinesisStreamsOutput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-resourcearn}
    */
-  ResourceARN: string;
+  ResourceARN: Resolvable<string>;
 };
 
 /**
@@ -115,5 +115,5 @@ export type KinesisFirehoseOutput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput-resourcearn}
    */
-  ResourceARN: string;
+  ResourceARN: Resolvable<string>;
 };

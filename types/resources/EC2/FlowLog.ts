@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::FlowLog
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FlowLog_Type = 'AWS::EC2::FlowLog';
 export const FlowLog_Type = 'AWS::EC2::FlowLog';
@@ -20,47 +20,47 @@ export default function FlowLog(props: FlowLog_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html}
  */
 export type FlowLog_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-deliverlogspermissionarn}
    */
-  DeliverLogsPermissionArn?: string;
+  DeliverLogsPermissionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-logdestination}
    */
-  LogDestination?: string;
+  LogDestination?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-logdestinationtype}
    */
-  LogDestinationType?: 'cloud-watch-logs' | 's3';
+  LogDestinationType?: Resolvable<'cloud-watch-logs' | 's3'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-logformat}
    */
-  LogFormat?: string;
+  LogFormat?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-loggroupname}
    */
-  LogGroupName?: string;
+  LogGroupName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-maxaggregationinterval}
    */
-  MaxAggregationInterval?: number;
+  MaxAggregationInterval?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-resourceid}
    */
-  ResourceId: string;
+  ResourceId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-resourcetype}
    */
-  ResourceType: 'NetworkInterface' | 'Subnet' | 'VPC';
+  ResourceType: Resolvable<'NetworkInterface' | 'Subnet' | 'VPC'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-tags}
@@ -70,10 +70,10 @@ export type FlowLog_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-traffictype}
    */
-  TrafficType: 'ACCEPT' | 'ALL' | 'REJECT';
+  TrafficType: Resolvable<'ACCEPT' | 'ALL' | 'REJECT'>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

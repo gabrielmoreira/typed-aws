@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Lambda::Alias
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Alias_Type = 'AWS::Lambda::Alias';
 export const Alias_Type = 'AWS::Lambda::Alias';
@@ -22,7 +22,7 @@ export type Alias_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-functionname}
    */
-  FunctionName: string;
+  FunctionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-provisionedconcurrencyconfig}
@@ -32,13 +32,13 @@ export type Alias_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-functionversion}
    */
-  FunctionVersion: string;
-  Id?: string;
+  FunctionVersion: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-routingconfig}
@@ -48,7 +48,7 @@ export type Alias_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html#cfn-lambda-alias-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -60,7 +60,7 @@ export type ProvisionedConcurrencyConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-provisionedconcurrencyconfiguration.html#cfn-lambda-alias-provisionedconcurrencyconfiguration-provisionedconcurrentexecutions}
    */
-  ProvisionedConcurrentExecutions: number;
+  ProvisionedConcurrentExecutions: Resolvable<number>;
 };
 
 /**
@@ -72,12 +72,12 @@ export type VersionWeight = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionweight}
    */
-  FunctionWeight: number;
+  FunctionWeight: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-alias-versionweight.html#cfn-lambda-alias-versionweight-functionversion}
    */
-  FunctionVersion: string;
+  FunctionVersion: Resolvable<string>;
 };
 
 /**

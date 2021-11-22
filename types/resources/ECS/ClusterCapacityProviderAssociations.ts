@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::ClusterCapacityProviderAssociations
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ClusterCapacityProviderAssociations_Type =
   'AWS::ECS::ClusterCapacityProviderAssociations';
@@ -46,9 +46,11 @@ export type ClusterCapacityProviderAssociations_Properties = {
 
 export type CapacityProviders = CapacityProvider[];
 
-export type CapacityProvider = 'FARGATE' | 'FARGATE_SPOT' | string;
+export type CapacityProvider =
+  | Resolvable<'FARGATE' | 'FARGATE_SPOT'>
+  | Resolvable<string>;
 
-export type Cluster = string;
+export type Cluster = Resolvable<string>;
 
 export type DefaultCapacityProviderStrategy = CapacityProviderStrategy[];
 
@@ -61,12 +63,12 @@ export type CapacityProviderStrategy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-clustercapacityproviderassociations-capacityproviderstrategy.html#cfn-ecs-clustercapacityproviderassociations-capacityproviderstrategy-base}
    */
-  Base?: number;
+  Base?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-clustercapacityproviderassociations-capacityproviderstrategy.html#cfn-ecs-clustercapacityproviderassociations-capacityproviderstrategy-weight}
    */
-  Weight?: number;
+  Weight?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-clustercapacityproviderassociations-capacityproviderstrategy.html#cfn-ecs-clustercapacityproviderassociations-capacityproviderstrategy-capacityprovider}

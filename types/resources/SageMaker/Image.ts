@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::Image
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Image_Type = 'AWS::SageMaker::Image';
 export const Image_Type = 'AWS::SageMaker::Image';
@@ -46,17 +46,17 @@ export type Image_Properties = {
   Tags?: Tag[];
 };
 
-export type ImageName = string;
+export type ImageName = Resolvable<string>;
 
-export type ImageArn = string;
+export type ImageArn = Resolvable<string>;
 
-export type ImageRoleArn = string;
+export type ImageRoleArn = Resolvable<string>;
 
-export type ImageDisplayName = string;
+export type ImageDisplayName = Resolvable<string>;
 
-export type ImageDescription = string;
+export type ImageDescription = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

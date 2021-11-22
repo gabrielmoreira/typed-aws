@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Job
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Job_Type = 'AWS::DataBrew::Job';
 export const Job_Type = 'AWS::DataBrew::Job';
@@ -22,42 +22,42 @@ export type Job_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-datasetname}
    */
-  DatasetName?: string;
+  DatasetName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-encryptionkeyarn}
    */
-  EncryptionKeyArn?: string;
+  EncryptionKeyArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-encryptionmode}
    */
-  EncryptionMode?: 'SSE-KMS' | 'SSE-S3';
+  EncryptionMode?: Resolvable<'SSE-KMS' | 'SSE-S3'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-type}
    */
-  Type: 'PROFILE' | 'RECIPE';
+  Type: Resolvable<'PROFILE' | 'RECIPE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-logsubscription}
    */
-  LogSubscription?: 'ENABLE' | 'DISABLE';
+  LogSubscription?: Resolvable<'ENABLE' | 'DISABLE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-maxcapacity}
    */
-  MaxCapacity?: number;
+  MaxCapacity?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-maxretries}
    */
-  MaxRetries?: number;
+  MaxRetries?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-outputs}
@@ -82,7 +82,7 @@ export type Job_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-projectname}
    */
-  ProjectName?: string;
+  ProjectName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-recipe}
@@ -92,7 +92,7 @@ export type Job_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-tags}
@@ -102,7 +102,7 @@ export type Job_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-timeout}
    */
-  Timeout?: number;
+  Timeout?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html#cfn-databrew-job-jobsample}
@@ -129,12 +129,12 @@ export type S3Location = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-s3location.html#cfn-databrew-job-s3location-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-s3location.html#cfn-databrew-job-s3location-key}
    */
-  Key?: string;
+  Key?: Resolvable<string>;
 };
 
 /**
@@ -146,7 +146,7 @@ export type CsvOutputOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-csvoutputoptions.html#cfn-databrew-job-csvoutputoptions-delimiter}
    */
-  Delimiter?: string;
+  Delimiter?: Resolvable<string>;
 };
 
 /**
@@ -170,12 +170,12 @@ export type OutputLocation = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-outputlocation.html#cfn-databrew-job-outputlocation-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-outputlocation.html#cfn-databrew-job-outputlocation-key}
    */
-  Key?: string;
+  Key?: Resolvable<string>;
 };
 
 /**
@@ -187,7 +187,7 @@ export type Output = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html#cfn-databrew-job-output-compressionformat}
    */
-  CompressionFormat?:
+  CompressionFormat?: Resolvable<
     | 'GZIP'
     | 'LZ4'
     | 'SNAPPY'
@@ -196,12 +196,13 @@ export type Output = {
     | 'LZO'
     | 'BROTLI'
     | 'ZSTD'
-    | 'ZLIB';
+    | 'ZLIB'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html#cfn-databrew-job-output-format}
    */
-  Format?:
+  Format?: Resolvable<
     | 'CSV'
     | 'JSON'
     | 'PARQUET'
@@ -209,7 +210,8 @@ export type Output = {
     | 'AVRO'
     | 'ORC'
     | 'XML'
-    | 'TABLEAUHYPER';
+    | 'TABLEAUHYPER'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html#cfn-databrew-job-output-formatoptions}
@@ -219,7 +221,7 @@ export type Output = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html#cfn-databrew-job-output-partitioncolumns}
    */
-  PartitionColumns?: string[];
+  PartitionColumns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html#cfn-databrew-job-output-location}
@@ -229,7 +231,7 @@ export type Output = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html#cfn-databrew-job-output-overwrite}
    */
-  Overwrite?: boolean;
+  Overwrite?: Resolvable<boolean>;
 };
 
 /**
@@ -241,17 +243,17 @@ export type DataCatalogOutput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html#cfn-databrew-job-datacatalogoutput-catalogid}
    */
-  CatalogId?: string;
+  CatalogId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html#cfn-databrew-job-datacatalogoutput-databasename}
    */
-  DatabaseName: string;
+  DatabaseName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html#cfn-databrew-job-datacatalogoutput-tablename}
    */
-  TableName: string;
+  TableName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html#cfn-databrew-job-datacatalogoutput-s3options}
@@ -266,7 +268,7 @@ export type DataCatalogOutput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html#cfn-databrew-job-datacatalogoutput-overwrite}
    */
-  Overwrite?: boolean;
+  Overwrite?: Resolvable<boolean>;
 };
 
 /**
@@ -295,7 +297,7 @@ export type DatabaseTableOutputOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-databasetableoutputoptions.html#cfn-databrew-job-databasetableoutputoptions-tablename}
    */
-  TableName: string;
+  TableName: Resolvable<string>;
 };
 
 /**
@@ -307,12 +309,12 @@ export type DatabaseOutput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-databaseoutput.html#cfn-databrew-job-databaseoutput-glueconnectionname}
    */
-  GlueConnectionName: string;
+  GlueConnectionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-databaseoutput.html#cfn-databrew-job-databaseoutput-databaseoutputmode}
    */
-  DatabaseOutputMode?: 'NEW_TABLE';
+  DatabaseOutputMode?: Resolvable<'NEW_TABLE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-databaseoutput.html#cfn-databrew-job-databaseoutput-databaseoptions}
@@ -329,22 +331,22 @@ export type Recipe = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-recipe.html#cfn-databrew-job-recipe-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-recipe.html#cfn-databrew-job-recipe-version}
    */
-  Version?: string;
+  Version?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
-export type SampleMode = 'FULL_DATASET' | 'CUSTOM_ROWS';
+export type SampleMode = Resolvable<'FULL_DATASET' | 'CUSTOM_ROWS'>;
 
-export type JobSize = number;
+export type JobSize = Resolvable<number>;
 
 /**
  * Job Sample {@link
@@ -399,7 +401,7 @@ export type EntityDetectorConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-entitydetectorconfiguration.html#cfn-databrew-job-entitydetectorconfiguration-entitytypes}
    */
-  EntityTypes: string[];
+  EntityTypes: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-entitydetectorconfiguration.html#cfn-databrew-job-entitydetectorconfiguration-allowedstatistics}
@@ -462,15 +464,15 @@ export type ColumnSelector = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-columnselector.html#cfn-databrew-job-columnselector-regex}
    */
-  Regex?: string;
+  Regex?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-columnselector.html#cfn-databrew-job-columnselector-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
-export type Statistic = string;
+export type Statistic = Resolvable<string>;
 
 /**
  * {@link
@@ -498,10 +500,10 @@ export type ParameterMap = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-parametermap.html}
    */
-  [k: string]: string;
+  [k: string]: Resolvable<string>;
 };
 
-export type ValidationMode = 'CHECK_ALL';
+export type ValidationMode = Resolvable<'CHECK_ALL'>;
 
 /**
  * Configuration to attach Rulesets to the job {@link
@@ -512,7 +514,7 @@ export type ValidationConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-validationconfiguration.html#cfn-databrew-job-validationconfiguration-rulesetarn}
    */
-  RulesetArn: string;
+  RulesetArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-validationconfiguration.html#cfn-databrew-job-validationconfiguration-validationmode}

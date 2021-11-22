@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AttributeGroupAssociation_Type =
   'AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation';
@@ -31,13 +31,13 @@ export type AttributeGroupAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html#cfn-servicecatalogappregistry-attributegroupassociation-application}
    */
-  Application: string;
+  Application: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html#cfn-servicecatalogappregistry-attributegroupassociation-attributegroup}
    */
-  AttributeGroup: string;
-  ApplicationArn?: string;
-  AttributeGroupArn?: string;
-  Id?: string;
+  AttributeGroup: Resolvable<string>;
+  ApplicationArn?: Resolvable<string>;
+  AttributeGroupArn?: Resolvable<string>;
+  Id?: Resolvable<string>;
 };

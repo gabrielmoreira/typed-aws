@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConfigurationRecorder
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ConfigurationRecorder_Type = 'AWS::Config::ConfigurationRecorder';
 export const ConfigurationRecorder_Type = 'AWS::Config::ConfigurationRecorder';
@@ -23,7 +23,7 @@ export default function ConfigurationRecorder(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html}
  */
 export type ConfigurationRecorder_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordinggroup}
@@ -33,12 +33,12 @@ export type ConfigurationRecorder_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-rolearn}
    */
-  RoleARN: string;
+  RoleARN: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 /**
@@ -50,15 +50,15 @@ export type RecordingGroup = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-includeglobalresourcetypes}
    */
-  IncludeGlobalResourceTypes?: boolean;
+  IncludeGlobalResourceTypes?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-resourcetypes}
    */
-  ResourceTypes?: string[];
+  ResourceTypes?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationrecorder-recordinggroup.html#cfn-config-configurationrecorder-recordinggroup-allsupported}
    */
-  AllSupported?: boolean;
+  AllSupported?: Resolvable<boolean>;
 };

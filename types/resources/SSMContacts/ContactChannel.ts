@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSMContacts::ContactChannel
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ContactChannel_Type = 'AWS::SSMContacts::ContactChannel';
 export const ContactChannel_Type = 'AWS::SSMContacts::ContactChannel';
@@ -14,26 +14,26 @@ export type ContactChannel_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html#cfn-ssmcontacts-contactchannel-contactid}
    */
-  ContactId: string;
+  ContactId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html#cfn-ssmcontacts-contactchannel-channelname}
    */
-  ChannelName: string;
+  ChannelName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html#cfn-ssmcontacts-contactchannel-channeltype}
    */
-  ChannelType: 'SMS' | 'VOICE' | 'EMAIL';
+  ChannelType: Resolvable<'SMS' | 'VOICE' | 'EMAIL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html#cfn-ssmcontacts-contactchannel-deferactivation}
    */
-  DeferActivation?: boolean;
+  DeferActivation?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html#cfn-ssmcontacts-contactchannel-channeladdress}
    */
-  ChannelAddress: string;
-  Arn?: string;
+  ChannelAddress: Resolvable<string>;
+  Arn?: Resolvable<string>;
 };

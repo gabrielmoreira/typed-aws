@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::IdentityPool
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type IdentityPool_Type = 'AWS::Cognito::IdentityPool';
 export const IdentityPool_Type = 'AWS::Cognito::IdentityPool';
@@ -32,7 +32,7 @@ export type IdentityPool_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-developerprovidername}
    */
-  DeveloperProviderName?: string;
+  DeveloperProviderName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitostreams}
@@ -45,7 +45,7 @@ export type IdentityPool_Properties = {
   SupportedLoginProviders?: {
     [k: string]: unknown;
   };
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoevents}
@@ -53,32 +53,32 @@ export type IdentityPool_Properties = {
   CognitoEvents?: {
     [k: string]: unknown;
   };
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypoolname}
    */
-  IdentityPoolName?: string;
+  IdentityPoolName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-allowunauthenticatedidentities}
    */
-  AllowUnauthenticatedIdentities: boolean;
+  AllowUnauthenticatedIdentities: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-samlproviderarns}
    */
-  SamlProviderARNs?: string[];
+  SamlProviderARNs?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-openidconnectproviderarns}
    */
-  OpenIdConnectProviderARNs?: string[];
+  OpenIdConnectProviderARNs?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-allowclassicflow}
    */
-  AllowClassicFlow?: boolean;
+  AllowClassicFlow?: Resolvable<boolean>;
 };
 
 /**
@@ -90,12 +90,12 @@ export type PushSync = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-applicationarns}
    */
-  ApplicationArns?: string[];
+  ApplicationArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
 };
 
 /**
@@ -107,17 +107,17 @@ export type CognitoIdentityProvider = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck}
    */
-  ServerSideTokenCheck?: boolean;
+  ServerSideTokenCheck?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername}
    */
-  ProviderName?: string;
+  ProviderName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-clientid}
    */
-  ClientId?: string;
+  ClientId?: Resolvable<string>;
 };
 
 /**
@@ -129,15 +129,15 @@ export type CognitoStreams = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus}
    */
-  StreamingStatus?: string;
+  StreamingStatus?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname}
    */
-  StreamName?: string;
+  StreamName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Schema
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Schema_Type = 'AWS::Glue::Schema';
 export const Schema_Type = 'AWS::Glue::Schema';
@@ -18,7 +18,7 @@ export default function Schema(props: Schema_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html}
  */
 export type Schema_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-registry}
@@ -28,22 +28,22 @@ export type Schema_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-dataformat}
    */
-  DataFormat: 'AVRO' | 'JSON';
+  DataFormat: Resolvable<'AVRO' | 'JSON'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-compatibility}
    */
-  Compatibility:
+  Compatibility: Resolvable<
     | 'NONE'
     | 'DISABLED'
     | 'BACKWARD'
@@ -51,12 +51,13 @@ export type Schema_Properties = {
     | 'FORWARD'
     | 'FORWARD_ALL'
     | 'FULL'
-    | 'FULL_ALL';
+    | 'FULL_ALL'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-schemadefinition}
    */
-  SchemaDefinition: string;
+  SchemaDefinition: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-checkpointversion}
@@ -67,7 +68,7 @@ export type Schema_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-tags}
    */
   Tags?: Tag[];
-  InitialSchemaVersionId?: string;
+  InitialSchemaVersionId?: Resolvable<string>;
 };
 
 /**
@@ -79,12 +80,12 @@ export type Registry = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html#cfn-glue-schema-registry-arn}
    */
-  Arn?: string;
+  Arn?: Resolvable<string>;
 };
 
 /**
@@ -97,15 +98,15 @@ export type SchemaVersion = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-schemaversion.html#cfn-glue-schema-schemaversion-islatest}
    */
-  IsLatest?: boolean;
+  IsLatest?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-schemaversion.html#cfn-glue-schema-schemaversion-versionnumber}
    */
-  VersionNumber?: number;
+  VersionNumber?: Resolvable<number>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

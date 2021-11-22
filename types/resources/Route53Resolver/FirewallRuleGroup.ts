@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::FirewallRuleGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FirewallRuleGroup_Type = 'AWS::Route53Resolver::FirewallRuleGroup';
 export const FirewallRuleGroup_Type = 'AWS::Route53Resolver::FirewallRuleGroup';
@@ -21,25 +21,23 @@ export default function FirewallRuleGroup(props: FirewallRuleGroup_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html}
  */
 export type FirewallRuleGroup_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-name}
    */
-  Name?: string;
-  RuleCount?: number;
-  Status?:
-    | 'COMPLETE'
-    | 'DELETING'
-    | 'UPDATING'
-    | 'INACTIVE_OWNER_ACCOUNT_CLOSED';
-  StatusMessage?: string;
-  OwnerId?: string;
-  ShareStatus?: 'NOT_SHARED' | 'SHARED_WITH_ME' | 'SHARED_BY_ME';
-  CreatorRequestId?: string;
-  CreationTime?: string;
-  ModificationTime?: string;
+  Name?: Resolvable<string>;
+  RuleCount?: Resolvable<number>;
+  Status?: Resolvable<
+    'COMPLETE' | 'DELETING' | 'UPDATING' | 'INACTIVE_OWNER_ACCOUNT_CLOSED'
+  >;
+  StatusMessage?: Resolvable<string>;
+  OwnerId?: Resolvable<string>;
+  ShareStatus?: Resolvable<'NOT_SHARED' | 'SHARED_WITH_ME' | 'SHARED_BY_ME'>;
+  CreatorRequestId?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
+  ModificationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html#cfn-route53resolver-firewallrulegroup-firewallrules}
@@ -61,40 +59,40 @@ export type FirewallRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid}
    */
-  FirewallDomainListId: string;
+  FirewallDomainListId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-priority}
    */
-  Priority: number;
+  Priority: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-action}
    */
-  Action: 'ALLOW' | 'BLOCK' | 'ALERT';
+  Action: Resolvable<'ALLOW' | 'BLOCK' | 'ALERT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockresponse}
    */
-  BlockResponse?: 'NODATA' | 'NXDOMAIN' | 'OVERRIDE';
+  BlockResponse?: Resolvable<'NODATA' | 'NXDOMAIN' | 'OVERRIDE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockoverridedomain}
    */
-  BlockOverrideDomain?: string;
+  BlockOverrideDomain?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockoverridednstype}
    */
-  BlockOverrideDnsType?: 'CNAME';
+  BlockOverrideDnsType?: Resolvable<'CNAME'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-blockoverridettl}
    */
-  BlockOverrideTtl?: number;
+  BlockOverrideTtl?: Resolvable<number>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

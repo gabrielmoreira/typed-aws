@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::RuleGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RuleGroup_Type = 'AWS::WAFv2::RuleGroup';
 export const RuleGroup_Type = 'AWS::WAFv2::RuleGroup';
@@ -39,7 +39,7 @@ export type RuleGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html#cfn-wafv2-rulegroup-capacity}
    */
-  Capacity: number;
+  Capacity: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html#cfn-wafv2-rulegroup-description}
@@ -125,9 +125,9 @@ export type ByteMatchStatement = {
   PositionalConstraint: PositionalConstraint;
 };
 
-export type EntityDescription = string;
+export type EntityDescription = Resolvable<string>;
 
-export type EntityName = string;
+export type EntityName = Resolvable<string>;
 
 /**
  * Field of the request to match. {@link
@@ -139,14 +139,14 @@ export type FieldToMatch = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-singleheader}
    */
   SingleHeader?: {
-    Name: string;
+    Name: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-fieldtomatch.html#cfn-wafv2-rulegroup-fieldtomatch-singlequeryargument}
    */
   SingleQueryArgument?: {
-    Name: string;
+    Name: Resolvable<string>;
   };
   /**
    * {@link
@@ -213,12 +213,11 @@ export type JsonBody = {
   InvalidFallbackBehavior?: BodyParsingFallbackBehavior;
 };
 
-export type BodyParsingFallbackBehavior =
-  | 'MATCH'
-  | 'NO_MATCH'
-  | 'EVALUATE_AS_STRING';
+export type BodyParsingFallbackBehavior = Resolvable<
+  'MATCH' | 'NO_MATCH' | 'EVALUATE_AS_STRING'
+>;
 
-export type JsonMatchScope = 'ALL' | 'KEY' | 'VALUE';
+export type JsonMatchScope = Resolvable<'ALL' | 'KEY' | 'VALUE'>;
 
 /**
  * The pattern to look for in the JSON body. {@link
@@ -239,7 +238,7 @@ export type JsonMatchPattern = {
   IncludedPaths?: JsonPointerPath[];
 };
 
-export type JsonPointerPath = string;
+export type JsonPointerPath = Resolvable<string>;
 
 /**
  * {@link
@@ -250,7 +249,7 @@ export type GeoMatchStatement = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-geomatchstatement.html#cfn-wafv2-rulegroup-geomatchstatement-countrycodes}
    */
-  CountryCodes?: string[];
+  CountryCodes?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-geomatchstatement.html#cfn-wafv2-rulegroup-geomatchstatement-forwardedipconfig}
@@ -258,7 +257,7 @@ export type GeoMatchStatement = {
   ForwardedIPConfig?: ForwardedIPConfiguration;
 };
 
-export type EntityId = string;
+export type EntityId = Resolvable<string>;
 
 /**
  * {@link
@@ -301,12 +300,9 @@ export type OrStatement = {
   Statements: Statement[];
 };
 
-export type PositionalConstraint =
-  | 'EXACTLY'
-  | 'STARTS_WITH'
-  | 'ENDS_WITH'
-  | 'CONTAINS'
-  | 'CONTAINS_WORD';
+export type PositionalConstraint = Resolvable<
+  'EXACTLY' | 'STARTS_WITH' | 'ENDS_WITH' | 'CONTAINS' | 'CONTAINS_WORD'
+>;
 
 /**
  * {@link
@@ -322,7 +318,7 @@ export type RateBasedStatement = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatement.html#cfn-wafv2-rulegroup-ratebasedstatement-aggregatekeytype}
    */
-  AggregateKeyType: 'IP' | 'FORWARDED_IP';
+  AggregateKeyType: Resolvable<'IP' | 'FORWARDED_IP'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ratebasedstatement.html#cfn-wafv2-rulegroup-ratebasedstatement-scopedownstatement}
@@ -335,7 +331,7 @@ export type RateBasedStatement = {
   ForwardedIPConfig?: ForwardedIPConfiguration;
 };
 
-export type RateLimit = number;
+export type RateLimit = Resolvable<number>;
 
 /**
  * {@link
@@ -359,7 +355,7 @@ export type RegexPatternSetReferenceStatement = {
   TextTransformations: TextTransformation[];
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 /**
  * {@link
@@ -370,12 +366,12 @@ export type ForwardedIPConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-forwardedipconfiguration.html#cfn-wafv2-rulegroup-forwardedipconfiguration-headername}
    */
-  HeaderName: string;
+  HeaderName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-forwardedipconfiguration.html#cfn-wafv2-rulegroup-forwardedipconfiguration-fallbackbehavior}
    */
-  FallbackBehavior: 'MATCH' | 'NO_MATCH';
+  FallbackBehavior: Resolvable<'MATCH' | 'NO_MATCH'>;
 };
 
 /**
@@ -387,17 +383,17 @@ export type IPSetForwardedIPConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ipsetforwardedipconfiguration.html#cfn-wafv2-rulegroup-ipsetforwardedipconfiguration-headername}
    */
-  HeaderName: string;
+  HeaderName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ipsetforwardedipconfiguration.html#cfn-wafv2-rulegroup-ipsetforwardedipconfiguration-fallbackbehavior}
    */
-  FallbackBehavior: 'MATCH' | 'NO_MATCH';
+  FallbackBehavior: Resolvable<'MATCH' | 'NO_MATCH'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ipsetforwardedipconfiguration.html#cfn-wafv2-rulegroup-ipsetforwardedipconfiguration-position}
    */
-  Position: 'FIRST' | 'LAST' | 'ANY';
+  Position: Resolvable<'FIRST' | 'LAST' | 'ANY'>;
 };
 
 /**
@@ -465,9 +461,9 @@ export type RuleAction = {
   };
 };
 
-export type CustomHTTPHeaderName = string;
+export type CustomHTTPHeaderName = Resolvable<string>;
 
-export type CustomHTTPHeaderValue = string;
+export type CustomHTTPHeaderValue = Resolvable<string>;
 
 export type CustomHTTPHeader = {
   Name: CustomHTTPHeaderName;
@@ -478,14 +474,13 @@ export type CustomRequestHandling = {
   InsertHeaders: CustomHTTPHeader[];
 };
 
-export type ResponseStatusCode = number;
+export type ResponseStatusCode = Resolvable<number>;
 
-export type ResponseContentType =
-  | 'TEXT_PLAIN'
-  | 'TEXT_HTML'
-  | 'APPLICATION_JSON';
+export type ResponseContentType = Resolvable<
+  'TEXT_PLAIN' | 'TEXT_HTML' | 'APPLICATION_JSON'
+>;
 
-export type ResponseContent = string;
+export type ResponseContent = Resolvable<string>;
 
 /**
  * Custom response body. {@link
@@ -506,7 +501,7 @@ export type CustomResponseBody = {
 
 export type CustomResponse = {
   ResponseCode: ResponseStatusCode;
-  CustomResponseBodyKey?: string;
+  CustomResponseBodyKey?: Resolvable<string>;
   ResponseHeaders?: CustomHTTPHeader[];
 };
 
@@ -521,16 +516,16 @@ export type RuleGroup = {
   Description?: EntityDescription;
   Rules?: Rule[];
   VisibilityConfig?: VisibilityConfig;
-  Capacity?: number;
+  Capacity?: Resolvable<number>;
 };
 
-export type RulePriority = number;
+export type RulePriority = Resolvable<number>;
 
-export type Scope = 'CLOUDFRONT' | 'REGIONAL';
+export type Scope = Resolvable<'CLOUDFRONT' | 'REGIONAL'>;
 
-export type SearchString = string;
+export type SearchString = Resolvable<string>;
 
-export type SearchStringBase64 = string;
+export type SearchStringBase64 = Resolvable<string>;
 
 /**
  * Size Constraint statement. {@link
@@ -546,12 +541,12 @@ export type SizeConstraintStatement = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sizeconstraintstatement.html#cfn-wafv2-rulegroup-sizeconstraintstatement-comparisonoperator}
    */
-  ComparisonOperator: 'EQ' | 'NE' | 'LE' | 'LT' | 'GE' | 'GT';
+  ComparisonOperator: Resolvable<'EQ' | 'NE' | 'LE' | 'LT' | 'GE' | 'GT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sizeconstraintstatement.html#cfn-wafv2-rulegroup-sizeconstraintstatement-size}
    */
-  Size: number;
+  Size: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-sizeconstraintstatement.html#cfn-wafv2-rulegroup-sizeconstraintstatement-texttransformations}
@@ -645,8 +640,8 @@ export type Statement = {
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
 /**
@@ -666,9 +661,9 @@ export type TextTransformation = {
   Type: TextTransformationType;
 };
 
-export type TextTransformationPriority = number;
+export type TextTransformationPriority = Resolvable<number>;
 
-export type TextTransformationType =
+export type TextTransformationType = Resolvable<
   | 'NONE'
   | 'COMPRESS_WHITE_SPACE'
   | 'HTML_ENTITY_DECODE'
@@ -689,7 +684,8 @@ export type TextTransformationType =
   | 'REPLACE_NULLS'
   | 'BASE64_DECODE_EXT'
   | 'URL_DECODE_UNI'
-  | 'UTF8_TO_UNICODE';
+  | 'UTF8_TO_UNICODE'
+>;
 
 /**
  * Visibility Metric of the RuleGroup. {@link
@@ -700,17 +696,17 @@ export type VisibilityConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-sampledrequestsenabled}
    */
-  SampledRequestsEnabled: boolean;
+  SampledRequestsEnabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-cloudwatchmetricsenabled}
    */
-  CloudWatchMetricsEnabled: boolean;
+  CloudWatchMetricsEnabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html#cfn-wafv2-rulegroup-visibilityconfig-metricname}
    */
-  MetricName: string;
+  MetricName: Resolvable<string>;
 };
 
 /**
@@ -730,7 +726,7 @@ export type XssMatchStatement = {
   TextTransformations: TextTransformation[];
 };
 
-export type LabelName = string;
+export type LabelName = Resolvable<string>;
 
 /**
  * {@link
@@ -756,9 +752,9 @@ export type Label = {
   Name: LabelName;
 };
 
-export type LabelMatchKey = string;
+export type LabelMatchKey = Resolvable<string>;
 
-export type LabelMatchScope = 'LABEL' | 'NAMESPACE';
+export type LabelMatchScope = Resolvable<'LABEL' | 'NAMESPACE'>;
 
 /**
  * {@link

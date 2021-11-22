@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::RuleGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RuleGroup_Type = 'AWS::NetworkFirewall::RuleGroup';
 export const RuleGroup_Type = 'AWS::NetworkFirewall::RuleGroup';
@@ -22,9 +22,9 @@ export type RuleGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-rulegroupname}
    */
-  RuleGroupName: string;
+  RuleGroupName: Resolvable<string>;
   RuleGroupArn?: ResourceArn;
-  RuleGroupId?: string;
+  RuleGroupId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-rulegroup}
@@ -34,17 +34,17 @@ export type RuleGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-type}
    */
-  Type: 'STATELESS' | 'STATEFUL';
+  Type: Resolvable<'STATELESS' | 'STATEFUL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-capacity}
    */
-  Capacity: number;
+  Capacity: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html#cfn-networkfirewall-rulegroup-tags}
@@ -52,14 +52,14 @@ export type RuleGroup_Properties = {
   Tags?: Tag[];
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
-export type RulesString = string;
+export type RulesString = Resolvable<string>;
 
 /**
  * {@link
@@ -128,7 +128,7 @@ export type PortSet = {
   Definition?: VariableDefinition[];
 };
 
-export type VariableDefinition = string;
+export type VariableDefinition = Resolvable<string>;
 
 /**
  * {@link
@@ -166,7 +166,7 @@ export type RulesSourceList = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targets}
    */
-  Targets: string[];
+  Targets: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html#cfn-networkfirewall-rulegroup-rulessourcelist-targettypes}
@@ -179,9 +179,9 @@ export type RulesSourceList = {
   GeneratedRulesType: GeneratedRulesType;
 };
 
-export type TargetType = 'TLS_SNI' | 'HTTP_HOST';
+export type TargetType = Resolvable<'TLS_SNI' | 'HTTP_HOST'>;
 
-export type GeneratedRulesType = 'ALLOWLIST' | 'DENYLIST';
+export type GeneratedRulesType = Resolvable<'ALLOWLIST' | 'DENYLIST'>;
 
 /**
  * {@link
@@ -192,7 +192,7 @@ export type StatefulRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-action}
    */
-  Action: 'PASS' | 'DROP' | 'ALERT';
+  Action: Resolvable<'PASS' | 'DROP' | 'ALERT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html#cfn-networkfirewall-rulegroup-statefulrule-header}
@@ -214,7 +214,7 @@ export type Header = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-protocol}
    */
-  Protocol:
+  Protocol: Resolvable<
     | 'IP'
     | 'TCP'
     | 'UDP'
@@ -233,12 +233,13 @@ export type Header = {
     | 'IKEV2'
     | 'TFTP'
     | 'NTP'
-    | 'DHCP';
+    | 'DHCP'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-source}
    */
-  Source: string;
+  Source: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-sourceport}
@@ -248,12 +249,12 @@ export type Header = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-direction}
    */
-  Direction: 'FORWARD' | 'ANY';
+  Direction: Resolvable<'FORWARD' | 'ANY'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destination}
    */
-  Destination: string;
+  Destination: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html#cfn-networkfirewall-rulegroup-header-destinationport}
@@ -270,7 +271,7 @@ export type RuleOption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-keyword}
    */
-  Keyword: string;
+  Keyword: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruleoption.html#cfn-networkfirewall-rulegroup-ruleoption-settings}
@@ -278,9 +279,9 @@ export type RuleOption = {
   Settings?: Setting[];
 };
 
-export type Setting = string;
+export type Setting = Resolvable<string>;
 
-export type Port = string;
+export type Port = Resolvable<string>;
 
 /**
  * {@link
@@ -313,7 +314,7 @@ export type StatelessRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html#cfn-networkfirewall-rulegroup-statelessrule-priority}
    */
-  Priority: number;
+  Priority: Resolvable<number>;
 };
 
 /**
@@ -330,7 +331,7 @@ export type RuleDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-ruledefinition.html#cfn-networkfirewall-rulegroup-ruledefinition-actions}
    */
-  Actions: string[];
+  Actions: Resolvable<string>[];
 };
 
 /**
@@ -379,7 +380,7 @@ export type Address = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html#cfn-networkfirewall-rulegroup-address-addressdefinition}
    */
-  AddressDefinition: string;
+  AddressDefinition: Resolvable<string>;
 };
 
 /**
@@ -399,9 +400,9 @@ export type PortRange = {
   ToPort: PortRangeBound;
 };
 
-export type PortRangeBound = number;
+export type PortRangeBound = Resolvable<number>;
 
-export type ProtocolNumber = number;
+export type ProtocolNumber = Resolvable<number>;
 
 /**
  * {@link
@@ -420,15 +421,9 @@ export type TCPFlagField = {
   Masks?: TCPFlag[];
 };
 
-export type TCPFlag =
-  | 'FIN'
-  | 'SYN'
-  | 'RST'
-  | 'PSH'
-  | 'ACK'
-  | 'URG'
-  | 'ECE'
-  | 'CWR';
+export type TCPFlag = Resolvable<
+  'FIN' | 'SYN' | 'RST' | 'PSH' | 'ACK' | 'URG' | 'ECE' | 'CWR'
+>;
 
 /**
  * {@link
@@ -439,7 +434,7 @@ export type CustomAction = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-customaction.html#cfn-networkfirewall-rulegroup-customaction-actionname}
    */
-  ActionName: string;
+  ActionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-customaction.html#cfn-networkfirewall-rulegroup-customaction-actiondefinition}
@@ -480,7 +475,7 @@ export type Dimension = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-dimension.html#cfn-networkfirewall-rulegroup-dimension-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -495,4 +490,4 @@ export type StatefulRuleOptions = {
   RuleOrder?: RuleOrder;
 };
 
-export type RuleOrder = 'DEFAULT_ACTION_ORDER' | 'STRICT_ORDER';
+export type RuleOrder = Resolvable<'DEFAULT_ACTION_ORDER' | 'STRICT_ORDER'>;

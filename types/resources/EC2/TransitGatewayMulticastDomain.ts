@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayMulticastDomain
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayMulticastDomain_Type =
   'AWS::EC2::TransitGatewayMulticastDomain';
@@ -25,15 +25,15 @@ export default function TransitGatewayMulticastDomain(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html}
  */
 export type TransitGatewayMulticastDomain_Properties = {
-  TransitGatewayMulticastDomainId?: string;
-  TransitGatewayMulticastDomainArn?: string;
+  TransitGatewayMulticastDomainId?: Resolvable<string>;
+  TransitGatewayMulticastDomainArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-transitgatewayid}
    */
-  TransitGatewayId: string;
-  State?: string;
-  CreationTime?: string;
+  TransitGatewayId: Resolvable<string>;
+  State?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-tags}
@@ -44,13 +44,13 @@ export type TransitGatewayMulticastDomain_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html#cfn-ec2-transitgatewaymulticastdomain-options}
    */
   Options?: {
-    AutoAcceptSharedAssociations?: string;
-    Igmpv2Support?: string;
-    StaticSourcesSupport?: string;
+    AutoAcceptSharedAssociations?: Resolvable<string>;
+    Igmpv2Support?: Resolvable<string>;
+    StaticSourcesSupport?: Resolvable<string>;
   };
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

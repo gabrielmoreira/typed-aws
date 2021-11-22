@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Cognito::UserPoolResourceServer
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserPoolResourceServer_Type =
   'AWS::Cognito::UserPoolResourceServer';
@@ -31,13 +31,13 @@ export type UserPoolResourceServer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-userpoolid}
    */
-  UserPoolId: string;
+  UserPoolId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-identifier}
    */
-  Identifier: string;
-  Id?: string;
+  Identifier: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-scopes}
@@ -47,7 +47,7 @@ export type UserPoolResourceServer_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html#cfn-cognito-userpoolresourceserver-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -59,10 +59,10 @@ export type ResourceServerScopeType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopename}
    */
-  ScopeName: string;
+  ScopeName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.html#cfn-cognito-userpoolresourceserver-resourceserverscopetype-scopedescription}
    */
-  ScopeDescription: string;
+  ScopeDescription: Resolvable<string>;
 };

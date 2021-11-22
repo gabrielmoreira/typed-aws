@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::MultiRegionAccessPointPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MultiRegionAccessPointPolicy_Type =
   'AWS::S3::MultiRegionAccessPointPolicy';
@@ -29,7 +29,7 @@ export type MultiRegionAccessPointPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspointpolicy.html#cfn-s3-multiregionaccesspointpolicy-mrapname}
    */
-  MrapName: string;
+  MrapName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspointpolicy.html#cfn-s3-multiregionaccesspointpolicy-policy}
@@ -38,6 +38,6 @@ export type MultiRegionAccessPointPolicy_Properties = {
     [k: string]: unknown;
   };
   PolicyStatus?: {
-    IsPublic: 'true' | 'false';
+    IsPublic: Resolvable<'true' | 'false'>;
   };
 };

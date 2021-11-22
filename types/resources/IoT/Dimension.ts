@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Dimension
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Dimension_Type = 'AWS::IoT::Dimension';
 export const Dimension_Type = 'AWS::IoT::Dimension';
@@ -24,26 +24,26 @@ export type Dimension_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-type}
    */
-  Type: 'TOPIC_FILTER';
+  Type: Resolvable<'TOPIC_FILTER'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-stringvalues}
    */
-  StringValues: string[];
+  StringValues: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html#cfn-iot-dimension-tags}
    */
   Tags?: Tag[];
-  Arn?: string;
+  Arn?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

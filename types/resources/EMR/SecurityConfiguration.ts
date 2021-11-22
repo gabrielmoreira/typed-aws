@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EMR::SecurityConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SecurityConfiguration_Type = 'AWS::EMR::SecurityConfiguration';
 export const SecurityConfiguration_Type = 'AWS::EMR::SecurityConfiguration';
@@ -23,12 +23,12 @@ export default function SecurityConfiguration(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html}
  */
 export type SecurityConfiguration_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration}

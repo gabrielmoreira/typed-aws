@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::WaitConditionHandle
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WaitConditionHandle_Type =
   'AWS::CloudFormation::WaitConditionHandle';
@@ -27,5 +27,5 @@ export default function WaitConditionHandle(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html}
  */
 export type WaitConditionHandle_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
 };

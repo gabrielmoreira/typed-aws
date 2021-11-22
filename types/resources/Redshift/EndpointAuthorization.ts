@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::EndpointAuthorization
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EndpointAuthorization_Type = 'AWS::Redshift::EndpointAuthorization';
 export const EndpointAuthorization_Type =
@@ -32,13 +32,13 @@ export type EndpointAuthorization_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointauthorization.html#cfn-redshift-endpointauthorization-clusteridentifier}
    */
-  ClusterIdentifier: string;
-  AuthorizeTime?: string;
-  ClusterStatus?: string;
-  Status?: string;
-  AllowedAllVPCs?: boolean;
+  ClusterIdentifier: Resolvable<string>;
+  AuthorizeTime?: Resolvable<string>;
+  ClusterStatus?: Resolvable<string>;
+  Status?: Resolvable<string>;
+  AllowedAllVPCs?: Resolvable<boolean>;
   AllowedVPCs?: VpcId[];
-  EndpointCount?: number;
+  EndpointCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointauthorization.html#cfn-redshift-endpointauthorization-account}
@@ -53,9 +53,9 @@ export type EndpointAuthorization_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointauthorization.html#cfn-redshift-endpointauthorization-force}
    */
-  Force?: boolean;
+  Force?: Resolvable<boolean>;
 };
 
-export type AwsAccount = string;
+export type AwsAccount = Resolvable<string>;
 
-export type VpcId = string;
+export type VpcId = Resolvable<string>;

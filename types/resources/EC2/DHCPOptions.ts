@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::DHCPOptions
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DHCPOptions_Type = 'AWS::EC2::DHCPOptions';
 export const DHCPOptions_Type = 'AWS::EC2::DHCPOptions';
@@ -18,32 +18,32 @@ export default function DHCPOptions(props: DHCPOptions_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html}
  */
 export type DHCPOptions_Properties = {
-  DhcpOptionsId?: string;
+  DhcpOptionsId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainname}
    */
-  DomainName?: string;
+  DomainName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-domainnameservers}
    */
-  DomainNameServers?: string[];
+  DomainNameServers?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnameservers}
    */
-  NetbiosNameServers?: string[];
+  NetbiosNameServers?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnodetype}
    */
-  NetbiosNodeType?: number;
+  NetbiosNodeType?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-ntpservers}
    */
-  NtpServers?: string[];
+  NtpServers?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-tags}
@@ -52,6 +52,6 @@ export type DHCPOptions_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

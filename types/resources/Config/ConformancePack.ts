@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConformancePack
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ConformancePack_Type = 'AWS::Config::ConformancePack';
 export const ConformancePack_Type = 'AWS::Config::ConformancePack';
@@ -29,27 +29,27 @@ export type ConformancePack_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackname}
    */
-  ConformancePackName: string;
+  ConformancePackName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3bucket}
    */
-  DeliveryS3Bucket?: string;
+  DeliveryS3Bucket?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix}
    */
-  DeliveryS3KeyPrefix?: string;
+  DeliveryS3KeyPrefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatebody}
    */
-  TemplateBody?: string;
+  TemplateBody?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templates3uri}
    */
-  TemplateS3Uri?: string;
+  TemplateS3Uri?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters}
@@ -57,9 +57,9 @@ export type ConformancePack_Properties = {
   ConformancePackInputParameters?: ConformancePackInputParameter[];
 };
 
-export type ParameterName = string;
+export type ParameterName = Resolvable<string>;
 
-export type ParameterValue = string;
+export type ParameterValue = Resolvable<string>;
 
 /**
  * Input parameters in the form of key-value pairs for the conformance

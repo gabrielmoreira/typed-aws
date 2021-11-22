@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GlobalAccelerator::EndpointGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EndpointGroup_Type = 'AWS::GlobalAccelerator::EndpointGroup';
 export const EndpointGroup_Type = 'AWS::GlobalAccelerator::EndpointGroup';
@@ -24,12 +24,12 @@ export type EndpointGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-listenerarn}
    */
-  ListenerArn: string;
+  ListenerArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-endpointgroupregion}
    */
-  EndpointGroupRegion: string;
+  EndpointGroupRegion: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-endpointconfigurations}
@@ -39,33 +39,33 @@ export type EndpointGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-trafficdialpercentage}
    */
-  TrafficDialPercentage?: number;
+  TrafficDialPercentage?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckport}
    */
-  HealthCheckPort?: number;
+  HealthCheckPort?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckprotocol}
    */
-  HealthCheckProtocol?: 'TCP' | 'HTTP' | 'HTTPS';
+  HealthCheckProtocol?: Resolvable<'TCP' | 'HTTP' | 'HTTPS'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckpath}
    */
-  HealthCheckPath?: string;
+  HealthCheckPath?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds}
    */
-  HealthCheckIntervalSeconds?: number;
+  HealthCheckIntervalSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-thresholdcount}
    */
-  ThresholdCount?: number;
-  EndpointGroupArn?: string;
+  ThresholdCount?: Resolvable<number>;
+  EndpointGroupArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html#cfn-globalaccelerator-endpointgroup-portoverrides}
@@ -82,20 +82,20 @@ export type EndpointConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-endpointid}
    */
-  EndpointId: string;
+  EndpointId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-weight}
    */
-  Weight?: number;
+  Weight?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-clientippreservationenabled}
    */
-  ClientIPPreservationEnabled?: boolean;
+  ClientIPPreservationEnabled?: Resolvable<boolean>;
 };
 
-export type Port = number;
+export type Port = Resolvable<number>;
 
 /**
  * listener to endpoint port mapping. {@link

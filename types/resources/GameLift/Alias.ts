@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::Alias
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Alias_Type = 'AWS::GameLift::Alias';
 export const Alias_Type = 'AWS::GameLift::Alias';
@@ -24,18 +24,18 @@ export type Alias_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html#cfn-gamelift-alias-routingstrategy}
    */
   RoutingStrategy: RoutingStrategy;
-  AliasId?: string;
+  AliasId?: Resolvable<string>;
 };
 
 export type RoutingStrategy =
@@ -44,32 +44,32 @@ export type RoutingStrategy =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-message}
        */
-      Message?: string;
+      Message?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-fleetid}
        */
-      FleetId: string;
+      FleetId: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type}
        */
-      Type?: 'SIMPLE' | 'TERMINAL';
+      Type?: Resolvable<'SIMPLE' | 'TERMINAL'>;
     }
   | {
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-message}
        */
-      Message: string;
+      Message: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-fleetid}
        */
-      FleetId?: string;
+      FleetId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html#cfn-gamelift-alias-routingstrategy-type}
        */
-      Type?: 'SIMPLE' | 'TERMINAL';
+      Type?: Resolvable<'SIMPLE' | 'TERMINAL'>;
     };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::ResolverEndpoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResolverEndpoint_Type = 'AWS::Route53Resolver::ResolverEndpoint';
 export const ResolverEndpoint_Type = 'AWS::Route53Resolver::ResolverEndpoint';
@@ -28,20 +28,20 @@ export type ResolverEndpoint_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-ipaddresses}
    */
   IpAddresses: IpAddressRequest[];
-  ResolverEndpointId?: string;
-  IpAddressCount?: string;
-  Arn?: string;
+  ResolverEndpointId?: Resolvable<string>;
+  IpAddressCount?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-direction}
    */
-  Direction: string;
-  HostVPCId?: string;
+  Direction: Resolvable<string>;
+  HostVPCId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-securitygroupids}
    */
-  SecurityGroupIds: string[];
+  SecurityGroupIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-tags}
@@ -51,7 +51,7 @@ export type ResolverEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#cfn-route53resolver-resolverendpoint-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 /**
@@ -63,15 +63,15 @@ export type IpAddressRequest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverendpoint-ipaddressrequest.html#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip}
    */
-  Ip?: string;
+  Ip?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverendpoint-ipaddressrequest.html#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

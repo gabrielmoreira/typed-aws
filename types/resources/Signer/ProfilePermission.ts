@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Signer::ProfilePermission
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ProfilePermission_Type = 'AWS::Signer::ProfilePermission';
 export const ProfilePermission_Type = 'AWS::Signer::ProfilePermission';
@@ -27,25 +27,25 @@ export type ProfilePermission_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html#cfn-signer-profilepermission-profilename}
    */
-  ProfileName: string;
+  ProfileName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html#cfn-signer-profilepermission-profileversion}
    */
-  ProfileVersion?: string;
+  ProfileVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html#cfn-signer-profilepermission-action}
    */
-  Action: string;
+  Action: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html#cfn-signer-profilepermission-principal}
    */
-  Principal: string;
+  Principal: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html#cfn-signer-profilepermission-statementid}
    */
-  StatementId: string;
+  StatementId: Resolvable<string>;
 };

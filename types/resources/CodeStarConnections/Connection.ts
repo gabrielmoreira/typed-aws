@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CodeStarConnections::Connection
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Connection_Type = 'AWS::CodeStarConnections::Connection';
 export const Connection_Type = 'AWS::CodeStarConnections::Connection';
@@ -20,24 +20,24 @@ export default function Connection(props: Connection_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html}
  */
 export type Connection_Properties = {
-  ConnectionArn?: string;
+  ConnectionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-connectionname}
    */
-  ConnectionName: string;
-  ConnectionStatus?: string;
-  OwnerAccountId?: string;
+  ConnectionName: Resolvable<string>;
+  ConnectionStatus?: Resolvable<string>;
+  OwnerAccountId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-providertype}
    */
-  ProviderType?: string;
+  ProviderType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-hostarn}
    */
-  HostArn?: string;
+  HostArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html#cfn-codestarconnections-connection-tags}
@@ -46,7 +46,7 @@ export type Connection_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
   [k: string]: unknown;
 };

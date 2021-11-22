@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SNS::Subscription
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Subscription_Type = 'AWS::SNS::Subscription';
 export const Subscription_Type = 'AWS::SNS::Subscription';
@@ -22,12 +22,12 @@ export type Subscription_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-rawmessagedelivery}
    */
-  RawMessageDelivery?: boolean;
+  RawMessageDelivery?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-endpoint}
    */
-  Endpoint?: string;
+  Endpoint?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-filterpolicy}
@@ -39,7 +39,7 @@ export type Subscription_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#topicarn}
    */
-  TopicArn: string;
+  TopicArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-redrivepolicy}
@@ -58,16 +58,16 @@ export type Subscription_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-region}
    */
-  Region?: string;
+  Region?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-subscription-subscriptionrolearn}
    */
-  SubscriptionRoleArn?: string;
-  Id?: string;
+  SubscriptionRoleArn?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html#cfn-sns-protocol}
    */
-  Protocol: string;
+  Protocol: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECS::Service
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Service_Type = 'AWS::ECS::Service';
 export const Service_Type = 'AWS::ECS::Service';
@@ -18,7 +18,7 @@ export default function Service(props: Service_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html}
  */
 export type Service_Properties = {
-  ServiceArn?: string;
+  ServiceArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-capacityproviderstrategy}
@@ -28,7 +28,7 @@ export type Service_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-cluster}
    */
-  Cluster?: string;
+  Cluster?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentconfiguration}
@@ -43,33 +43,33 @@ export type Service_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-desiredcount}
    */
-  DesiredCount?: number;
+  DesiredCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableecsmanagedtags}
    */
-  EnableECSManagedTags?: boolean;
+  EnableECSManagedTags?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-enableexecutecommand}
    */
-  EnableExecuteCommand?: boolean;
+  EnableExecuteCommand?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds}
    */
-  HealthCheckGracePeriodSeconds?: number;
+  HealthCheckGracePeriodSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-launchtype}
    */
-  LaunchType?: 'EC2' | 'FARGATE' | 'EXTERNAL';
+  LaunchType?: Resolvable<'EC2' | 'FARGATE' | 'EXTERNAL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers}
    */
   LoadBalancers?: LoadBalancer[];
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-networkconfiguration}
@@ -89,27 +89,27 @@ export type Service_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-platformversion}
    */
-  PlatformVersion?: string;
+  PlatformVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-propagatetags}
    */
-  PropagateTags?: 'SERVICE' | 'TASK_DEFINITION';
+  PropagateTags?: Resolvable<'SERVICE' | 'TASK_DEFINITION'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-role}
    */
-  Role?: string;
+  Role?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-schedulingstrategy}
    */
-  SchedulingStrategy?: 'DAEMON' | 'REPLICA';
+  SchedulingStrategy?: Resolvable<'DAEMON' | 'REPLICA'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-servicename}
    */
-  ServiceName?: string;
+  ServiceName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries}
@@ -124,7 +124,7 @@ export type Service_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition}
    */
-  TaskDefinition?: string;
+  TaskDefinition?: Resolvable<string>;
 };
 
 /**
@@ -136,17 +136,17 @@ export type AwsVpcConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip}
    */
-  AssignPublicIp?: 'DISABLED' | 'ENABLED';
+  AssignPublicIp?: Resolvable<'DISABLED' | 'ENABLED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-securitygroups}
    */
-  SecurityGroups?: string[];
+  SecurityGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-subnets}
    */
-  Subnets?: string[];
+  Subnets?: Resolvable<string>[];
 };
 
 /**
@@ -158,17 +158,17 @@ export type CapacityProviderStrategyItem = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-base}
    */
-  Base?: number;
+  Base?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-capacityprovider}
    */
-  CapacityProvider?: string;
+  CapacityProvider?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html#cfn-ecs-service-capacityproviderstrategyitem-weight}
    */
-  Weight?: number;
+  Weight?: Resolvable<number>;
 };
 
 /**
@@ -180,12 +180,12 @@ export type DeploymentCircuitBreaker = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-enable}
    */
-  Enable: boolean;
+  Enable: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcircuitbreaker.html#cfn-ecs-service-deploymentcircuitbreaker-rollback}
    */
-  Rollback: boolean;
+  Rollback: Resolvable<boolean>;
 };
 
 /**
@@ -202,12 +202,12 @@ export type DeploymentConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent}
    */
-  MaximumPercent?: number;
+  MaximumPercent?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent}
    */
-  MinimumHealthyPercent?: number;
+  MinimumHealthyPercent?: Resolvable<number>;
 };
 
 /**
@@ -219,7 +219,7 @@ export type DeploymentController = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html#cfn-ecs-service-deploymentcontroller-type}
    */
-  Type?: 'CODE_DEPLOY' | 'ECS' | 'EXTERNAL';
+  Type?: Resolvable<'CODE_DEPLOY' | 'ECS' | 'EXTERNAL'>;
 };
 
 /**
@@ -231,22 +231,22 @@ export type LoadBalancer = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html#cfn-ecs-service-loadbalancer-containername}
    */
-  ContainerName?: string;
+  ContainerName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html#cfn-ecs-service-loadbalancer-containerport}
    */
-  ContainerPort?: number;
+  ContainerPort?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html#cfn-ecs-service-loadbalancer-loadbalancername}
    */
-  LoadBalancerName?: string;
+  LoadBalancerName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html#cfn-ecs-service-loadbalancer-targetgrouparn}
    */
-  TargetGroupArn?: string;
+  TargetGroupArn?: Resolvable<string>;
 };
 
 /**
@@ -270,12 +270,12 @@ export type PlacementConstraint = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-expression}
    */
-  Expression?: string;
+  Expression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html#cfn-ecs-service-placementconstraint-type}
    */
-  Type: 'distinctInstance' | 'memberOf';
+  Type: Resolvable<'distinctInstance' | 'memberOf'>;
 };
 
 /**
@@ -287,12 +287,12 @@ export type PlacementStrategy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-field}
    */
-  Field?: string;
+  Field?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html#cfn-ecs-service-placementstrategy-type}
    */
-  Type: 'binpack' | 'random' | 'spread';
+  Type: Resolvable<'binpack' | 'random' | 'spread'>;
 };
 
 /**
@@ -304,25 +304,25 @@ export type ServiceRegistry = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containername}
    */
-  ContainerName?: string;
+  ContainerName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-containerport}
    */
-  ContainerPort?: number;
+  ContainerPort?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-port}
    */
-  Port?: number;
+  Port?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html#cfn-ecs-service-serviceregistry-registryarn}
    */
-  RegistryArn?: string;
+  RegistryArn?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

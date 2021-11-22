@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::ClientVpnTargetNetworkAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ClientVpnTargetNetworkAssociation_Type =
   'AWS::EC2::ClientVpnTargetNetworkAssociation';
@@ -27,15 +27,15 @@ export default function ClientVpnTargetNetworkAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html}
  */
 export type ClientVpnTargetNetworkAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-clientvpnendpointid}
    */
-  ClientVpnEndpointId: string;
+  ClientVpnEndpointId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html#cfn-ec2-clientvpntargetnetworkassociation-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };

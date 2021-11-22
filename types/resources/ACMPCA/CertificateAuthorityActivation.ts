@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ACMPCA::CertificateAuthorityActivation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type CertificateAuthorityActivation_Type =
   'AWS::ACMPCA::CertificateAuthorityActivation';
@@ -31,21 +31,21 @@ export type CertificateAuthorityActivation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html#cfn-acmpca-certificateauthorityactivation-certificateauthorityarn}
    */
-  CertificateAuthorityArn: string;
+  CertificateAuthorityArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html#cfn-acmpca-certificateauthorityactivation-certificate}
    */
-  Certificate: string;
+  Certificate: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html#cfn-acmpca-certificateauthorityactivation-certificatechain}
    */
-  CertificateChain?: string;
+  CertificateChain?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html#cfn-acmpca-certificateauthorityactivation-status}
    */
-  Status?: string;
-  CompleteCertificateChain?: string;
+  Status?: Resolvable<string>;
+  CompleteCertificateChain?: Resolvable<string>;
 };

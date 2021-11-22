@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppStream::StackFleetAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type StackFleetAssociation_Type =
   'AWS::AppStream::StackFleetAssociation';
@@ -31,11 +31,11 @@ export type StackFleetAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackfleetassociation.html#cfn-appstream-stackfleetassociation-fleetname}
    */
-  FleetName: string;
+  FleetName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackfleetassociation.html#cfn-appstream-stackfleetassociation-stackname}
    */
-  StackName: string;
-  Id?: string;
+  StackName: Resolvable<string>;
+  Id?: Resolvable<string>;
 };

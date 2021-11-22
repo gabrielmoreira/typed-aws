@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KMS::Alias
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Alias_Type = 'AWS::KMS::Alias';
 export const Alias_Type = 'AWS::KMS::Alias';
@@ -26,10 +26,10 @@ export type Alias_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-aliasname}
    */
-  AliasName: string;
+  AliasName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-targetkeyid}
    */
-  TargetKeyId: string;
+  TargetKeyId: Resolvable<string>;
 };

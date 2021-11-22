@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::Firewall
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Firewall_Type = 'AWS::NetworkFirewall::Firewall';
 export const Firewall_Type = 'AWS::NetworkFirewall::Firewall';
@@ -22,9 +22,9 @@ export type Firewall_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallname}
    */
-  FirewallName: string;
+  FirewallName: Resolvable<string>;
   FirewallArn?: ResourceArn;
-  FirewallId?: string;
+  FirewallId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicyarn}
@@ -34,7 +34,7 @@ export type Firewall_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetmappings}
@@ -44,22 +44,22 @@ export type Firewall_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-deleteprotection}
    */
-  DeleteProtection?: boolean;
+  DeleteProtection?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-subnetchangeprotection}
    */
-  SubnetChangeProtection?: boolean;
+  SubnetChangeProtection?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-firewallpolicychangeprotection}
    */
-  FirewallPolicyChangeProtection?: boolean;
+  FirewallPolicyChangeProtection?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html#cfn-networkfirewall-firewall-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   EndpointIds?: EndpointId[];
   /**
    * {@link
@@ -68,9 +68,9 @@ export type Firewall_Properties = {
   Tags?: Tag[];
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
-export type EndpointId = string;
+export type EndpointId = Resolvable<string>;
 
 /**
  * {@link
@@ -81,10 +81,10 @@ export type SubnetMapping = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewall-subnetmapping.html#cfn-networkfirewall-firewall-subnetmapping-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

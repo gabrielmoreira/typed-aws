@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPNGatewayRoutePropagation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPNGatewayRoutePropagation_Type =
   'AWS::EC2::VPNGatewayRoutePropagation';
@@ -27,15 +27,15 @@ export default function VPNGatewayRoutePropagation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html}
  */
 export type VPNGatewayRoutePropagation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-routetableids}
    */
-  RouteTableIds: string[];
+  RouteTableIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-vpngatewayid}
    */
-  VpnGatewayId: string;
+  VpnGatewayId: Resolvable<string>;
 };

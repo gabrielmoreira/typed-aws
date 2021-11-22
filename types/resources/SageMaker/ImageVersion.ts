@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ImageVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ImageVersion_Type = 'AWS::SageMaker::ImageVersion';
 export const ImageVersion_Type = 'AWS::SageMaker::ImageVersion';
@@ -34,14 +34,14 @@ export type ImageVersion_Properties = {
   Version?: Version;
 };
 
-export type ImageName = string;
+export type ImageName = Resolvable<string>;
 
-export type ImageArn = string;
+export type ImageArn = Resolvable<string>;
 
-export type ImageVersionArn = string;
+export type ImageVersionArn = Resolvable<string>;
 
-export type BaseImage = string;
+export type BaseImage = Resolvable<string>;
 
-export type ContainerImage = string;
+export type ContainerImage = Resolvable<string>;
 
-export type Version = number;
+export type Version = Resolvable<number>;

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DynamoDB::Table
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Table_Type = 'AWS::DynamoDB::Table';
 export const Table_Type = 'AWS::DynamoDB::Table';
@@ -52,7 +52,7 @@ export type Table_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename}
    */
-  TableName?: string;
+  TableName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef}
@@ -62,7 +62,7 @@ export type Table_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-billingmode}
    */
-  BillingMode?: string;
+  BillingMode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi}
@@ -78,9 +78,9 @@ export type Table_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi}
    */
   LocalSecondaryIndexes?: LocalSecondaryIndex[];
-  Id?: string;
-  Arn?: string;
-  StreamArn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
+  StreamArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags}
@@ -102,7 +102,7 @@ export type LocalSecondaryIndex = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-indexname}
    */
-  IndexName: string;
+  IndexName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-lsi.html#cfn-dynamodb-lsi-projection}
@@ -124,17 +124,17 @@ export type SSESpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-kmsmasterkeyid}
    */
-  KMSMasterKeyId?: string;
+  KMSMasterKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled}
    */
-  SSEEnabled: boolean;
+  SSEEnabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-ssetype}
    */
-  SSEType?: string;
+  SSEType?: Resolvable<string>;
 };
 
 /**
@@ -146,7 +146,7 @@ export type KinesisStreamSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-kinesisstreamspecification.html#cfn-dynamodb-kinesisstreamspecification-streamarn}
    */
-  StreamArn: string;
+  StreamArn: Resolvable<string>;
 };
 
 /**
@@ -158,7 +158,7 @@ export type StreamSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-streamspecification.html#cfn-dynamodb-streamspecification-streamviewtype}
    */
-  StreamViewType: string;
+  StreamViewType: Resolvable<string>;
 };
 
 /**
@@ -170,7 +170,7 @@ export type ContributorInsightsSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-contributorinsightsspecification.html#cfn-dynamodb-contributorinsightsspecification-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
 };
 
 /**
@@ -182,12 +182,12 @@ export type AttributeDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-attributedef.html#cfn-dynamodb-attributedef-attributename-attributetype}
    */
-  AttributeType: string;
+  AttributeType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-attributedef.html#cfn-dynamodb-attributedef-attributename}
    */
-  AttributeName: string;
+  AttributeName: Resolvable<string>;
 };
 
 /**
@@ -199,12 +199,12 @@ export type Projection = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-projtype}
    */
-  ProjectionType?: string;
+  ProjectionType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-projectionobject.html#cfn-dynamodb-projectionobj-nonkeyatt}
    */
-  NonKeyAttributes?: string[];
+  NonKeyAttributes?: Resolvable<string>[];
 };
 
 /**
@@ -216,7 +216,7 @@ export type PointInTimeRecoverySpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-pointintimerecoveryspecification.html#cfn-dynamodb-table-pointintimerecoveryspecification-pointintimerecoveryenabled}
    */
-  PointInTimeRecoveryEnabled?: boolean;
+  PointInTimeRecoveryEnabled?: Resolvable<boolean>;
 };
 
 /**
@@ -228,12 +228,12 @@ export type ProvisionedThroughput = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-writecapacityunits}
    */
-  WriteCapacityUnits: number;
+  WriteCapacityUnits: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-readcapacityunits}
    */
-  ReadCapacityUnits: number;
+  ReadCapacityUnits: Resolvable<number>;
 };
 
 /**
@@ -245,7 +245,7 @@ export type GlobalSecondaryIndex = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-indexname}
    */
-  IndexName: string;
+  IndexName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-projection}
@@ -277,17 +277,17 @@ export type KeySchema = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-keytype}
    */
-  KeyType: string;
+  KeyType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-keyschema.html#aws-properties-dynamodb-keyschema-attributename}
    */
-  AttributeName: string;
+  AttributeName: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -299,10 +299,10 @@ export type TimeToLiveSpecification = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-timetolivespecification.html#cfn-dynamodb-timetolivespecification-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-timetolivespecification.html#cfn-dynamodb-timetolivespecification-attributename}
    */
-  AttributeName: string;
+  AttributeName: Resolvable<string>;
 };

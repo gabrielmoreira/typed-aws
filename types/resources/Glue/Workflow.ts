@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::Workflow
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Workflow_Type = 'AWS::Glue::Workflow';
 export const Workflow_Type = 'AWS::Glue::Workflow';
@@ -18,12 +18,12 @@ export default function Workflow(props: Workflow_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html}
  */
 export type Workflow_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-defaultrunproperties}
@@ -42,5 +42,5 @@ export type Workflow_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };

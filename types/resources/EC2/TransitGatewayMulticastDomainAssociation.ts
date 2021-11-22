@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayMulticastDomainAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayMulticastDomainAssociation_Type =
   'AWS::EC2::TransitGatewayMulticastDomainAssociation';
@@ -29,18 +29,18 @@ export type TransitGatewayMulticastDomainAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewaymulticastdomainid}
    */
-  TransitGatewayMulticastDomainId: string;
+  TransitGatewayMulticastDomainId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewayattachmentid}
    */
-  TransitGatewayAttachmentId: string;
-  ResourceId?: string;
-  ResourceType?: string;
-  State?: string;
+  TransitGatewayAttachmentId: Resolvable<string>;
+  ResourceId?: Resolvable<string>;
+  ResourceType?: Resolvable<string>;
+  State?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html#cfn-ec2-transitgatewaymulticastdomainassociation-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };

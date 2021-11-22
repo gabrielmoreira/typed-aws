@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Kinesis::StreamConsumer
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type StreamConsumer_Type = 'AWS::Kinesis::StreamConsumer';
 export const StreamConsumer_Type = 'AWS::Kinesis::StreamConsumer';
@@ -18,18 +18,18 @@ export default function StreamConsumer(props: StreamConsumer_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html}
  */
 export type StreamConsumer_Properties = {
-  Id?: string;
-  ConsumerCreationTimestamp?: string;
+  Id?: Resolvable<string>;
+  ConsumerCreationTimestamp?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-consumername}
    */
-  ConsumerName: string;
-  ConsumerARN?: string;
-  ConsumerStatus?: string;
+  ConsumerName: Resolvable<string>;
+  ConsumerARN?: Resolvable<string>;
+  ConsumerStatus?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-streamarn}
    */
-  StreamARN: string;
+  StreamARN: Resolvable<string>;
 };

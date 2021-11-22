@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AutoScaling::ScheduledAction
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ScheduledAction_Type = 'AWS::AutoScaling::ScheduledAction';
 export const ScheduledAction_Type = 'AWS::AutoScaling::ScheduledAction';
@@ -25,41 +25,41 @@ export type ScheduledAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-minsize}
    */
-  MinSize?: number;
+  MinSize?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-recurrence}
    */
-  Recurrence?: string;
+  Recurrence?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-timezone}
    */
-  TimeZone?: string;
+  TimeZone?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-endtime}
    */
-  EndTime?: string;
+  EndTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-asgname}
    */
-  AutoScalingGroupName: string;
+  AutoScalingGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-starttime}
    */
-  StartTime?: string;
+  StartTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-desiredcapacity}
    */
-  DesiredCapacity?: number;
-  Id?: string;
+  DesiredCapacity?: Resolvable<number>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html#cfn-as-scheduledaction-maxsize}
    */
-  MaxSize?: number;
+  MaxSize?: Resolvable<number>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::User
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type User_Type = 'AWS::ElastiCache::User';
 export const User_Type = 'AWS::ElastiCache::User';
@@ -18,36 +18,36 @@ export default function User(props: User_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html}
  */
 export type User_Properties = {
-  Status?: string;
+  Status?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-userid}
    */
-  UserId: string;
+  UserId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-username}
    */
-  UserName: string;
+  UserName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine}
    */
-  Engine: 'redis';
+  Engine: Resolvable<'redis'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-accessstring}
    */
-  AccessString?: string;
+  AccessString?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired}
    */
-  NoPasswordRequired?: boolean;
+  NoPasswordRequired?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords}
    */
-  Passwords?: string[];
-  Arn?: string;
+  Passwords?: Resolvable<string>[];
+  Arn?: Resolvable<string>;
 };

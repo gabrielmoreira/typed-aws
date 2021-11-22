@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::MSK::Cluster
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Cluster_Type = 'AWS::MSK::Cluster';
 export const Cluster_Type = 'AWS::MSK::Cluster';
@@ -27,17 +27,17 @@ export type Cluster_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-enhancedmonitoring}
    */
-  EnhancedMonitoring?: string;
+  EnhancedMonitoring?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-kafkaversion}
    */
-  KafkaVersion: string;
+  KafkaVersion: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-numberofbrokernodes}
    */
-  NumberOfBrokerNodes: number;
+  NumberOfBrokerNodes: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-encryptioninfo}
@@ -52,8 +52,8 @@ export type Cluster_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clustername}
    */
-  ClusterName: string;
-  Id?: string;
+  ClusterName: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html#cfn-msk-cluster-clientauthentication}
@@ -104,17 +104,17 @@ export type S3 = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-s3.html#cfn-msk-cluster-s3-bucket}
    */
-  Bucket?: string;
+  Bucket?: Resolvable<string>;
 };
 
 /**
@@ -148,7 +148,7 @@ export type Unauthenticated = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-unauthenticated.html#cfn-msk-cluster-unauthenticated-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
 };
 
 /**
@@ -160,7 +160,7 @@ export type NodeExporter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-nodeexporter.html#cfn-msk-cluster-nodeexporter-enabledinbroker}
    */
-  EnabledInBroker: boolean;
+  EnabledInBroker: Resolvable<boolean>;
 };
 
 /**
@@ -201,12 +201,12 @@ export type Firehose = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-firehose.html#cfn-msk-cluster-firehose-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-firehose.html#cfn-msk-cluster-firehose-deliverystream}
    */
-  DeliveryStream?: string;
+  DeliveryStream?: Resolvable<string>;
 };
 
 /**
@@ -247,12 +247,12 @@ export type CloudWatchLogs = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-loggroup}
    */
-  LogGroup?: string;
+  LogGroup?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html#cfn-msk-cluster-cloudwatchlogs-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
 };
 
 /**
@@ -264,7 +264,7 @@ export type EBSStorageInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-ebsstorageinfo.html#cfn-msk-cluster-ebsstorageinfo-volumesize}
    */
-  VolumeSize?: number;
+  VolumeSize?: Resolvable<number>;
 };
 
 /**
@@ -276,7 +276,7 @@ export type Scram = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-scram.html#cfn-msk-cluster-scram-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
 };
 
 /**
@@ -288,12 +288,12 @@ export type ConfigurationInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-configurationinfo.html#cfn-msk-cluster-configurationinfo-revision}
    */
-  Revision: number;
+  Revision: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-configurationinfo.html#cfn-msk-cluster-configurationinfo-arn}
    */
-  Arn: string;
+  Arn: Resolvable<string>;
 };
 
 /**
@@ -305,12 +305,12 @@ export type BrokerNodeGroupInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-securitygroups}
    */
-  SecurityGroups?: string[];
+  SecurityGroups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-clientsubnets}
    */
-  ClientSubnets: string[];
+  ClientSubnets: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-connectivityinfo}
@@ -325,12 +325,12 @@ export type BrokerNodeGroupInfo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-brokerazdistribution}
    */
-  BrokerAZDistribution?: string;
+  BrokerAZDistribution?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#cfn-msk-cluster-brokernodegroupinfo-instancetype}
    */
-  InstanceType: string;
+  InstanceType: Resolvable<string>;
 };
 
 /**
@@ -342,7 +342,7 @@ export type EncryptionAtRest = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptionatrest.html#cfn-msk-cluster-encryptionatrest-datavolumekmskeyid}
    */
-  DataVolumeKMSKeyId: string;
+  DataVolumeKMSKeyId: Resolvable<string>;
 };
 
 /**
@@ -354,7 +354,7 @@ export type JmxExporter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-jmxexporter.html#cfn-msk-cluster-jmxexporter-enabledinbroker}
    */
-  EnabledInBroker: boolean;
+  EnabledInBroker: Resolvable<boolean>;
 };
 
 /**
@@ -366,7 +366,7 @@ export type Iam = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-iam.html#cfn-msk-cluster-iam-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
 };
 
 /**
@@ -390,12 +390,12 @@ export type Tls = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-tls.html#cfn-msk-cluster-tls-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-tls.html#cfn-msk-cluster-tls-certificateauthorityarnlist}
    */
-  CertificateAuthorityArnList?: string[];
+  CertificateAuthorityArnList?: Resolvable<string>[];
 };
 
 /**
@@ -407,7 +407,7 @@ export type PublicAccess = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-publicaccess.html#cfn-msk-cluster-publicaccess-type}
    */
-  Type?: string;
+  Type?: Resolvable<string>;
 };
 
 /**
@@ -453,10 +453,10 @@ export type EncryptionInTransit = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptionintransit.html#cfn-msk-cluster-encryptionintransit-incluster}
    */
-  InCluster?: boolean;
+  InCluster?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptionintransit.html#cfn-msk-cluster-encryptionintransit-clientbroker}
    */
-  ClientBroker?: string;
+  ClientBroker?: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::SubnetRouteTableAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SubnetRouteTableAssociation_Type =
   'AWS::EC2::SubnetRouteTableAssociation';
@@ -27,15 +27,15 @@ export default function SubnetRouteTableAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html}
  */
 export type SubnetRouteTableAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html#cfn-ec2-subnetroutetableassociation-routetableid}
    */
-  RouteTableId: string;
+  RouteTableId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-route-table-assoc.html#cfn-ec2-subnetroutetableassociation-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };

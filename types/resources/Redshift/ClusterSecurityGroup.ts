@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Redshift::ClusterSecurityGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ClusterSecurityGroup_Type = 'AWS::Redshift::ClusterSecurityGroup';
 export const ClusterSecurityGroup_Type = 'AWS::Redshift::ClusterSecurityGroup';
@@ -25,12 +25,12 @@ export default function ClusterSecurityGroup(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html}
  */
 export type ClusterSecurityGroup_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-description}
    */
-  Description: string;
+  Description: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-tags}
@@ -39,6 +39,6 @@ export type ClusterSecurityGroup_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EventSchemas::Discoverer
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Discoverer_Type = 'AWS::EventSchemas::Discoverer';
 export const Discoverer_Type = 'AWS::EventSchemas::Discoverer';
@@ -18,23 +18,23 @@ export default function Discoverer(props: Discoverer_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html}
  */
 export type Discoverer_Properties = {
-  DiscovererArn?: string;
-  DiscovererId?: string;
+  DiscovererArn?: Resolvable<string>;
+  DiscovererId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html#cfn-eventschemas-discoverer-crossaccount}
    */
-  CrossAccount?: boolean;
+  CrossAccount?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html#cfn-eventschemas-discoverer-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html#cfn-eventschemas-discoverer-sourcearn}
    */
-  SourceArn: string;
+  SourceArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html#cfn-eventschemas-discoverer-tags}
@@ -51,10 +51,10 @@ export type TagsEntry = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-discoverer-tagsentry.html#cfn-eventschemas-discoverer-tagsentry-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-discoverer-tagsentry.html#cfn-eventschemas-discoverer-tagsentry-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DMS::ReplicationSubnetGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ReplicationSubnetGroup_Type = 'AWS::DMS::ReplicationSubnetGroup';
 export const ReplicationSubnetGroup_Type = 'AWS::DMS::ReplicationSubnetGroup';
@@ -23,22 +23,22 @@ export default function ReplicationSubnetGroup(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html}
  */
 export type ReplicationSubnetGroup_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription}
    */
-  ReplicationSubnetGroupDescription: string;
+  ReplicationSubnetGroupDescription: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier}
    */
-  ReplicationSubnetGroupIdentifier?: string;
+  ReplicationSubnetGroupIdentifier?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids}
    */
-  SubnetIds: string[];
+  SubnetIds: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags}
@@ -47,6 +47,6 @@ export type ReplicationSubnetGroup_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

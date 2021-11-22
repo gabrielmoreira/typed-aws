@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::FMS::Policy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Policy_Type = 'AWS::FMS::Policy';
 export const Policy_Type = 'AWS::FMS::Policy';
@@ -27,23 +27,23 @@ export type Policy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-excluderesourcetags}
    */
-  ExcludeResourceTags: boolean;
+  ExcludeResourceTags: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-includemap}
    */
   IncludeMap?: IEMap;
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policyname}
    */
-  PolicyName: string;
+  PolicyName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-remediationenabled}
    */
-  RemediationEnabled: boolean;
+  RemediationEnabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcetags}
@@ -64,8 +64,8 @@ export type Policy_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-securityservicepolicydata}
    */
   SecurityServicePolicyData: {
-    ManagedServiceData?: string;
-    Type:
+    ManagedServiceData?: Resolvable<string>;
+    Type: Resolvable<
       | 'WAF'
       | 'WAFV2'
       | 'SHIELD_ADVANCED'
@@ -73,19 +73,20 @@ export type Policy_Properties = {
       | 'SECURITY_GROUPS_CONTENT_AUDIT'
       | 'SECURITY_GROUPS_USAGE_AUDIT'
       | 'NETWORK_FIREWALL'
-      | 'DNS_FIREWALL';
+      | 'DNS_FIREWALL'
+    >;
   };
   Arn?: ResourceArn;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-deleteallpolicyresources}
    */
-  DeleteAllPolicyResources?: boolean;
+  DeleteAllPolicyResources?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-resourcescleanup}
    */
-  ResourcesCleanUp?: boolean;
+  ResourcesCleanUp?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-tags}
@@ -93,9 +94,9 @@ export type Policy_Properties = {
   Tags?: PolicyTag[];
 };
 
-export type AccountId = string;
+export type AccountId = Resolvable<string>;
 
-export type OrganizationalUnitId = string;
+export type OrganizationalUnitId = Resolvable<string>;
 
 /**
  * An FMS includeMap or excludeMap. {@link
@@ -123,12 +124,12 @@ export type PolicyTag = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html#cfn-fms-policy-policytag-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -140,14 +141,14 @@ export type ResourceTag = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-resourcetag.html#cfn-fms-policy-resourcetag-value}
    */
-  Value?: string;
+  Value?: Resolvable<string>;
 };
 
-export type ResourceType = string;
+export type ResourceType = Resolvable<string>;
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;

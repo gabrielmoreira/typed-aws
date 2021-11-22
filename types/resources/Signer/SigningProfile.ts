@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Signer::SigningProfile
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SigningProfile_Type = 'AWS::Signer::SigningProfile';
 export const SigningProfile_Type = 'AWS::Signer::SigningProfile';
@@ -20,7 +20,7 @@ export default function SigningProfile(props: SigningProfile_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html}
  */
 export type SigningProfile_Properties = {
-  ProfileName?: string;
+  ProfileName?: Resolvable<string>;
   ProfileVersion?: ProfileVersion;
   Arn?: Arn;
   ProfileVersionArn?: Arn;
@@ -41,11 +41,11 @@ export type SigningProfile_Properties = {
   Tags?: Tag[];
 };
 
-export type PlatformId = 'AWSLambda-SHA384-ECDSA';
+export type PlatformId = Resolvable<'AWSLambda-SHA384-ECDSA'>;
 
-export type Arn = string;
+export type Arn = Resolvable<string>;
 
-export type ProfileVersion = string;
+export type ProfileVersion = Resolvable<string>;
 
 /**
  * {@link
@@ -56,15 +56,15 @@ export type SignatureValidityPeriod = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-signer-signingprofile-signaturevalidityperiod.html#cfn-signer-signingprofile-signaturevalidityperiod-value}
    */
-  Value?: number;
+  Value?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-signer-signingprofile-signaturevalidityperiod.html#cfn-signer-signingprofile-signaturevalidityperiod-type}
    */
-  Type?: 'DAYS' | 'MONTHS' | 'YEARS';
+  Type?: Resolvable<'DAYS' | 'MONTHS' | 'YEARS'>;
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

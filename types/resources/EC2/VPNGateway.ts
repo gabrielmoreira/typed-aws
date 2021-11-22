@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPNGateway
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPNGateway_Type = 'AWS::EC2::VPNGateway';
 export const VPNGateway_Type = 'AWS::EC2::VPNGateway';
@@ -22,13 +22,13 @@ export type VPNGateway_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-type}
    */
-  Type: string;
-  Id?: string;
+  Type: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-amazonsideasn}
    */
-  AmazonSideAsn?: number;
+  AmazonSideAsn?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gateway.html#cfn-ec2-vpngateway-tags}
@@ -37,6 +37,6 @@ export type VPNGateway_Properties = {
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

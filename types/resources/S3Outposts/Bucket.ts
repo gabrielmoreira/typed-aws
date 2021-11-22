@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3Outposts::Bucket
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Bucket_Type = 'AWS::S3Outposts::Bucket';
 export const Bucket_Type = 'AWS::S3Outposts::Bucket';
@@ -18,17 +18,17 @@ export default function Bucket(props: Bucket_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html}
  */
 export type Bucket_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html#cfn-s3outposts-bucket-bucketname}
    */
-  BucketName: string;
+  BucketName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html#cfn-s3outposts-bucket-outpostid}
    */
-  OutpostId: string;
+  OutpostId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html#cfn-s3outposts-bucket-tags}
@@ -42,8 +42,8 @@ export type Bucket_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -64,12 +64,12 @@ export type Rule =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-status}
        */
-      Status: 'Enabled' | 'Disabled';
+      Status: Resolvable<'Enabled' | 'Disabled'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-id}
        */
-      Id?: string;
+      Id?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-abortincompletemultipartupload}
@@ -84,7 +84,7 @@ export type Rule =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-expirationindays}
        */
-      ExpirationInDays?: number;
+      ExpirationInDays?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-filter}
@@ -111,12 +111,12 @@ export type Rule =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-status}
        */
-      Status: 'Enabled' | 'Disabled';
+      Status: Resolvable<'Enabled' | 'Disabled'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-id}
        */
-      Id?: string;
+      Id?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-abortincompletemultipartupload}
@@ -131,7 +131,7 @@ export type Rule =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-expirationindays}
        */
-      ExpirationInDays?: number;
+      ExpirationInDays?: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-filter}
@@ -158,12 +158,12 @@ export type Rule =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-status}
        */
-      Status: 'Enabled' | 'Disabled';
+      Status: Resolvable<'Enabled' | 'Disabled'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-id}
        */
-      Id?: string;
+      Id?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-abortincompletemultipartupload}
@@ -178,7 +178,7 @@ export type Rule =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-expirationindays}
        */
-      ExpirationInDays: number;
+      ExpirationInDays: Resolvable<number>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-filter}
@@ -201,7 +201,7 @@ export type Rule =
           };
     };
 
-export type iso8601UTC = string;
+export type iso8601UTC = Resolvable<string>;
 
 /**
  * Specifies the days since the initiation of an incomplete multipart
@@ -214,14 +214,14 @@ export type AbortIncompleteMultipartUpload = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-abortincompletemultipartupload.html#cfn-s3outposts-bucket-abortincompletemultipartupload-daysafterinitiation}
    */
-  DaysAfterInitiation: number;
+  DaysAfterInitiation: Resolvable<number>;
 };
 
-export type FilterPrefix = string;
+export type FilterPrefix = Resolvable<string>;
 
 export type FilterTag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 export type FilterAndOperator = {

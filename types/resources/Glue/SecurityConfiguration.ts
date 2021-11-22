@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Glue::SecurityConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SecurityConfiguration_Type = 'AWS::Glue::SecurityConfiguration';
 export const SecurityConfiguration_Type = 'AWS::Glue::SecurityConfiguration';
@@ -32,8 +32,8 @@ export type SecurityConfiguration_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html#cfn-glue-securityconfiguration-name}
    */
-  Name: string;
-  Id?: string;
+  Name: Resolvable<string>;
+  Id?: Resolvable<string>;
 };
 
 /**
@@ -73,12 +73,12 @@ export type CloudWatchEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn}
    */
-  KmsKeyArn?: string;
+  KmsKeyArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html#cfn-glue-securityconfiguration-cloudwatchencryption-cloudwatchencryptionmode}
    */
-  CloudWatchEncryptionMode?: string;
+  CloudWatchEncryptionMode?: Resolvable<string>;
 };
 
 /**
@@ -90,10 +90,10 @@ export type JobBookmarksEncryption = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn}
    */
-  KmsKeyArn?: string;
+  KmsKeyArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html#cfn-glue-securityconfiguration-jobbookmarksencryption-jobbookmarksencryptionmode}
    */
-  JobBookmarksEncryptionMode?: string;
+  JobBookmarksEncryptionMode?: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataSync::LocationNFS
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LocationNFS_Type = 'AWS::DataSync::LocationNFS';
 export const LocationNFS_Type = 'AWS::DataSync::LocationNFS';
@@ -32,19 +32,19 @@ export type LocationNFS_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-serverhostname}
    */
-  ServerHostname: string;
+  ServerHostname: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-subdirectory}
    */
-  Subdirectory: string;
+  Subdirectory: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html#cfn-datasync-locationnfs-tags}
    */
   Tags?: Tag[];
-  LocationArn?: string;
-  LocationUri?: string;
+  LocationArn?: Resolvable<string>;
+  LocationUri?: Resolvable<string>;
 };
 
 /**
@@ -57,7 +57,7 @@ export type MountOptions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-mountoptions.html#cfn-datasync-locationnfs-mountoptions-version}
    */
-  Version?: 'AUTOMATIC' | 'NFS3' | 'NFS4_0' | 'NFS4_1';
+  Version?: Resolvable<'AUTOMATIC' | 'NFS3' | 'NFS4_0' | 'NFS4_1'>;
 };
 
 /**
@@ -70,10 +70,10 @@ export type OnPremConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html#cfn-datasync-locationnfs-onpremconfig-agentarns}
    */
-  AgentArns: string[];
+  AgentArns: Resolvable<string>[];
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

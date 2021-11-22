@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::LoggingConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type LoggingConfiguration_Type =
   'AWS::NetworkFirewall::LoggingConfiguration';
@@ -31,7 +31,7 @@ export type LoggingConfiguration_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallname}
    */
-  FirewallName?: string;
+  FirewallName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html#cfn-networkfirewall-loggingconfiguration-firewallarn}
@@ -44,7 +44,7 @@ export type LoggingConfiguration_Properties = {
   LoggingConfiguration: LoggingConfiguration;
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 /**
  * {@link
@@ -67,17 +67,19 @@ export type LogDestinationConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logtype}
    */
-  LogType: 'ALERT' | 'FLOW';
+  LogType: Resolvable<'ALERT' | 'FLOW'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestinationtype}
    */
-  LogDestinationType: 'S3' | 'CloudWatchLogs' | 'KinesisDataFirehose';
+  LogDestinationType: Resolvable<
+    'S3' | 'CloudWatchLogs' | 'KinesisDataFirehose'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html#cfn-networkfirewall-loggingconfiguration-logdestinationconfig-logdestination}
    */
   LogDestination: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
 };

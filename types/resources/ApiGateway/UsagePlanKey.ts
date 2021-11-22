@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::UsagePlanKey
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UsagePlanKey_Type = 'AWS::ApiGateway::UsagePlanKey';
 export const UsagePlanKey_Type = 'AWS::ApiGateway::UsagePlanKey';
@@ -22,16 +22,16 @@ export type UsagePlanKey_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid}
    */
-  KeyId: string;
+  KeyId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype}
    */
-  KeyType: 'API_KEY';
+  KeyType: Resolvable<'API_KEY'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid}
    */
-  UsagePlanId: string;
-  Id?: string;
+  UsagePlanId: Resolvable<string>;
+  Id?: Resolvable<string>;
 };

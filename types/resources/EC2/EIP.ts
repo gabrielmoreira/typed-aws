@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EIP
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EIP_Type = 'AWS::EC2::EIP';
 export const EIP_Type = 'AWS::EC2::EIP';
@@ -22,27 +22,27 @@ export type EIP_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-publicipv4pool}
    */
-  PublicIpv4Pool?: string;
-  Id?: string;
+  PublicIpv4Pool?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-domain}
    */
-  Domain?: string;
+  Domain?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-instanceid}
    */
-  InstanceId?: string;
+  InstanceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html#cfn-ec2-eip-tags}
    */
   Tags?: Tag[];
-  AllocationId?: string;
+  AllocationId?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

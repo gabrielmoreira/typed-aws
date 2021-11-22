@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::StackSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type StackSet_Type = 'AWS::CloudFormation::StackSet';
 export const StackSet_Type = 'AWS::CloudFormation::StackSet';
@@ -15,13 +15,13 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname}
        */
-      StackSetName?: string;
-      StackSetId?: string;
+      StackSetName?: Resolvable<string>;
+      StackSetId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-administrationrolearn}
        */
-      AdministrationRoleARN?: string;
+      AdministrationRoleARN?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment}
@@ -36,12 +36,12 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-description}
        */
-      Description?: string;
+      Description?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-executionrolename}
        */
-      ExecutionRoleName?: string;
+      ExecutionRoleName?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences}
@@ -61,7 +61,7 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel}
        */
-      PermissionModel?: 'SERVICE_MANAGED' | 'SELF_MANAGED';
+      PermissionModel?: Resolvable<'SERVICE_MANAGED' | 'SELF_MANAGED'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags}
@@ -71,17 +71,17 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templatebody}
        */
-      TemplateBody?: string;
+      TemplateBody?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templateurl}
        */
-      TemplateURL: string;
+      TemplateURL: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas}
        */
-      CallAs?: 'SELF' | 'DELEGATED_ADMIN';
+      CallAs?: Resolvable<'SELF' | 'DELEGATED_ADMIN'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-managedexecution}
@@ -95,13 +95,13 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-stacksetname}
        */
-      StackSetName?: string;
-      StackSetId?: string;
+      StackSetName?: Resolvable<string>;
+      StackSetId?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-administrationrolearn}
        */
-      AdministrationRoleARN?: string;
+      AdministrationRoleARN?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-autodeployment}
@@ -116,12 +116,12 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-description}
        */
-      Description?: string;
+      Description?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-executionrolename}
        */
-      ExecutionRoleName?: string;
+      ExecutionRoleName?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-operationpreferences}
@@ -141,7 +141,7 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-permissionmodel}
        */
-      PermissionModel?: 'SERVICE_MANAGED' | 'SELF_MANAGED';
+      PermissionModel?: Resolvable<'SERVICE_MANAGED' | 'SELF_MANAGED'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-tags}
@@ -151,17 +151,17 @@ export type StackSet_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templatebody}
        */
-      TemplateBody: string;
+      TemplateBody: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-templateurl}
        */
-      TemplateURL?: string;
+      TemplateURL?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-callas}
        */
-      CallAs?: 'SELF' | 'DELEGATED_ADMIN';
+      CallAs?: Resolvable<'SELF' | 'DELEGATED_ADMIN'>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html#cfn-cloudformation-stackset-managedexecution}
@@ -172,8 +172,8 @@ export type StackSet_Properties =
     };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -185,28 +185,27 @@ export type AutoDeployment = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-autodeployment.html#cfn-cloudformation-stackset-autodeployment-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-autodeployment.html#cfn-cloudformation-stackset-autodeployment-retainstacksonaccountremoval}
    */
-  RetainStacksOnAccountRemoval?: boolean;
+  RetainStacksOnAccountRemoval?: Resolvable<boolean>;
 };
 
-export type Account = string;
+export type Account = Resolvable<string>;
 
-export type Region = string;
+export type Region = Resolvable<string>;
 
-export type OrganizationalUnitId = string;
+export type OrganizationalUnitId = Resolvable<string>;
 
-export type Capability =
-  | 'CAPABILITY_IAM'
-  | 'CAPABILITY_NAMED_IAM'
-  | 'CAPABILITY_AUTO_EXPAND';
+export type Capability = Resolvable<
+  'CAPABILITY_IAM' | 'CAPABILITY_NAMED_IAM' | 'CAPABILITY_AUTO_EXPAND'
+>;
 
-export type RegionConcurrencyType = 'SEQUENTIAL' | 'PARALLEL';
+export type RegionConcurrencyType = Resolvable<'SEQUENTIAL' | 'PARALLEL'>;
 
-export type Active = boolean;
+export type Active = Resolvable<boolean>;
 
 /**
  * The user-specified preferences for how AWS CloudFormation performs a
@@ -218,22 +217,22 @@ export type OperationPreferences = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-failuretolerancecount}
    */
-  FailureToleranceCount?: number;
+  FailureToleranceCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-failuretolerancepercentage}
    */
-  FailureTolerancePercentage?: number;
+  FailureTolerancePercentage?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-maxconcurrentcount}
    */
-  MaxConcurrentCount?: number;
+  MaxConcurrentCount?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-maxconcurrentpercentage}
    */
-  MaxConcurrentPercentage?: number;
+  MaxConcurrentPercentage?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html#cfn-cloudformation-stackset-operationpreferences-regionorder}
@@ -255,12 +254,12 @@ export type Parameter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parameterkey}
    */
-  ParameterKey: string;
+  ParameterKey: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-parameter.html#cfn-cloudformation-stackset-parameter-parametervalue}
    */
-  ParameterValue: string;
+  ParameterValue: Resolvable<string>;
 };
 
 /**

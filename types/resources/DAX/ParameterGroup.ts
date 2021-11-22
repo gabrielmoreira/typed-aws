@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DAX::ParameterGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ParameterGroup_Type = 'AWS::DAX::ParameterGroup';
 export const ParameterGroup_Type = 'AWS::DAX::ParameterGroup';
@@ -29,11 +29,11 @@ export type ParameterGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-description}
    */
-  Description?: string;
-  Id?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html#cfn-dax-parametergroup-parametergroupname}
    */
-  ParameterGroupName?: string;
+  ParameterGroupName?: Resolvable<string>;
 };

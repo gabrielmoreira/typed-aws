@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Config::ConfigurationAggregator
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ConfigurationAggregator_Type =
   'AWS::Config::ConfigurationAggregator';
@@ -36,8 +36,8 @@ export type ConfigurationAggregator_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-configurationaggregatorname}
    */
-  ConfigurationAggregatorName?: string;
-  ConfigurationAggregatorArn?: string;
+  ConfigurationAggregatorName?: Resolvable<string>;
+  ConfigurationAggregatorArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-organizationaggregationsource}
@@ -59,17 +59,17 @@ export type AccountAggregationSource = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-allawsregions}
    */
-  AllAwsRegions?: boolean;
+  AllAwsRegions?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-awsregions}
    */
-  AwsRegions?: string[];
+  AwsRegions?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-accountids}
    */
-  AccountIds: string[];
+  AccountIds: Resolvable<string>[];
 };
 
 /**
@@ -81,20 +81,20 @@ export type OrganizationAggregationSource = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-allawsregions}
    */
-  AllAwsRegions?: boolean;
+  AllAwsRegions?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-awsregions}
    */
-  AwsRegions?: string[];
+  AwsRegions?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html#cfn-config-configurationaggregator-organizationaggregationsource-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

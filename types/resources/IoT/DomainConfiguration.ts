@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::DomainConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DomainConfiguration_Type = 'AWS::IoT::DomainConfiguration';
 export const DomainConfiguration_Type = 'AWS::IoT::DomainConfiguration';
@@ -27,7 +27,7 @@ export type DomainConfiguration_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainconfigurationname}
    */
-  DomainConfigurationName?: string;
+  DomainConfigurationName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-authorizerconfig}
@@ -37,29 +37,29 @@ export type DomainConfiguration_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainname}
    */
-  DomainName?: string;
+  DomainName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servercertificatearns}
    */
-  ServerCertificateArns?: string[];
+  ServerCertificateArns?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-servicetype}
    */
-  ServiceType?: 'DATA' | 'CREDENTIAL_PROVIDER' | 'JOBS';
+  ServiceType?: Resolvable<'DATA' | 'CREDENTIAL_PROVIDER' | 'JOBS'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-validationcertificatearn}
    */
-  ValidationCertificateArn?: string;
-  Arn?: string;
+  ValidationCertificateArn?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-domainconfigurationstatus}
    */
-  DomainConfigurationStatus?: 'ENABLED' | 'DISABLED';
-  DomainType?: 'ENDPOINT' | 'AWS_MANAGED' | 'CUSTOMER_MANAGED';
+  DomainConfigurationStatus?: Resolvable<'ENABLED' | 'DISABLED'>;
+  DomainType?: Resolvable<'ENDPOINT' | 'AWS_MANAGED' | 'CUSTOMER_MANAGED'>;
   ServerCertificates?: ServerCertificateSummary[];
   /**
    * {@link
@@ -77,12 +77,12 @@ export type AuthorizerConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-authorizerconfig.html#cfn-iot-domainconfiguration-authorizerconfig-allowauthorizeroverride}
    */
-  AllowAuthorizerOverride?: boolean;
+  AllowAuthorizerOverride?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-authorizerconfig.html#cfn-iot-domainconfiguration-authorizerconfig-defaultauthorizername}
    */
-  DefaultAuthorizerName?: string;
+  DefaultAuthorizerName?: Resolvable<string>;
 };
 
 /**
@@ -94,20 +94,20 @@ export type ServerCertificateSummary = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatearn}
    */
-  ServerCertificateArn?: string;
+  ServerCertificateArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatestatus}
    */
-  ServerCertificateStatus?: 'INVALID' | 'VALID';
+  ServerCertificateStatus?: Resolvable<'INVALID' | 'VALID'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificatesummary.html#cfn-iot-domainconfiguration-servercertificatesummary-servercertificatestatusdetail}
    */
-  ServerCertificateStatusDetail?: string;
+  ServerCertificateStatusDetail?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

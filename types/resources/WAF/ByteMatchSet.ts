@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAF::ByteMatchSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ByteMatchSet_Type = 'AWS::WAF::ByteMatchSet';
 export const ByteMatchSet_Type = 'AWS::WAF::ByteMatchSet';
@@ -18,7 +18,7 @@ export default function ByteMatchSet(props: ByteMatchSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html}
  */
 export type ByteMatchSet_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html#cfn-waf-bytematchset-bytematchtuples}
@@ -28,7 +28,7 @@ export type ByteMatchSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-bytematchset.html#cfn-waf-bytematchset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };
 
 /**
@@ -45,22 +45,22 @@ export type ByteMatchTuple = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples.html#cfn-waf-bytematchset-bytematchtuples-positionalconstraint}
    */
-  PositionalConstraint: string;
+  PositionalConstraint: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples.html#cfn-waf-bytematchset-bytematchtuples-targetstring}
    */
-  TargetString?: string;
+  TargetString?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples.html#cfn-waf-bytematchset-bytematchtuples-targetstringbase64}
    */
-  TargetStringBase64?: string;
+  TargetStringBase64?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples.html#cfn-waf-bytematchset-bytematchtuples-texttransformation}
    */
-  TextTransformation: string;
+  TextTransformation: Resolvable<string>;
 };
 
 /**
@@ -72,10 +72,10 @@ export type FieldToMatch = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-bytematchset-bytematchtuples-fieldtomatch-data}
    */
-  Data?: string;
+  Data?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.html#cfn-waf-bytematchset-bytematchtuples-fieldtomatch-type}
    */
-  Type: string;
+  Type: Resolvable<string>;
 };

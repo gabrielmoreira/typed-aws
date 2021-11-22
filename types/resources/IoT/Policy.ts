@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Policy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Policy_Type = 'AWS::IoT::Policy';
 export const Policy_Type = 'AWS::IoT::Policy';
@@ -18,8 +18,8 @@ export default function Policy(props: Policy_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html}
  */
 export type Policy_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policydocument}
@@ -31,5 +31,5 @@ export type Policy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html#cfn-iot-policy-policyname}
    */
-  PolicyName?: string;
+  PolicyName?: Resolvable<string>;
 };

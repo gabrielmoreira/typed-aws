@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::WAFv2::RegexPatternSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type RegexPatternSet_Type = 'AWS::WAFv2::RegexPatternSet';
 export const RegexPatternSet_Type = 'AWS::WAFv2::RegexPatternSet';
@@ -25,28 +25,28 @@ export default function RegexPatternSet(props: RegexPatternSet_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html}
  */
 export type RegexPatternSet_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html#cfn-wafv2-regexpatternset-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html#cfn-wafv2-regexpatternset-name}
    */
-  Name?: string;
-  Id?: string;
+  Name?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html#cfn-wafv2-regexpatternset-regularexpressionlist}
    */
-  RegularExpressionList: string[];
+  RegularExpressionList: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html#cfn-wafv2-regexpatternset-scope}
    */
-  Scope: 'CLOUDFRONT' | 'REGIONAL';
+  Scope: Resolvable<'CLOUDFRONT' | 'REGIONAL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html#cfn-wafv2-regexpatternset-tags}
@@ -55,6 +55,6 @@ export type RegexPatternSet_Properties = {
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };

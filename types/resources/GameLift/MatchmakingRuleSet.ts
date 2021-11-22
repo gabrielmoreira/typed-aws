@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::GameLift::MatchmakingRuleSet
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MatchmakingRuleSet_Type = 'AWS::GameLift::MatchmakingRuleSet';
 export const MatchmakingRuleSet_Type = 'AWS::GameLift::MatchmakingRuleSet';
@@ -27,12 +27,12 @@ export type MatchmakingRuleSet_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html#cfn-gamelift-matchmakingruleset-rulesetbody}
    */
-  RuleSetBody: string;
-  Id?: string;
-  Arn?: string;
+  RuleSetBody: Resolvable<string>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html#cfn-gamelift-matchmakingruleset-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::BasePathMapping
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BasePathMapping_Type = 'AWS::ApiGateway::BasePathMapping';
 export const BasePathMapping_Type = 'AWS::ApiGateway::BasePathMapping';
@@ -21,25 +21,25 @@ export default function BasePathMapping(props: BasePathMapping_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html}
  */
 export type BasePathMapping_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-basepath}
    */
-  BasePath?: string;
+  BasePath?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-domainname}
    */
-  DomainName: string;
+  DomainName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-restapiid}
    */
-  RestApiId?: string;
+  RestApiId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-stage}
    */
-  Stage?: string;
+  Stage?: Resolvable<string>;
 };

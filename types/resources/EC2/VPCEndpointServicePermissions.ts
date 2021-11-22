@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCEndpointServicePermissions
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPCEndpointServicePermissions_Type =
   'AWS::EC2::VPCEndpointServicePermissions';
@@ -27,15 +27,15 @@ export default function VPCEndpointServicePermissions(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html}
  */
 export type VPCEndpointServicePermissions_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html#cfn-ec2-vpcendpointservicepermissions-allowedprincipals}
    */
-  AllowedPrincipals?: string[];
+  AllowedPrincipals?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html#cfn-ec2-vpcendpointservicepermissions-serviceid}
    */
-  ServiceId: string;
+  ServiceId: Resolvable<string>;
 };

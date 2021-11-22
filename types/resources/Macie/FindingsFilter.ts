@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Macie::FindingsFilter
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FindingsFilter_Type = 'AWS::Macie::FindingsFilter';
 export const FindingsFilter_Type = 'AWS::Macie::FindingsFilter';
@@ -22,12 +22,12 @@ export type FindingsFilter_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-findingcriteria}
@@ -42,19 +42,19 @@ export type FindingsFilter_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html#cfn-macie-findingsfilter-position}
    */
-  Position?: number;
-  Id?: string;
-  Arn?: string;
+  Position?: Resolvable<number>;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   FindingsFilterListItems?: FindingsFilterListItem[];
 };
 
 export type CriterionAdditionalProperties = {
-  gt?: number;
-  gte?: number;
-  lt?: number;
-  lte?: number;
-  eq?: string[];
-  neq?: string[];
+  gt?: Resolvable<number>;
+  gte?: Resolvable<number>;
+  lt?: Resolvable<number>;
+  lte?: Resolvable<number>;
+  eq?: Resolvable<string>[];
+  neq?: Resolvable<string>[];
   [k: string]: unknown;
 };
 
@@ -87,7 +87,7 @@ export type FindingCriteria = {
   [k: string]: unknown;
 };
 
-export type FindingFilterAction = 'ARCHIVE' | 'NOOP';
+export type FindingFilterAction = Resolvable<'ARCHIVE' | 'NOOP'>;
 
 /**
  * Returned by ListHandler representing filter name and ID. {@link
@@ -98,12 +98,12 @@ export type FindingsFilterListItem = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-findingsfilterlistitem.html#cfn-macie-findingsfilter-findingsfilterlistitem-id}
    */
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-findingsfilterlistitem.html#cfn-macie-findingsfilter-findingsfilterlistitem-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-findingsfilter-findingsfilterlistitem.html}

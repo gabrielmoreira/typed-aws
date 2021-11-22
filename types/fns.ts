@@ -9,11 +9,19 @@ export function Base64(value: Resolvable<string>) {
   return new IntrinsicFunction('Fn::Base64', value);
 }
 
+export function Cidr(
+  ipBlock: Resolvable<string>,
+  count: Resolvable<string | number>,
+  cidrBits: Resolvable<string | number>
+): IntrinsicFunction {
+  return new IntrinsicFunction('Fn::Cidr', [ipBlock, count, cidrBits]);
+}
+
 export function FindInMap(
   mapName: Resolvable<string>,
   topLevelKey: Resolvable<string>,
   secondLevelKey: Resolvable<string>
-) {
+): IntrinsicFunction {
   return new IntrinsicFunction('Fn::FindInMap', [
     mapName,
     topLevelKey,
@@ -62,8 +70,9 @@ export function Split(
 
 export function Sub(
   string: Resolvable<string>,
-  vars: { [key: string]: Resolvable<unknown> }
+  vars?: { [key: string]: Resolvable<unknown> }
 ) {
+  if (!vars) return new IntrinsicFunction('Fn::Sub', string);
   return new IntrinsicFunction('Fn::Sub', [string, vars]);
 }
 
@@ -97,4 +106,20 @@ export function Not(condition: Condition) {
 
 export function Or(conditions: Resolvable<Condition[]>) {
   return new ConditionIntrinsicFunction('Fn::Or', conditions);
+}
+
+export function Condition(conditionName: Resolvable<string>) {
+  return new ConditionIntrinsicFunction('Condition', conditionName);
+}
+
+export function Transform(
+  name: string,
+  parameters?: { [key: string]: Resolvable<unknown> }
+) {
+  if (!parameters)
+    return new IntrinsicFunction('Fn::Transform', { Name: name });
+  return new IntrinsicFunction('Fn::Transform', {
+    Name: name,
+    Parameters: parameters,
+  });
 }

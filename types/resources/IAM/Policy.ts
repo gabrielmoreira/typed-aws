@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IAM::Policy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Policy_Type = 'AWS::IAM::Policy';
 export const Policy_Type = 'AWS::IAM::Policy';
@@ -18,12 +18,12 @@ export default function Policy(props: Policy_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html}
  */
 export type Policy_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-groups}
    */
-  Groups?: string[];
+  Groups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument}
@@ -35,15 +35,15 @@ export type Policy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policyname}
    */
-  PolicyName: string;
+  PolicyName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-roles}
    */
-  Roles?: string[];
+  Roles?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-users}
    */
-  Users?: string[];
+  Users?: Resolvable<string>[];
 };

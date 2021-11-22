@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayRouteTable
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayRouteTable_Type =
   'AWS::EC2::TransitGatewayRouteTable';
@@ -25,12 +25,12 @@ export default function TransitGatewayRouteTable(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetable.html}
  */
 export type TransitGatewayRouteTable_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetable.html#cfn-ec2-transitgatewayroutetable-transitgatewayid}
    */
-  TransitGatewayId: string;
+  TransitGatewayId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetable.html#cfn-ec2-transitgatewayroutetable-tags}
@@ -39,6 +39,6 @@ export type TransitGatewayRouteTable_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

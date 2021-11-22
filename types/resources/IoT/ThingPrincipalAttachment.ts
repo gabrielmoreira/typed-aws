@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::ThingPrincipalAttachment
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ThingPrincipalAttachment_Type =
   'AWS::IoT::ThingPrincipalAttachment';
@@ -25,15 +25,15 @@ export default function ThingPrincipalAttachment(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html}
  */
 export type ThingPrincipalAttachment_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-principal}
    */
-  Principal: string;
+  Principal: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingprincipalattachment.html#cfn-iot-thingprincipalattachment-thingname}
    */
-  ThingName: string;
+  ThingName: Resolvable<string>;
 };

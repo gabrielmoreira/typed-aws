@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::RDS::DBProxyEndpoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DBProxyEndpoint_Type = 'AWS::RDS::DBProxyEndpoint';
 export const DBProxyEndpoint_Type = 'AWS::RDS::DBProxyEndpoint';
@@ -25,31 +25,31 @@ export type DBProxyEndpoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-dbproxyendpointname}
    */
-  DBProxyEndpointName: string;
-  DBProxyEndpointArn?: string;
+  DBProxyEndpointName: Resolvable<string>;
+  DBProxyEndpointArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-dbproxyname}
    */
-  DBProxyName: string;
-  VpcId?: string;
+  DBProxyName: Resolvable<string>;
+  VpcId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-vpcsecuritygroupids}
    */
-  VpcSecurityGroupIds?: string[];
+  VpcSecurityGroupIds?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-vpcsubnetids}
    */
-  VpcSubnetIds: string[];
-  Endpoint?: string;
+  VpcSubnetIds: Resolvable<string>[];
+  Endpoint?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-targetrole}
    */
-  TargetRole?: 'READ_WRITE' | 'READ_ONLY';
-  IsDefault?: boolean;
+  TargetRole?: Resolvable<'READ_WRITE' | 'READ_ONLY'>;
+  IsDefault?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html#cfn-rds-dbproxyendpoint-tags}
@@ -66,10 +66,10 @@ export type TagFormat = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html#cfn-rds-dbproxyendpoint-tagformat-key}
    */
-  Key?: string;
+  Key?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html#cfn-rds-dbproxyendpoint-tagformat-value}
    */
-  Value?: string;
+  Value?: Resolvable<string>;
 };

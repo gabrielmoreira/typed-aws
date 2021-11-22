@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SDB::Domain
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Domain_Type = 'AWS::SDB::Domain';
 export const Domain_Type = 'AWS::SDB::Domain';
@@ -18,10 +18,10 @@ export default function Domain(props: Domain_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html}
  */
 export type Domain_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html#cfn-sdb-domain-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
 };

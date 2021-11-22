@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkFirewall::FirewallPolicy
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FirewallPolicy_Type = 'AWS::NetworkFirewall::FirewallPolicy';
 export const FirewallPolicy_Type = 'AWS::NetworkFirewall::FirewallPolicy';
@@ -24,19 +24,19 @@ export type FirewallPolicy_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicyname}
    */
-  FirewallPolicyName: string;
+  FirewallPolicyName: Resolvable<string>;
   FirewallPolicyArn?: ResourceArn;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy}
    */
   FirewallPolicy: FirewallPolicy;
-  FirewallPolicyId?: string;
+  FirewallPolicyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-tags}
@@ -44,11 +44,11 @@ export type FirewallPolicy_Properties = {
   Tags?: Tag[];
 };
 
-export type ResourceArn = string;
+export type ResourceArn = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -60,12 +60,12 @@ export type FirewallPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelessdefaultactions}
    */
-  StatelessDefaultActions: string[];
+  StatelessDefaultActions: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelessfragmentdefaultactions}
    */
-  StatelessFragmentDefaultActions: string[];
+  StatelessFragmentDefaultActions: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelesscustomactions}
@@ -85,7 +85,7 @@ export type FirewallPolicy = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions}
    */
-  StatefulDefaultActions?: string[];
+  StatefulDefaultActions?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulengineoptions}
@@ -102,7 +102,7 @@ export type CustomAction = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-customaction.html#cfn-networkfirewall-firewallpolicy-customaction-actionname}
    */
-  ActionName: string;
+  ActionName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-customaction.html#cfn-networkfirewall-firewallpolicy-customaction-actiondefinition}
@@ -143,7 +143,7 @@ export type Dimension = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-dimension.html#cfn-networkfirewall-firewallpolicy-dimension-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -180,7 +180,7 @@ export type StatelessRuleGroupReference = {
   Priority: Priority;
 };
 
-export type Priority = number;
+export type Priority = Resolvable<number>;
 
 /**
  * {@link
@@ -194,4 +194,4 @@ export type StatefulEngineOptions = {
   RuleOrder?: RuleOrder;
 };
 
-export type RuleOrder = 'DEFAULT_ACTION_ORDER' | 'STRICT_ORDER';
+export type RuleOrder = Resolvable<'DEFAULT_ACTION_ORDER' | 'STRICT_ORDER'>;

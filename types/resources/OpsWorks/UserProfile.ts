@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::OpsWorks::UserProfile
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type UserProfile_Type = 'AWS::OpsWorks::UserProfile';
 export const UserProfile_Type = 'AWS::OpsWorks::UserProfile';
@@ -18,25 +18,25 @@ export default function UserProfile(props: UserProfile_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html}
  */
 export type UserProfile_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername}
    */
-  SshUsername?: string;
+  SshUsername?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement}
    */
-  AllowSelfManagement?: boolean;
+  AllowSelfManagement?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn}
    */
-  IamUserArn: string;
+  IamUserArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey}
    */
-  SshPublicKey?: string;
+  SshPublicKey?: Resolvable<string>;
 };

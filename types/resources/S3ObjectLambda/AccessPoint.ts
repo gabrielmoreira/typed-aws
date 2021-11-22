@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3ObjectLambda::AccessPoint
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type AccessPoint_Type = 'AWS::S3ObjectLambda::AccessPoint';
 export const AccessPoint_Type = 'AWS::S3ObjectLambda::AccessPoint';
@@ -26,12 +26,12 @@ export type AccessPoint_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html#cfn-s3objectlambda-accesspoint-name}
    */
-  Name?: string;
-  Arn?: string;
-  CreationDate?: string;
+  Name?: Resolvable<string>;
+  Arn?: Resolvable<string>;
+  CreationDate?: Resolvable<string>;
   PublicAccessBlockConfiguration?: PublicAccessBlockConfiguration;
   PolicyStatus?: {
-    IsPublic?: boolean;
+    IsPublic?: Resolvable<boolean>;
   };
   /**
    * {@link
@@ -41,10 +41,10 @@ export type AccessPoint_Properties = {
 };
 
 export type PublicAccessBlockConfiguration = {
-  BlockPublicAcls?: boolean;
-  IgnorePublicAcls?: boolean;
-  BlockPublicPolicy?: boolean;
-  RestrictPublicBuckets?: boolean;
+  BlockPublicAcls?: Resolvable<boolean>;
+  IgnorePublicAcls?: Resolvable<boolean>;
+  BlockPublicPolicy?: Resolvable<boolean>;
+  RestrictPublicBuckets?: Resolvable<boolean>;
 };
 
 /**
@@ -60,17 +60,17 @@ export type ObjectLambdaConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-supportingaccesspoint}
    */
-  SupportingAccessPoint: string;
+  SupportingAccessPoint: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-allowedfeatures}
    */
-  AllowedFeatures?: string[];
+  AllowedFeatures?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-cloudwatchmetricsenabled}
    */
-  CloudWatchMetricsEnabled?: boolean;
+  CloudWatchMetricsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.html#cfn-s3objectlambda-accesspoint-objectlambdaconfiguration-transformationconfigurations}
@@ -99,8 +99,8 @@ export type TransformationConfiguration = {
 };
 
 export type AwsLambda = {
-  FunctionArn: string;
-  FunctionPayload?: string;
+  FunctionArn: Resolvable<string>;
+  FunctionPayload?: Resolvable<string>;
 };
 
-export type Action = string;
+export type Action = Resolvable<string>;

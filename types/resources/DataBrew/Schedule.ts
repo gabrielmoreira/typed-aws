@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::DataBrew::Schedule
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Schedule_Type = 'AWS::DataBrew::Schedule';
 export const Schedule_Type = 'AWS::DataBrew::Schedule';
@@ -27,12 +27,12 @@ export type Schedule_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-cronexpression}
    */
-  CronExpression: string;
+  CronExpression: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html#cfn-databrew-schedule-tags}
@@ -40,9 +40,9 @@ export type Schedule_Properties = {
   Tags?: Tag[];
 };
 
-export type JobName = string;
+export type JobName = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceDiscovery::Instance
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Instance_Type = 'AWS::ServiceDiscovery::Instance';
 export const Instance_Type = 'AWS::ServiceDiscovery::Instance';
@@ -29,10 +29,10 @@ export type Instance_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-instanceid}
    */
-  InstanceId?: string;
+  InstanceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html#cfn-servicediscovery-instance-serviceid}
    */
-  ServiceId: string;
+  ServiceId: Resolvable<string>;
 };

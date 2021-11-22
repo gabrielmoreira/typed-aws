@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Greengrass::GroupVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GroupVersion_Type = 'AWS::Greengrass::GroupVersion';
 export const GroupVersion_Type = 'AWS::Greengrass::GroupVersion';
@@ -18,45 +18,45 @@ export default function GroupVersion(props: GroupVersion_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html}
  */
 export type GroupVersion_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-loggerdefinitionversionarn}
    */
-  LoggerDefinitionVersionArn?: string;
+  LoggerDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-devicedefinitionversionarn}
    */
-  DeviceDefinitionVersionArn?: string;
+  DeviceDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-functiondefinitionversionarn}
    */
-  FunctionDefinitionVersionArn?: string;
+  FunctionDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-coredefinitionversionarn}
    */
-  CoreDefinitionVersionArn?: string;
+  CoreDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-resourcedefinitionversionarn}
    */
-  ResourceDefinitionVersionArn?: string;
+  ResourceDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-connectordefinitionversionarn}
    */
-  ConnectorDefinitionVersionArn?: string;
+  ConnectorDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-subscriptiondefinitionversionarn}
    */
-  SubscriptionDefinitionVersionArn?: string;
+  SubscriptionDefinitionVersionArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html#cfn-greengrass-groupversion-groupid}
    */
-  GroupId: string;
+  GroupId: Resolvable<string>;
 };

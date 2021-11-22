@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EFS::MountTarget
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type MountTarget_Type = 'AWS::EFS::MountTarget';
 export const MountTarget_Type = 'AWS::EFS::MountTarget';
@@ -18,25 +18,25 @@ export default function MountTarget(props: MountTarget_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html}
  */
 export type MountTarget_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-ipaddress}
    */
-  IpAddress?: string;
+  IpAddress?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-filesystemid}
    */
-  FileSystemId: string;
+  FileSystemId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-securitygroups}
    */
-  SecurityGroups: string[];
+  SecurityGroups: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html#cfn-efs-mounttarget-subnetid}
    */
-  SubnetId: string;
+  SubnetId: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::Account
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Account_Type = 'AWS::ApiGateway::Account';
 export const Account_Type = 'AWS::ApiGateway::Account';
@@ -18,10 +18,10 @@ export default function Account(props: Account_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html}
  */
 export type Account_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-account.html#cfn-apigateway-account-cloudwatchrolearn}
    */
-  CloudWatchRoleArn?: string;
+  CloudWatchRoleArn?: Resolvable<string>;
 };

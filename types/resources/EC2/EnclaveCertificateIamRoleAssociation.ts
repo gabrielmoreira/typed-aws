@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::EnclaveCertificateIamRoleAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type EnclaveCertificateIamRoleAssociation_Type =
   'AWS::EC2::EnclaveCertificateIamRoleAssociation';
@@ -35,13 +35,13 @@ export type EnclaveCertificateIamRoleAssociation_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html#cfn-ec2-enclavecertificateiamroleassociation-certificatearn}
    */
-  CertificateArn: string;
+  CertificateArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html#cfn-ec2-enclavecertificateiamroleassociation-rolearn}
    */
-  RoleArn: string;
-  CertificateS3BucketName?: string;
-  CertificateS3ObjectKey?: string;
-  EncryptionKmsKeyId?: string;
+  RoleArn: Resolvable<string>;
+  CertificateS3BucketName?: Resolvable<string>;
+  CertificateS3ObjectKey?: Resolvable<string>;
+  EncryptionKmsKeyId?: Resolvable<string>;
 };

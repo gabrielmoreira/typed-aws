@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::Publisher
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Publisher_Type = 'AWS::CloudFormation::Publisher';
 export const Publisher_Type = 'AWS::CloudFormation::Publisher';
@@ -22,14 +22,14 @@ export type Publisher_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html#cfn-cloudformation-publisher-accepttermsandconditions}
    */
-  AcceptTermsAndConditions: boolean;
-  PublisherId?: string;
+  AcceptTermsAndConditions: Resolvable<boolean>;
+  PublisherId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html#cfn-cloudformation-publisher-connectionarn}
    */
-  ConnectionArn?: string;
-  PublisherStatus?: 'VERIFIED' | 'UNVERIFIED';
-  PublisherProfile?: string;
-  IdentityProvider?: 'AWS_Marketplace' | 'GitHub' | 'Bitbucket';
+  ConnectionArn?: Resolvable<string>;
+  PublisherStatus?: Resolvable<'VERIFIED' | 'UNVERIFIED'>;
+  PublisherProfile?: Resolvable<string>;
+  IdentityProvider?: Resolvable<'AWS_Marketplace' | 'GitHub' | 'Bitbucket'>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53::HostedZone
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type HostedZone_Type = 'AWS::Route53::HostedZone';
 export const HostedZone_Type = 'AWS::Route53::HostedZone';
@@ -18,7 +18,7 @@ export default function HostedZone(props: HostedZone_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html}
  */
 export type HostedZone_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzoneconfig}
@@ -33,7 +33,7 @@ export type HostedZone_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-queryloggingconfig}
@@ -44,7 +44,7 @@ export type HostedZone_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs}
    */
   VPCs?: VPC[];
-  NameServers?: string[];
+  NameServers?: Resolvable<string>[];
 };
 
 /**
@@ -58,7 +58,7 @@ export type HostedZoneConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment}
    */
-  Comment?: string;
+  Comment?: Resolvable<string>;
 };
 
 /**
@@ -71,12 +71,12 @@ export type HostedZoneTag = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html#cfn-route53-hostedzone-hostedzonetag-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -89,7 +89,7 @@ export type QueryLoggingConfig = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn}
    */
-  CloudWatchLogsLogGroupArn: string;
+  CloudWatchLogsLogGroupArn: Resolvable<string>;
 };
 
 /**
@@ -103,10 +103,10 @@ export type VPC = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-vpc.html#cfn-route53-hostedzone-vpc-vpcid}
    */
-  VPCId: string;
+  VPCId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-vpc.html#cfn-route53-hostedzone-vpc-vpcregion}
    */
-  VPCRegion: string;
+  VPCRegion: Resolvable<string>;
 };

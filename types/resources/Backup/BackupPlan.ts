@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Backup::BackupPlan
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BackupPlan_Type = 'AWS::Backup::BackupPlan';
 export const BackupPlan_Type = 'AWS::Backup::BackupPlan';
@@ -28,11 +28,11 @@ export type BackupPlan_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags}
    */
   BackupPlanTags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
-  BackupPlanArn?: string;
-  BackupPlanId?: string;
-  VersionId?: string;
+  BackupPlanArn?: Resolvable<string>;
+  BackupPlanId?: Resolvable<string>;
+  VersionId?: Resolvable<string>;
 };
 
 /**
@@ -44,7 +44,7 @@ export type BackupPlanResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-backupplanname}
    */
-  BackupPlanName: string;
+  BackupPlanName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html#cfn-backup-backupplan-backupplanresourcetype-advancedbackupsettings}
@@ -66,33 +66,33 @@ export type BackupRuleResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-rulename}
    */
-  RuleName: string;
+  RuleName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-targetbackupvault}
    */
-  TargetBackupVault: string;
+  TargetBackupVault: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes}
    */
-  StartWindowMinutes?: number;
+  StartWindowMinutes?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes}
    */
-  CompletionWindowMinutes?: number;
+  CompletionWindowMinutes?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression}
    */
-  ScheduleExpression?: string;
+  ScheduleExpression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags}
    */
   RecoveryPointTags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
@@ -108,7 +108,7 @@ export type BackupRuleResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup}
    */
-  EnableContinuousBackup?: boolean;
+  EnableContinuousBackup?: Resolvable<boolean>;
 };
 
 /**
@@ -127,7 +127,7 @@ export type AdvancedBackupSettingResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-advancedbackupsettingresourcetype.html#cfn-backup-backupplan-advancedbackupsettingresourcetype-resourcetype}
    */
-  ResourceType: string;
+  ResourceType: Resolvable<string>;
 };
 
 /**
@@ -144,7 +144,7 @@ export type CopyActionResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn}
    */
-  DestinationBackupVaultArn: string;
+  DestinationBackupVaultArn: Resolvable<string>;
 };
 
 /**
@@ -156,10 +156,10 @@ export type LifecycleResourceType = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-movetocoldstorageafterdays}
    */
-  MoveToColdStorageAfterDays?: number;
+  MoveToColdStorageAfterDays?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-deleteafterdays}
    */
-  DeleteAfterDays?: number;
+  DeleteAfterDays?: Resolvable<number>;
 };

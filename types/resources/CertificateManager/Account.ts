@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CertificateManager::Account
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Account_Type = 'AWS::CertificateManager::Account';
 export const Account_Type = 'AWS::CertificateManager::Account';
@@ -35,7 +35,7 @@ export type ExpiryEventsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-account-expiryeventsconfiguration.html#cfn-certificatemanager-account-expiryeventsconfiguration-daysbeforeexpiry}
    */
-  DaysBeforeExpiry?: number;
+  DaysBeforeExpiry?: Resolvable<number>;
 };
 
-export type AccountId = string;
+export type AccountId = Resolvable<string>;

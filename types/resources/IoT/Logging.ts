@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::Logging
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Logging_Type = 'AWS::IoT::Logging';
 export const Logging_Type = 'AWS::IoT::Logging';
@@ -26,15 +26,15 @@ export type Logging_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html#cfn-iot-logging-accountid}
    */
-  AccountId: string;
+  AccountId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html#cfn-iot-logging-rolearn}
    */
-  RoleArn: string;
+  RoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html#cfn-iot-logging-defaultloglevel}
    */
-  DefaultLogLevel: 'ERROR' | 'WARN' | 'INFO' | 'DEBUG' | 'DISABLED';
+  DefaultLogLevel: Resolvable<'ERROR' | 'WARN' | 'INFO' | 'DEBUG' | 'DISABLED'>;
 };

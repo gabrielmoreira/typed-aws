@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::TagOption
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TagOption_Type = 'AWS::ServiceCatalog::TagOption';
 export const TagOption_Type = 'AWS::ServiceCatalog::TagOption';
@@ -18,20 +18,20 @@ export default function TagOption(props: TagOption_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html}
  */
 export type TagOption_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-active}
    */
-  Active?: boolean;
+  Active?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html#cfn-servicecatalog-tagoption-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Athena::WorkGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type WorkGroup_Type = 'AWS::Athena::WorkGroup';
 export const WorkGroup_Type = 'AWS::Athena::WorkGroup';
@@ -22,12 +22,12 @@ export type WorkGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-tags}
@@ -43,29 +43,29 @@ export type WorkGroup_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-workgroupconfigurationupdates}
    */
   WorkGroupConfigurationUpdates?: WorkGroupConfigurationUpdates;
-  CreationTime?: string;
+  CreationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-state}
    */
-  State?: 'ENABLED' | 'DISABLED';
+  State?: Resolvable<'ENABLED' | 'DISABLED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-recursivedeleteoption}
    */
-  RecursiveDeleteOption?: boolean;
+  RecursiveDeleteOption?: Resolvable<boolean>;
 };
 
 export type Tags = Tag[];
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
-export type SelectedEngineVersion = string;
+export type SelectedEngineVersion = Resolvable<string>;
 
-export type EffectiveEngineVersion = string;
+export type EffectiveEngineVersion = Resolvable<string>;
 
 /**
  * The Athena engine version for running queries. {@link
@@ -84,21 +84,21 @@ export type EngineVersion = {
   EffectiveEngineVersion?: EffectiveEngineVersion;
 };
 
-export type BytesScannedCutoffPerQuery = number;
+export type BytesScannedCutoffPerQuery = Resolvable<number>;
 
-export type EnforceWorkGroupConfiguration = boolean;
+export type EnforceWorkGroupConfiguration = Resolvable<boolean>;
 
-export type PublishCloudWatchMetricsEnabled = boolean;
+export type PublishCloudWatchMetricsEnabled = Resolvable<boolean>;
 
-export type RequesterPaysEnabled = boolean;
+export type RequesterPaysEnabled = Resolvable<boolean>;
 
-export type OutputLocation = string;
+export type OutputLocation = Resolvable<string>;
 
-export type KmsKey = string;
+export type KmsKey = Resolvable<string>;
 
-export type EncryptionOption = 'SSE_S3' | 'SSE_KMS' | 'CSE_KMS';
+export type EncryptionOption = Resolvable<'SSE_S3' | 'SSE_KMS' | 'CSE_KMS'>;
 
-export type RemoveBytesScannedCutoffPerQuery = boolean;
+export type RemoveBytesScannedCutoffPerQuery = Resolvable<boolean>;
 
 /**
  * If query results are encrypted in Amazon S3, indicates the encryption
@@ -119,9 +119,9 @@ export type EncryptionConfiguration = {
   KmsKey?: KmsKey;
 };
 
-export type RemoveEncryptionConfiguration = boolean;
+export type RemoveEncryptionConfiguration = Resolvable<boolean>;
 
-export type RemoveOutputLocation = boolean;
+export type RemoveOutputLocation = Resolvable<boolean>;
 
 /**
  * The location in Amazon S3 where query results are stored and the

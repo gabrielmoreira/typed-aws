@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::ParameterGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ParameterGroup_Type = 'AWS::ElastiCache::ParameterGroup';
 export const ParameterGroup_Type = 'AWS::ElastiCache::ParameterGroup';
@@ -22,8 +22,8 @@ export type ParameterGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-description}
    */
-  Description: string;
-  Id?: string;
+  Description: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-properties}
@@ -40,10 +40,10 @@ export type ParameterGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-cacheparametergroupfamily}
    */
-  CacheParameterGroupFamily: string;
+  CacheParameterGroupFamily: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

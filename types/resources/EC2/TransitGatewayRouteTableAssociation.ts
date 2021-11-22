@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::TransitGatewayRouteTableAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayRouteTableAssociation_Type =
   'AWS::EC2::TransitGatewayRouteTableAssociation';
@@ -27,15 +27,15 @@ export default function TransitGatewayRouteTableAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html}
  */
 export type TransitGatewayRouteTableAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html#cfn-ec2-transitgatewayroutetableassociation-transitgatewayroutetableid}
    */
-  TransitGatewayRouteTableId: string;
+  TransitGatewayRouteTableId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html#cfn-ec2-transitgatewayroutetableassociation-transitgatewayattachmentid}
    */
-  TransitGatewayAttachmentId: string;
+  TransitGatewayAttachmentId: Resolvable<string>;
 };

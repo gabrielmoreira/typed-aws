@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ApiGateway::GatewayResponse
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GatewayResponse_Type = 'AWS::ApiGateway::GatewayResponse';
 export const GatewayResponse_Type = 'AWS::ApiGateway::GatewayResponse';
@@ -21,34 +21,34 @@ export default function GatewayResponse(props: GatewayResponse_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html}
  */
 export type GatewayResponse_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-restapiid}
    */
-  RestApiId: string;
+  RestApiId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responsetype}
    */
-  ResponseType: string;
+  ResponseType: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-statuscode}
    */
-  StatusCode?: string;
+  StatusCode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responseparameters}
    */
   ResponseParameters?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html#cfn-apigateway-gatewayresponse-responsetemplates}
    */
   ResponseTemplates?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
 };

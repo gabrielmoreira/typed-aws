@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::ApiKey
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ApiKey_Type = 'AWS::AppSync::ApiKey';
 export const ApiKey_Type = 'AWS::AppSync::ApiKey';
@@ -18,26 +18,26 @@ export default function ApiKey(props: ApiKey_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html}
  */
 export type ApiKey_Properties = {
-  ApiKey?: string;
+  ApiKey?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apikeyid}
    */
-  ApiKeyId?: string;
+  ApiKeyId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires}
    */
-  Expires?: number;
-  Arn?: string;
+  Expires?: Resolvable<number>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
 };

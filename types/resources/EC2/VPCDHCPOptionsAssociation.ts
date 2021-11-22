@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCDHCPOptionsAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPCDHCPOptionsAssociation_Type =
   'AWS::EC2::VPCDHCPOptionsAssociation';
@@ -27,15 +27,15 @@ export default function VPCDHCPOptionsAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html}
  */
 export type VPCDHCPOptionsAssociation_Properties = {
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid}
    */
-  DhcpOptionsId: string;
+  DhcpOptionsId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-dhcp-options-assoc.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
 };

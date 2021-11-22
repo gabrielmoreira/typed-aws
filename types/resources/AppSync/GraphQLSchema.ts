@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::AppSync::GraphQLSchema
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type GraphQLSchema_Type = 'AWS::AppSync::GraphQLSchema';
 export const GraphQLSchema_Type = 'AWS::AppSync::GraphQLSchema';
@@ -22,16 +22,16 @@ export type GraphQLSchema_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-definition}
    */
-  Definition?: string;
+  Definition?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-definitions3location}
    */
-  DefinitionS3Location?: string;
-  Id?: string;
+  DefinitionS3Location?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html#cfn-appsync-graphqlschema-apiid}
    */
-  ApiId: string;
+  ApiId: Resolvable<string>;
 };

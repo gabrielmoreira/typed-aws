@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::KMS::ReplicaKey
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ReplicaKey_Type = 'AWS::KMS::ReplicaKey';
 export const ReplicaKey_Type = 'AWS::KMS::ReplicaKey';
@@ -26,17 +26,17 @@ export type ReplicaKey_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-primarykeyarn}
    */
-  PrimaryKeyArn: string;
+  PrimaryKeyArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-enabled}
    */
-  Enabled?: boolean;
+  Enabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-keypolicy}
@@ -45,22 +45,22 @@ export type ReplicaKey_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-pendingwindowindays}
    */
-  PendingWindowInDays?: number;
+  PendingWindowInDays?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html#cfn-kms-replicakey-tags}
    */
   Tags?: Tag[];
-  Arn?: string;
-  KeyId?: string;
+  Arn?: Resolvable<string>;
+  KeyId?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

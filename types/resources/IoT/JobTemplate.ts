@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::IoT::JobTemplate
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type JobTemplate_Type = 'AWS::IoT::JobTemplate';
 export const JobTemplate_Type = 'AWS::IoT::JobTemplate';
@@ -20,32 +20,32 @@ export default function JobTemplate(props: JobTemplate_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html}
  */
 export type JobTemplate_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-jobarn}
    */
-  JobArn?: string;
+  JobArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-jobtemplateid}
    */
-  JobTemplateId: string;
+  JobTemplateId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-description}
    */
-  Description: string;
+  Description: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-document}
    */
-  Document?: string;
+  Document?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-documentsource}
    */
-  DocumentSource?: string;
+  DocumentSource?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html#cfn-iot-jobtemplate-timeoutconfig}
@@ -91,20 +91,20 @@ export type ExponentialRolloutRate = {
   };
 };
 
-export type BaseRatePerMinute = number;
+export type BaseRatePerMinute = Resolvable<number>;
 
-export type IncrementFactor = number;
+export type IncrementFactor = Resolvable<number>;
 
 export type RateIncreaseCriteria = {
   NumberOfNotifiedThings?: NumberOfNotifiedThings;
   NumberOfSucceededThings?: NumberOfSucceededThings;
 };
 
-export type NumberOfNotifiedThings = number;
+export type NumberOfNotifiedThings = Resolvable<number>;
 
-export type NumberOfSucceededThings = number;
+export type NumberOfSucceededThings = Resolvable<number>;
 
-export type MaximumPerMinute = number;
+export type MaximumPerMinute = Resolvable<number>;
 
 export type AbortCriteria = {
   Action: Action;
@@ -113,21 +113,23 @@ export type AbortCriteria = {
   ThresholdPercentage: ThresholdPercentage;
 };
 
-export type Action = 'CANCEL';
+export type Action = Resolvable<'CANCEL'>;
 
-export type FailureType = 'FAILED' | 'REJECTED' | 'TIMED_OUT' | 'ALL';
+export type FailureType = Resolvable<
+  'FAILED' | 'REJECTED' | 'TIMED_OUT' | 'ALL'
+>;
 
-export type MinNumberOfExecutedThings = number;
+export type MinNumberOfExecutedThings = Resolvable<number>;
 
-export type ThresholdPercentage = number;
+export type ThresholdPercentage = Resolvable<number>;
 
-export type InProgressTimeoutInMinutes = number;
+export type InProgressTimeoutInMinutes = Resolvable<number>;
 
-export type RoleArn = string;
+export type RoleArn = Resolvable<string>;
 
-export type ExpiresInSec = number;
+export type ExpiresInSec = Resolvable<number>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::ModelPackageGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ModelPackageGroup_Type = 'AWS::SageMaker::ModelPackageGroup';
 export const ModelPackageGroup_Type = 'AWS::SageMaker::ModelPackageGroup';
@@ -45,24 +45,25 @@ export type ModelPackageGroup_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
-  CreationTime?: string;
-  ModelPackageGroupStatus?:
+    | Resolvable<string>;
+  CreationTime?: Resolvable<string>;
+  ModelPackageGroupStatus?: Resolvable<
     | 'Pending'
     | 'InProgress'
     | 'Completed'
     | 'Failed'
     | 'Deleting'
-    | 'DeleteFailed';
+    | 'DeleteFailed'
+  >;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
-export type ModelPackageGroupDescription = string;
+export type ModelPackageGroupDescription = Resolvable<string>;
 
-export type ModelPackageGroupName = string;
+export type ModelPackageGroupName = Resolvable<string>;
 
-export type ModelPackageGroupArn = string;
+export type ModelPackageGroupArn = Resolvable<string>;

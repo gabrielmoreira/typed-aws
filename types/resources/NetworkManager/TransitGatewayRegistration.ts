@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::NetworkManager::TransitGatewayRegistration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type TransitGatewayRegistration_Type =
   'AWS::NetworkManager::TransitGatewayRegistration';
@@ -37,10 +37,10 @@ export type TransitGatewayRegistration_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-globalnetworkid}
    */
-  GlobalNetworkId: string;
+  GlobalNetworkId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-transitgatewayarn}
    */
-  TransitGatewayArn: string;
+  TransitGatewayArn: Resolvable<string>;
 };

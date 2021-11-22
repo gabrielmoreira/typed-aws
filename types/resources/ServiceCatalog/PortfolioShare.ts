@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ServiceCatalog::PortfolioShare
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type PortfolioShare_Type = 'AWS::ServiceCatalog::PortfolioShare';
 export const PortfolioShare_Type = 'AWS::ServiceCatalog::PortfolioShare';
@@ -24,21 +24,21 @@ export type PortfolioShare_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-acceptlanguage}
    */
-  AcceptLanguage?: string;
+  AcceptLanguage?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-portfolioid}
    */
-  PortfolioId: string;
+  PortfolioId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-accountid}
    */
-  AccountId: string;
+  AccountId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html#cfn-servicecatalog-portfolioshare-sharetagoptions}
    */
-  ShareTagOptions?: boolean;
-  Id?: string;
+  ShareTagOptions?: Resolvable<boolean>;
+  Id?: Resolvable<string>;
 };

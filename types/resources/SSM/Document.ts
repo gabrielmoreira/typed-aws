@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::Document
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Document_Type = 'AWS::SSM::Document';
 export const Document_Type = 'AWS::SSM::Document';
@@ -30,7 +30,7 @@ export type Document_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-attachments}
@@ -40,17 +40,17 @@ export type Document_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-versionname}
    */
-  VersionName?: string;
+  VersionName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-documenttype}
    */
-  DocumentType?:
+  DocumentType?: Resolvable<
     | 'ApplicationConfiguration'
     | 'ApplicationConfigurationSchema'
     | 'Automation'
@@ -63,17 +63,18 @@ export type Document_Properties = {
     | 'Policy'
     | 'ProblemAnalysis'
     | 'ProblemAnalysisTemplate'
-    | 'Session';
+    | 'Session'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-documentformat}
    */
-  DocumentFormat?: 'YAML' | 'JSON' | 'TEXT';
+  DocumentFormat?: Resolvable<'YAML' | 'JSON' | 'TEXT'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-targettype}
    */
-  TargetType?: string;
+  TargetType?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-tags}
@@ -95,22 +96,22 @@ export type AttachmentsSource = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-attachmentssource.html#cfn-ssm-document-attachmentssource-key}
    */
-  Key?: 'SourceUrl' | 'S3FileUrl' | 'AttachmentReference';
+  Key?: Resolvable<'SourceUrl' | 'S3FileUrl' | 'AttachmentReference'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-attachmentssource.html#cfn-ssm-document-attachmentssource-values}
    */
-  Values?: string[];
+  Values?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-attachmentssource.html#cfn-ssm-document-attachmentssource-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
 };
 
 export type Tag = {
-  Key?: string;
-  Value?: string;
+  Key?: Resolvable<string>;
+  Value?: Resolvable<string>;
 };
 
 /**
@@ -122,10 +123,10 @@ export type DocumentRequires = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-documentrequires.html#cfn-ssm-document-documentrequires-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-documentrequires.html#cfn-ssm-document-documentrequires-version}
    */
-  Version?: string;
+  Version?: Resolvable<string>;
 };

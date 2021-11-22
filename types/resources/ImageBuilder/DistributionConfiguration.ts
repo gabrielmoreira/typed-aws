@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ImageBuilder::DistributionConfiguration
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type DistributionConfiguration_Type =
   'AWS::ImageBuilder::DistributionConfiguration';
@@ -27,17 +27,17 @@ export default function DistributionConfiguration(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html}
  */
 export type DistributionConfiguration_Properties = {
-  Arn?: string;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-distributions}
@@ -48,7 +48,7 @@ export type DistributionConfiguration_Properties = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html#cfn-imagebuilder-distributionconfiguration-tags}
    */
   Tags?: {
-    [k: string]: string;
+    [k: string]: Resolvable<string>;
   };
 };
 
@@ -61,22 +61,22 @@ export type Distribution = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-region}
    */
-  Region: string;
+  Region: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration}
    */
   AmiDistributionConfiguration?: {
-    Name?: string;
-    KmsKeyId?: string;
-    Description?: string;
+    Name?: Resolvable<string>;
+    KmsKeyId?: Resolvable<string>;
+    Description?: Resolvable<string>;
     AmiTags?: {
-      [k: string]: string;
+      [k: string]: Resolvable<string>;
     };
-    TargetAccountIds?: string[];
+    TargetAccountIds?: Resolvable<string>[];
     LaunchPermissionConfiguration?: {
-      UserIds?: string[];
-      UserGroups?: string[];
+      UserIds?: Resolvable<string>[];
+      UserGroups?: Resolvable<string>[];
     };
   };
   /**
@@ -84,8 +84,8 @@ export type Distribution = {
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration}
    */
   ContainerDistributionConfiguration?: {
-    Description?: string;
-    ContainerTags?: string[];
+    Description?: Resolvable<string>;
+    ContainerTags?: Resolvable<string>[];
     TargetRepository?: TargetContainerRepository;
   };
   /**
@@ -110,22 +110,22 @@ export type LaunchTemplateConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.html#cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-launchtemplateid}
    */
-  LaunchTemplateId?: string;
+  LaunchTemplateId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.html#cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-accountid}
    */
-  AccountId?: string;
+  AccountId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.html#cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-setdefaultversion}
    */
-  SetDefaultVersion?: boolean;
+  SetDefaultVersion?: Resolvable<boolean>;
 };
 
-export type LicenseConfigurationArn = string;
+export type LicenseConfigurationArn = Resolvable<string>;
 
 export type TargetContainerRepository = {
-  Service?: 'ECR';
-  RepositoryName?: string;
+  Service?: Resolvable<'ECR'>;
+  RepositoryName?: Resolvable<string>;
 };

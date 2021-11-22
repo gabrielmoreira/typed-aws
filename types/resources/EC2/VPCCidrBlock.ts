@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EC2::VPCCidrBlock
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type VPCCidrBlock_Type = 'AWS::EC2::VPCCidrBlock';
 export const VPCCidrBlock_Type = 'AWS::EC2::VPCCidrBlock';
@@ -22,26 +22,26 @@ export type VPCCidrBlock_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-cidrblock}
    */
-  CidrBlock?: string;
+  CidrBlock?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6pool}
    */
-  Ipv6Pool?: string;
-  Id?: string;
+  Ipv6Pool?: Resolvable<string>;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-ipv6cidrblock}
    */
-  Ipv6CidrBlock?: string;
+  Ipv6CidrBlock?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock}
    */
-  AmazonProvidedIpv6CidrBlock?: boolean;
+  AmazonProvidedIpv6CidrBlock?: Resolvable<boolean>;
 };

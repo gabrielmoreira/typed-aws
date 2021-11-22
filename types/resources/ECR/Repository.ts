@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ECR::Repository
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Repository_Type = 'AWS::ECR::Repository';
 export const Repository_Type = 'AWS::ECR::Repository';
@@ -35,7 +35,7 @@ export type Repository_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositoryname}
    */
-  RepositoryName?: string;
+  RepositoryName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositorypolicytext}
@@ -44,19 +44,19 @@ export type Repository_Properties = {
     | {
         [k: string]: unknown;
       }
-    | string;
+    | Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-tags}
    */
   Tags?: Tag[];
-  Arn?: string;
-  RepositoryUri?: string;
+  Arn?: Resolvable<string>;
+  RepositoryUri?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-imagetagmutability}
    */
-  ImageTagMutability?: 'MUTABLE' | 'IMMUTABLE';
+  ImageTagMutability?: Resolvable<'MUTABLE' | 'IMMUTABLE'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-imagescanningconfiguration}
@@ -89,13 +89,13 @@ export type LifecyclePolicy = {
   RegistryId?: RegistryId;
 };
 
-export type LifecyclePolicyText = string;
+export type LifecyclePolicyText = Resolvable<string>;
 
-export type RegistryId = string;
+export type RegistryId = Resolvable<string>;
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -112,7 +112,7 @@ export type ImageScanningConfiguration = {
   ScanOnPush?: ScanOnPush;
 };
 
-export type ScanOnPush = boolean;
+export type ScanOnPush = Resolvable<boolean>;
 
 /**
  * The encryption configuration for the repository. This determines how
@@ -139,6 +139,6 @@ export type EncryptionConfiguration = {
   KmsKey?: KmsKey;
 };
 
-export type EncryptionType = 'AES256' | 'KMS';
+export type EncryptionType = Resolvable<'AES256' | 'KMS'>;
 
-export type KmsKey = string;
+export type KmsKey = Resolvable<string>;

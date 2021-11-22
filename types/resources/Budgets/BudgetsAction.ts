@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Budgets::BudgetsAction
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type BudgetsAction_Type = 'AWS::Budgets::BudgetsAction';
 export const BudgetsAction_Type = 'AWS::Budgets::BudgetsAction';
@@ -20,22 +20,24 @@ export default function BudgetsAction(props: BudgetsAction_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html}
  */
 export type BudgetsAction_Properties = {
-  ActionId?: string;
+  ActionId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-budgetname}
    */
-  BudgetName: string;
+  BudgetName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-notificationtype}
    */
-  NotificationType: 'ACTUAL' | 'FORECASTED';
+  NotificationType: Resolvable<'ACTUAL' | 'FORECASTED'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-actiontype}
    */
-  ActionType: 'APPLY_IAM_POLICY' | 'APPLY_SCP_POLICY' | 'RUN_SSM_DOCUMENTS';
+  ActionType: Resolvable<
+    'APPLY_IAM_POLICY' | 'APPLY_SCP_POLICY' | 'RUN_SSM_DOCUMENTS'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-actionthreshold}
@@ -45,12 +47,12 @@ export type BudgetsAction_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-executionrolearn}
    */
-  ExecutionRoleArn: string;
+  ExecutionRoleArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-approvalmodel}
    */
-  ApprovalModel?: 'AUTOMATIC' | 'MANUAL';
+  ApprovalModel?: Resolvable<'AUTOMATIC' | 'MANUAL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html#cfn-budgets-budgetsaction-subscribers}
@@ -72,12 +74,12 @@ export type Subscriber = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-type}
    */
-  Type: 'SNS' | 'EMAIL';
+  Type: Resolvable<'SNS' | 'EMAIL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-subscriber.html#cfn-budgets-budgetsaction-subscriber-address}
    */
-  Address: string;
+  Address: Resolvable<string>;
 };
 
 /**
@@ -89,12 +91,12 @@ export type ActionThreshold = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-actionthreshold.html#cfn-budgets-budgetsaction-actionthreshold-value}
    */
-  Value: number;
+  Value: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-actionthreshold.html#cfn-budgets-budgetsaction-actionthreshold-type}
    */
-  Type: 'PERCENTAGE' | 'ABSOLUTE_VALUE';
+  Type: Resolvable<'PERCENTAGE' | 'ABSOLUTE_VALUE'>;
 };
 
 /**
@@ -106,22 +108,22 @@ export type IamActionDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-iamactiondefinition.html#cfn-budgets-budgetsaction-iamactiondefinition-policyarn}
    */
-  PolicyArn: string;
+  PolicyArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-iamactiondefinition.html#cfn-budgets-budgetsaction-iamactiondefinition-roles}
    */
-  Roles?: string[];
+  Roles?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-iamactiondefinition.html#cfn-budgets-budgetsaction-iamactiondefinition-groups}
    */
-  Groups?: string[];
+  Groups?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-iamactiondefinition.html#cfn-budgets-budgetsaction-iamactiondefinition-users}
    */
-  Users?: string[];
+  Users?: Resolvable<string>[];
 };
 
 /**
@@ -133,12 +135,12 @@ export type ScpActionDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-scpactiondefinition.html#cfn-budgets-budgetsaction-scpactiondefinition-policyid}
    */
-  PolicyId: string;
+  PolicyId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-scpactiondefinition.html#cfn-budgets-budgetsaction-scpactiondefinition-targetids}
    */
-  TargetIds: string[];
+  TargetIds: Resolvable<string>[];
 };
 
 /**
@@ -150,17 +152,17 @@ export type SsmActionDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-subtype}
    */
-  Subtype: 'STOP_EC2_INSTANCES' | 'STOP_RDS_INSTANCES';
+  Subtype: Resolvable<'STOP_EC2_INSTANCES' | 'STOP_RDS_INSTANCES'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-region}
    */
-  Region: string;
+  Region: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html#cfn-budgets-budgetsaction-ssmactiondefinition-instanceids}
    */
-  InstanceIds: string[];
+  InstanceIds: Resolvable<string>[];
 };
 
 /**

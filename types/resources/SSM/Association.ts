@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SSM::Association
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Association_Type = 'AWS::SSM::Association';
 export const Association_Type = 'AWS::SSM::Association';
@@ -22,27 +22,27 @@ export default function Association(props: Association_Properties) {
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html}
  */
 export type Association_Properties = {
-  AssociationId?: string;
+  AssociationId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname}
    */
-  AssociationName?: string;
+  AssociationName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-documentversion}
    */
-  DocumentVersion?: string;
+  DocumentVersion?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid}
    */
-  InstanceId?: string;
+  InstanceId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters}
@@ -54,7 +54,7 @@ export type Association_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-scheduleexpression}
    */
-  ScheduleExpression?: string;
+  ScheduleExpression?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets}
@@ -69,42 +69,44 @@ export type Association_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-automationtargetparametername}
    */
-  AutomationTargetParameterName?: string;
+  AutomationTargetParameterName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-maxerrors}
    */
-  MaxErrors?: string;
+  MaxErrors?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-maxconcurrency}
    */
-  MaxConcurrency?: string;
+  MaxConcurrency?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-complianceseverity}
    */
-  ComplianceSeverity?: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW' | 'UNSPECIFIED';
+  ComplianceSeverity?: Resolvable<
+    'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW' | 'UNSPECIFIED'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-synccompliance}
    */
-  SyncCompliance?: 'AUTO' | 'MANUAL';
+  SyncCompliance?: Resolvable<'AUTO' | 'MANUAL'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-waitforsuccesstimeoutseconds}
    */
-  WaitForSuccessTimeoutSeconds?: number;
+  WaitForSuccessTimeoutSeconds?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-applyonlyatcroninterval}
    */
-  ApplyOnlyAtCronInterval?: boolean;
+  ApplyOnlyAtCronInterval?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-calendarnames}
    */
-  CalendarNames?: string[];
+  CalendarNames?: Resolvable<string>[];
 };
 
 /**
@@ -116,21 +118,21 @@ export type Target = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html#cfn-ssm-association-target-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html#cfn-ssm-association-target-values}
    */
-  Values: string[];
+  Values: Resolvable<string>[];
 };
 
-export type ParameterValues = string[];
+export type ParameterValues = Resolvable<string>[];
 
-export type S3Region = string;
+export type S3Region = Resolvable<string>;
 
-export type S3BucketName = string;
+export type S3BucketName = Resolvable<string>;
 
-export type S3KeyPrefix = string;
+export type S3KeyPrefix = Resolvable<string>;
 
 /**
  * {@link

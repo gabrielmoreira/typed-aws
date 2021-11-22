@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::EventSchemas::Registry
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Registry_Type = 'AWS::EventSchemas::Registry';
 export const Registry_Type = 'AWS::EventSchemas::Registry';
@@ -22,14 +22,14 @@ export type Registry_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-registryname}
    */
-  RegistryName?: string;
+  RegistryName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-description}
    */
-  Description?: string;
-  Id?: string;
-  RegistryArn?: string;
+  Description?: Resolvable<string>;
+  Id?: Resolvable<string>;
+  RegistryArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags}
@@ -46,10 +46,10 @@ export type TagsEntry = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-registry-tagsentry.html#cfn-eventschemas-registry-tagsentry-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-registry-tagsentry.html#cfn-eventschemas-registry-tagsentry-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
 };

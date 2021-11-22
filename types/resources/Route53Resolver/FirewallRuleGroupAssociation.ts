@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::Route53Resolver::FirewallRuleGroupAssociation
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FirewallRuleGroupAssociation_Type =
   'AWS::Route53Resolver::FirewallRuleGroupAssociation';
@@ -27,43 +27,41 @@ export default function FirewallRuleGroupAssociation(
  * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html}
  */
 export type FirewallRuleGroupAssociation_Properties = {
-  Id?: string;
-  Arn?: string;
+  Id?: Resolvable<string>;
+  Arn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-firewallrulegroupid}
    */
-  FirewallRuleGroupId: string;
+  FirewallRuleGroupId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-vpcid}
    */
-  VpcId: string;
+  VpcId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-name}
    */
-  Name?: string;
+  Name?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-priority}
    */
-  Priority: number;
+  Priority: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-mutationprotection}
    */
-  MutationProtection?: 'ENABLED' | 'DISABLED';
-  ManagedOwnerName?: string;
-  Status?:
-    | 'COMPLETE'
-    | 'DELETING'
-    | 'UPDATING'
-    | 'INACTIVE_OWNER_ACCOUNT_CLOSED';
-  StatusMessage?: string;
-  CreatorRequestId?: string;
-  CreationTime?: string;
-  ModificationTime?: string;
+  MutationProtection?: Resolvable<'ENABLED' | 'DISABLED'>;
+  ManagedOwnerName?: Resolvable<string>;
+  Status?: Resolvable<
+    'COMPLETE' | 'DELETING' | 'UPDATING' | 'INACTIVE_OWNER_ACCOUNT_CLOSED'
+  >;
+  StatusMessage?: Resolvable<string>;
+  CreatorRequestId?: Resolvable<string>;
+  CreationTime?: Resolvable<string>;
+  ModificationTime?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html#cfn-route53resolver-firewallrulegroupassociation-tags}
@@ -72,6 +70,6 @@ export type FirewallRuleGroupAssociation_Properties = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };

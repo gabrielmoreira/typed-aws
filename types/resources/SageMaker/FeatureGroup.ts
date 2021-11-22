@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::SageMaker::FeatureGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type FeatureGroup_Type = 'AWS::SageMaker::FeatureGroup';
 export const FeatureGroup_Type = 'AWS::SageMaker::FeatureGroup';
@@ -22,17 +22,17 @@ export type FeatureGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-featuregroupname}
    */
-  FeatureGroupName: string;
+  FeatureGroupName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-recordidentifierfeaturename}
    */
-  RecordIdentifierFeatureName: string;
+  RecordIdentifierFeatureName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-eventtimefeaturename}
    */
-  EventTimeFeatureName: string;
+  EventTimeFeatureName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-featuredefinitions}
@@ -44,7 +44,7 @@ export type FeatureGroup_Properties = {
    */
   OnlineStoreConfig?: {
     SecurityConfig?: OnlineStoreSecurityConfig;
-    EnableOnlineStore?: boolean;
+    EnableOnlineStore?: Resolvable<boolean>;
   };
   /**
    * {@link
@@ -52,19 +52,19 @@ export type FeatureGroup_Properties = {
    */
   OfflineStoreConfig?: {
     S3StorageConfig: S3StorageConfig;
-    DisableGlueTableCreation?: boolean;
+    DisableGlueTableCreation?: Resolvable<boolean>;
     DataCatalogConfig?: DataCatalogConfig;
   };
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-rolearn}
    */
-  RoleArn?: string;
+  RoleArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-description}
    */
-  Description?: string;
+  Description?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html#cfn-sagemaker-featuregroup-tags}
@@ -81,32 +81,32 @@ export type FeatureDefinition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featurename}
    */
-  FeatureName: string;
+  FeatureName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html#cfn-sagemaker-featuregroup-featuredefinition-featuretype}
    */
-  FeatureType: 'Integral' | 'Fractional' | 'String';
+  FeatureType: Resolvable<'Integral' | 'Fractional' | 'String'>;
 };
 
-export type KmsKeyId = string;
+export type KmsKeyId = Resolvable<string>;
 
 export type OnlineStoreSecurityConfig = {
   KmsKeyId?: KmsKeyId;
 };
 
 export type S3StorageConfig = {
-  S3Uri: string;
+  S3Uri: Resolvable<string>;
   KmsKeyId?: KmsKeyId;
 };
 
 export type DataCatalogConfig = {
-  TableName: string;
-  Catalog: string;
-  Database: string;
+  TableName: Resolvable<string>;
+  Catalog: Resolvable<string>;
+  Database: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };

@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::Bucket
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type Bucket_Type = 'AWS::S3::Bucket';
 export const Bucket_Type = 'AWS::S3::Bucket';
@@ -27,7 +27,7 @@ export type Bucket_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol}
    */
-  AccessControl?:
+  AccessControl?: Resolvable<
     | 'AuthenticatedRead'
     | 'AwsExecRead'
     | 'BucketOwnerFullControl'
@@ -35,7 +35,8 @@ export type Bucket_Properties = {
     | 'LogDeliveryWrite'
     | 'Private'
     | 'PublicRead'
-    | 'PublicReadWrite';
+    | 'PublicReadWrite'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-analyticsconfigurations}
@@ -50,7 +51,7 @@ export type Bucket_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name}
    */
-  BucketName?: string;
+  BucketName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-crossoriginconfig}
@@ -95,7 +96,7 @@ export type Bucket_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-objectlockenabled}
    */
-  ObjectLockEnabled?: boolean;
+  ObjectLockEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-ownershipcontrols}
@@ -127,10 +128,10 @@ export type Bucket_Properties = {
    */
   WebsiteConfiguration?: WebsiteConfiguration;
   Arn?: Arn;
-  DomainName?: string;
-  DualStackDomainName?: string;
-  RegionalDomainName?: string;
-  WebsiteURL?: string;
+  DomainName?: Resolvable<string>;
+  DualStackDomainName?: Resolvable<string>;
+  RegionalDomainName?: Resolvable<string>;
+  WebsiteURL?: Resolvable<string>;
 };
 
 /**
@@ -143,12 +144,12 @@ export type TagFilter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-tagfilter.html#cfn-s3-bucket-tagfilter-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-tagfilter.html#cfn-s3-bucket-tagfilter-key}
    */
-  Key: string;
+  Key: Resolvable<string>;
 };
 
 /**
@@ -162,22 +163,22 @@ export type Destination = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-bucketarn}
    */
-  BucketArn: string;
+  BucketArn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-bucketaccountid}
    */
-  BucketAccountId?: string;
+  BucketAccountId?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-format}
    */
-  Format: 'CSV' | 'ORC' | 'Parquet';
+  Format: Resolvable<'CSV' | 'ORC' | 'Parquet'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html#cfn-s3-bucket-destination-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
 };
 
 /**
@@ -189,7 +190,7 @@ export type AccelerateConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accelerateconfiguration.html#cfn-s3-bucket-accelerateconfiguration-accelerationstatus}
    */
-  AccelerationStatus: 'Enabled' | 'Suspended';
+  AccelerationStatus: Resolvable<'Enabled' | 'Suspended'>;
 };
 
 /**
@@ -212,12 +213,12 @@ export type AnalyticsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html#cfn-s3-bucket-analyticsconfiguration-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html#cfn-s3-bucket-analyticsconfiguration-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
 };
 
 /**
@@ -249,7 +250,7 @@ export type DataExport = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-dataexport.html#cfn-s3-bucket-dataexport-outputschemaversion}
    */
-  OutputSchemaVersion: string;
+  OutputSchemaVersion: Resolvable<string>;
 };
 
 /**
@@ -275,7 +276,7 @@ export type ServerSideEncryptionRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionrule.html#cfn-s3-bucket-serversideencryptionrule-bucketkeyenabled}
    */
-  BucketKeyEnabled?: boolean;
+  BucketKeyEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionrule.html#cfn-s3-bucket-serversideencryptionrule-serversideencryptionbydefault}
@@ -294,12 +295,12 @@ export type ServerSideEncryptionByDefault = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-kmsmasterkeyid}
    */
-  KMSMasterKeyID?: string;
+  KMSMasterKeyID?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html#cfn-s3-bucket-serversideencryptionbydefault-ssealgorithm}
    */
-  SSEAlgorithm: 'aws:kms' | 'AES256';
+  SSEAlgorithm: Resolvable<'aws:kms' | 'AES256'>;
 };
 
 /**
@@ -324,32 +325,32 @@ export type CorsRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html#cfn-s3-bucket-cors-corsrule-allowedheaders}
    */
-  AllowedHeaders?: string[];
+  AllowedHeaders?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html#cfn-s3-bucket-cors-corsrule-allowedmethods}
    */
-  AllowedMethods: ('GET' | 'PUT' | 'HEAD' | 'POST' | 'DELETE')[];
+  AllowedMethods: Resolvable<'GET' | 'PUT' | 'HEAD' | 'POST' | 'DELETE'>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html#cfn-s3-bucket-cors-corsrule-allowedorigins}
    */
-  AllowedOrigins: string[];
+  AllowedOrigins: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html#cfn-s3-bucket-cors-corsrule-exposedheaders}
    */
-  ExposedHeaders?: string[];
+  ExposedHeaders?: Resolvable<string>[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html#cfn-s3-bucket-cors-corsrule-id}
    */
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-cors-corsrule.html#cfn-s3-bucket-cors-corsrule-maxage}
    */
-  MaxAge?: number;
+  MaxAge?: Resolvable<number>;
 };
 
 /**
@@ -361,17 +362,17 @@ export type IntelligentTieringConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-intelligenttieringconfiguration.html#cfn-s3-bucket-intelligenttieringconfiguration-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-intelligenttieringconfiguration.html#cfn-s3-bucket-intelligenttieringconfiguration-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-intelligenttieringconfiguration.html#cfn-s3-bucket-intelligenttieringconfiguration-status}
    */
-  Status: 'Disabled' | 'Enabled';
+  Status: Resolvable<'Disabled' | 'Enabled'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-intelligenttieringconfiguration.html#cfn-s3-bucket-intelligenttieringconfiguration-tagfilters}
@@ -393,12 +394,12 @@ export type Tiering = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-tiering.html#cfn-s3-bucket-tiering-accesstier}
    */
-  AccessTier: 'ARCHIVE_ACCESS' | 'DEEP_ARCHIVE_ACCESS';
+  AccessTier: Resolvable<'ARCHIVE_ACCESS' | 'DEEP_ARCHIVE_ACCESS'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-tiering.html#cfn-s3-bucket-tiering-days}
    */
-  Days: number;
+  Days: Resolvable<number>;
 };
 
 /**
@@ -415,22 +416,22 @@ export type InventoryConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-enabled}
    */
-  Enabled: boolean;
+  Enabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-includedobjectversions}
    */
-  IncludedObjectVersions: 'All' | 'Current';
+  IncludedObjectVersions: Resolvable<'All' | 'Current'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-optionalfields}
    */
-  OptionalFields?: (
+  OptionalFields?: Resolvable<
     | 'Size'
     | 'LastModifiedDate'
     | 'StorageClass'
@@ -443,17 +444,17 @@ export type InventoryConfiguration = {
     | 'ObjectLockLegalHoldStatus'
     | 'IntelligentTieringAccessTier'
     | 'BucketKeyStatus'
-  )[];
+  >[];
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-schedulefrequency}
    */
-  ScheduleFrequency: 'Daily' | 'Weekly';
+  ScheduleFrequency: Resolvable<'Daily' | 'Weekly'>;
 };
 
 /**
@@ -490,22 +491,22 @@ export type Rule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-expirationindays}
    */
-  ExpirationInDays?: number;
+  ExpirationInDays?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-rule-expiredobjectdeletemarker}
    */
-  ExpiredObjectDeleteMarker?: boolean;
+  ExpiredObjectDeleteMarker?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-id}
    */
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays}
    */
-  NoncurrentVersionExpirationInDays?: number;
+  NoncurrentVersionExpirationInDays?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition}
@@ -520,12 +521,12 @@ export type Rule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-status}
    */
-  Status: 'Enabled' | 'Disabled';
+  Status: Resolvable<'Enabled' | 'Disabled'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-rule-tagfilters}
@@ -554,10 +555,10 @@ export type AbortIncompleteMultipartUpload = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-abortincompletemultipartupload.html#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation}
    */
-  DaysAfterInitiation: number;
+  DaysAfterInitiation: Resolvable<number>;
 };
 
-export type iso8601UTC = string;
+export type iso8601UTC = Resolvable<string>;
 
 /**
  * Container for the transition rule that describes when noncurrent
@@ -575,18 +576,19 @@ export type NoncurrentVersionTransition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass}
    */
-  StorageClass:
+  StorageClass: Resolvable<
     | 'DEEP_ARCHIVE'
     | 'GLACIER'
     | 'Glacier'
     | 'INTELLIGENT_TIERING'
     | 'ONEZONE_IA'
-    | 'STANDARD_IA';
+    | 'STANDARD_IA'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays}
    */
-  TransitionInDays: number;
+  TransitionInDays: Resolvable<number>;
 };
 
 /**
@@ -599,13 +601,14 @@ export type Transition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass}
    */
-  StorageClass:
+  StorageClass: Resolvable<
     | 'DEEP_ARCHIVE'
     | 'GLACIER'
     | 'Glacier'
     | 'INTELLIGENT_TIERING'
     | 'ONEZONE_IA'
-    | 'STANDARD_IA';
+    | 'STANDARD_IA'
+  >;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate}
@@ -615,7 +618,7 @@ export type Transition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays}
    */
-  TransitionInDays?: number;
+  TransitionInDays?: Resolvable<number>;
 };
 
 /**
@@ -627,12 +630,12 @@ export type LoggingConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-loggingconfig.html#cfn-s3-bucket-loggingconfig-destinationbucketname}
    */
-  DestinationBucketName?: string;
+  DestinationBucketName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-loggingconfig.html#cfn-s3-bucket-loggingconfig-logfileprefix}
    */
-  LogFilePrefix?: string;
+  LogFilePrefix?: Resolvable<string>;
 };
 
 /**
@@ -644,17 +647,17 @@ export type MetricsConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html#cfn-s3-bucket-metricsconfiguration-accesspointarn}
    */
-  AccessPointArn?: string;
+  AccessPointArn?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html#cfn-s3-bucket-metricsconfiguration-id}
    */
-  Id: string;
+  Id: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html#cfn-s3-bucket-metricsconfiguration-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html#cfn-s3-bucket-metricsconfiguration-tagfilters}
@@ -695,7 +698,7 @@ export type LambdaConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-event}
    */
-  Event: string;
+  Event: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-filter}
@@ -705,7 +708,7 @@ export type LambdaConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-lambdaconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig-function}
    */
-  Function: string;
+  Function: Resolvable<string>;
 };
 
 /**
@@ -718,7 +721,7 @@ export type QueueConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-event}
    */
-  Event: string;
+  Event: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-filter}
@@ -728,7 +731,7 @@ export type QueueConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-queueconfig.html#cfn-s3-bucket-notificationconfig-queueconfig-queue}
    */
-  Queue: string;
+  Queue: Resolvable<string>;
 };
 
 /**
@@ -741,7 +744,7 @@ export type TopicConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-event}
    */
-  Event: string;
+  Event: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-filter}
@@ -751,7 +754,7 @@ export type TopicConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-topic}
    */
-  Topic: string;
+  Topic: Resolvable<string>;
 };
 
 /**
@@ -789,12 +792,12 @@ export type FilterRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.html#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-name}
    */
-  Name: string;
+  Name: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.html#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-value}
    */
-  Value: string;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -806,7 +809,7 @@ export type ObjectLockConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockconfiguration.html#cfn-s3-bucket-objectlockconfiguration-objectlockenabled}
    */
-  ObjectLockEnabled?: string;
+  ObjectLockEnabled?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockconfiguration.html#cfn-s3-bucket-objectlockconfiguration-rule}
@@ -836,17 +839,17 @@ export type DefaultRetention = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-years}
    */
-  Years?: number;
+  Years?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-days}
    */
-  Days?: number;
+  Days?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html#cfn-s3-bucket-defaultretention-mode}
    */
-  Mode?: 'COMPLIANCE' | 'GOVERNANCE';
+  Mode?: Resolvable<'COMPLIANCE' | 'GOVERNANCE'>;
 };
 
 /**
@@ -870,7 +873,7 @@ export type OwnershipControlsRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-ownershipcontrolsrule.html#cfn-s3-bucket-ownershipcontrolsrule-objectownership}
    */
-  ObjectOwnership?: 'ObjectWriter' | 'BucketOwnerPreferred';
+  ObjectOwnership?: Resolvable<'ObjectWriter' | 'BucketOwnerPreferred'>;
 };
 
 /**
@@ -882,22 +885,22 @@ export type PublicAccessBlockConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicacls}
    */
-  BlockPublicAcls?: boolean;
+  BlockPublicAcls?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-blockpublicpolicy}
    */
-  BlockPublicPolicy?: boolean;
+  BlockPublicPolicy?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-ignorepublicacls}
    */
-  IgnorePublicAcls?: boolean;
+  IgnorePublicAcls?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-publicaccessblockconfiguration.html#cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets}
    */
-  RestrictPublicBuckets?: boolean;
+  RestrictPublicBuckets?: Resolvable<boolean>;
 };
 
 /**
@@ -910,7 +913,7 @@ export type ReplicationConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-role}
    */
-  Role: string;
+  Role: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-rules}
@@ -943,17 +946,17 @@ export type ReplicationRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-id}
    */
-  Id?: string;
+  Id?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationrule-priority}
    */
-  Priority?: number;
+  Priority?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationrule-sourceselectioncriteria}
@@ -963,7 +966,7 @@ export type ReplicationRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-status}
    */
-  Status: 'Disabled' | 'Enabled';
+  Status: Resolvable<'Disabled' | 'Enabled'>;
 };
 
 /**
@@ -975,7 +978,7 @@ export type DeleteMarkerReplication = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-deletemarkerreplication.html#cfn-s3-bucket-deletemarkerreplication-status}
    */
-  Status?: 'Disabled' | 'Enabled';
+  Status?: Resolvable<'Disabled' | 'Enabled'>;
 };
 
 /**
@@ -993,12 +996,12 @@ export type ReplicationDestination = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-account}
    */
-  Account?: string;
+  Account?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket}
    */
-  Bucket: string;
+  Bucket: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationdestination-encryptionconfiguration}
@@ -1018,14 +1021,15 @@ export type ReplicationDestination = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules-destination.html#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass}
    */
-  StorageClass?:
+  StorageClass?: Resolvable<
     | 'DEEP_ARCHIVE'
     | 'GLACIER'
     | 'INTELLIGENT_TIERING'
     | 'ONEZONE_IA'
     | 'REDUCED_REDUNDANCY'
     | 'STANDARD'
-    | 'STANDARD_IA';
+    | 'STANDARD_IA'
+  >;
 };
 
 /**
@@ -1042,7 +1046,7 @@ export type AccessControlTranslation = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html#cfn-s3-bucket-accesscontroltranslation-owner}
    */
-  Owner: string;
+  Owner: Resolvable<string>;
 };
 
 /**
@@ -1055,7 +1059,7 @@ export type EncryptionConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-encryptionconfiguration.html#cfn-s3-bucket-encryptionconfiguration-replicakmskeyid}
    */
-  ReplicaKmsKeyID: string;
+  ReplicaKmsKeyID: Resolvable<string>;
 };
 
 /**
@@ -1072,7 +1076,7 @@ export type Metrics = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metrics.html#cfn-s3-bucket-metrics-status}
    */
-  Status: 'Disabled' | 'Enabled';
+  Status: Resolvable<'Disabled' | 'Enabled'>;
 };
 
 /**
@@ -1084,7 +1088,7 @@ export type ReplicationTimeValue = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationtimevalue.html#cfn-s3-bucket-replicationtimevalue-minutes}
    */
-  Minutes: number;
+  Minutes: Resolvable<number>;
 };
 
 /**
@@ -1096,7 +1100,7 @@ export type ReplicationTime = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationtime.html#cfn-s3-bucket-replicationtime-status}
    */
-  Status: 'Disabled' | 'Enabled';
+  Status: Resolvable<'Disabled' | 'Enabled'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationtime.html#cfn-s3-bucket-replicationtime-time}
@@ -1118,7 +1122,7 @@ export type ReplicationRuleFilter = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationrulefilter.html#cfn-s3-bucket-replicationrulefilter-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationrulefilter.html#cfn-s3-bucket-replicationrulefilter-tagfilter}
@@ -1135,7 +1139,7 @@ export type ReplicationRuleAndOperator = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationruleandoperator.html#cfn-s3-bucket-replicationruleandoperator-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationruleandoperator.html#cfn-s3-bucket-replicationruleandoperator-tagfilters}
@@ -1170,7 +1174,7 @@ export type ReplicaModifications = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicamodifications.html#cfn-s3-bucket-replicamodifications-status}
    */
-  Status: 'Enabled' | 'Disabled';
+  Status: Resolvable<'Enabled' | 'Disabled'>;
 };
 
 /**
@@ -1183,12 +1187,12 @@ export type SseKmsEncryptedObjects = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-ssekmsencryptedobjects.html#cfn-s3-bucket-ssekmsencryptedobjects-status}
    */
-  Status: 'Disabled' | 'Enabled';
+  Status: Resolvable<'Disabled' | 'Enabled'>;
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -1200,7 +1204,7 @@ export type VersioningConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-versioningconfig.html#cfn-s3-bucket-versioningconfig-status}
    */
-  Status: 'Enabled' | 'Suspended';
+  Status: Resolvable<'Enabled' | 'Suspended'>;
 };
 
 /**
@@ -1213,12 +1217,12 @@ export type WebsiteConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html#cfn-s3-websiteconfiguration-errordocument}
    */
-  ErrorDocument?: string;
+  ErrorDocument?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html#cfn-s3-websiteconfiguration-indexdocument}
    */
-  IndexDocument?: string;
+  IndexDocument?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration.html#cfn-s3-websiteconfiguration-routingrules}
@@ -1258,27 +1262,27 @@ export type RedirectRule = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-hostname}
    */
-  HostName?: string;
+  HostName?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-httpredirectcode}
    */
-  HttpRedirectCode?: string;
+  HttpRedirectCode?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-protocol}
    */
-  Protocol?: 'http' | 'https';
+  Protocol?: Resolvable<'http' | 'https'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-replacekeyprefixwith}
    */
-  ReplaceKeyPrefixWith?: string;
+  ReplaceKeyPrefixWith?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-replacekeywith}
    */
-  ReplaceKeyWith?: string;
+  ReplaceKeyWith?: Resolvable<string>;
 };
 
 /**
@@ -1292,12 +1296,12 @@ export type RoutingRuleCondition = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-keyprefixequals}
    */
-  KeyPrefixEquals?: string;
+  KeyPrefixEquals?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-httperrorcodereturnedequals}
    */
-  HttpErrorCodeReturnedEquals?: string;
+  HttpErrorCodeReturnedEquals?: Resolvable<string>;
 };
 
 /**
@@ -1310,12 +1314,12 @@ export type RedirectAllRequestsTo = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname}
    */
-  HostName: string;
+  HostName: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-redirectallrequeststo.html#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol}
    */
-  Protocol?: 'http' | 'https';
+  Protocol?: Resolvable<'http' | 'https'>;
 };
 
-export type Arn = string;
+export type Arn = Resolvable<string>;

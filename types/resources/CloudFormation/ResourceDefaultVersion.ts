@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::CloudFormation::ResourceDefaultVersion
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type ResourceDefaultVersion_Type =
   'AWS::CloudFormation::ResourceDefaultVersion';
@@ -22,34 +22,34 @@ export type ResourceDefaultVersion_Properties =
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html#cfn-cloudformation-resourcedefaultversion-typeversionarn}
        */
-      TypeVersionArn: string;
+      TypeVersionArn: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html#cfn-cloudformation-resourcedefaultversion-typename}
        */
-      TypeName?: string;
-      Arn?: string;
+      TypeName?: Resolvable<string>;
+      Arn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html#cfn-cloudformation-resourcedefaultversion-versionid}
        */
-      VersionId?: string;
+      VersionId?: Resolvable<string>;
     }
   | {
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html#cfn-cloudformation-resourcedefaultversion-typeversionarn}
        */
-      TypeVersionArn?: string;
+      TypeVersionArn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html#cfn-cloudformation-resourcedefaultversion-typename}
        */
-      TypeName: string;
-      Arn?: string;
+      TypeName: Resolvable<string>;
+      Arn?: Resolvable<string>;
       /**
        * {@link
        * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html#cfn-cloudformation-resourcedefaultversion-versionid}
        */
-      VersionId: string;
+      VersionId: Resolvable<string>;
     };

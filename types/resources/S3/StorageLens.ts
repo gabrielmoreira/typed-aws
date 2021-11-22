@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::S3::StorageLens
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type StorageLens_Type = 'AWS::S3::StorageLens';
 export const StorageLens_Type = 'AWS::S3::StorageLens';
@@ -32,9 +32,9 @@ export type StorageLens_Properties = {
   Tags?: Tag[];
 };
 
-export type Id = string;
+export type Id = Resolvable<string>;
 
-export type Arn = string;
+export type Arn = Resolvable<string>;
 
 /**
  * S3 buckets and Regions to include/exclude in the Amazon S3 Storage
@@ -51,7 +51,7 @@ export type BucketsAndRegions = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html#cfn-s3-storagelens-bucketsandregions-regions}
    */
-  Regions?: string[];
+  Regions?: Resolvable<string>[];
 };
 
 /**
@@ -76,7 +76,7 @@ export type ActivityMetrics = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-activitymetrics.html#cfn-s3-storagelens-activitymetrics-isenabled}
    */
-  IsEnabled?: boolean;
+  IsEnabled?: Resolvable<boolean>;
 };
 
 /**
@@ -88,17 +88,17 @@ export type SelectionCriteria = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-maxdepth}
    */
-  MaxDepth?: number;
+  MaxDepth?: Resolvable<number>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-delimiter}
    */
-  Delimiter?: string;
+  Delimiter?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html#cfn-s3-storagelens-selectioncriteria-minstoragebytespercentage}
    */
-  MinStorageBytesPercentage?: number;
+  MinStorageBytesPercentage?: Resolvable<number>;
 };
 
 /**
@@ -110,7 +110,7 @@ export type PrefixLevelStorageMetrics = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-isenabled}
    */
-  IsEnabled?: boolean;
+  IsEnabled?: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-prefixlevelstoragemetrics.html#cfn-s3-storagelens-prefixlevelstoragemetrics-selectioncriteria}
@@ -165,7 +165,7 @@ export type AccountLevel = {
 };
 
 export type SSEKMS = {
-  KeyId: string;
+  KeyId: Resolvable<string>;
 };
 
 export type Encryption =
@@ -186,27 +186,27 @@ export type S3BucketDestination = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html#cfn-s3-storagelens-s3bucketdestination-outputschemaversion}
    */
-  OutputSchemaVersion: 'V_1';
+  OutputSchemaVersion: Resolvable<'V_1'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html#cfn-s3-storagelens-s3bucketdestination-format}
    */
-  Format: 'CSV' | 'Parquet';
+  Format: Resolvable<'CSV' | 'Parquet'>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html#cfn-s3-storagelens-s3bucketdestination-accountid}
    */
-  AccountId: string;
+  AccountId: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html#cfn-s3-storagelens-s3bucketdestination-arn}
    */
-  Arn: string;
+  Arn: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html#cfn-s3-storagelens-s3bucketdestination-prefix}
    */
-  Prefix?: string;
+  Prefix?: Resolvable<string>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html#cfn-s3-storagelens-s3bucketdestination-encryption}
@@ -228,8 +228,8 @@ export type DataExport = {
 };
 
 export type Tag = {
-  Key: string;
-  Value: string;
+  Key: Resolvable<string>;
+  Value: Resolvable<string>;
 };
 
 /**
@@ -271,10 +271,10 @@ export type StorageLensConfiguration = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-isenabled}
    */
-  IsEnabled: boolean;
+  IsEnabled: Resolvable<boolean>;
   /**
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html#cfn-s3-storagelens-storagelensconfiguration-storagelensarn}
    */
-  StorageLensArn?: string;
+  StorageLensArn?: Resolvable<string>;
 };

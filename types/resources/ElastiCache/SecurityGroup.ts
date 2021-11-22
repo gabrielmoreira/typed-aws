@@ -1,6 +1,6 @@
 // CloudFormation Resource AWS::ElastiCache::SecurityGroup
 
-import { CfnResource } from '../../base';
+import { CfnResource, Resolvable } from '../../base';
 
 export type SecurityGroup_Type = 'AWS::ElastiCache::SecurityGroup';
 export const SecurityGroup_Type = 'AWS::ElastiCache::SecurityGroup';
@@ -27,11 +27,11 @@ export type SecurityGroup_Properties = {
    * {@link
    * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html#cfn-elasticache-securitygroup-description}
    */
-  Description: string;
-  Id?: string;
+  Description: Resolvable<string>;
+  Id?: Resolvable<string>;
 };
 
 export type Tag = {
-  Value: string;
-  Key: string;
+  Value: Resolvable<string>;
+  Key: Resolvable<string>;
 };
